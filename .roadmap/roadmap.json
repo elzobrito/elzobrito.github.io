@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "initialized",
-      "last_event_seq": 43,
-      "projection_hash_sha256": "23aad3a936d58ff16272663da41a8d9c5e70fce25abb26a20892ce591ea650d0",
+      "last_event_seq": 52,
+      "projection_hash_sha256": "4b417e86a3a33bfd328a6ec7ea565dd02e13ca7dec26bcac7bd159f6fae1bbe6",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-01T16:08:55Z"
+    "updated_at": "2026-07-01T16:15:42Z"
   },
   "project": {
     "name": "esaa-core",
@@ -201,16 +201,45 @@
           "python -m esaa --root . verify retornou ok antes da conclusao."
         ]
       }
+    },
+    {
+      "task_id": "T-SITE-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Auditar publicacao no GitHub Pages",
+      "description": "Registrar e verificar a publicacao do site no repositorio elzobrito.github.io apos push para main.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "README.md"
+      ],
+      "outputs": {
+        "files": [
+          "README.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-01T16:15:26Z",
+      "verification": {
+        "checks": [
+          "git status confirmou main rastreando origin/main apos push do commit d2310dc.",
+          "remote origin aponta para https://github.com/elzobrito/elzobrito.github.io.git.",
+          "gh api repos/elzobrito/elzobrito.github.io/pages retornou source main /, public true, https_enforced true e status building.",
+          "python -m esaa --root . verify estava ok antes da auditoria."
+        ]
+      }
     }
   ],
   "indexes": {
     "by_status": {
-      "review": 4,
+      "review": 5,
       "todo": 3
     },
     "by_kind": {
       "impl": 5,
-      "qa": 1,
+      "qa": 2,
       "spec": 1
     }
   }
