@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "schema_version": "0.4.1",
+    "esaa_version": "0.4.x",
+    "immutable_done": true,
+    "master_correlation_id": "CID-ESAA-INIT",
+    "run": {
+      "run_id": "RUN-0001",
+      "status": "initialized",
+      "last_event_seq": 43,
+      "projection_hash_sha256": "23aad3a936d58ff16272663da41a8d9c5e70fce25abb26a20892ce591ea650d0",
+      "verify_status": "ok"
+    },
+    "updated_at": "2026-07-01T16:08:55Z"
+  },
+  "project": {
+    "name": "esaa-core",
+    "audit_scope": ".roadmap/"
+  },
+  "tasks": [
+    {
+      "task_id": "T-1000",
+      "task_kind": "spec",
+      "title": "Create initial ESAA spec document",
+      "description": "Produce the initial specification artifact for the ESAA core baseline.",
+      "status": "todo",
+      "depends_on": [],
+      "targets": [
+        "spec-core"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/T-1000.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "T-1010",
+      "task_kind": "impl",
+      "title": "Create initial implementation artifact",
+      "description": "Produce the initial implementation artifact that follows the approved specification.",
+      "status": "todo",
+      "depends_on": [
+        "T-1000"
+      ],
+      "targets": [
+        "impl-core"
+      ],
+      "outputs": {
+        "files": [
+          "src/T-1010.txt"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "T-1020",
+      "task_kind": "qa",
+      "title": "Create initial QA report",
+      "description": "Produce the initial QA evidence artifact validating the implementation baseline.",
+      "status": "todo",
+      "depends_on": [
+        "T-1010"
+      ],
+      "targets": [
+        "qa-core"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/T-1020.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "T-SITE-001",
+      "task_kind": "impl",
+      "title": "Criar site profissional GitHub Pages",
+      "description": "Site estatico profissional para consultoria em IA aplicada a educacao, automacao e governanca.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "index.html",
+        "style.css",
+        "script.js",
+        "README.md",
+        "assets/.gitkeep"
+      ],
+      "outputs": {
+        "files": [
+          "index.html",
+          "style.css",
+          "script.js",
+          "README.md",
+          "assets/.gitkeep"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-01T15:46:22Z",
+      "verification": {
+        "checks": [
+          "Arquivos obrigatorios existem: index.html, style.css, script.js, README.md e assets/.gitkeep.",
+          "index.html contem lang pt-BR, SEO/Open Graph, navegacao por ancoras e todas as secoes principais.",
+          "script.js implementa alternancia de tema com localStorage, menu mobile e ano automatico no footer.",
+          "python -m esaa --root . verify retornou ok antes da conclusao."
+        ]
+      }
+    },
+    {
+      "task_id": "T-SITE-HOTFIX-001",
+      "task_kind": "impl",
+      "title": "Atualizar links de contato do site",
+      "description": "Substituir placeholder de LinkedIn pelo perfil real e remover WhatsApp, usando email no lugar.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "index.html",
+        "README.md"
+      ],
+      "outputs": {
+        "files": [
+          "index.html",
+          "README.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-01T16:03:18Z",
+      "verification": {
+        "checks": [
+          "rg nao encontrou PLACEHOLDER, WhatsApp ou href=# em index.html e README.md.",
+          "index.html contem https://www.linkedin.com/in/elzobrito e mailto:elzobrito@gmail.com nos botoes/canais de contato.",
+          "python -m esaa --root . verify retornou ok antes da conclusao."
+        ]
+      }
+    },
+    {
+      "task_id": "T-SITE-HOTFIX-002",
+      "task_kind": "impl",
+      "title": "Definir tema claro como padrao",
+      "description": "Usar tema claro por padrao quando nao houver preferencia salva no localStorage.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "script.js"
+      ],
+      "outputs": {
+        "files": [
+          "script.js"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-01T16:07:33Z",
+      "verification": {
+        "checks": [
+          "script.js usa setTheme(savedTheme || light), mantendo localStorage para preferencias futuras.",
+          "rg confirmou que systemTheme foi removido e localStorage permanece ativo.",
+          "python -m esaa --root . verify retornou ok antes da conclusao."
+        ]
+      }
+    },
+    {
+      "task_id": "T-SITE-HOTFIX-003",
+      "task_kind": "impl",
+      "title": "Tornar descricao de sistemas agnostica a stack",
+      "description": "Remover mencoes a PHP e MySQL da lista de servicos, deixando a consultoria agnostica a linguagem e plataforma.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "index.html"
+      ],
+      "outputs": {
+        "files": [
+          "index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-01T16:08:37Z",
+      "verification": {
+        "checks": [
+          "rg nao encontrou PHP ou MySQL em index.html, README.md, style.css e script.js.",
+          "index.html agora usa: Integracao de IA em sistemas, plataformas e aplicacoes web existentes.",
+          "python -m esaa --root . verify retornou ok antes da conclusao."
+        ]
+      }
+    }
+  ],
+  "indexes": {
+    "by_status": {
+      "review": 4,
+      "todo": 3
+    },
+    "by_kind": {
+      "impl": 5,
+      "qa": 1,
+      "spec": 1
+    }
+  }
+}
