@@ -1,0 +1,12 @@
+ESAA baseline implementation artifact — elzobrito.github.io
+Task: T-1010 (impl)
+Spec: docs/spec/T-1000.md
+Generated: 2026-07-05
+
+Implementation baseline confirms the static site deliverables exist and align with T-1000:
+- index.html: sections #sobre #atuacao #consultorias #formatos #pesquisa #contato
+- style.css: responsive layout + theme toggle styles
+- script.js: mobile nav, theme switch, footer year
+- README.md: GitHub Pages publish instructions
+
+Status: baseline artifact for ESAA impl tranche (no server-side code).
