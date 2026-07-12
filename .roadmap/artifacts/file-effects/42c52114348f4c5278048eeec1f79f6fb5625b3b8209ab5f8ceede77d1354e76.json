@@ -1,0 +1,13 @@
+{
+  "after_sha256": "8362147d407173ab3b24b751414b45a4a6fc0111d6cb1463b26f423f48d5e0f9",
+  "artifact_id": "ART-8362147d407173ab3b24b751414b45a4a6fc0111d6cb1463b26f423f48d5e0f9",
+  "artifact_sha256": "42c52114348f4c5278048eeec1f79f6fb5625b3b8209ab5f8ceede77d1354e76",
+  "before_sha256": "8362147d407173ab3b24b751414b45a4a6fc0111d6cb1463b26f423f48d5e0f9",
+  "bytes": 1389,
+  "content": "---\ntitle: \"The AI revolution: Sora 2, intelligent agents, and the workslop challenge\"\ndescription: \"A curated English edition about AI media generation, agents, and the risk of low-quality automated work.\"\npublished: 2025-10-01\nlocale: en\ntranslation: a-revolucao-da-ia-sora-2-agentes-inteligentes-e-o-desafio-do-workslop\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2025-10-01. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe post captures a useful tension: generative systems make creation faster, but speed can also flood organizations with shallow output.\n\nThe term workslop matters because it names a real failure mode. More generated work is not the same as better work; governance and review decide the difference.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/a-revolucao-da-ia-sora-2-agentes-inteligentes-e-o-desafio-do-workslop/](/blog/a-revolucao-da-ia-sora-2-agentes-inteligentes-e-o-desafio-do-workslop/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/ai-revolution-sora-2-intelligent-agents-and-workslop.md",
+  "source_path": "src/content/posts/en/ai-revolution-sora-2-intelligent-agents-and-workslop.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

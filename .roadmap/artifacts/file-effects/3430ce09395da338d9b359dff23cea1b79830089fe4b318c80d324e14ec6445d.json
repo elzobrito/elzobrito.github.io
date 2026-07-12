@@ -1,0 +1,13 @@
+{
+  "after_sha256": "a49ea160c4aaf11d3de502e730a54a89e645575302a44175d951ff3d8097746f",
+  "artifact_id": "ART-a49ea160c4aaf11d3de502e730a54a89e645575302a44175d951ff3d8097746f",
+  "artifact_sha256": "3430ce09395da338d9b359dff23cea1b79830089fe4b318c80d324e14ec6445d",
+  "before_sha256": "a49ea160c4aaf11d3de502e730a54a89e645575302a44175d951ff3d8097746f",
+  "bytes": 1510,
+  "content": "---\ntitle: \"How Grok Build helped me use Linux for real\"\ndescription: \"A curated English edition about using an agent to turn Linux from a technical alternative into a practical daily system.\"\npublished: 2026-06-27\nlocale: en\ntranslation: como-o-grok-build-me-ajudou-a-usar-o-linux-de-verdade\ntags: [\"Linux\", \"operations\", \"AI agents\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2026-06-27. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThis article is less about discovering Linux and more about lowering operational friction. The original story follows a Windows failure, an Ubuntu setup, GPU validation, local AI tooling, Bambu Studio, desktop launchers, and the moment an agent becomes a practical layer over the operating system.\n\nThe durable lesson is evidence. The agent did not merely suggest commands; it checked services, read logs, changed files, tested again, and left the machine closer to a working state.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/como-o-grok-build-me-ajudou-a-usar-o-linux-de-verdade/](/blog/como-o-grok-build-me-ajudou-a-usar-o-linux-de-verdade/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/how-grok-build-helped-me-use-linux-for-real.md",
+  "source_path": "src/content/posts/en/how-grok-build-helped-me-use-linux-for-real.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

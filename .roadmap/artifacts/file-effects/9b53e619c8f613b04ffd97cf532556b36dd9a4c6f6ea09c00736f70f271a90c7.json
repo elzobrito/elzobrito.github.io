@@ -1,0 +1,13 @@
+{
+  "after_sha256": "7a1b6188de18fee497b1c7cf7e96d6029558af99a216f9099825e7e903ce4557",
+  "artifact_id": "ART-7a1b6188de18fee497b1c7cf7e96d6029558af99a216f9099825e7e903ce4557",
+  "artifact_sha256": "9b53e619c8f613b04ffd97cf532556b36dd9a4c6f6ea09c00736f70f271a90c7",
+  "before_sha256": "7a1b6188de18fee497b1c7cf7e96d6029558af99a216f9099825e7e903ce4557",
+  "bytes": 1371,
+  "content": "# SITE-BLOG-TABNEWS-QA-001 - QA da migracao TabNews\n\nData: 2026-07-12.\n\n## Resultado\n\nAprovado. Os 10 posts publicos do TabNews foram inventariados, migrados para PT, pareados com edicoes EN, documentados para SEO/proveniencia e validados no build estatico.\n\n## Evidencias\n\n- Posts TabNews coletados pela API publica: 10/10 com HTTP 200.\n- Conteudo atual: 31 posts PT e 31 posts EN.\n- Lote TabNews: 10 posts PT e 10 edicoes EN.\n- Pares de idioma: nenhum par faltante.\n- Comando final: `npm test`.\n- `astro check`: 0 errors, 0 warnings, 0 hints.\n- Build: 71 paginas geradas.\n- Auditoria publica: 82 arquivos, 11 rotas obrigatorias, 0 matches proibidos.\n- Artefatos: RSS PT/EN e sitemap presentes.\n- Amostras: Grok Build/Linux PT e EN presentes no `dist`.\n\n## Achados corrigidos\n\n- A auditoria publica bloqueou literais operacionais do ecossistema ESAA em posts TabNews.\n- A hotfix `SITE-BLOG-TABNEWS-PRIVACY-FIX-001` substituiu esses literais por descricoes conceituais publicaveis, preservando o sentido editorial.\n- A hotfix `SITE-BLOG-TABNEWS-SEO-DOC-FIX-001` removeu um literal de caminho local do documento de SEO para evitar falso positivo em auditorias textuais.\n\n## Observacoes\n\n- As versoes EN sao edicoes curatoriais, nao traducoes linha a linha.\n- Posts de noticias/mercado de IA foram preservados como contexto historico e trazem nota de verificacao temporal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-TABNEWS-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-TABNEWS-QA-001.md",
+  "ts": "2026-07-12T18:56:57Z"
+}

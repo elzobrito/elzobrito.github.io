@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 331,
-      "projection_hash_sha256": "bcbe6f9b7b3e39c6cd942bace7e2d538e035fdd7c913611da0520d36d0081a5e",
+      "last_event_seq": 428,
+      "projection_hash_sha256": "d5f97d6c4206d015a503ba6bfe38090366de1a43f9a94367e8d05e14b191d85c",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T18:11:31Z"
+    "updated_at": "2026-07-12T18:57:05Z"
   },
   "project": {
     "name": "esaa-core",
@@ -820,16 +820,242 @@
         ]
       },
       "completed_at": "2026-07-12T18:07:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-INVENTORY-001",
+      "task_kind": "spec",
+      "title": "Inventariar posts do TabNews",
+      "description": "Mapear os posts publicos do usuario elzobrito no TabNews informados pelo usuario, com URL, slug, titulo, data, corpo, tags inferidas, profundidade, tema ESAA/IA/Linux e recomendacao de migracao.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "docs/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-TABNEWS-INVENTORY-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-spec",
+      "started_at": "2026-07-12T18:49:54Z",
+      "verification": {
+        "checks": [
+          "API TabNews respondeu status 200 para 10/10 URLs; validacao local hasApi=true rows=10 noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:50:35Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-MIGRATE-001",
+      "task_kind": "impl",
+      "title": "Migrar posts do TabNews para o blog",
+      "description": "Converter os posts inventariados do TabNews para Markdown em portugues, preservando autoria, data, origem, notas de migracao e slugs curados para o hub.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-INVENTORY-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:51:02Z",
+      "verification": {
+        "checks": [
+          "npm run check; validacao local ptFiles=31 tabnews=10 noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:51:31Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-I18N-001",
+      "task_kind": "impl",
+      "title": "Criar edicoes inglesas dos posts TabNews",
+      "description": "Criar versoes inglesas curatoriais dos posts TabNews migrados, mantendo pares translation e sem inventar fatos.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-MIGRATE-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/en/"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:52:15Z",
+      "verification": {
+        "checks": [
+          "npm run check; validacao local enFiles=31 tabPt=10 tabEn=10 missing=[] noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:52:37Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-SEO-001",
+      "task_kind": "spec",
+      "title": "Documentar SEO e proveniencia TabNews",
+      "description": "Definir canonical, origem TabNews, notas de duplicidade, sitemap/RSS e politica de proveniencia para os posts migrados do TabNews.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-MIGRATE-001"
+      ],
+      "targets": [
+        "docs/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-TABNEWS-SEO-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-spec",
+      "started_at": "2026-07-12T18:52:59Z",
+      "verification": {
+        "checks": [
+          "validacao local rows=10 hasCanonical=true noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:53:09Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-QA-001",
+      "task_kind": "qa",
+      "title": "Validar migracao dos posts TabNews",
+      "description": "Validar completude, pares PT/EN, build, auditoria publica, RSS, sitemap, canonical, hreflang e ausencia de dados privados no lote TabNews.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-I18N-001",
+        "SITE-BLOG-TABNEWS-SEO-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-TABNEWS-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T18:53:57Z",
+      "verification": {
+        "checks": [
+          "npm test; pt=31 en=31 tabPt=10 tabEn=10 missing=[] noHome=true distFiles=82 hasGrok=true hasEnGrok=true hasRss=true hasSitemap=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:56:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar posts TabNews no GitHub Pages",
+      "description": "Publicar o lote TabNews aprovado, verificar workflow GitHub Pages e rotas HTTPS publicas, registrando recibo final.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-QA-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-TABNEWS-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T18:57:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-SEO-DOC-FIX-001",
+      "task_kind": "spec",
+      "title": "Sanitizar literal de caminho local no documento SEO TabNews",
+      "description": "Remover o literal /home/ do documento de SEO TabNews para evitar falso positivo em auditorias textuais do repositorio, mantendo a intencao da regra.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-SEO-001"
+      ],
+      "targets": [
+        "docs/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-TABNEWS-SEO-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-spec",
+      "started_at": "2026-07-12T18:53:26Z",
+      "verification": {
+        "checks": [
+          "validacao local rows=10 hasCanonical=true noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:53:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-PRIVACY-FIX-001",
+      "task_kind": "impl",
+      "title": "Sanitizar literal conversation-esaa no post TabNews",
+      "description": "Remover literal bloqueado .conversation-esaa do post TabNews sobre Grok Build para respeitar a auditoria publica fail-closed, preservando o sentido editorial.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-MIGRATE-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/como-o-grok-build-me-ajudou-a-usar-o-linux-de-verdade.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:54:34Z",
+      "verification": {
+        "checks": [
+          "npm run build && npm run audit:public passou; rg nao encontrou .roadmap, .conversation-esaa ou activity.jsonl em src/content/posts"
+        ]
+      },
+      "completed_at": "2026-07-12T18:55:46Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 27
+      "done": 34,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 17,
-      "qa": 7,
-      "spec": 3
+      "impl": 20,
+      "qa": 9,
+      "spec": 6
     }
   }
 }

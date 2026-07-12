@@ -1,0 +1,13 @@
+{
+  "after_sha256": "a0f6b46e529f5a85e705d55bf761aabab38ea52062c9a16cd80560fe14011d3f",
+  "artifact_id": "ART-a0f6b46e529f5a85e705d55bf761aabab38ea52062c9a16cd80560fe14011d3f",
+  "artifact_sha256": "0a564ffacad85752c25aa16641f2989f307c8d84475a7df06f08f16cca61e847",
+  "before_sha256": "a0f6b46e529f5a85e705d55bf761aabab38ea52062c9a16cd80560fe14011d3f",
+  "bytes": 1384,
+  "content": "---\ntitle: \"When TRACE logs become constant SSD writes\"\ndescription: \"A curated English edition about noticing operational side effects from verbose tracing and protecting local hardware.\"\npublished: 2026-06-23\nlocale: en\ntranslation: quando-logs-trace-viram-escrita-constante-no-ssd\ntags: [\"Linux\", \"operations\", \"AI agents\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2026-06-23. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe post turns a small operational symptom into a useful engineering lesson: logs are not free. TRACE-level output can become continuous disk activity, especially when agents and watchers run for long periods.\n\nThe migration preserves the practical warning: observability should be proportional to the task, and local automation needs defaults that do not punish the machine.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/quando-logs-trace-viram-escrita-constante-no-ssd/](/blog/quando-logs-trace-viram-escrita-constante-no-ssd/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/when-trace-logs-become-constant-ssd-writes.md",
+  "source_path": "src/content/posts/en/when-trace-logs-become-constant-ssd-writes.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

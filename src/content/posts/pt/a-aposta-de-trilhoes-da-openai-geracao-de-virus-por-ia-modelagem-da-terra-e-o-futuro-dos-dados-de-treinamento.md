@@ -1,0 +1,43 @@
+---
+title: "A Aposta de Trilhões da OpenAI, Geração de Vírus por IA, Modelagem da Terra e o Futuro dos Dados de Treinamento"
+description: "A inteligência artificial continua a moldar nosso mundo em um ritmo vertiginoso, e as inovações recentes destacam tanto o vasto potencial quanto os desafios inerentes a essa tecnologia. Desde investimentos m..."
+published: 2025-10-02
+locale: pt
+translation: openai-trillion-dollar-bet-ai-virus-generation-earth-modeling-training-data
+tags: ["Conversation ESAA", "IA"]
+featured: false
+---
+
+A inteligência artificial continua a moldar nosso mundo em um ritmo vertiginoso, e as inovações recentes destacam tanto o vasto potencial quanto os desafios inerentes a essa tecnologia. Desde investimentos massivos em infraestrutura até avanços na biotecnologia e na observação planetária, a IA está redefinindo o que é possível.A Gigantesca Aposta da OpenAI em Infraestrutura de IA
+
+A OpenAI está embarcando em um empreendimento colossal, com planos que podem totalizar trilhões de dólares em capacidade computacional global. Em parceria com Oracle e SoftBank, o projeto "Stargate" prevê a construção de 20 data centers ao longo de quatro anos, com um custo inicial de US$ 500 bilhões. Anúncios recentes revelaram cinco novos locais nos Estados Unidos, com um investimento de US$ 400 bilhões, além do lançamento do Stargate UK, uma colaboração com a Nvidia e a Nscale para construir infraestrutura de IA na Inglaterra.
+
+A visão da OpenAI é ambiciosa: eles preveem uma demanda global de até 100 gigawatts de capacidade, o que poderia elevar o investimento total para impressionantes US$ 5 trilhões – um valor comparável ao Produto Interno Bruto da Alemanha. Essa expansão massiva não é isenta de riscos, com analistas expressando preocupações sobre a sustentabilidade financeira se a demanda por IA não acompanhar o ritmo. No entanto, o CEO da OpenAI, Sam Altman, acredita que os vencedores colherão recompensas ainda maiores, e até agora, as apostas da empresa têm se mostrado lucrativas.
+
+Esse cenário de investimento bilionário reflete a corrida armamentista da IA, com gigantes como Alphabet, Amazon, Meta e Microsoft planejando gastar mais de US$ 325 bilhões em data centers este ano. Os riscos são proporcionais aos investimentos, envolvendo balanços corporativos, investidores, governos e até mesmo provedores de energia e comunidades locais, que precisam equilibrar prosperidade e impactos ambientais. A visão otimista é que o valor da IA continuará a crescer, os custos diminuirão, os benefícios sociais se espalharão e o uso de energia se tornará mais eficiente à medida que os modelos de IA produzirem resultados de maior qualidade.IA na Biotecnologia: Gerando Genomas Virais para Combater Infecções
+
+Em um avanço notável na biotecnologia, pesquisadores estão utilizando modelos de IA para criar vírus inéditos do zero. Samuel King e sua equipe no Arc Institute, Stanford University e Memorial Sloan Kettering Cancer Center, empregaram arquiteturas de modelos semelhantes a transformers, treinadas em sequências de DNA em vez de texto, para sintetizar vírus que combatem infecções bacterianas comuns.
+
+A chave para essa inovação reside nos "modelos de linguagem genômica", que podem gerar sequências de DNA. Ao ajustar esses modelos em genomas de famílias de vírus, eles podem produzir sequências mais longas e completas. Os pesquisadores geraram 11.000 genomas candidatos, filtraram os mais promissores e sintetizaram 285 deles. Testes com um coquetel de 16 vírus sintéticos demonstraram sua eficácia contra cepas bacterianas resistentes, com alguns vírus sintéticos superando significativamente seus equivalentes naturais em replicação e eliminação bacteriana.
+
+Este trabalho representa um salto da engenharia genômica tradicional, que geralmente modifica genomas existentes, para o design de novos genomas. As implicações para a medicina são enormes, oferecendo uma nova abordagem para a terapia com bacteriófagos como alternativa aos antibióticos, especialmente diante do crescente problema da resistência bacteriana. Contudo, a capacidade de criar novos vírus levanta preocupações éticas e de segurança, ressaltando a importância de pesquisas paralelas em resposta a ameaças biológicas.Modelagem da Terra em Detalhes Sem Precedentes com AlphaEarth Foundations
+
+Pesquisadores do Google desenvolveram o AlphaEarth Foundations (AEF), um modelo que integra imagens de satélite e outras leituras de sensores em toda a superfície da Terra. O AEF produz "embeddings" que representam cada ponto de 10 metros quadrados no globo para cada ano entre 2017 e 2024. Esses embeddings são ferramentas poderosas para rastrear características planetárias como umidade, precipitação e vegetação, e desafios globais como produção de alimentos, risco de incêndios florestais e níveis de reservatórios.
+
+O modelo foi treinado com três tipos de dados de satélite – vídeos ópticos, de radar e térmicos – e otimizado com quatro termos de perda para garantir a precisão e a utilidade dos embeddings. O AEF superou significativamente outras abordagens em diversas tarefas, como classificação de culturas, detecção de mudanças ambientais e estimativa da quantidade de água transferida da terra para a atmosfera.
+
+A capacidade do AEF de integrar dados fragmentados de satélites em um conjunto abrangente de embeddings, com uma resolução de 10x10 metros, oferece insights sem precedentes sobre fenômenos ambientais em pequena escala e o rastreamento de mudanças ao longo do tempo. Este projeto demonstra como a IA pode ser aplicada para entender e monitorar nosso planeta em uma escala global, com o potencial de impactar diretamente a forma como abordamos desafios climáticos e ambientais.O Desafio da Atribuição e Remuneração na Música Gerada por IA
+
+À medida que a IA avança na geração de conteúdo criativo, surgem questões complexas sobre direitos autorais e remuneração. Na indústria da música, a organização sueca STIM, que coleta royalties para mais de 100.000 compositores e artistas, desenvolveu uma licença inovadora para o uso de obras musicais no treinamento de modelos de IA.
+
+Em parceria com a startup sueca Sureel, que oferece tecnologia para calcular a influência de um exemplo de treinamento na saída de um modelo, e a Songfox, uma startup de geração de música, a STIM busca criar um ecossistema onde desenvolvedores de IA possam usar música legalmente, compensando editores de gravações e composições. A licença permite copiar gravações e suas composições subjacentes para treinar uma versão de um modelo, com licenças adicionais necessárias para versões futuras.
+
+No entanto, a adesão a essa licença exige a integração da tecnologia de atribuição da Sureel no processo de treinamento do modelo, o que a torna inviável para empresas de geração de música que já treinaram seus modelos sem essa ferramenta. A incerteza jurídica em torno do uso de obras protegidas por direitos autorais no treinamento de IA persiste, com processos judiciais em andamento e leis ainda em evolução. A licença da STIM é um esforço inicial para encontrar um equilíbrio entre a inovação da IA e a proteção dos direitos dos criadores, visando mitigar riscos legais para desenvolvedores de IA e incentivar a produção contínua de novas obras.
+A inteligência artificial não é apenas uma ferramenta; é uma força transformadora que está remodelando indústrias, redefinindo a pesquisa científica e levantando novas questões éticas e sociais. Os desenvolvimentos recentes nos mostram um futuro onde a IA é um pilar central para o progresso, mas também nos lembram da responsabilidade que temos em guiar seu desenvolvimento de forma consciente e benéfica para todos. Qual desses avanços mais te intrigou? Deixe seu comentário abaixo!
+
+## Nota de migracao
+
+Este artigo foi migrado do TabNews em 2026-07-12 para compor o acervo publico do hub. A data original foi preservada e a fonte segue registrada abaixo. Conteudos sobre ferramentas, modelos, seguranca e infraestrutura podem envelhecer; valide referencias atuais antes de usar como decisao operacional.
+
+Fonte original: https://www.tabnews.com.br/elzobrito/a-aposta-de-trilhoes-da-openai-geracao-de-virus-por-ia-modelagem-da-terra-e-o-futuro-dos-dados-de-treinamento
+

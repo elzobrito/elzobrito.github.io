@@ -1,0 +1,13 @@
+{
+  "after_sha256": "cf390811666fe653b406c707e8fa5b032f50a9ada084452eb8aed39f592d2292",
+  "artifact_id": "ART-cf390811666fe653b406c707e8fa5b032f50a9ada084452eb8aed39f592d2292",
+  "artifact_sha256": "9d39956fb6b28df88c6ebe0a32c5506117f4f41818021c1fe2572990a5244270",
+  "before_sha256": "cf390811666fe653b406c707e8fa5b032f50a9ada084452eb8aed39f592d2292",
+  "bytes": 1476,
+  "content": "---\ntitle: \"ESAA three months later: what happened when others started implementing it\"\ndescription: \"A curated English edition about the transition from a personal protocol to implementations by other people.\"\npublished: 2026-06-13\nlocale: en\ntranslation: esaa-3-meses-depois-o-que-aconteceu-quando-outras-pessoas-comecaram-a-implementar\ntags: [\"ESAA\", \"AI agents\", \"governance\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2026-06-13. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe article reflects on what changes when ESAA leaves the author’s own machine and becomes something other people can implement, question, and extend.\n\nThat shift matters because governance protocols are tested socially as much as technically. The moment others build from the idea, the protocol needs clearer language, boundaries, and examples.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/esaa-3-meses-depois-o-que-aconteceu-quando-outras-pessoas-comecaram-a-implementar/](/blog/esaa-3-meses-depois-o-que-aconteceu-quando-outras-pessoas-comecaram-a-implementar/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/esaa-three-months-later-what-happened-when-others-started-implementing.md",
+  "source_path": "src/content/posts/en/esaa-three-months-later-what-happened-when-others-started-implementing.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

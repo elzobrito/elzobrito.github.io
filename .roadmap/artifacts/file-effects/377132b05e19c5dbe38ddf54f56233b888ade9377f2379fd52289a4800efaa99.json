@@ -1,0 +1,13 @@
+{
+  "after_sha256": "24978514bd2759fcee81613740fd26c226ab2e51cfec0d0807269d496764312b",
+  "artifact_id": "ART-24978514bd2759fcee81613740fd26c226ab2e51cfec0d0807269d496764312b",
+  "artifact_sha256": "377132b05e19c5dbe38ddf54f56233b888ade9377f2379fd52289a4800efaa99",
+  "before_sha256": "24978514bd2759fcee81613740fd26c226ab2e51cfec0d0807269d496764312b",
+  "bytes": 1344,
+  "content": "---\ntitle: \"The AI revolution: from Hollywood stages to cancer treatment\"\ndescription: \"A curated English edition of a broad AI analysis post connecting media, science, and applied research.\"\npublished: 2025-10-02\nlocale: en\ntranslation: a-revolucao-da-ia-do-palco-de-hollywood-a-cura-do-cancer\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2025-10-02. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe original article reads AI through contrasting domains: entertainment, image and video generation, scientific discovery, and medical applications.\n\nThe useful thread is scope. AI is not one market or one tool; it is a family of capabilities moving through very different institutions at different speeds.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/a-revolucao-da-ia-do-palco-de-hollywood-a-cura-do-cancer/](/blog/a-revolucao-da-ia-do-palco-de-hollywood-a-cura-do-cancer/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/ai-revolution-from-hollywood-stage-to-cancer-treatment.md",
+  "source_path": "src/content/posts/en/ai-revolution-from-hollywood-stage-to-cancer-treatment.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

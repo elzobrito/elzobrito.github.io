@@ -1,0 +1,13 @@
+{
+  "after_sha256": "3a9f74838cff82f337159c59926cb70fb1518f016be67a009b3ffb8e189bd483",
+  "artifact_id": "ART-3a9f74838cff82f337159c59926cb70fb1518f016be67a009b3ffb8e189bd483",
+  "artifact_sha256": "3f50d534834374884b6c32bb000370f8c22d58223b8c61c1c56c8e57aa02d8b3",
+  "before_sha256": "3a9f74838cff82f337159c59926cb70fb1518f016be67a009b3ffb8e189bd483",
+  "bytes": 1431,
+  "content": "---\ntitle: \"The accelerating rhythm of AI: from quantum atoms to social video and work\"\ndescription: \"A curated English edition of an AI radar article about scientific, social, and workplace acceleration.\"\npublished: 2025-10-01\nlocale: en\ntranslation: o-ritmo-acelerado-da-ia-de-atomos-quanticos-a-videos-sociais-e-o-futuro-do-trabalho\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2025-10-01. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe original article observes AI moving across scales: scientific modeling, social video, and the future of labor.\n\nThe migration preserves it as a snapshot of acceleration. The exact examples may age, but the pattern remains useful: capability moves faster than institutions can comfortably absorb.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/o-ritmo-acelerado-da-ia-de-atomos-quanticos-a-videos-sociais-e-o-futuro-do-trabalho/](/blog/o-ritmo-acelerado-da-ia-de-atomos-quanticos-a-videos-sociais-e-o-futuro-do-trabalho/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/accelerating-ai-from-quantum-atoms-to-social-video-and-work.md",
+  "source_path": "src/content/posts/en/accelerating-ai-from-quantum-atoms-to-social-video-and-work.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

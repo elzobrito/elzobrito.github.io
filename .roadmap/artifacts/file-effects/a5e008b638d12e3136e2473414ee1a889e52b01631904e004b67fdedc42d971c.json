@@ -1,0 +1,13 @@
+{
+  "after_sha256": "85aac2dce1515249e52d417f3c3e4046e8853e52c25a5bdcbbe025d6b47b415a",
+  "artifact_id": "ART-85aac2dce1515249e52d417f3c3e4046e8853e52c25a5bdcbbe025d6b47b415a",
+  "artifact_sha256": "a5e008b638d12e3136e2473414ee1a889e52b01631904e004b67fdedc42d971c",
+  "before_sha256": "85aac2dce1515249e52d417f3c3e4046e8853e52c25a5bdcbbe025d6b47b415a",
+  "bytes": 1440,
+  "content": "---\ntitle: \"Stop asking AI to find bugs: meet ESAA-Security\"\ndescription: \"A curated English edition introducing ESAA-Security as a governed alternative to vague AI bug hunting.\"\npublished: 2026-06-24\nlocale: en\ntranslation: pare-de-pedir-para-a-ia-achar-bugs-no-seu-projeto-conheca-o-esaa-security\ntags: [\"ESAA\", \"AI agents\", \"governance\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2026-06-24. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe original post argues that asking a model to \"find bugs\" is too loose for serious security work. ESAA-Security reframes the job as a governed process with scope, evidence, boundaries, review, and reproducible findings.\n\nThe important distinction is between intuition and auditability. A useful security agent should leave a trail that another reviewer can inspect.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/pare-de-pedir-para-a-ia-achar-bugs-no-seu-projeto-conheca-o-esaa-security/](/blog/pare-de-pedir-para-a-ia-achar-bugs-no-seu-projeto-conheca-o-esaa-security/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/stop-asking-ai-to-find-bugs-meet-esaa-security.md",
+  "source_path": "src/content/posts/en/stop-asking-ai-to-find-bugs-meet-esaa-security.md",
+  "ts": "2026-07-12T18:52:36Z"
+}

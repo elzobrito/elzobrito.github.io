@@ -1,0 +1,13 @@
+{
+  "after_sha256": "ac97cff6f4ce8304e4b76a09f6e82f0b0064fdbcdb7ddc3e692a52488891cb54",
+  "artifact_id": "ART-ac97cff6f4ce8304e4b76a09f6e82f0b0064fdbcdb7ddc3e692a52488891cb54",
+  "artifact_sha256": "01b4ae1beb39d6bd2d9275870d93dcc00bcc2e7fc8fb5081434a6a9bbab54015",
+  "before_sha256": "ac97cff6f4ce8304e4b76a09f6e82f0b0064fdbcdb7ddc3e692a52488891cb54",
+  "bytes": 1516,
+  "content": "---\ntitle: \"Stop letting LLMs edit code directly: meet the ESAA architecture\"\ndescription: \"A curated English edition explaining ESAA as Event Sourcing for autonomous agents.\"\npublished: 2026-02-28\nlocale: en\ntranslation: pare-de-deixar-llms-editarem-seu-codigo-direto-conheca-a-arquitetura-esaa-event-sourcing-para-agentes-autonomos\ntags: [\"ESAA\", \"AI agents\", \"governance\"]\nfeatured: false\n---\n\nThis is a curated English edition of a public TabNews article originally published on 2026-02-28. It preserves the public argument and editorial intent while avoiding private operational details and unsupported new claims.\n\n## Core idea\n\nThe original post makes the central ESAA argument: agents should emit intentions into a governed workflow rather than mutate code directly without an auditable trail.\n\nEvent sourcing gives the process memory. The code changes matter, but so do claims, evidence, review, and the sequence of decisions that made the change legitimate.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of public TabNews posts into the GitHub Pages hub. Technical, security, legal, model, and market references can age quickly; verify current sources before using the article as operational guidance.\n\nPortuguese source article: [/blog/pare-de-deixar-llms-editarem-seu-codigo-direto-conheca-a-arquitetura-esaa-event-sourcing-para-agentes-autonomos/](/blog/pare-de-deixar-llms-editarem-seu-codigo-direto-conheca-a-arquitetura-esaa-event-sourcing-para-agentes-autonomos/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/stop-letting-llms-edit-code-directly-meet-esaa-architecture.md",
+  "source_path": "src/content/posts/en/stop-letting-llms-edit-code-directly-meet-esaa-architecture.md",
+  "ts": "2026-07-12T18:52:36Z"
+}
