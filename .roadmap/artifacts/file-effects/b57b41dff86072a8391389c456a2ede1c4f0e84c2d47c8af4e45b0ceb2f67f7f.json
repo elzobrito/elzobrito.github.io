@@ -1,0 +1,13 @@
+{
+  "after_sha256": "56f96b7c7f6b4503d02ab88942234c3ed53a426bb070dc816bd260ee73e71ea1",
+  "artifact_id": "ART-56f96b7c7f6b4503d02ab88942234c3ed53a426bb070dc816bd260ee73e71ea1",
+  "artifact_sha256": "b57b41dff86072a8391389c456a2ede1c4f0e84c2d47c8af4e45b0ceb2f67f7f",
+  "before_sha256": "56f96b7c7f6b4503d02ab88942234c3ed53a426bb070dc816bd260ee73e71ea1",
+  "bytes": 1363,
+  "content": "---\ntitle: \"Understanding hallucinations in large language models\"\ndescription: \"A concise English translation about why language models can produce confident but false answers.\"\npublished: 2023-09-15\nlocale: en\ntranslation: entendendo-alucinacoes-em-grandes-modelos-de-linguagem\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2023-09-15. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe article explains hallucination as a predictable failure mode of systems trained to produce plausible language rather than guaranteed truth.\n\nThe operational lesson is simple and stubborn: use retrieval, evidence, tests, and review when factual accuracy matters. Confidence is not provenance.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/entendendo-alucinacoes-em-grandes-modelos-de-linguagem/](/blog/entendendo-alucinacoes-em-grandes-modelos-de-linguagem/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/understanding-hallucinations-in-large-language-models.md",
+  "source_path": "src/content/posts/en/understanding-hallucinations-in-large-language-models.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "68b8435f9678092002bac762f4ba40fa8c4a1a35b47badbca9e2874fd2a0adbd",
+  "artifact_id": "ART-68b8435f9678092002bac762f4ba40fa8c4a1a35b47badbca9e2874fd2a0adbd",
+  "artifact_sha256": "2bb2b3512638e41e5a584bb4f595f18e5cb14f3c8e5b05f7e91f2f2a24a5ffa1",
+  "before_sha256": "68b8435f9678092002bac762f4ba40fa8c4a1a35b47badbca9e2874fd2a0adbd",
+  "bytes": 1889,
+  "content": "---\ntitle: \"OpenAI para Países: Um Grande Passo na Direção Certa!\"\ndescription: \"Olá, leitores! Hoje é segunda-feira, o começo da semana, e vamos direto ao assunto: OpenAI para países – um grande passo na direção certa. Além disso, vamos explorar como a IA está influenciando o mercado fi...\"\npublished: 2025-05-12\nlocale: pt\ntranslation: openai-for-countries-a-step-in-the-right-direction\ntags: [\"Inteligência Artificial\", \"IA\"]\nfeatured: false\n---\n\nOlá, leitores!\n\nHoje é segunda-feira, o começo da semana, e vamos direto ao assunto: OpenAI para países – um grande passo na direção certa. Além disso, vamos explorar como a IA está influenciando o mercado financeiro e quais mudanças podemos esperar no futuro.\n\nNesta edição:\n\nDentro do Plano Ousado da OpenAI para\n\nVisão geral do Business Insider – Wall Street Escala Gen-AI\n\nUma análise recente da BI mostra como os bancos, fundos de cobertura e empresas de private equity estão a escalar a IA generativa de ferramentas pontuais para plataformas empresariais: A JPMorgan está a orçamentar 17 mil milhões de dólares, a Goldman está a lançar assistentes de chat e a Point72 está a automatizar rotinas de analistas. A mudança do teste para a automatização de processos está a mudar as fontes de margem do capital humano para o capital de dados. A queda dos custos laborais, o aumento do capex da GPU e os novos riscos regulamentares e cibernéticos estão a mudar estruturalmente os modelos de avaliação.\n\nEspero que tenham gostado do resumo das novidades de hoje!\n\n## Nota de migracao\n\nEste artigo foi migrado do blog legado em 2026-07-12 para compor o acervo publico do hub. A data original foi preservada e o texto pode receber revisoes editoriais futuras para atualizar referencias tecnicas.\n\nFonte original: https://blog.elzobrito.com/openai-para-paises-um-grande-passo-na-direcao-certa/\n\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/pt/openai-para-paises-um-grande-passo-na-direcao-certa.md",
+  "source_path": "src/content/posts/pt/openai-para-paises-um-grande-passo-na-direcao-certa.md",
+  "ts": "2026-07-12T18:02:45Z"
+}

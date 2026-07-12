@@ -1,0 +1,13 @@
+{
+  "after_sha256": "5b88569eef0ce26d03d3752af59936a8d77d674355dc97bf192667d8b85a8e71",
+  "artifact_id": "ART-5b88569eef0ce26d03d3752af59936a8d77d674355dc97bf192667d8b85a8e71",
+  "artifact_sha256": "e6eb6ebc4841eff251dc952c6b290932adca0b1147142daad00b3615e9080bd7",
+  "before_sha256": "5b88569eef0ce26d03d3752af59936a8d77d674355dc97bf192667d8b85a8e71",
+  "bytes": 1583,
+  "content": "---\ntitle: \"Building a hybrid Excel chat with Ollama and GPT-4o mini\"\ndescription: \"A migrated implementation note on combining offline and online models for spreadsheet workflows.\"\npublished: 2025-05-16\nlocale: en\ntranslation: construindo-um-chat-com-excel-hibrido-ollama-off-line-ou-gpt-4o-mini-on-line-velocidade-custo-e-codigo-em-um-so-lugar\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-05-16. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe article explores a pragmatic architecture: use a local model when privacy, cost, or availability matter, and an online model when quality or speed justifies the call.\n\nThe useful pattern is not tied to Excel alone. Hybrid AI systems should make the routing decision explicit, measurable, and understandable to the user.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/construindo-um-chat-com-excel-hibrido-ollama-off-line-ou-gpt-4o-mini-on-line-velocidade-custo-e-codigo-em-um-so-lugar/](/blog/construindo-um-chat-com-excel-hibrido-ollama-off-line-ou-gpt-4o-mini-on-line-velocidade-custo-e-codigo-em-um-so-lugar/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/building-a-hybrid-excel-chat-with-ollama-and-gpt-4o-mini.md",
+  "source_path": "src/content/posts/en/building-a-hybrid-excel-chat-with-ollama-and-gpt-4o-mini.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

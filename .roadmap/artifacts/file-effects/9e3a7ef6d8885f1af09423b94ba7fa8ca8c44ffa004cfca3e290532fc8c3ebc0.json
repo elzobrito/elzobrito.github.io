@@ -1,0 +1,13 @@
+{
+  "after_sha256": "aecfa9f13e8d21856126587ee3641e7ce863d649a76eae280bcf7064cf58db86",
+  "artifact_id": "ART-aecfa9f13e8d21856126587ee3641e7ce863d649a76eae280bcf7064cf58db86",
+  "artifact_sha256": "9e3a7ef6d8885f1af09423b94ba7fa8ca8c44ffa004cfca3e290532fc8c3ebc0",
+  "before_sha256": "aecfa9f13e8d21856126587ee3641e7ce863d649a76eae280bcf7064cf58db86",
+  "bytes": 1538,
+  "content": "---\ntitle: \"The context window explained: short-term and long-term memory\"\ndescription: \"An English adaptation of the article explaining context windows and memory in ChatGPT-style systems.\"\npublished: 2025-04-30\nlocale: en\ntranslation: a-janela-de-contexto-explicada-como-chatgpt-usa-memoria-de-curto-e-longo-prazo-para-ser-brilhante-2\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-04-30. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe article separates two ideas that users often mix: what the model can see in the current context and what a product may persist as longer-term memory.\n\nThat distinction matters because many failures are not intelligence failures. They are missing-context failures, stale-memory failures, or unclear-instruction failures.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/a-janela-de-contexto-explicada-como-chatgpt-usa-memoria-de-curto-e-longo-prazo-para-ser-brilhante-2/](/blog/a-janela-de-contexto-explicada-como-chatgpt-usa-memoria-de-curto-e-longo-prazo-para-ser-brilhante-2/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/context-window-explained-chatgpt-short-and-long-term-memory.md",
+  "source_path": "src/content/posts/en/context-window-explained-chatgpt-short-and-long-term-memory.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

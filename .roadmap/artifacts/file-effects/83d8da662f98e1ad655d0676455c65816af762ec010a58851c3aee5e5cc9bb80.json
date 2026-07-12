@@ -1,0 +1,13 @@
+{
+  "after_sha256": "dece41066f39d6497f9e8f979c4fc525116ba5b1923707db0671df0cdcbf71eb",
+  "artifact_id": "ART-dece41066f39d6497f9e8f979c4fc525116ba5b1923707db0671df0cdcbf71eb",
+  "artifact_sha256": "83d8da662f98e1ad655d0676455c65816af762ec010a58851c3aee5e5cc9bb80",
+  "before_sha256": "dece41066f39d6497f9e8f979c4fc525116ba5b1923707db0671df0cdcbf71eb",
+  "bytes": 1359,
+  "content": "---\ntitle: \"The rise of AI agents: from tools to teammates\"\ndescription: \"A migrated English edition on AI agents as collaborators inside work systems.\"\npublished: 2026-01-27\nlocale: en\ntranslation: a-ascensao-imparavel-dos-agentes-de-ia-de-ferramentas-a-colegas-de-equipe\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2026-01-27. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe original post tracks the shift from single-turn tools to agents that participate in longer workflows.\n\nThe useful framing is teammate, not oracle. A teammate needs role clarity, task state, coordination, and review. Without those, autonomy becomes theater.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/a-ascensao-imparavel-dos-agentes-de-ia-de-ferramentas-a-colegas-de-equipe/](/blog/a-ascensao-imparavel-dos-agentes-de-ia-de-ferramentas-a-colegas-de-equipe/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/rise-of-ai-agents-from-tools-to-teammates.md",
+  "source_path": "src/content/posts/en/rise-of-ai-agents-from-tools-to-teammates.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

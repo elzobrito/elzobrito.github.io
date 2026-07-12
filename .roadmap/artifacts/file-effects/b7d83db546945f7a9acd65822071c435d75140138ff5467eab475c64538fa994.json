@@ -1,0 +1,13 @@
+{
+  "after_sha256": "52e413a62a5aeb348eab546cfe6ab9064e3fa7ddcaf4148fed8c6fb9de5a1210",
+  "artifact_id": "ART-52e413a62a5aeb348eab546cfe6ab9064e3fa7ddcaf4148fed8c6fb9de5a1210",
+  "artifact_sha256": "b7d83db546945f7a9acd65822071c435d75140138ff5467eab475c64538fa994",
+  "before_sha256": "52e413a62a5aeb348eab546cfe6ab9064e3fa7ddcaf4148fed8c6fb9de5a1210",
+  "bytes": 1429,
+  "content": "---\ntitle: \"Ollama on Windows: installation, usage, and configuration\"\ndescription: \"A migrated technical guide for running local models with Ollama on Windows.\"\npublished: 2025-05-05\nlocale: en\ntranslation: ollama-no-windows-guia-completo-de-instalacao-uso-e-configuracao\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-05-05. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThis article belongs to the practical side of the archive: installing, configuring, and using local AI models without treating the cloud as the only path.\n\nThe strategic value is sovereignty. Local models can reduce latency, cost, and data exposure, but they also require clearer expectations about hardware, model quality, and operational support.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/ollama-no-windows-guia-completo-de-instalacao-uso-e-configuracao/](/blog/ollama-no-windows-guia-completo-de-instalacao-uso-e-configuracao/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/ollama-on-windows-installation-and-configuration-guide.md",
+  "source_path": "src/content/posts/en/ollama-on-windows-installation-and-configuration-guide.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

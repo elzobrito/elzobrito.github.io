@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f4a1601db0c4883c01cb473fe2f6456402f9c4e08f11ff9288a163d731fa4cfc",
+  "artifact_id": "ART-f4a1601db0c4883c01cb473fe2f6456402f9c4e08f11ff9288a163d731fa4cfc",
+  "artifact_sha256": "428b57288a172ebcd543fcce2cab1691a4579fb572e2836d8e435def215fab37",
+  "before_sha256": "f4a1601db0c4883c01cb473fe2f6456402f9c4e08f11ff9288a163d731fa4cfc",
+  "bytes": 1698,
+  "content": "---\ntitle: \"The four waves of artificial intelligence\"\ndescription: \"A long-form reflection on the cognitive and economic waves that shaped artificial intelligence and its next phase.\"\npublished: 2025-04-22\nlocale: en\ntranslation: as-quatro-ondas-da-inteligencia-artificial-uma-analise-profunda-do-passado-presente-e-futuro-cognitivo-e-economico\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-04-22. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe original essay reads AI as a sequence of waves rather than a single sudden arrival. This edition keeps that frame: each wave changes what machines can do, what people expect, and how organizations redistribute work.\n\nFor ESAA and the hub, the article matters because it connects technical progress with governance. When capability accelerates, evidence, review, and operational memory become part of the product rather than an afterthought.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/as-quatro-ondas-da-inteligencia-artificial-uma-analise-profunda-do-passado-presente-e-futuro-cognitivo-e-economico/](/blog/as-quatro-ondas-da-inteligencia-artificial-uma-analise-profunda-do-passado-presente-e-futuro-cognitivo-e-economico/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/four-waves-of-artificial-intelligence.md",
+  "source_path": "src/content/posts/en/four-waves-of-artificial-intelligence.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

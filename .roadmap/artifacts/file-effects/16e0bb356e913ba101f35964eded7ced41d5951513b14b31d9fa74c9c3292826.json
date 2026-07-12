@@ -1,0 +1,13 @@
+{
+  "after_sha256": "e21dd53174fae9701791e59d3ef48c13052030649ade20b087651603362fe7a5",
+  "artifact_id": "ART-e21dd53174fae9701791e59d3ef48c13052030649ade20b087651603362fe7a5",
+  "artifact_sha256": "16e0bb356e913ba101f35964eded7ced41d5951513b14b31d9fa74c9c3292826",
+  "before_sha256": "e21dd53174fae9701791e59d3ef48c13052030649ade20b087651603362fe7a5",
+  "bytes": 1407,
+  "content": "---\ntitle: \"Running ChatGPT-like models locally without internet\"\ndescription: \"A legacy technical note on local language-model execution and offline experimentation.\"\npublished: 2023-07-07\nlocale: en\ntranslation: executando-o-chatgpt-em-uma-maquina-local-sem-necessidade-de-internet\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2023-07-07. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe original article predates much of today’s local-model tooling, but the core idea remains useful: experimenting locally changes the privacy, cost, and dependency profile of AI work.\n\nThe migrated version preserves that historical signal while treating model names and setup details as time-sensitive.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/executando-o-chatgpt-em-uma-maquina-local-sem-necessidade-de-internet/](/blog/executando-o-chatgpt-em-uma-maquina-local-sem-necessidade-de-internet/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/running-chatgpt-locally-without-internet.md",
+  "source_path": "src/content/posts/en/running-chatgpt-locally-without-internet.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

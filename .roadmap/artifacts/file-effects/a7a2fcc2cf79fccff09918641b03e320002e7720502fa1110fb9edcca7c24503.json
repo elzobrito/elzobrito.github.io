@@ -1,0 +1,13 @@
+{
+  "after_sha256": "cdcb88df1bddd784acb6908dc33d3602046699986634b1dfc054b7d211af3aae",
+  "artifact_id": "ART-cdcb88df1bddd784acb6908dc33d3602046699986634b1dfc054b7d211af3aae",
+  "artifact_sha256": "a7a2fcc2cf79fccff09918641b03e320002e7720502fa1110fb9edcca7c24503",
+  "before_sha256": "cdcb88df1bddd784acb6908dc33d3602046699986634b1dfc054b7d211af3aae",
+  "bytes": 1494,
+  "content": "---\ntitle: \"Lessons from Claude system-prompt leaks and ChatGPT override attempts\"\ndescription: \"An English edition about prompt exposure, instruction hierarchy, and the limits of prompt-only security.\"\npublished: 2025-05-11\nlocale: en\ntranslation: licoes-da-system-prompt-leak-do-claude-e-as-tentativas-de-override-no-chatgpt\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-05-11. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe original article uses public prompt-leak episodes to discuss how model instructions can be exposed, contested, or misunderstood by users.\n\nIts lasting point is architectural: prompts are not a security boundary by themselves. Sensitive behavior needs layered controls, narrow permissions, reviewable logs, and fail-closed design.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/licoes-da-system-prompt-leak-do-claude-e-as-tentativas-de-override-no-chatgpt/](/blog/licoes-da-system-prompt-leak-do-claude-e-as-tentativas-de-override-no-chatgpt/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/lessons-from-claude-system-prompt-leak-and-chatgpt-overrides.md",
+  "source_path": "src/content/posts/en/lessons-from-claude-system-prompt-leak-and-chatgpt-overrides.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

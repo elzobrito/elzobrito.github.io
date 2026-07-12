@@ -1,0 +1,13 @@
+{
+  "after_sha256": "10d2a5ed0909c4c977de0c4dfb0f4e5d40ea74ad24b10f49c8b3f17898f5eadd",
+  "artifact_id": "ART-10d2a5ed0909c4c977de0c4dfb0f4e5d40ea74ad24b10f49c8b3f17898f5eadd",
+  "artifact_sha256": "6e8f862b36b8beb73640c71a35cd07a1d77c665b669d1f087498c6b3a3d13b07",
+  "before_sha256": "10d2a5ed0909c4c977de0c4dfb0f4e5d40ea74ad24b10f49c8b3f17898f5eadd",
+  "bytes": 1362,
+  "content": "---\ntitle: \"PACER v1.1: a multiphase approach to prompt engineering\"\ndescription: \"An English edition of the PACER prompt-engineering framework article.\"\npublished: 2025-04-30\nlocale: en\ntranslation: pacer-v1-1-uma-abordagem-multi-fase-na-engenharia-de-prompt\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-04-30. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe migrated text presents prompt engineering as a process with phases, not a bag of clever phrases. That process orientation is the part worth preserving.\n\nA good prompt clarifies purpose, context, constraints, evaluation, and revision. The framework is valuable because it makes those elements visible.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/pacer-v1-1-uma-abordagem-multi-fase-na-engenharia-de-prompt/](/blog/pacer-v1-1-uma-abordagem-multi-fase-na-engenharia-de-prompt/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/pacer-v1-1-multiphase-prompt-engineering.md",
+  "source_path": "src/content/posts/en/pacer-v1-1-multiphase-prompt-engineering.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

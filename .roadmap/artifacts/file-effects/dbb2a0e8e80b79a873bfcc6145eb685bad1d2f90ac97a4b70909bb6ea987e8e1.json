@@ -1,0 +1,13 @@
+{
+  "after_sha256": "04372cfa51ace5737d489638859b6be9bb0438c38cc9675d0922293582234746",
+  "artifact_id": "ART-04372cfa51ace5737d489638859b6be9bb0438c38cc9675d0922293582234746",
+  "artifact_sha256": "dbb2a0e8e80b79a873bfcc6145eb685bad1d2f90ac97a4b70909bb6ea987e8e1",
+  "before_sha256": "04372cfa51ace5737d489638859b6be9bb0438c38cc9675d0922293582234746",
+  "bytes": 1523,
+  "content": "---\ntitle: \"The autonomous wave: from copilot to autopilot\"\ndescription: \"A concise English edition about AI moving from assistive copilots toward more autonomous workflows.\"\npublished: 2026-02-15\nlocale: en\ntranslation: a-onda-autonoma-por-que-a-ia-acabou-de-mudar-de-copiloto-para-piloto-automatico\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2026-02-15. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe original text captures a turning point in product language and user expectations: AI is no longer framed only as a helper beside the user, but as a system that can carry sequences of work.\n\nThat shift is powerful and risky. Autopilot-style systems need logs, checkpoints, rollback, and human review because the cost of an unobserved mistake grows with every step the system takes.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/a-onda-autonoma-por-que-a-ia-acabou-de-mudar-de-copiloto-para-piloto-automatico/](/blog/a-onda-autonoma-por-que-a-ia-acabou-de-mudar-de-copiloto-para-piloto-automatico/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/autonomous-wave-from-copilot-to-autopilot.md",
+  "source_path": "src/content/posts/en/autonomous-wave-from-copilot-to-autopilot.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

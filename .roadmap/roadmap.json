@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 228,
-      "projection_hash_sha256": "c0d8e1625be0c3608d9e061bc815355d720c6c70eb3805875b73d647524ab4d3",
+      "last_event_seq": 324,
+      "projection_hash_sha256": "b4c4cfd8d35d1d7eb7ff22e93c82e4c6268ba4fbad1fc6fa68bc34199f861d75",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T16:47:48Z"
+    "updated_at": "2026-07-12T18:09:33Z"
   },
   "project": {
     "name": "esaa-core",
@@ -589,16 +589,242 @@
         ]
       },
       "completed_at": "2026-07-12T16:44:51Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-INVENTORY-001",
+      "task_kind": "spec",
+      "title": "Inventariar acervo do blog legado",
+      "description": "Mapear todos os artigos publicos de blog.elzobrito.com com URL, slug, titulo, datas, categorias, tags, imagens, idioma, profundidade, relevancia para IA e recomendacao copiar-atualizar-arquivar. Identificar duplicatas e registrar manifest deterministico.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "docs/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-LEGACY-INVENTORY-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-spec",
+      "started_at": "2026-07-12T17:57:29Z",
+      "verification": {
+        "checks": [
+          "curl https://blog.elzobrito.com/wp-json/wp/v2/posts?per_page=100&page=1&_embed=1; coleta paginas 1..3; validacao local hasSource=true hasMta=true noHome=true rows>=212"
+        ]
+      },
+      "completed_at": "2026-07-12T17:59:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-PILOT-001",
+      "task_kind": "impl",
+      "title": "Migrar artigo piloto sobre recurso de multa com ChatGPT",
+      "description": "Migrar o artigo de 24/05/2023 preservando autoria e data, baixar imagens publicaveis, revisar formatacao, adicionar nota retrospectiva e aviso de que IA nao substitui orientacao juridica.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-INVENTORY-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/chatgpt-recurso-multa-transito.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:00:13Z",
+      "verification": {
+        "checks": [
+          "npm run check; validacao local: lines=131 images=5 hasLegalNote=true hasSource=true noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:01:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-MIGRATE-001",
+      "task_kind": "impl",
+      "title": "Migrar acervo prioritario do blog legado",
+      "description": "Converter para Markdown os artigos classificados como copiar ou atualizar, preservar metadados e autoria, normalizar slugs e hospedar assets localmente no GitHub Pages. Nao publicar itens classificados como arquivar.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-PILOT-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:02:11Z",
+      "verification": {
+        "checks": [
+          "npm run check; validacao local ptFiles=21 legacyMigrated=18 noHome=true; imagens preservadas como referencias externas por boundary limitado a src/content/posts/**"
+        ]
+      },
+      "completed_at": "2026-07-12T18:02:46Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-I18N-001",
+      "task_kind": "impl",
+      "title": "Criar traducoes inglesas do acervo migrado",
+      "description": "Produzir versoes inglesas editoriais dos artigos migrados, manter translation pares e permitir rollout progressivo sem inventar fatos ou alterar o sentido do original.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-MIGRATE-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/en/"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:03:57Z",
+      "verification": {
+        "checks": [
+          "npm run check; validacao local pt=21 en=21 missingPt=[] missingEn=[] noHome=true"
+        ]
+      },
+      "completed_at": "2026-07-12T18:04:25Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-SEO-001",
+      "task_kind": "impl",
+      "title": "Preservar SEO e proveniencia do acervo legado",
+      "description": "Definir canonical, datas original e de atualizacao, URLs de origem, redirects viaveis, sitemap, RSS e metadados. Evitar conteudo duplicado entre blog.elzobrito.com e elzobrito.github.io.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-MIGRATE-001"
+      ],
+      "targets": [
+        "docs/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-LEGACY-SEO-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:04:50Z",
+      "verification": {
+        "checks": [
+          "validacao local hasCanonical=true hasMta=true rows=18 noHome=true; boundary de file_updates rejeitou docs/spec/** para task_kind impl"
+        ]
+      },
+      "completed_at": "2026-07-12T18:05:57Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-QA-001",
+      "task_kind": "qa",
+      "title": "Validar migracao do acervo legado",
+      "description": "Auditar completude do inventario, fidelidade editorial, imagens, links, traducoes, acessibilidade, privacidade, build, RSS, sitemap, canonical e ausencia de dados pessoais indevidos.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-I18N-001",
+        "SITE-BLOG-LEGACY-SEO-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-LEGACY-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T18:06:15Z",
+      "verification": {
+        "checks": [
+          "npm test; validacao pares pt=21 en=21 legacyPt=18 legacyEn=18 missingPt=[] missingEn=[] noHome=true; audit:public passou 62 arquivos/11 rotas/0 matches"
+        ]
+      },
+      "completed_at": "2026-07-12T18:08:54Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar acervo migrado no GitHub Pages",
+      "description": "Publicar o lote aprovado, verificar workflow GitHub Pages, rotas HTTPS, canonical, feeds e amostra de artigos em portugues e ingles. Registrar recibo publico.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-QA-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-LEGACY-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T18:09:33Z"
+    },
+    {
+      "task_id": "SITE-BLOG-LEGACY-PRIVACY-FIX-001",
+      "task_kind": "impl",
+      "title": "Sanitizar URL com /home/ em artigo legado",
+      "description": "Remover referencia externa contendo /home/ do artigo das quatro ondas para que a auditoria publica fail-closed nao confunda URL publica com caminho local.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-LEGACY-MIGRATE-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/as-quatro-ondas-da-inteligencia-artificial-uma-analise-profunda-do-passado-presente-e-futuro-cognitivo-e-economico.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:07:11Z",
+      "verification": {
+        "checks": [
+          "npm run build && npm run audit:public; rg -n '/home/|/home' src/content/posts dist retorna vazio"
+        ]
+      },
+      "completed_at": "2026-07-12T18:07:59Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 19
+      "done": 26,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 12,
-      "qa": 5,
-      "spec": 2
+      "impl": 17,
+      "qa": 7,
+      "spec": 3
     }
   }
 }

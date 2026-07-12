@@ -1,0 +1,13 @@
+{
+  "after_sha256": "4ea58aa2e0da77bf67e0b8542d36e69ff805e7d649b0393c1a967872af587271",
+  "artifact_id": "ART-4ea58aa2e0da77bf67e0b8542d36e69ff805e7d649b0393c1a967872af587271",
+  "artifact_sha256": "226edbb381e2bb848464f566336399ca4beec0b5bf8f6a73554576fdcdaf89b3",
+  "before_sha256": "4ea58aa2e0da77bf67e0b8542d36e69ff805e7d649b0393c1a967872af587271",
+  "bytes": 1441,
+  "content": "---\ntitle: \"How ChatGPT works: a journey through language AI\"\ndescription: \"An English edition of an introductory legacy article on how ChatGPT-style systems work.\"\npublished: 2023-08-24\nlocale: en\ntranslation: desvendando-o-funcionamento-do-chatgpt-uma-jornada-pela-inteligencia-artificial-em-linguagem-natural\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2023-08-24. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe article introduces language AI in approachable terms: patterns, probability, context, and generated text.\n\nIts historical value is pedagogical. It shows the author explaining AI while the public vocabulary around these systems was still forming.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/desvendando-o-funcionamento-do-chatgpt-uma-jornada-pela-inteligencia-artificial-em-linguagem-natural/](/blog/desvendando-o-funcionamento-do-chatgpt-uma-jornada-pela-inteligencia-artificial-em-linguagem-natural/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/how-chatgpt-works-a-language-ai-journey.md",
+  "source_path": "src/content/posts/en/how-chatgpt-works-a-language-ai-journey.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "1fcf68c4bbef9a7a9be6d7d4714d8bd442e57da91bf2d610c54777d4e5147ec5",
+  "artifact_id": "ART-1fcf68c4bbef9a7a9be6d7d4714d8bd442e57da91bf2d610c54777d4e5147ec5",
+  "artifact_sha256": "b6dac0801dd3b8ec9df1cc0ac78f7d45eedf37e2dc766c1e3f72e67044452c1e",
+  "before_sha256": "1fcf68c4bbef9a7a9be6d7d4714d8bd442e57da91bf2d610c54777d4e5147ec5",
+  "bytes": 1404,
+  "content": "---\ntitle: \"Using 5W2H for deep, critical LLM searches\"\ndescription: \"A practical English edition about applying 5W2H to deeper AI-assisted research.\"\npublished: 2025-04-30\nlocale: en\ntranslation: guia-pratico-utilizando-o-framework-5w2h-para-buscas-profundas-e-criticas-com-llms\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-04-30. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe legacy article adapts a management tool to LLM work: who, what, when, where, why, how, and how much become a checklist for better questions.\n\nThe method helps prevent shallow answers. It forces scope, assumptions, stakeholders, constraints, and evidence into the conversation.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/guia-pratico-utilizando-o-framework-5w2h-para-buscas-profundas-e-criticas-com-llms/](/blog/guia-pratico-utilizando-o-framework-5w2h-para-buscas-profundas-e-criticas-com-llms/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/using-5w2h-for-deep-critical-llm-searches.md",
+  "source_path": "src/content/posts/en/using-5w2h-for-deep-critical-llm-searches.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

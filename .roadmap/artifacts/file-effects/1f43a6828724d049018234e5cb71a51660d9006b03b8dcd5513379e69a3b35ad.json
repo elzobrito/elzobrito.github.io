@@ -1,0 +1,13 @@
+{
+  "after_sha256": "bf3ca4cec32f3d894a31c7b2573d9f23c98afd7be57ef830f0de071ad6ac5621",
+  "artifact_id": "ART-bf3ca4cec32f3d894a31c7b2573d9f23c98afd7be57ef830f0de071ad6ac5621",
+  "artifact_sha256": "1f43a6828724d049018234e5cb71a51660d9006b03b8dcd5513379e69a3b35ad",
+  "before_sha256": "bf3ca4cec32f3d894a31c7b2573d9f23c98afd7be57ef830f0de071ad6ac5621",
+  "bytes": 1359,
+  "content": "---\ntitle: \"OpenAI for Countries: a step in the right direction\"\ndescription: \"A translated editorial note on national AI infrastructure and public-sector capability.\"\npublished: 2025-05-12\nlocale: en\ntranslation: openai-para-paises-um-grande-passo-na-direcao-certa\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-05-12. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe article reflects on AI as infrastructure rather than just a product category. Countries need capacity, skills, policy, and institutions that can use AI responsibly.\n\nIts relevance to this hub is the same theme at a different scale: powerful tools need public reasoning, accountability, and local competence.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/openai-para-paises-um-grande-passo-na-direcao-certa/](/blog/openai-para-paises-um-grande-passo-na-direcao-certa/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/openai-for-countries-a-step-in-the-right-direction.md",
+  "source_path": "src/content/posts/en/openai-for-countries-a-step-in-the-right-direction.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

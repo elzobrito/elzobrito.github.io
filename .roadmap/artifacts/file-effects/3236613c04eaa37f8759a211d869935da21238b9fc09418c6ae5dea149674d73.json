@@ -1,0 +1,13 @@
+{
+  "after_sha256": "1e90f5c80c6fa6805c08de54e57164699c1a7a3fa2c4c7b915ba01b69aeb9d2b",
+  "artifact_id": "ART-1e90f5c80c6fa6805c08de54e57164699c1a7a3fa2c4c7b915ba01b69aeb9d2b",
+  "artifact_sha256": "3236613c04eaa37f8759a211d869935da21238b9fc09418c6ae5dea149674d73",
+  "before_sha256": "1e90f5c80c6fa6805c08de54e57164699c1a7a3fa2c4c7b915ba01b69aeb9d2b",
+  "bytes": 1522,
+  "content": "---\ntitle: \"The AI revolution: from autonomous agents to strategic partnerships\"\ndescription: \"An English adaptation of the legacy article on agents, autonomy, and more strategic human-machine collaboration.\"\npublished: 2025-09-19\nlocale: en\ntranslation: a-revolucao-da-ia-de-agentes-autonomos-a-parcerias-estrategicas\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2025-09-19. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe migrated article argues that the next AI shift is not just better answers. It is the movement from isolated tools toward agents that can coordinate work, preserve context, and support strategic execution.\n\nThe durable lesson is organizational: autonomy needs boundaries. A useful agent must know the task, the evidence, the approval path, and the moment when it should stop and ask for review.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/a-revolucao-da-ia-de-agentes-autonomos-a-parcerias-estrategicas/](/blog/a-revolucao-da-ia-de-agentes-autonomos-a-parcerias-estrategicas/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/ai-revolution-from-autonomous-agents-to-strategic-partnerships.md",
+  "source_path": "src/content/posts/en/ai-revolution-from-autonomous-agents-to-strategic-partnerships.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

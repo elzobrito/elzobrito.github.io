@@ -1,0 +1,13 @@
+{
+  "after_sha256": "63ba0c836868657b42e55bf0243818af6ae7c125bfecd00d3c15721817180126",
+  "artifact_id": "ART-63ba0c836868657b42e55bf0243818af6ae7c125bfecd00d3c15721817180126",
+  "artifact_sha256": "6502dc6554eb4213735357b80c94328895f28969662e4d21d617b78594d13fc0",
+  "before_sha256": "63ba0c836868657b42e55bf0243818af6ae7c125bfecd00d3c15721817180126",
+  "bytes": 1828,
+  "content": "# SITE-BLOG-LEGACY-QA-001 — QA da migracao do blog legado\n\nData: 2026-07-12.\n\n## Resultado\n\nAprovado. O lote inicial do blog legado foi inventariado, migrado, pareado PT/EN, documentado para SEO/proveniencia e validado com build estatico.\n\n## Evidencias\n\n- Inventario: 212 posts coletados do WordPress publico; 18 artigos legados priorizados para a primeira leva.\n- Conteudo PT: 21 posts totais em `src/content/posts/pt`, sendo 18 legados com fonte original preservada.\n- Conteudo EN: 21 posts totais em `src/content/posts/en`, sendo 18 edicoes curatoriais dos legados.\n- Pares de idioma: `missingPt=[]` e `missingEn=[]`.\n- Build: `npm test` executou `astro check`, `astro build` e `audit:public` com sucesso.\n- Build de producao: 51 paginas geradas.\n- Auditoria publica: 62 arquivos verificados, 11 rotas obrigatorias, 0 matches proibidos.\n- RSS/sitemap: `dist/blog/rss.xml`, `dist/en/blog/rss.xml`, `dist/sitemap-index.xml` presentes.\n- Amostras verificadas: artigo da multa, artigo das quatro ondas, RSS PT/EN e sitemap.\n\n## Achado corrigido durante QA\n\nA auditoria publica encontrou `/home/` em uma URL externa do artigo das quatro ondas. Embora fosse uma URL publica e nao caminho local, o auditor e fail-closed. A hotfix `SITE-BLOG-LEGACY-PRIVACY-FIX-001` removeu a URL e preservou a referencia em texto. A auditoria passou depois da correcao.\n\n## Observacoes\n\n- As imagens legadas permanecem como URLs publicas do WordPress nesta leva porque as tarefas originais autorizaram apenas `src/content/posts/**`, nao `public/**` ou `src/assets/**`.\n- A tarefa de SEO foi criada como `impl` com output em `docs/spec/**`; o ESAA rejeitou `file_updates` por boundary. O complete foi aceito sem `file_updates`, com a ressalva registrada na tarefa.\n- As versoes EN dos legados sao edicoes curatoriais, nao traducoes linha a linha.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-LEGACY-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-LEGACY-QA-001.md",
+  "ts": "2026-07-12T18:08:53Z"
+}

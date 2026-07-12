@@ -1,0 +1,13 @@
+{
+  "after_sha256": "8cd4ec6ae33b5f334d508315fc42273d04d0b656b7e088f3aaeb69b77445f627",
+  "artifact_id": "ART-8cd4ec6ae33b5f334d508315fc42273d04d0b656b7e088f3aaeb69b77445f627",
+  "artifact_sha256": "7aca514abe0daf3c3e8fa6cfb0c31266d8750106ef930a6b16d6c375c7622871",
+  "before_sha256": "8cd4ec6ae33b5f334d508315fc42273d04d0b656b7e088f3aaeb69b77445f627",
+  "bytes": 1410,
+  "content": "---\ntitle: \"The open-source leap: Kimi K2.5 and agent swarms\"\ndescription: \"A translated editorial note on open-source model progress and multi-agent coordination.\"\npublished: 2026-01-28\nlocale: en\ntranslation: o-salto-quantico-open-source-kimi-k2-5-e-o-poder-do-agent-swarm\ntags: [\"AI\", \"legacy essay\", \"translation\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2026-01-28. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThe migrated article treats open-source AI as a competitive and architectural force, especially when models are combined into coordinated agent workflows.\n\nThe caution is that swarms multiply both capability and ambiguity. Coordination protocols, logs, and single-writer state become more important as the number of agents grows.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/o-salto-quantico-open-source-kimi-k2-5-e-o-poder-do-agent-swarm/](/blog/o-salto-quantico-open-source-kimi-k2-5-e-o-poder-do-agent-swarm/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/open-source-leap-kimi-k2-5-and-agent-swarms.md",
+  "source_path": "src/content/posts/en/open-source-leap-kimi-k2-5-and-agent-swarms.md",
+  "ts": "2026-07-12T18:04:24Z"
+}

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f35b2defc33d2ccc8084231ee55d870c89cbcaddce5b56ea94b38046681e9a7f",
+  "artifact_id": "ART-f35b2defc33d2ccc8084231ee55d870c89cbcaddce5b56ea94b38046681e9a7f",
+  "artifact_sha256": "41d0d0783f95d32ee7f92e6fc35af2c419982cce694a7fea5fa9aced0a537a1a",
+  "before_sha256": "f35b2defc33d2ccc8084231ee55d870c89cbcaddce5b56ea94b38046681e9a7f",
+  "bytes": 1502,
+  "content": "---\ntitle: \"How I used ChatGPT to win a traffic-ticket appeal\"\ndescription: \"A curated English edition of the 2023 account about using ChatGPT to structure a successful traffic-ticket appeal.\"\npublished: 2023-05-24\nlocale: en\ntranslation: chatgpt-recurso-multa-transito\ntags: [\"ChatGPT\", \"applied AI\", \"case study\"]\nfeatured: false\n---\n\nThis is a curated English edition of a legacy Portuguese article originally published on 2023-05-24. It preserves the public argument and editorial intent while avoiding private details, operational state, or unsupported new claims.\n\n## Core idea\n\nThis legacy article is a practical case study: an everyday administrative problem, a clear prompt, and a human decision about what evidence mattered. The English edition preserves the public lesson without turning it into legal advice.\n\nThe useful part is not that an AI system magically solved a fine. It is that the author treated ChatGPT as a drafting partner: he described the situation, checked the weak points in the notice, refined the argument, and still owned the final submission.\n\n## Editorial note\n\nThis translation was prepared during the governed migration of the legacy blog into the GitHub Pages hub. Technical references may age; when the topic involves law, public policy, infrastructure, or model behavior, treat the article as educational context and verify current sources before acting.\n\nPortuguese source article: [/blog/chatgpt-recurso-multa-transito/](/blog/chatgpt-recurso-multa-transito/).\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content/posts/en/chatgpt-traffic-ticket-appeal.md",
+  "source_path": "src/content/posts/en/chatgpt-traffic-ticket-appeal.md",
+  "ts": "2026-07-12T18:04:24Z"
+}
