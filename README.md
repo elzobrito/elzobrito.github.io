@@ -1,11 +1,3 @@
-<!-- esaa:bootstrap:contract:begin -->
-# ESAA
-
-Este projeto usa ESAA para governança de agentes: agentes emitem intenções, o Orchestrator valida e aplica efeitos, e `.roadmap/activity.jsonl` é a fonte da verdade.
-
-Guias: `docs/guides/`.
-<!-- esaa:bootstrap:contract:end -->
-
 <!-- esaa:bootstrap:project:begin -->
 # Elzo Brito — Hub de projetos
 
