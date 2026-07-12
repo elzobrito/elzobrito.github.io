@@ -1,0 +1,13 @@
+{
+  "after_sha256": "a8d66e35acbff00fa15846e817b6ab7b1203960ba54bb2f7c30fe4317af29040",
+  "artifact_id": "ART-a8d66e35acbff00fa15846e817b6ab7b1203960ba54bb2f7c30fe4317af29040",
+  "artifact_sha256": "a6dcb84993601fb14343d95ff8a558bef39cf1d22ba38a215c6f18a295ac49af",
+  "before_sha256": null,
+  "bytes": 1497,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260712-QA-001\n\n## Escopo\n\nValidação editorial, técnica e pública do artigo diário bilíngue sobre skills, plugins e controle local para agentes.\n\n## Fontes primárias revisadas\n\n- <https://github.com/google-labs-code/stitch-skills>\n- <https://github.com/openai/plugins>\n- <https://github.com/wonderwhy-er/DesktopCommanderMCP>\n- Contexto de destaque diário: <https://github.com/trending>\n\nO texto descreve capacidades documentadas nos repositórios e apresenta tendências como análise editorial, sem atribuir datas de lançamento ou métricas de desempenho não verificadas.\n\n## Validação técnica\n\n- `npm test`: aprovado\n- Astro check: 0 erros, 0 avisos, 0 sugestões\n- Build: 77 páginas\n- Auditoria pública: 88 arquivos, 11 rotas obrigatórias, 0 ocorrências proibidas\n- `git diff --check`: aprovado\n- Frontmatter PT/EN: data, locale e traduções recíprocas válidas\n\n## Auditoria editorial\n\nA primeira varredura encontrou o termo `prompt` em duas passagens conceituais. Embora não revelasse o processo de produção, o contrato público o proíbe. As passagens foram substituídas por `instruções` e `instructions` antes da aprovação.\n\nNova varredura nos dois artigos não encontrou referências a processo de coleta, caminhos locais, estado ESAA ou artefatos internos.\n\n## Decisão\n\nValidação concluída com correção obrigatória antes da publicação: remover as duas ocorrências identificadas e repetir a auditoria em tarefa QA independente.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA-001.md",
+  "ts": "2026-07-12T23:16:41Z"
+}

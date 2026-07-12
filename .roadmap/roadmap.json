@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 526,
-      "projection_hash_sha256": "fce3c77c53f528bf1ce05222d48f34aed6016c2c1d314cf8b5692b5ea55e710c",
+      "last_event_seq": 587,
+      "projection_hash_sha256": "c2466844ac58587744b3fcecd3ca1e2384c047b82f1e6e0995990e27fb1d7d24",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T22:38:05Z"
+    "updated_at": "2026-07-12T23:17:35Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1270,15 +1270,167 @@
         ]
       },
       "completed_at": "2026-07-12T22:38:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260712-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN",
+      "description": "Produzir artigo bilíngue sobre a tendência de skills, plugins e controle local em agentes, baseado em fontes primárias e no destaque diário do GitHub.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/agentes-viram-plataformas-skills-plugins-e-controle-local.md",
+        "src/content/posts/en/agents-become-platforms-skills-plugins-and-local-control.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/agentes-viram-plataformas-skills-plugins-e-controle-local.md",
+          "src/content/posts/en/agents-become-platforms-skills-plugins-and-local-control.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T23:13:50Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias vinculadas diretamente",
+          "Afirmações promocionais e métricas não verificadas removidas",
+          "Frontmatter PT/EN e traduções recíprocas incluídos"
+        ]
+      },
+      "completed_at": "2026-07-12T23:15:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260712-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto",
+      "description": "Validar fontes, rigor, frontmatter, tradução, privacidade, npm test e auditoria pública do artigo diário.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260712-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T23:15:15Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado",
+          "Astro check com zero diagnósticos",
+          "77 páginas geradas",
+          "auditoria pública aprovada",
+          "duas ocorrências do termo proibido identificadas para correção segregada"
+        ]
+      },
+      "completed_at": "2026-07-12T23:16:41Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260712-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto",
+      "description": "Fazer commit explícito, push em main, aguardar GitHub Pages e registrar evidências das URLs PT/EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260712-QA-001",
+        "SITE-BLOG-DAILY-OPEN-20260712-QA2-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T23:17:35Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260712-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover termo interno do artigo diário",
+      "description": "Substituir duas ocorrências do termo prompt por linguagem editorial neutra nos artigos PT e EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260712-QA-001"
+      ],
+      "targets": [
+        "src/content/posts/pt/agentes-viram-plataformas-skills-plugins-e-controle-local.md",
+        "src/content/posts/en/agents-become-platforms-skills-plugins-and-local-control.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/agentes-viram-plataformas-skills-plugins-e-controle-local.md",
+          "src/content/posts/en/agents-become-platforms-skills-plugins-and-local-control.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T23:17:07Z",
+      "verification": {
+        "checks": [
+          "PT usa instruções em vez do termo proibido",
+          "EN usa instructions em vez do termo proibido"
+        ]
+      },
+      "completed_at": "2026-07-12T23:17:08Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260712-QA2-001",
+      "task_kind": "qa",
+      "title": "Revalidar artigo diário corrigido",
+      "description": "Repetir auditoria de termos internos e confirmar que a correção editorial está pronta para publicação.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260712-FIX-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA2-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA2-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T23:17:23Z",
+      "verification": {
+        "checks": [
+          "Nenhum termo interno encontrado",
+          "git diff --check aprovado",
+          "links e traduções preservados"
+        ]
+      },
+      "completed_at": "2026-07-12T23:17:25Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 42
+      "done": 46,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 23,
-      "qa": 13,
+      "impl": 25,
+      "qa": 16,
       "spec": 6
     }
   }

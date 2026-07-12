@@ -1,0 +1,13 @@
+{
+  "after_sha256": "89782848c1dc0a8d9cf0b880a3b041a633a708355b8c382d4dfdc004a255a167",
+  "artifact_id": "ART-89782848c1dc0a8d9cf0b880a3b041a633a708355b8c382d4dfdc004a255a167",
+  "artifact_sha256": "127ea9262c73e5f188fb2d0f36817df46e3d862cb52c82b32d840f09b31ebfb3",
+  "before_sha256": null,
+  "bytes": 307,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260712-QA2-001\n\n## Revalidação\n\n- Correção PT/EN revisada.\n- Varredura de termos internos: nenhuma ocorrência.\n- `git diff --check`: aprovado.\n- Traduções recíprocas preservadas.\n- Links para as três fontes primárias preservados.\n\n## Decisão\n\nAprovado para publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA2-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260712-QA2-001.md",
+  "ts": "2026-07-12T23:17:24Z"
+}
