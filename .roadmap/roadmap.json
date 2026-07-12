@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 487,
-      "projection_hash_sha256": "a5d253bb50db1bdacbd00101598ab3718efd70b8e44dc36b11319479f27d1b96",
+      "last_event_seq": 526,
+      "projection_hash_sha256": "fce3c77c53f528bf1ce05222d48f34aed6016c2c1d314cf8b5692b5ea55e710c",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T19:17:07Z"
+    "updated_at": "2026-07-12T22:38:05Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1176,15 +1176,109 @@
         ]
       },
       "completed_at": "2026-07-12T19:17:07Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-AUTOMATION-GOV-001",
+      "task_kind": "qa",
+      "title": "Registrar governanca da automacao diaria PACER",
+      "description": "Registro retrospectivo da criacao e ajuste da automacao Codex app que verifica tres newsletters diarias, gera post PACER sob ESAA e faz commit local sem push.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "docs/qa/**",
+        ".roadmap/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-AI-AUTOMATION-GOV-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T19:35:23Z",
+      "verification": {
+        "checks": [
+          "automacao Codex app ativa: blog-di-rio-pacer-quando-3-newsletters-chegarem",
+          "janela diaria configurada: 12h,13h,14h,15h,16h,17h",
+          "sem push automatico; commit local apenas",
+          "registro declara explicitamente governanca retrospectiva"
+        ]
+      },
+      "completed_at": "2026-07-12T19:35:53Z"
+    },
+    {
+      "task_id": "SITE-BLOG-JSPACE-CRITIQUE-001",
+      "task_kind": "impl",
+      "title": "Criar artigo crítico sobre J-space",
+      "description": "Produzir artigo bilíngue rigoroso sobre J-lens, residual stream e a interpretação de global workspace, com fontes primárias e sem afirmar modificação arquitetônica inexistente.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/j-space-descoberta-ou-mesa-de-trabalho-construida.md",
+        "src/content/posts/en/j-space-discovery-or-constructed-workbench.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/j-space-descoberta-ou-mesa-de-trabalho-construida.md",
+          "src/content/posts/en/j-space-discovery-or-constructed-workbench.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T22:31:04Z",
+      "verification": {
+        "checks": [
+          "Conteúdo PT-BR e EN revisado para precisão conceitual",
+          "Frontmatter e referências primárias incluídos",
+          "Nenhuma alegação de modificação arquitetônica inexistente"
+        ]
+      },
+      "completed_at": "2026-07-12T22:33:23Z"
+    },
+    {
+      "task_id": "SITE-BLOG-JSPACE-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo crítico sobre J-space",
+      "description": "Validar, fazer commit e publicar no GitHub Pages o par PT/EN do artigo sobre J-space, preservando alterações pendentes não relacionadas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/j-space-descoberta-ou-mesa-de-trabalho-construida.md",
+        "src/content/posts/en/j-space-discovery-or-constructed-workbench.md",
+        "docs/qa/SITE-BLOG-JSPACE-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-JSPACE-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T22:35:51Z",
+      "verification": {
+        "checks": [
+          "npm test passou",
+          "origin/main estava alinhada antes do push",
+          "workflow 29211864518 concluiu build e deploy com sucesso",
+          "URLs PT e EN responderam com metadados e hreflang corretos"
+        ]
+      },
+      "completed_at": "2026-07-12T22:38:05Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 39
+      "done": 42
     },
     "by_kind": {
-      "impl": 22,
-      "qa": 11,
+      "impl": 23,
+      "qa": 13,
       "spec": 6
     }
   }

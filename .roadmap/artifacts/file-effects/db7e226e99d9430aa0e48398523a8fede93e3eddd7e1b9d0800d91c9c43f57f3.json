@@ -1,0 +1,13 @@
+{
+  "after_sha256": "bcebbd4269962dd1dc402670d49f918dd67773eece103c5f1377e0eb027a22c2",
+  "artifact_id": "ART-bcebbd4269962dd1dc402670d49f918dd67773eece103c5f1377e0eb027a22c2",
+  "artifact_sha256": "db7e226e99d9430aa0e48398523a8fede93e3eddd7e1b9d0800d91c9c43f57f3",
+  "before_sha256": null,
+  "bytes": 1214,
+  "content": "# SITE-BLOG-JSPACE-PUBLISH-001\n\n## Resultado\n\nArtigo crítico sobre J-space publicado em português e inglês no GitHub Pages.\n\n## Evidências\n\n- Commit de conteúdo: `6b810f47bc68c5bf658cf5d23049270920b0ba16`\n- Push: `main -> origin/main`\n- Workflow: `Deploy static hub to GitHub Pages`\n- Execução: `29211864518`\n- Build: sucesso em 30 segundos\n- Deploy: sucesso em 10 segundos\n- Página PT: <https://elzobrito.github.io/blog/j-space-descoberta-ou-mesa-de-trabalho-construida/>\n- Página EN: <https://elzobrito.github.io/en/blog/j-space-discovery-or-constructed-workbench/>\n- As duas páginas foram consultadas após o deploy e retornaram HTML com títulos, descrições canônicas e links `hreflang` correspondentes.\n\n## Validações\n\n- `npm test`: sucesso\n- Astro check: 0 erros, 0 avisos, 0 sugestões\n- Build local: 75 páginas\n- Auditoria pública: 86 arquivos, 11 rotas obrigatórias, 0 ocorrências proibidas\n- `origin/main` estava alinhada ao `HEAD` antes do commit (`0 0`)\n\n## Observação não bloqueante\n\nO workflow emitiu aviso de depreciação do Node.js 20 em actions oficiais, executadas pelo runner com Node.js 24. O build e o deploy concluíram com sucesso; o aviso não afetou a publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-JSPACE-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-JSPACE-PUBLISH-001.md",
+  "ts": "2026-07-12T22:37:57Z"
+}
