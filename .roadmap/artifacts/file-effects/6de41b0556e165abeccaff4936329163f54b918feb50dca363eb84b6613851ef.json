@@ -1,0 +1,13 @@
+{
+  "after_sha256": "82764d3a458751f7401c355a4e9c60f3550d60113292a3a86e35286777f9dc91",
+  "artifact_id": "ART-82764d3a458751f7401c355a4e9c60f3550d60113292a3a86e35286777f9dc91",
+  "artifact_sha256": "6de41b0556e165abeccaff4936329163f54b918feb50dca363eb84b6613851ef",
+  "before_sha256": "82764d3a458751f7401c355a4e9c60f3550d60113292a3a86e35286777f9dc91",
+  "bytes": 2117,
+  "content": "# SITE-BLOG-DAILY-AI-PUBLISH-001\n\n## Escopo\n\nPublicação do post diário de IA criado sob o PACER v1.4 e governado pelo ESAA.\n\n## Tarefas ESAA relacionadas\n\n- `SITE-BLOG-DAILY-AI-POST-001`: `done`\n- `SITE-BLOG-DAILY-AI-QA-001`: `done`\n- `SITE-BLOG-DAILY-AI-PUBLISH-001`: em fechamento neste recibo\n\n## Commit publicado\n\n- Commit: `2db3e77843765c1d3e91f134fed95f2b9668dadc`\n- Mensagem: `Publish daily AI governance post`\n- Branch: `main`\n- Remote: `origin`\n\n## Workflow GitHub Pages\n\n- Workflow: `Deploy static hub to GitHub Pages`\n- Run ID: `29205458667`\n- URL: `https://github.com/elzobrito/elzobrito.github.io/actions/runs/29205458667`\n- Resultado: `success`\n\nEtapas observadas no run:\n\n- `npm ci`: aprovado\n- `npm run check`: aprovado\n- `npm run build`: aprovado\n- `npm run audit:public`: aprovado\n- upload do artefato Pages: aprovado\n- deploy GitHub Pages: aprovado\n\n## Verificação pública\n\nComandos:\n\n```bash\ncurl -L -s -o /tmp/esaa-post-pt.html -w '%{http_code} %{url_effective}\\n' https://elzobrito.github.io/blog/agentes-de-ia-entre-autonomia-e-governanca/\ncurl -L -s -o /tmp/esaa-post-en.html -w '%{http_code} %{url_effective}\\n' https://elzobrito.github.io/en/blog/ai-agents-between-autonomy-and-governance/\nrg -n 'Agentes de IA entre autonomia e governança|AI agents between autonomy and governance' /tmp/esaa-post-pt.html /tmp/esaa-post-en.html\n```\n\nResultado:\n\n- `200 https://elzobrito.github.io/blog/agentes-de-ia-entre-autonomia-e-governanca/`\n- `200 https://elzobrito.github.io/en/blog/ai-agents-between-autonomy-and-governance/`\n- título PT encontrado no HTML público;\n- título EN encontrado no HTML público;\n- `canonical` e `hreflang` presentes nas duas páginas renderizadas.\n\n## Validação local antes da publicação\n\nComando:\n\n```bash\nnpm test\n```\n\nResultado:\n\n- `astro check`: 0 errors, 0 warnings, 0 hints;\n- `astro build`: 73 páginas geradas;\n- `audit:public`: `Public artifact audit passed: 84 files, 11 required routes, 0 forbidden matches.`\n\n## Decisão\n\nPublicado. O post está disponível publicamente em português e inglês no GitHub Pages, com build e auditoria aprovados.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-AI-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-AI-PUBLISH-001.md",
+  "ts": "2026-07-12T19:17:06Z"
+}

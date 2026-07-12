@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 480,
-      "projection_hash_sha256": "9f7d432fd6f3a9f9668f18bbc6376d43eebc20630c368cd4853fc06ae0a82eec",
+      "last_event_seq": 487,
+      "projection_hash_sha256": "a5d253bb50db1bdacbd00101598ab3718efd70b8e44dc36b11319479f27d1b96",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T19:15:07Z"
+    "updated_at": "2026-07-12T19:17:07Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1148,7 +1148,7 @@
       "task_kind": "qa",
       "title": "Publicar post PACER diario de IA",
       "description": "Commitar e publicar no GitHub Pages o post diario de IA criado e validado sob ESAA, registrando evidencia de commit, workflow e URL publica.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-AI-QA-001"
       ],
@@ -1166,13 +1166,21 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-12T19:15:07Z"
+      "started_at": "2026-07-12T19:15:07Z",
+      "verification": {
+        "checks": [
+          "commit publicado: 2db3e77843765c1d3e91f134fed95f2b9668dadc",
+          "GitHub Actions run 29205458667: success",
+          "URLs publicas PT/EN: HTTP 200 com titulos esperados",
+          "npm test pre-publicacao: ok"
+        ]
+      },
+      "completed_at": "2026-07-12T19:17:07Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 38,
-      "in_progress": 1
+      "done": 39
     },
     "by_kind": {
       "impl": 22,
