@@ -1,0 +1,13 @@
+{
+  "after_sha256": "94d542bbad658c221dca49092086be3ec97020e4d08d35cc4369374319517a2e",
+  "artifact_id": "ART-94d542bbad658c221dca49092086be3ec97020e4d08d35cc4369374319517a2e",
+  "artifact_sha256": "cd7a07c394b9e4cedd50a19e2ae0ab9f6a368a32205e3994207ffd6202c1fdf3",
+  "before_sha256": "94d542bbad658c221dca49092086be3ec97020e4d08d35cc4369374319517a2e",
+  "bytes": 1800,
+  "content": "# SITE-BLOG-LEGACY-PUBLISH-001 — recibo de publicacao\n\nData: 2026-07-12.\n\n## Resultado\n\nPublicado em GitHub Pages.\n\n## Commit e workflow\n\n- Commit de migracao: `47adba1868c3528153f2147fec5754d939aec86f` (`Migrate legacy blog articles`).\n- Branch publicada: `main`.\n- Workflow: `Deploy static hub to GitHub Pages`.\n- Run: https://github.com/elzobrito/elzobrito.github.io/actions/runs/29203355936\n- Jobs: `build` concluido em 22s; `deploy` concluido em 9s.\n- Validacoes no workflow: `npm ci`, `npm run check`, `npm run build`, `npm run audit:public`.\n- Anotacao do GitHub Actions: aviso de deprecacao de Node.js 20 em actions oficiais executadas sob Node 24; nao bloqueou deploy.\n\n## Rotas HTTPS verificadas\n\n| status | bytes | rota |\n|---:|---:|---|\n| 200 | 22437 | https://elzobrito.github.io/blog/ |\n| 200 | 19314 | https://elzobrito.github.io/blog/chatgpt-recurso-multa-transito/ |\n| 200 | 5777 | https://elzobrito.github.io/en/blog/chatgpt-traffic-ticket-appeal/ |\n| 200 | 133660 | https://elzobrito.github.io/blog/as-quatro-ondas-da-inteligencia-artificial-uma-analise-profunda-do-passado-presente-e-futuro-cognitivo-e-economico/ |\n| 200 | 13088 | https://elzobrito.github.io/blog/rss.xml |\n| 200 | 9617 | https://elzobrito.github.io/en/blog/rss.xml |\n| 200 | 190 | https://elzobrito.github.io/sitemap-index.xml |\n\n## Amostras de conteudo\n\n- Artigo da multa PT contem canonical, hreflang, titulo, nota de que nao e aconselhamento juridico e fonte original.\n- Artigo da multa EN contem canonical, hreflang e link para o par em portugues.\n- RSS PT/EN e sitemap foram servidos por HTTPS.\n\n## Estado de governanca\n\n- `esaa --root . verify` estava `ok` antes da publicacao e permaneceu `ok` durante as transicoes anteriores.\n- Esta tarefa registra o recibo final para posterior commit de evidencia.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-LEGACY-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-LEGACY-PUBLISH-001.md",
+  "ts": "2026-07-12T18:11:30Z"
+}

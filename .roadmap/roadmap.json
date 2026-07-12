@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 324,
-      "projection_hash_sha256": "b4c4cfd8d35d1d7eb7ff22e93c82e4c6268ba4fbad1fc6fa68bc34199f861d75",
+      "last_event_seq": 331,
+      "projection_hash_sha256": "bcbe6f9b7b3e39c6cd942bace7e2d538e035fdd7c913611da0520d36d0081a5e",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T18:09:33Z"
+    "updated_at": "2026-07-12T18:11:31Z"
   },
   "project": {
     "name": "esaa-core",
@@ -768,7 +768,7 @@
       "task_kind": "qa",
       "title": "Publicar acervo migrado no GitHub Pages",
       "description": "Publicar o lote aprovado, verificar workflow GitHub Pages, rotas HTTPS, canonical, feeds e amostra de artigos em portugues e ingles. Registrar recibo publico.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-LEGACY-QA-001"
       ],
@@ -784,7 +784,13 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-12T18:09:33Z"
+      "started_at": "2026-07-12T18:09:33Z",
+      "verification": {
+        "checks": [
+          "gh run watch 29203355936 --exit-status; curl HTTPS rotas blog, artigo multa PT/EN, quatro ondas, RSS PT/EN e sitemap retornaram 200; amostras contem canonical/hreflang"
+        ]
+      },
+      "completed_at": "2026-07-12T18:11:31Z"
     },
     {
       "task_id": "SITE-BLOG-LEGACY-PRIVACY-FIX-001",
@@ -818,8 +824,7 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 26,
-      "in_progress": 1
+      "done": 27
     },
     "by_kind": {
       "impl": 17,
