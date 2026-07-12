@@ -1,0 +1,48 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import type { Locale } from '../i18n';
+interface Props { title: string; description: string; locale: Locale; alternate: string; image?: string; section?: 'hub' | 'esaa'; }
+const { title, description, locale, alternate, image = '/social-card.svg', section = 'hub' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const alternateUrl = new URL(alternate, Astro.site);
+---
+<!doctype html>
+<html lang={locale === 'pt' ? 'pt-BR' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f1e8" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={locale === 'pt' ? 'en' : 'pt-BR'} href={alternateUrl} />
+    <link rel="alternate" hreflang={locale === 'pt' ? 'pt-BR' : 'en'} href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={locale === 'pt' ? canonical : alternateUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:locale" content={locale === 'pt' ? 'pt_BR' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+    <script is:inline>
+      const saved = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = saved === 'dark' ? 'dark' : 'light';
+    </script>
+  </head>
+  <body>
+    <Header locale={locale} alternate={alternate} section={section} />
+    <main id="conteudo"><slot /></main>
+    <Footer locale={locale} />
+    <script is:inline>
+      document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('theme', next);
+      });
+    </script>
+  </body>
+</html>

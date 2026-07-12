@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+const { post, Content } = Astro.props as { post: CollectionEntry<'posts'>; Content: any };
+const pt = post.data.locale === 'pt';
+const prefix = pt ? '/blog/' : '/en/blog/';
+const alternate = `${pt?'/en/blog/':'/blog/'}${post.data.translation}/`;
+---
+<BaseLayout title={`${post.data.title} — Elzo Brito`} description={post.data.description} locale={post.data.locale} alternate={alternate}>
+ <article class="prose"><a class="back" href={prefix}>← {pt?'Todos os artigos':'All articles'}</a><header><p class="eyebrow">{post.data.tags.join(' · ')}</p><h1>{post.data.title}</h1><p class="standfirst">{post.data.description}</p><p class="meta"><time datetime={post.data.published.toISOString()}>{post.data.published.toLocaleDateString(pt?'pt-BR':'en-US',{year:'numeric',month:'long',day:'numeric'})}</time> · Elzo Brito</p></header><div class="article-body"><Content /></div><footer class="article-footer"><p>{pt?'Este texto também está disponível em inglês.':'This essay is also available in Portuguese.'}</p><a href={alternate}>{pt?'Read in English':'Ler em português'} ↗</a></footer></article>
+</BaseLayout>
+<style>
+ .back{font-family:var(--mono);font-size:.75rem;text-decoration:none}.prose header{margin:4rem 0}.standfirst{font-size:1.35rem;color:var(--muted)}.article-body :global(h2){font-family:var(--serif);font-size:2.3rem}.article-body :global(p){line-height:1.85}.article-footer{margin-top:5rem;border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;gap:2rem}
+</style>

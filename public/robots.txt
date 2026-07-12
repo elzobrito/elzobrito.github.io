@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elzobrito.github.io/sitemap-index.xml

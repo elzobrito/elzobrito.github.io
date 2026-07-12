@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Locale } from '../i18n';
+const { locale } = Astro.props as { locale: Locale }; const pt = locale === 'pt';
+const c = pt ? {
+ title:'Consultoria em IA aplicada — Elzo Brito', description:'Estratégia, prototipagem e implantação de Inteligência Artificial com governança, evidência e revisão humana.', alternate:'/en/consulting/',
+ eyebrow:'Consultoria aplicada', headline:'Da hipótese ao sistema confiável.', lede:'Ajudo equipes a escolher onde a IA cria valor, construir o caminho técnico e instalar as salvaguardas que mantêm o projeto compreensível.',
+ services:'Onde posso contribuir', method:'Um processo que deixa rastros', deliver:'Entregas que continuam úteis', contact:'Traga o problema antes da solução.',
+ servicesList:[['Estratégia de IA','Diagnóstico de oportunidades, riscos, prioridades e critérios de sucesso.'],['Agentes e automação','Arquitetura de fluxos governados, integrações e mecanismos de revisão.'],['IA na educação','Experiências de aprendizagem, capacitação docente e avaliação responsável.']],
+ steps:[['01','Enquadrar','Entender contexto, restrições e decisão que o projeto precisa melhorar.'],['02','Provar','Construir um experimento pequeno com métricas e evidências explícitas.'],['03','Governar','Definir responsabilidades, limites, revisão humana e rastreabilidade.'],['04','Transferir','Documentar, capacitar e deixar a equipe capaz de operar o resultado.']],
+ outputs:['Mapa de oportunidades e riscos','Arquitetura e protótipo funcional','Critérios de avaliação e revisão','Documentação e plano de adoção']
+} : {
+ title:'Applied AI consulting — Elzo Brito', description:'Strategy, prototyping and Artificial Intelligence delivery with governance, evidence and human review.', alternate:'/consultoria/',
+ eyebrow:'Applied consulting', headline:'From hypothesis to dependable system.', lede:'I help teams decide where AI creates value, build the technical path and install safeguards that keep the project understandable.',
+ services:'Where I can contribute', method:'A process that leaves evidence', deliver:'Deliverables that remain useful', contact:'Bring the problem before the solution.',
+ servicesList:[['AI strategy','Opportunity, risk and priority assessment with explicit success criteria.'],['Agents and automation','Governed workflow architecture, integrations and review mechanisms.'],['AI in education','Learning experiences, faculty development and responsible assessment.']],
+ steps:[['01','Frame','Understand context, constraints and the decision the project must improve.'],['02','Prove','Build a small experiment with explicit metrics and evidence.'],['03','Govern','Define responsibilities, boundaries, human review and traceability.'],['04','Transfer','Document, train and leave the team able to operate the result.']],
+ outputs:['Opportunity and risk map','Architecture and functional prototype','Evaluation and review criteria','Documentation and adoption plan']
+};
+---
+<BaseLayout title={c.title} description={c.description} locale={locale} alternate={c.alternate}>
+ <section class="hero wrap consulting-hero"><p class="eyebrow">{c.eyebrow}</p><h1>{c.headline}</h1><p class="lede">{c.lede}</p><div class="actions"><a class="button" href="#contato">{pt?'Conversar sobre um desafio':'Discuss a challenge'}</a><a class="button secondary" href="#metodo">{pt?'Ver o método':'See the method'}</a></div></section>
+ <section class="section wrap" id="atuacao"><div class="section-heading"><div><p class="eyebrow">01 — {pt?'Atuação':'Practice'}</p><h2>{c.services}</h2></div></div><div class="grid">{c.servicesList.map(([title,text])=><article class="card"><span class="tag">{pt?'SERVIÇO':'SERVICE'}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+ <section class="section method" id="metodo"><div class="wrap"><p class="eyebrow">02 — {pt?'Método':'Method'}</p><h2>{c.method}</h2><ol class="steps">{c.steps.map(([n,title,text])=><li><span>{n}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol></div></section>
+ <section class="section wrap" id="consultorias"><div class="section-heading"><div><p class="eyebrow">03 — {pt?'Entregáveis':'Deliverables'}</p><h2>{c.deliver}</h2></div><p>{pt?'O formato muda; a obrigação de tornar decisões, limites e próximos passos explícitos permanece.':'The format changes; the obligation to make decisions, boundaries and next steps explicit remains.'}</p></div><ul class="output-list">{c.outputs.map((x,i)=><li><span>0{i+1}</span>{x}</li>)}</ul></section>
+ <section class="section wrap contact-section" id="contato"><p class="eyebrow">04 — {pt?'Contato':'Contact'}</p><h2>{c.contact}</h2><p>{pt?'Uma boa conversa inicial serve para descobrir se há um projeto — e se sou a pessoa certa para ele.':'A good first conversation helps determine whether there is a project — and whether I am the right person for it.'}</p><a class="contact-link" href="mailto:elzobrito@gmail.com">elzobrito@gmail.com ↗</a></section>
+</BaseLayout>
+<style>
+ .consulting-hero .eyebrow{color:var(--consulting)}.method{background:var(--ink);color:var(--paper);margin-block:4rem}.method .eyebrow{color:#88b8ef}.steps{list-style:none;padding:0;margin:3rem 0 0;border-top:1px solid #444}.steps li{display:grid;grid-template-columns:80px 1fr;gap:1rem;padding:1.5rem 0;border-bottom:1px solid #444}.steps li>span{font-family:var(--mono);color:#88b8ef}.steps h3{font-size:1.6rem;margin:0}.steps p{color:#bbb;margin:.4rem 0}.output-list{list-style:none;padding:0;border-top:1px solid var(--line)}.output-list li{display:flex;gap:2rem;padding:1.4rem 0;border-bottom:1px solid var(--line);font-size:clamp(1.1rem,3vw,1.8rem)}.output-list span{font-family:var(--mono);font-size:.8rem;color:var(--consulting)}.contact-section{text-align:center}.contact-section>p:not(.eyebrow){color:var(--muted);max-width:620px;margin:auto}.contact-link{display:inline-block;font-family:var(--serif);font-size:clamp(1.5rem,5vw,4rem);margin-top:2rem}
+</style>

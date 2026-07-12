@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Locale } from '../i18n';
+const { locale } = Astro.props as { locale: Locale }; const pt = locale === 'pt';
+const posts = (await getCollection('posts', ({ data }) => data.locale === locale)).sort((a,b)=>b.data.published.valueOf()-a.data.published.valueOf());
+const prefix = pt ? '/blog/' : '/en/blog/';
+---
+<BaseLayout title={pt?'Blog — Elzo Brito':'Blog — Elzo Brito'} description={pt?'Artigos sobre agentes, IA aplicada, educação e sistemas governados.':'Essays on agents, applied AI, education and governed systems.'} locale={locale} alternate={pt?'/en/blog/':'/blog/'}>
+ <section class="blog-hero wrap"><p class="eyebrow">{pt?'Caderno aberto':'Open notebook'}</p><h1>{pt?'Ideias em construção, evidências em público.':'Ideas under construction, evidence in public.'}</h1><p>{pt?'Textos sobre o trabalho de tornar sistemas inteligentes compreensíveis, governáveis e úteis.':'Writing about the work of making intelligent systems understandable, governable and useful.'}</p><a href={pt?'/blog/rss.xml':'/en/blog/rss.xml'}>RSS ↗</a></section>
+ <section class="wrap posts" aria-label={pt?'Artigos':'Articles'}>{posts.map((post,i)=><article class="post-card"><span class="post-number">0{i+1}</span><div><p class="meta">{post.data.published.toLocaleDateString(pt?'pt-BR':'en-US',{year:'numeric',month:'long',day:'numeric'})} · {post.data.tags.join(' · ')}</p><h2><a href={`${prefix}${post.id.split('/').pop()}/`}>{post.data.title}</a></h2><p>{post.data.description}</p></div><a class="arrow" aria-label={pt?'Ler artigo':'Read article'} href={`${prefix}${post.id.split('/').pop()}/`}>↗</a></article>)}</section>
+</BaseLayout>
+<style>
+ .blog-hero{padding-block:7rem;border-bottom:1px solid var(--line)}.blog-hero .eyebrow{color:var(--blog)}.blog-hero h1{font-family:var(--serif);font-size:clamp(3rem,8vw,7rem);line-height:.9;letter-spacing:-.065em;max-width:1050px;margin:1rem 0 2rem}.blog-hero>p:not(.eyebrow){font-size:1.25rem;color:var(--muted);max-width:650px}.posts{padding-block:3rem}.post-card{display:grid;grid-template-columns:60px 1fr 50px;gap:1rem;padding:2.5rem 0;border-bottom:1px solid var(--line);align-items:start}.post-number,.meta{font-family:var(--mono);font-size:.7rem;color:var(--muted)}.post-card h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3.2rem);line-height:1;margin:.6rem 0}.post-card h2 a{text-decoration:none}.post-card>div>p:last-child{color:var(--muted);max-width:700px}.arrow{font-size:1.8rem;text-decoration:none}@media(max-width:600px){.post-card{grid-template-columns:32px 1fr}.arrow{display:none}}
+</style>

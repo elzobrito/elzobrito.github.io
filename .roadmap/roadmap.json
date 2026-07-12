@@ -6,12 +6,12 @@
     "master_correlation_id": "CID-ESAA-INIT",
     "run": {
       "run_id": "RUN-0001",
-      "status": "initialized",
-      "last_event_seq": 97,
-      "projection_hash_sha256": "839aee5a77a512a4e336912241f8409008ab48f7f62a12182a7be3a31399a1f5",
+      "status": "success",
+      "last_event_seq": 222,
+      "projection_hash_sha256": "415cf554ab01d7b7bf57aeaa07673f1116c1676a09cad6d67f75b6b2b8723180",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-05T18:09:47Z"
+    "updated_at": "2026-07-12T16:44:51Z"
   },
   "project": {
     "name": "esaa-core",
@@ -109,7 +109,7 @@
       "task_kind": "impl",
       "title": "Criar site profissional GitHub Pages",
       "description": "Site estatico profissional para consultoria em IA aplicada a educacao, automacao e governanca.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "index.html",
@@ -139,14 +139,15 @@
           "script.js implementa alternancia de tema com localStorage, menu mobile e ano automatico no footer.",
           "python -m esaa --root . verify retornou ok antes da conclusao."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:09Z"
     },
     {
       "task_id": "T-SITE-HOTFIX-001",
       "task_kind": "impl",
       "title": "Atualizar links de contato do site",
       "description": "Substituir placeholder de LinkedIn pelo perfil real e remover WhatsApp, usando email no lugar.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "index.html",
@@ -169,14 +170,15 @@
           "index.html contem https://www.linkedin.com/in/elzobrito e mailto:elzobrito@gmail.com nos botoes/canais de contato.",
           "python -m esaa --root . verify retornou ok antes da conclusao."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:10Z"
     },
     {
       "task_id": "T-SITE-HOTFIX-002",
       "task_kind": "impl",
       "title": "Definir tema claro como padrao",
       "description": "Usar tema claro por padrao quando nao houver preferencia salva no localStorage.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "script.js"
@@ -197,14 +199,15 @@
           "rg confirmou que systemTheme foi removido e localStorage permanece ativo.",
           "python -m esaa --root . verify retornou ok antes da conclusao."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:10Z"
     },
     {
       "task_id": "T-SITE-HOTFIX-003",
       "task_kind": "impl",
       "title": "Tornar descricao de sistemas agnostica a stack",
       "description": "Remover mencoes a PHP e MySQL da lista de servicos, deixando a consultoria agnostica a linguagem e plataforma.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "index.html"
@@ -225,14 +228,15 @@
           "index.html agora usa: Integracao de IA em sistemas, plataformas e aplicacoes web existentes.",
           "python -m esaa --root . verify retornou ok antes da conclusao."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:10Z"
     },
     {
       "task_id": "T-SITE-PUBLISH-001",
       "task_kind": "qa",
       "title": "Auditar publicacao no GitHub Pages",
       "description": "Registrar e verificar a publicacao do site no repositorio elzobrito.github.io apos push para main.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "README.md"
@@ -254,14 +258,15 @@
           "gh api repos/elzobrito/elzobrito.github.io/pages retornou source main /, public true, https_enforced true e status building.",
           "python -m esaa --root . verify estava ok antes da auditoria."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:11Z"
     },
     {
       "task_id": "T-GOV-MEMORY-001",
       "task_kind": "impl",
       "title": "Registrar regra operacional ESAA obrigatoria",
       "description": "Persistir no AGENTS.md que toda acao relevante deve ser precedida por tarefa ESAA, claim, execucao e complete.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "AGENTS.md"
@@ -282,14 +287,15 @@
           "AGENTS.md registra que operacoes Git/deploy/publicacao nao devem ser atalhos fora do fluxo ESAA.",
           "python -m esaa --root . verify retornou ok antes da conclusao."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:11Z"
     },
     {
       "task_id": "T-GOV-CONVERSATION-001",
       "task_kind": "qa",
       "title": "Verificar persistencia da conversa",
       "description": "Auditar se a conversa atual esta registrada em .conversation-esaa ou em workspace conversation-esaa.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "AGENTS.md"
@@ -311,18 +317,281 @@
           "README do Conversation ESAA informa que Codex requer watcher/sync; nao ha evidencia de watcher ativo para esta sessao.",
           "python -m esaa --root . verify estava ok antes da verificacao."
         ]
-      }
+      },
+      "completed_at": "2026-07-06T15:39:11Z"
+    },
+    {
+      "task_id": "SITE-HUB-SPEC-001",
+      "task_kind": "spec",
+      "title": "Especificar hub bilingue e site ESAA no GitHub Pages",
+      "description": "Definir arquitetura, rotas, conteudo bilingue, identidade visual, privacidade e criterios de aceitacao. Entrega verificavel e compativel com GitHub Pages.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "docs/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-HUB-SPEC-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-spec",
+      "started_at": "2026-07-12T16:29:07Z",
+      "verification": {
+        "checks": [
+          "Spec contem Objetivo, Escopo, Requisitos e Criterios de Aceitacao"
+        ]
+      },
+      "completed_at": "2026-07-12T16:29:46Z"
+    },
+    {
+      "task_id": "SITE-HUB-IMPL-001",
+      "task_kind": "impl",
+      "title": "Migrar hub para Astro estatico",
+      "description": "Implementar base Astro, layouts, navegacao, tema, SEO, internacionalizacao e compatibilidade com URLs existentes.",
+      "status": "done",
+      "depends_on": [
+        "SITE-HUB-SPEC-001"
+      ],
+      "targets": [
+        "*"
+      ],
+      "outputs": {
+        "files": [
+          "dist/index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T16:29:57Z",
+      "verification": {
+        "checks": [
+          "npm run check: 0 errors",
+          "npm run build: 3 paginas geradas"
+        ]
+      },
+      "completed_at": "2026-07-12T16:33:38Z"
+    },
+    {
+      "task_id": "SITE-CONSULTORIA-001",
+      "task_kind": "impl",
+      "title": "Implementar area publica de consultoria",
+      "description": "Criar paginas bilingues e sanitizadas de consultoria em /consultoria/.",
+      "status": "done",
+      "depends_on": [
+        "SITE-HUB-IMPL-001"
+      ],
+      "targets": [
+        "*"
+      ],
+      "outputs": {
+        "files": [
+          "dist/consultoria/index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T16:33:47Z",
+      "verification": {
+        "checks": [
+          "dist/consultoria/index.html e dist/en/consulting/index.html gerados",
+          "Public artifact audit: 0 forbidden matches"
+        ]
+      },
+      "completed_at": "2026-07-12T16:41:37Z"
+    },
+    {
+      "task_id": "SITE-BLOG-001",
+      "task_kind": "impl",
+      "title": "Implementar blog bilingue",
+      "description": "Criar indice, RSS, colecoes e tres artigos inaugurais em portugues e ingles.",
+      "status": "done",
+      "depends_on": [
+        "SITE-HUB-IMPL-001"
+      ],
+      "targets": [
+        "*"
+      ],
+      "outputs": {
+        "files": [
+          "dist/blog/index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T16:33:48Z",
+      "verification": {
+        "checks": [
+          "3 artigos PT, 3 artigos EN e 2 feeds RSS gerados",
+          "Public artifact audit: 0 forbidden matches"
+        ]
+      },
+      "completed_at": "2026-07-12T16:41:39Z"
+    },
+    {
+      "task_id": "SITE-ESAA-001",
+      "task_kind": "impl",
+      "title": "Implementar site publico do ESAA",
+      "description": "Criar /esaa/ com overview, arquitetura, workflow, quickstart, runners, trust e docs usando exemplos curados.",
+      "status": "done",
+      "depends_on": [
+        "SITE-HUB-IMPL-001"
+      ],
+      "targets": [
+        "*"
+      ],
+      "outputs": {
+        "files": [
+          "dist/esaa/index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T16:33:49Z",
+      "verification": {
+        "checks": [
+          "Rotas /esaa/ e /en/esaa/ geradas; screenshot mobile validado",
+          "Public artifact audit: 0 forbidden matches"
+        ]
+      },
+      "completed_at": "2026-07-12T16:41:40Z"
+    },
+    {
+      "task_id": "SITE-PAGES-CI-001",
+      "task_kind": "impl",
+      "title": "Configurar publicacao no GitHub Pages",
+      "description": "Configurar build estatico, validacoes de privacidade e deploy pelo GitHub Actions Pages.",
+      "status": "done",
+      "depends_on": [
+        "SITE-HUB-IMPL-001"
+      ],
+      "targets": [
+        "*"
+      ],
+      "outputs": {
+        "files": [
+          "dist/index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T16:33:49Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado e workflow pages.yml configurado",
+          "Public artifact audit: 0 forbidden matches"
+        ]
+      },
+      "completed_at": "2026-07-12T16:41:44Z"
+    },
+    {
+      "task_id": "SITE-HUB-QA-001",
+      "task_kind": "qa",
+      "title": "Validar hub bilingue e artefato publico",
+      "description": "Revisar build, rotas, acessibilidade, responsividade, SEO, traducoes, privacidade e compatibilidade GitHub Pages.",
+      "status": "done",
+      "depends_on": [
+        "SITE-CONSULTORIA-001",
+        "SITE-BLOG-001",
+        "SITE-ESAA-001",
+        "SITE-PAGES-CI-001"
+      ],
+      "targets": [
+        "artifacts/**"
+      ],
+      "outputs": {
+        "files": [
+          "artifacts/SITE-HUB-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T16:41:55Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado",
+          "0 links internos quebrados",
+          "Lighthouse 100/100/100/100"
+        ]
+      },
+      "completed_at": "2026-07-12T16:42:56Z"
+    },
+    {
+      "task_id": "SITE-HUB-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar e verificar hub no GitHub Pages",
+      "description": "Integrar, publicar e verificar HTTPS e rotas publicas no dominio elzobrito.github.io.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-HUB-QA-001"
+      ],
+      "targets": [
+        "artifacts/**"
+      ],
+      "outputs": {
+        "files": [
+          "artifacts/SITE-HUB-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T16:43:10Z"
+    },
+    {
+      "task_id": "SITE-ESAA-HOTFIX-001",
+      "task_kind": "impl",
+      "title": "Corrigir link canonico do paper ESAA",
+      "description": "Substituir o link generico do arXiv pelo paper 2602.23193 antes da publicacao.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/components/EsaaPage.astro"
+      ],
+      "outputs": {
+        "files": [
+          "dist/esaa/index.html"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T16:44:03Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado",
+          "arXiv respondeu HTTP"
+        ]
+      },
+      "completed_at": "2026-07-12T16:44:51Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 3,
-      "review": 7
+      "done": 18,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 6,
-      "qa": 3,
-      "spec": 1
+      "impl": 12,
+      "qa": 5,
+      "spec": 2
     }
   }
 }

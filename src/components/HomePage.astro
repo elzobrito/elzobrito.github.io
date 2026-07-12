@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { paths, type Locale } from '../i18n';
+import portrait from '../../assets/foto-elzo.jpg';
+const { locale } = Astro.props as { locale: Locale };
+const pt = locale === 'pt';
+const p = paths[locale];
+const copy = pt ? {
+  title: 'Elzo Brito — IA aplicada, automação e governança',
+  description: 'Hub de projetos, consultoria e pesquisa de Elzo Brito em IA aplicada, automação e governança de agentes.',
+  alternate: '/en/', eyebrow: 'Pesquisador · Arquiteto · Consultor',
+  headline: 'Sistemas inteligentes precisam de direção, não apenas velocidade.',
+  lede: 'Transformo IA em sistemas auditáveis, experiências de aprendizagem e decisões que equipes conseguem compreender e sustentar.',
+  projects: 'Projetos que conectam pesquisa e prática', projectsText: 'Protocolos, produtos e métodos construídos para funcionar fora da apresentação.',
+  consulting: 'Consultoria aplicada', consultingText: 'Estratégia, prototipagem e implantação de IA com governança e revisão humana.',
+  blog: 'Caderno aberto', blogText: 'Notas sobre agentes, educação, sistemas e o trabalho de tornar tecnologia explicável.',
+  about: 'Tecnologia com contexto', aboutText: 'Atuo na interseção entre Inteligência Artificial, engenharia de software e educação. Meu trabalho combina pesquisa, implementação e governança para reduzir a distância entre uma boa demonstração e um sistema confiável.',
+  contact: 'Vamos conversar?', contactText: 'Se o desafio envolve IA aplicada, agentes ou automação com responsabilidade, posso ajudar a transformar a pergunta em um caminho executável.'
+} : {
+  title: 'Elzo Brito — Applied AI, automation and governance',
+  description: 'Elzo Brito’s hub for projects, consulting and research in applied AI, automation and agent governance.',
+  alternate: '/', eyebrow: 'Researcher · Architect · Consultant',
+  headline: 'Intelligent systems need direction, not only speed.',
+  lede: 'I turn AI into auditable systems, learning experiences and decisions that teams can understand and sustain.',
+  projects: 'Projects connecting research and practice', projectsText: 'Protocols, products and methods designed to work beyond the presentation.',
+  consulting: 'Applied consulting', consultingText: 'Strategy, prototyping and AI delivery with governance and human review.',
+  blog: 'Open notebook', blogText: 'Notes on agents, education, systems and the work of making technology explainable.',
+  about: 'Technology with context', aboutText: 'I work at the intersection of Artificial Intelligence, software engineering and education. My practice combines research, implementation and governance to close the gap between a compelling demo and a dependable system.',
+  contact: 'Shall we talk?', contactText: 'If your challenge involves applied AI, agents or responsible automation, I can help turn the question into an executable path.'
+};
+---
+<BaseLayout title={copy.title} description={copy.description} locale={locale} alternate={copy.alternate}>
+  <section class="hero wrap">
+    <p class="eyebrow">{copy.eyebrow}</p>
+    <h1>{copy.headline}</h1>
+    <p class="lede">{copy.lede}</p>
+    <div class="actions"><a class="button" href="#projetos">{pt ? 'Explorar projetos' : 'Explore projects'} <span>↘</span></a><a class="button secondary" href="#contato">{pt ? 'Entrar em contato' : 'Get in touch'}</a></div>
+  </section>
+  <section class="section wrap" id="projetos">
+    <div class="section-heading"><div><p class="eyebrow">01 — {pt ? 'Projetos' : 'Projects'}</p><h2>{copy.projects}</h2></div><p>{copy.projectsText}</p></div>
+    <div class="grid">
+      <a class="card esaa-card" href={p.esaa}><span class="tag">OPEN PROTOCOL</span><h3>ESAA</h3><p>{pt ? 'Event Sourcing para agentes autônomos: intenção, contrato, evidência e replay.' : 'Event Sourcing for autonomous agents: intent, contract, evidence and replay.'}</p></a>
+      <a class="card consulting-card" href={p.consulting}><span class="tag">APPLIED AI</span><h3>{copy.consulting}</h3><p>{copy.consultingText}</p></a>
+      <a class="card blog-card" href={p.blog}><span class="tag">FIELD NOTES</span><h3>{copy.blog}</h3><p>{copy.blogText}</p></a>
+    </div>
+  </section>
+  <span id="atuacao" class="anchor-alias"></span><span id="consultorias" class="anchor-alias"></span><span id="pesquisa" class="anchor-alias"></span>
+  <section class="section about-section" id="sobre">
+    <div class="wrap about-grid">
+      <div class="portrait-wrap"><img src={portrait.src} width={portrait.width} height={portrait.height} alt={pt ? 'Retrato profissional de Elzo Brito' : 'Professional portrait of Elzo Brito'} loading="lazy" /></div>
+      <div><p class="eyebrow">02 — {pt ? 'Sobre' : 'About'}</p><h2>{copy.about}</h2><p class="about-copy">{copy.aboutText}</p><div class="mini-links"><a href="https://github.com/elzobrito">GitHub ↗</a><a href="https://www.linkedin.com/in/elzobrito">LinkedIn ↗</a></div></div>
+    </div>
+  </section>
+  <section class="section wrap contact-section" id="contato">
+    <p class="eyebrow">03 — {pt ? 'Contato' : 'Contact'}</p><h2>{copy.contact}</h2><p>{copy.contactText}</p><a class="contact-link" href="mailto:elzobrito@gmail.com">elzobrito@gmail.com ↗</a>
+  </section>
+</BaseLayout>
+<style>
+  .esaa-card { box-shadow: inset 0 5px 0 var(--esaa); }.consulting-card{box-shadow:inset 0 5px 0 var(--consulting)}.blog-card{box-shadow:inset 0 5px 0 var(--blog)}
+  .about-section { background: var(--ink); color: var(--paper); margin-top: 4rem; }.about-grid{display:grid;grid-template-columns:minmax(240px,420px) 1fr;gap:clamp(2rem,7vw,8rem);align-items:center}.portrait-wrap{aspect-ratio:4/5;overflow:hidden;border-radius:50% 50% 16px 16px}.portrait-wrap img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%)}.about-section .eyebrow{color:#f0a06f}.about-copy{font-size:clamp(1.15rem,2vw,1.5rem);max-width:700px;color:#c9c5bb}.mini-links{display:flex;gap:1.3rem;margin-top:2rem}.contact-section{text-align:center;max-width:900px}.contact-section p:not(.eyebrow){max-width:650px;margin:1rem auto;color:var(--muted);font-size:1.15rem}.contact-link{font-family:var(--serif);display:inline-block;font-size:clamp(1.5rem,5vw,4rem);margin-top:2rem}.anchor-alias{display:block;position:relative;top:-80px;visibility:hidden}
+  @media(max-width:800px){.about-grid{grid-template-columns:1fr}.portrait-wrap{max-width:320px}}
+</style>

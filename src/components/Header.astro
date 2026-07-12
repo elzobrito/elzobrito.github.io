@@ -1,0 +1,23 @@
+---
+import { paths, ui, type Locale } from '../i18n';
+interface Props { locale: Locale; alternate: string; section?: 'hub' | 'esaa'; }
+const { locale, alternate, section = 'hub' } = Astro.props;
+const t = ui[locale];
+const p = paths[locale];
+---
+<a class="skip-link" href="#conteudo">{t.skip}</a>
+<header class:list={["site-header", { "esaa-header": section === 'esaa' }]}>
+  <a class="brand" href={p.home} aria-label="Elzo Brito — início">
+    <span class="brand-mark" aria-hidden="true">EB</span><span>Elzo Brito</span>
+  </a>
+  <nav aria-label={locale === 'pt' ? 'Navegação principal' : 'Main navigation'}>
+    <a href={`${p.home}#projetos`}>{t.nav.projects}</a>
+    <a href={p.consulting}>{t.nav.consulting}</a>
+    <a href={p.blog}>{t.nav.blog}</a>
+    <a class="nav-esaa" href={p.esaa}>ESAA</a>
+  </nav>
+  <div class="header-actions">
+    <a class="language" href={alternate} hreflang={locale === 'pt' ? 'en' : 'pt'}>{t.language}</a>
+    <button class="theme-toggle" type="button" title={t.theme}><span class="sr-only">{t.theme}</span><span aria-hidden="true">◐</span></button>
+  </div>
+</header>

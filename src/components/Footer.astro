@@ -1,0 +1,8 @@
+---
+import type { Locale } from '../i18n';
+const { locale } = Astro.props as { locale: Locale };
+---
+<footer class="site-footer">
+  <p>© {new Date().getFullYear()} Elzo Brito. {locale === 'pt' ? 'Construído com evidência.' : 'Built with evidence.'}</p>
+  <div><a href="mailto:elzobrito@gmail.com">Email</a><a href="https://github.com/elzobrito" rel="me">GitHub</a><a href="https://www.linkedin.com/in/elzobrito" rel="me">LinkedIn</a></div>
+</footer>

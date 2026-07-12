@@ -57,5 +57,7 @@ python -m esaa --root . --runner codex submit output.json --actor agent-spec
 <!-- esaa:bootstrap:project:begin -->
 ## Contexto do projeto
 
-_Adicione aqui regras específicas do seu projeto._
+- Toda ação relevante neste repositório deve nascer governada pelo ESAA antes da execução.
+- Para alterações, commits, pushes, publicação, configuração remota ou validações relevantes: criar tarefa ESAA, executar `claim`, realizar a ação, registrar `complete` com evidências e rodar `verify`.
+- Não tratar operações Git, deploy ou publicação como atalhos fora do fluxo ESAA. Se algo ocorrer fora de ordem, declarar a falha e registrar auditoria/correção no event store.
 <!-- esaa:bootstrap:project:end -->
