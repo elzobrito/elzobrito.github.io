@@ -187,7 +187,7 @@ Esse tipo de ajuste faz parte da experiência real.
 
 ## ESAA e registro operacional: registrar a propria migracao
 
-Durante a sessão, percebi que tudo aquilo não deveria se perder. Eu já vinha trabalhando com ESAA e registro operacional. Então pedi para o Grok Build ler o ESAA-Core, guardar o contexto, reconhecer o `esaa-codex-plugin`, ler o `registro operacional do ESAA` e iniciar um `.registro operacional do ESAA` em `~`.
+Durante a sessão, percebi que tudo aquilo não deveria se perder. Eu já vinha trabalhando com ESAA e registro operacional. Então pedi para o Grok Build ler o ESAA-Core, guardar o contexto, reconhecer o `esaa-codex-plugin`, ler o `registro operacional do ESAA` e iniciar um registro operacional no meu ambiente.
 
 A ideia era registrar conversas que não pertenciam a um projeto fixo. Cada projeto pode ter seu próprio histórico, mas meu ambiente Linux também merecia um log operacional.
 
@@ -318,4 +318,3 @@ E, sinceramente, depois dessa experiência, não parece que eu volto para o Wind
 Este artigo foi migrado do TabNews em 2026-07-12 para compor o acervo publico do hub. A data original foi preservada e a fonte segue registrada abaixo. Conteudos sobre ferramentas, modelos, seguranca e infraestrutura podem envelhecer; valide referencias atuais antes de usar como decisao operacional.
 
 Fonte original: https://www.tabnews.com.br/elzobrito/como-o-grok-build-me-ajudou-a-usar-o-linux-de-verdade
-

@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 428,
-      "projection_hash_sha256": "d5f97d6c4206d015a503ba6bfe38090366de1a43f9a94367e8d05e14b191d85c",
+      "last_event_seq": 441,
+      "projection_hash_sha256": "dc8c33452c7e28a0fb3faa4f085fe66db5cf71fb7fb78e49bc58c92b6b7ec8d4",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T18:57:05Z"
+    "updated_at": "2026-07-12T18:59:14Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1045,15 +1045,44 @@
         ]
       },
       "completed_at": "2026-07-12T18:55:46Z"
+    },
+    {
+      "task_id": "SITE-BLOG-TABNEWS-COPY-FIX-001",
+      "task_kind": "impl",
+      "title": "Ajustar frase sanitizada no post Grok Build",
+      "description": "Corrigir redacao residual gerada pela sanitizacao de literal operacional no post Grok Build, removendo ponto antes de conceito publicavel.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-TABNEWS-PRIVACY-FIX-001"
+      ],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/como-o-grok-build-me-ajudou-a-usar-o-linux-de-verdade.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T18:58:40Z",
+      "verification": {
+        "checks": [
+          "npm run check && npm run build && npm run audit:public"
+        ]
+      },
+      "completed_at": "2026-07-12T18:59:14Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 34,
+      "done": 35,
       "in_progress": 1
     },
     "by_kind": {
-      "impl": 20,
+      "impl": 21,
       "qa": 9,
       "spec": 6
     }
