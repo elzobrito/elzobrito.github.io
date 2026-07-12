@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 448,
-      "projection_hash_sha256": "39f72f3401bcad818dece927c4a4fd9a20f831dc867b62779d7020f4e7ff8b2b",
+      "last_event_seq": 480,
+      "projection_hash_sha256": "9f7d432fd6f3a9f9668f18bbc6376d43eebc20630c368cd4853fc06ae0a82eec",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T19:00:46Z"
+    "updated_at": "2026-07-12T19:15:07Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1080,15 +1080,103 @@
         ]
       },
       "completed_at": "2026-07-12T18:59:14Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-POST-001",
+      "task_kind": "impl",
+      "title": "Criar post PACER a partir dos sinais de IA de 2026-07-12",
+      "description": "Produzir artigo autonomo em pt-BR e par editorial en para o blog, usando apenas material publico e sanitizado extraido dos sinais de IA do dia, sem expor origem em email newsletter ou clipping.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/agentes-de-ia-entre-autonomia-e-governanca.md",
+          "src/content/posts/en/ai-agents-between-autonomy-and-governance.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-12T19:09:34Z",
+      "verification": {
+        "checks": [
+          "npm test: ok (astro check, build, audit-public)",
+          "rotas geradas: /blog/agentes-de-ia-entre-autonomia-e-governanca/ e /en/blog/ai-agents-between-autonomy-and-governance/",
+          "PACER v1.4 aplicado: artigo autonomo, tese clara, cinco secoes, conclusao reflexiva, sem origem visivel"
+        ]
+      },
+      "completed_at": "2026-07-12T19:11:14Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar post PACER diario de IA",
+      "description": "Validar schema, build, PACER, links internos de traducao e auditoria de privacidade do novo post.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-AI-POST-001"
+      ],
+      "targets": [
+        "src/content/posts/**",
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-AI-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T19:11:29Z",
+      "verification": {
+        "checks": [
+          "npm test: ok (astro check, build, audit-public)",
+          "rg de origem/privacidade: nenhum match no Markdown; match de Email apenas no rodape global de contato",
+          "esaa verify: ok"
+        ]
+      },
+      "completed_at": "2026-07-12T19:12:24Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar post PACER diario de IA",
+      "description": "Commitar e publicar no GitHub Pages o post diario de IA criado e validado sob ESAA, registrando evidencia de commit, workflow e URL publica.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-AI-QA-001"
+      ],
+      "targets": [
+        "src/content/posts/**",
+        "docs/qa/**",
+        ".roadmap/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-AI-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-12T19:15:07Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 36
+      "done": 38,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 21,
-      "qa": 9,
+      "impl": 22,
+      "qa": 11,
       "spec": 6
     }
   }
