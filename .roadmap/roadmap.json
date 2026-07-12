@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 587,
-      "projection_hash_sha256": "c2466844ac58587744b3fcecd3ca1e2384c047b82f1e6e0995990e27fb1d7d24",
+      "last_event_seq": 594,
+      "projection_hash_sha256": "a50f162f5dacc1bbb7b916cf7b2573d2ccc2076799d41017d66c5f4a671febf0",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T23:17:35Z"
+    "updated_at": "2026-07-12T23:19:06Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1340,7 +1340,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário aberto",
       "description": "Fazer commit explícito, push em main, aguardar GitHub Pages e registrar evidências das URLs PT/EN.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260712-QA-001",
         "SITE-BLOG-DAILY-OPEN-20260712-QA2-001"
@@ -1357,7 +1357,16 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-12T23:17:35Z"
+      "started_at": "2026-07-12T23:17:35Z",
+      "verification": {
+        "checks": [
+          "commit 3206eeb enviado a main",
+          "workflow 29213143785 aprovado",
+          "URLs PT e EN verificadas por HTTPS",
+          "canonical e hreflang corretos"
+        ]
+      },
+      "completed_at": "2026-07-12T23:19:06Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260712-FIX-001",
@@ -1425,8 +1434,7 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 46,
-      "in_progress": 1
+      "done": 47
     },
     "by_kind": {
       "impl": 25,
