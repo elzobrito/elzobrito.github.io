@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 222,
-      "projection_hash_sha256": "415cf554ab01d7b7bf57aeaa07673f1116c1676a09cad6d67f75b6b2b8723180",
+      "last_event_seq": 228,
+      "projection_hash_sha256": "c0d8e1625be0c3608d9e061bc815355d720c6c70eb3805875b73d647524ab4d3",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T16:44:51Z"
+    "updated_at": "2026-07-12T16:47:48Z"
   },
   "project": {
     "name": "esaa-core",
@@ -536,7 +536,7 @@
       "task_kind": "qa",
       "title": "Publicar e verificar hub no GitHub Pages",
       "description": "Integrar, publicar e verificar HTTPS e rotas publicas no dominio elzobrito.github.io.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-HUB-QA-001"
       ],
@@ -552,7 +552,15 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-12T16:43:10Z"
+      "started_at": "2026-07-12T16:43:10Z",
+      "verification": {
+        "checks": [
+          "Workflow 29200739125: success",
+          "10 rotas publicas: HTTP 200",
+          "Pages public=true e https_enforced=true"
+        ]
+      },
+      "completed_at": "2026-07-12T16:47:48Z"
     },
     {
       "task_id": "SITE-ESAA-HOTFIX-001",
@@ -585,8 +593,7 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 18,
-      "in_progress": 1
+      "done": 19
     },
     "by_kind": {
       "impl": 12,
