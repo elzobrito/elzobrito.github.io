@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 441,
-      "projection_hash_sha256": "dc8c33452c7e28a0fb3faa4f085fe66db5cf71fb7fb78e49bc58c92b6b7ec8d4",
+      "last_event_seq": 448,
+      "projection_hash_sha256": "39f72f3401bcad818dece927c4a4fd9a20f831dc867b62779d7020f4e7ff8b2b",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-12T18:59:14Z"
+    "updated_at": "2026-07-12T19:00:46Z"
   },
   "project": {
     "name": "esaa-core",
@@ -970,7 +970,7 @@
       "task_kind": "qa",
       "title": "Publicar posts TabNews no GitHub Pages",
       "description": "Publicar o lote TabNews aprovado, verificar workflow GitHub Pages e rotas HTTPS publicas, registrando recibo final.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-TABNEWS-QA-001"
       ],
@@ -986,7 +986,13 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-12T18:57:05Z"
+      "started_at": "2026-07-12T18:57:05Z",
+      "verification": {
+        "checks": [
+          "gh run watch 29204919477 --exit-status; curl HTTPS rotas Grok PT/EN, ESAA-Security, Conversation ESAA, RSS PT/EN e sitemap retornaram 200"
+        ]
+      },
+      "completed_at": "2026-07-12T19:00:46Z"
     },
     {
       "task_id": "SITE-BLOG-TABNEWS-SEO-DOC-FIX-001",
@@ -1078,8 +1084,7 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 35,
-      "in_progress": 1
+      "done": 36
     },
     "by_kind": {
       "impl": 21,
