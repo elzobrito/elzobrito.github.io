@@ -1,0 +1,13 @@
+{
+  "after_sha256": "d7a43a3f15670e0f5bbc73fa7b83933a5abf16f32587d7b090582db14927eef5",
+  "artifact_id": "ART-d7a43a3f15670e0f5bbc73fa7b83933a5abf16f32587d7b090582db14927eef5",
+  "artifact_sha256": "90871326e016c2baa8afb6a8f84787649a137e53be0ab96144b36d9c70ac39e6",
+  "before_sha256": null,
+  "bytes": 1087,
+  "content": "# SITE-ESAA-RUNTIME-ANIMATIONS-QA-001\n\n## Scope\n\nValidation of the bilingual ESAA runtime visualization added to the PT and EN ESAA routes.\n\n## Automated validation\n\n- `npm test`: passed\n- `astro check`: 0 errors, 0 warnings, 0 hints\n- Static build: 77 pages generated\n- Public artifact audit: 88 files, 11 required routes, 0 forbidden matches\n- `esaa --root . verify`: passed during every governed transition\n\n## Browser validation\n\n- PT route rendered with the complete state machine and live panels.\n- Pause and replay controls each resolved to exactly one accessible button and behaved correctly.\n- Paused state remained unchanged across 2.5 seconds.\n- Replay returned the state to `todo`.\n- Mobile layout produced no horizontal overflow.\n- Browser console contained no errors.\n\n## Visual validation\n\nThe reference and implementation were reviewed in the same comparison artifact at `/tmp/esaa-runtime-comparison.png`. The resulting interface matches the reference's telemetry rhythm while retaining ESAA's green accent and the site's typography and spacing system.\n\nResult: passed.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-ESAA-RUNTIME-ANIMATIONS-QA-001.md",
+  "source_path": "docs/qa/SITE-ESAA-RUNTIME-ANIMATIONS-QA-001.md",
+  "ts": "2026-07-13T01:55:00Z"
+}
