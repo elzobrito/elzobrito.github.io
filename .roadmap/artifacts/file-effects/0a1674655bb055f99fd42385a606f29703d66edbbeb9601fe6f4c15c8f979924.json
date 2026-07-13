@@ -1,0 +1,13 @@
+{
+  "after_sha256": "4dd22571a4c498112a1f004edf0463b10edcd9ea1bf3c375492b1c3bb11cb7b6",
+  "artifact_id": "ART-4dd22571a4c498112a1f004edf0463b10edcd9ea1bf3c375492b1c3bb11cb7b6",
+  "artifact_sha256": "0a1674655bb055f99fd42385a606f29703d66edbbeb9601fe6f4c15c8f979924",
+  "before_sha256": null,
+  "bytes": 1848,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260713-QA-001\n\n## Escopo\n\nValidação editorial, técnica e pública do artigo bilíngue sobre falhas nas bordas operacionais de agentes.\n\n## Janela editorial e fontes primárias\n\nJanela: 2026-07-12 11:00 a 2026-07-13 11:00 em America/Sao_Paulo.\n\n- Codex 0.144.2, publicado em 2026-07-13 04:39:22 UTC: <https://github.com/openai/codex/releases/tag/rust-v0.144.2>\n- llama.cpp b9977, publicado em 2026-07-12 16:18:10 UTC: <https://github.com/ggml-org/llama.cpp/releases/tag/b9977>\n- llama.cpp b9979, publicado em 2026-07-12 23:36:43 UTC: <https://github.com/ggml-org/llama.cpp/releases/tag/b9979>\n- llama.cpp b9986, publicado em 2026-07-13 09:06:33 UTC: <https://github.com/ggml-org/llama.cpp/releases/tag/b9986>\n\nAs quatro páginas responderam HTTP 200 durante a validação. Cada afirmação específica foi comparada com o texto da release correspondente. O artigo limita comparações ao comportamento documentado e apresenta consequências práticas como análise editorial.\n\n## Validação técnica\n\n- `npm test`: aprovado.\n- `astro check`: 27 arquivos, 0 erros, 0 avisos e 0 sugestões.\n- `astro build`: 79 páginas geradas.\n- `audit:public`: 90 arquivos, 11 rotas obrigatórias e 0 ocorrências vedadas.\n- Verificação dedicada de frontmatter: campos obrigatórios presentes, data 2026-07-13, locales PT/EN e traduções recíprocas.\n- `git diff --check`: aprovado.\n- Links das quatro fontes: HTTP 200.\n\n## Auditoria editorial e de privacidade\n\nA varredura foi limitada aos dois novos posts públicos. Não encontrou referências ao processo de produção, artefatos internos, caminhos do ambiente ou termos vedados pelo contrato editorial.\n\nA edição em inglês preserva a tese, os fatos e as fontes, mas adapta exemplos e ritmo em vez de reproduzir frases mecanicamente.\n\n## Decisão\n\nAprovado para publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-QA-001.md",
+  "ts": "2026-07-13T14:07:02Z"
+}

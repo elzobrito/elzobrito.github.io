@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 684,
-      "projection_hash_sha256": "564cf689595a706ac199d9db24c447c62abf0e42d487e4c7508e2d94d0a0b300",
+      "last_event_seq": 716,
+      "projection_hash_sha256": "242408ad846f572f929a5c3dd48a0cd6a432878ea595f34be4ee2332a2bae09d",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-13T02:21:14Z"
+    "updated_at": "2026-07-13T14:07:11Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1597,15 +1597,102 @@
         ]
       },
       "completed_at": "2026-07-13T02:21:14Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260713-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN",
+      "description": "Produzir artigo bilíngue sobre correções recentes nas bordas operacionais de agentes: revisão, raciocínio, multimodalidade e integridade de entrada.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/as-bordas-frageis-dos-agentes-revisao-raciocinio-e-imagens.md",
+        "src/content/posts/en/the-fragile-edges-of-agents-reviews-reasoning-and-images.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/as-bordas-frageis-dos-agentes-revisao-raciocinio-e-imagens.md",
+          "src/content/posts/en/the-fragile-edges-of-agents-reviews-reasoning-and-images.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-13T14:03:42Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias vinculadas diretamente",
+          "Comparações limitadas ao comportamento documentado nas releases",
+          "Frontmatter PT e EN com traduções recíprocas"
+        ]
+      },
+      "completed_at": "2026-07-13T14:06:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260713-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto",
+      "description": "Validar fontes, rigor, schema, privacidade, adaptação editorial, links e npm test.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260713-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-13T14:06:07Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado com 79 páginas",
+          "Frontmatter e traduções recíprocas validados",
+          "Quatro fontes primárias responderam HTTP 200",
+          "Auditoria pública e git diff --check aprovados"
+        ]
+      },
+      "completed_at": "2026-07-13T14:07:10Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260713-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto",
+      "description": "Fazer commit explícito, push em main, aguardar GitHub Pages e registrar evidências HTTP das URLs PT e EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260713-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-13T14:07:11Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 53
+      "done": 55,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 27,
-      "qa": 20,
+      "impl": 28,
+      "qa": 22,
       "spec": 6
     }
   }
