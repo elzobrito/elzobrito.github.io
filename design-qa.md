@@ -39,3 +39,37 @@ The implementation preserves the reference's near-black telemetry panel, thin di
 ## Final result
 
 passed
+
+---
+
+# Design QA — canonical `in_progress` label correction
+
+## Evidence
+
+- Source visual truth: `/tmp/codex-remote-attachments/019f57ec-3f1e-7870-b795-0a950dc02552/b5d783a7-b443-4d00-bcb1-0d477b009b4b/1-Photo-1.jpg`
+- Browser-rendered implementation: `/tmp/esaa-in-progress-mobile-focused.png`
+- Side-by-side comparison: `/tmp/esaa-in-progress-label-comparison.png`
+- Viewport: 390 × 844
+- State: roadmap projection while the animated task is in `review`
+
+## Required fidelity surfaces
+
+- Typography: unchanged; the canonical label fits the existing mono UI without clipping.
+- Spacing and layout: the longer `IN_PROGRESS` label stays inside its grid cell at 390 px.
+- Colors and tokens: unchanged and consistent with the ESAA green telemetry palette.
+- Image and asset fidelity: no image assets are used by the runtime visualization; the source phone screenshot and browser capture were compared side by side.
+- Copy and content: `ACTIVE` was replaced by the exact protocol state `IN_PROGRESS`; state counters and status projection remain synchronized.
+
+## Comparison history
+
+1. P2 — The source screenshot exposed a semantic mismatch: the projection used `ACTIVE`, while the state machine and ESAA protocol use `in_progress`.
+2. Fix — Replaced the visible label with `IN_PROGRESS` and renamed the internal counter selector to `data-count="in_progress"`.
+3. Post-fix evidence — The combined comparison shows `IN_PROGRESS` in the mobile projection; browser checks found one exact `IN_PROGRESS`, zero exact `ACTIVE`, no console errors, and no horizontal overflow.
+
+## Findings
+
+No remaining P0, P1, or P2 findings. A focused region comparison was used because the correction is a small, text-specific semantic change.
+
+## Final result
+
+passed

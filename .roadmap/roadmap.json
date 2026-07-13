@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 646,
-      "projection_hash_sha256": "cc291b83681f6ed5400f0b6dcd47d3a5c5efa5a54f21ae56d121338bf9c4bbb8",
+      "last_event_seq": 684,
+      "projection_hash_sha256": "564cf689595a706ac199d9db24c447c62abf0e42d487e4c7508e2d94d0a0b300",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-13T01:56:05Z"
+    "updated_at": "2026-07-13T02:21:14Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1513,15 +1513,99 @@
         ]
       },
       "completed_at": "2026-07-13T01:56:05Z"
+    },
+    {
+      "task_id": "SITE-ESAA-RUNTIME-LABEL-FIX-001",
+      "task_kind": "impl",
+      "title": "Corrigir rótulo in_progress na projeção ESAA",
+      "description": "Substituir o rótulo incorreto ACTIVE pelo estado canônico IN_PROGRESS e alinhar o seletor interno.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/components/EsaaPage.astro"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-13T02:17:48Z",
+      "verification": {
+        "checks": [
+          "ACTIVE removido",
+          "IN_PROGRESS presente"
+        ]
+      },
+      "completed_at": "2026-07-13T02:20:14Z"
+    },
+    {
+      "task_id": "SITE-ESAA-RUNTIME-LABEL-FIX-QA-001",
+      "task_kind": "qa",
+      "title": "Validar rótulo in_progress na projeção ESAA",
+      "description": "Validar renderização móvel, build e consistência da máquina de estados.",
+      "status": "done",
+      "depends_on": [
+        "SITE-ESAA-RUNTIME-LABEL-FIX-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "design-qa.md",
+          "docs/qa/SITE-ESAA-RUNTIME-LABEL-FIX-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "design-qa.md"
+      ],
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-13T02:20:15Z",
+      "verification": {
+        "checks": [
+          "IN_PROGRESS count 1",
+          "ACTIVE count 0",
+          "npm test passou",
+          "Sem overflow ou erros de console"
+        ]
+      },
+      "completed_at": "2026-07-13T02:20:41Z"
+    },
+    {
+      "task_id": "SITE-ESAA-RUNTIME-LABEL-FIX-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar correção do rótulo in_progress",
+      "description": "Criar commit governado e publicar a correção no GitHub Pages.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-13T02:21:06Z",
+      "verification": {
+        "checks": [
+          "Commit local criado",
+          "npm test passou"
+        ]
+      },
+      "completed_at": "2026-07-13T02:21:14Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 50
+      "done": 53
     },
     "by_kind": {
-      "impl": 26,
-      "qa": 18,
+      "impl": 27,
+      "qa": 20,
       "spec": 6
     }
   }

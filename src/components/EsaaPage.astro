@@ -31,7 +31,7 @@ const labels = pt ? ['Visão','Por quê','Arquitetura','Fluxo','Quickstart','Run
      </div>
      <div class="event-stream"><div class="panel-label"><span>EVENT STORE</span><span>APPEND ONLY</span></div><ol aria-live="polite"><li data-demo-event="0"><time>10:42:01</time><b>TASK</b><code>task.created</code></li><li data-demo-event="1"><time>10:42:03</time><b>CLAIM</b><code>task.claimed · agent-impl</code></li><li data-demo-event="2"><time>10:42:08</time><b>OUTPUT</b><code>task.completed · 2 files</code></li><li data-demo-event="3"><time>10:42:11</time><b>REVIEW</b><code>review.approved · agent-qa</code></li></ol></div>
     </div>
-    <aside class="projection-panel"><div class="panel-label"><span>ROADMAP PROJECTION</span><span data-projection-sync>SYNCED</span></div><div class="projection-counts"><div><small>TODO</small><strong data-count="todo">1</strong></div><div><small>ACTIVE</small><strong data-count="active">0</strong></div><div><small>REVIEW</small><strong data-count="review">0</strong></div><div><small>DONE</small><strong data-count="done">0</strong></div></div><div class="projection-card"><span data-roadmap-line>status: todo</span><span>assigned_to: <i data-roadmap-agent>null</i></span><span>event_seq: <i data-roadmap-seq>1041</i></span><span>projection_hash: <i data-roadmap-hash>9f2a…71c0</i></span></div><p>{pt?'O roadmap não é editado: ele é reconstruído a partir dos eventos admitidos.':'The roadmap is not edited: it is rebuilt from admitted events.'}</p></aside>
+    <aside class="projection-panel"><div class="panel-label"><span>ROADMAP PROJECTION</span><span data-projection-sync>SYNCED</span></div><div class="projection-counts"><div><small>TODO</small><strong data-count="todo">1</strong></div><div><small>IN_PROGRESS</small><strong data-count="in_progress">0</strong></div><div><small>REVIEW</small><strong data-count="review">0</strong></div><div><small>DONE</small><strong data-count="done">0</strong></div></div><div class="projection-card"><span data-roadmap-line>status: todo</span><span>assigned_to: <i data-roadmap-agent>null</i></span><span>event_seq: <i data-roadmap-seq>1041</i></span><span>projection_hash: <i data-roadmap-hash>9f2a…71c0</i></span></div><p>{pt?'O roadmap não é editado: ele é reconstruído a partir dos eventos admitidos.':'The roadmap is not edited: it is rebuilt from admitted events.'}</p></aside>
    </div>
    <footer class="runtime-stats"><div><span>{pt?'EVENTOS ADMITIDOS':'EVENTS ADMITTED'}</span><strong data-event-count>1</strong></div><div><span>{pt?'PROJEÇÃO':'PROJECTION'}</span><strong data-projection-state>{pt?'ATUAL':'CURRENT'}</strong></div><div><span>{pt?'CADEIA':'CHAIN'}</span><strong>VERIFIED</strong></div></footer>
   </div>
@@ -77,7 +77,7 @@ esaa eligible</code></pre><p>{pt?'O primeiro sinal esperado é verify_status: ok
    setText('[data-roadmap-hash]', hashes[step]);
    setText('[data-event-count]', String(step + 1));
    setText('[data-count="todo"]', step === 0 ? '1' : '0');
-   setText('[data-count="active"]', step === 1 ? '1' : '0');
+   setText('[data-count="in_progress"]', step === 1 ? '1' : '0');
    setText('[data-count="review"]', step === 2 ? '1' : '0');
    setText('[data-count="done"]', step === 3 ? '1' : '0');
   };

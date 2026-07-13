@@ -1,0 +1,13 @@
+{
+  "after_sha256": "7d579c3abf27c0c1861efa1fed2c845cdb014f5e54c624dc37c37373fb092a97",
+  "artifact_id": "ART-7d579c3abf27c0c1861efa1fed2c845cdb014f5e54c624dc37c37373fb092a97",
+  "artifact_sha256": "12598d7e075cf53f2629fe0d389a4363aa32e13775541aa81bc93d01def5fb2a",
+  "before_sha256": null,
+  "bytes": 596,
+  "content": "# SITE-ESAA-RUNTIME-LABEL-FIX-QA-001\n\n## Result\n\nPassed.\n\n## Evidence\n\n- `npm test`: passed.\n- Astro diagnostics: 0 errors, 0 warnings, 0 hints.\n- Public artifact audit: passed with 0 forbidden matches.\n- Mobile viewport: 390 × 844.\n- Exact `IN_PROGRESS` labels: 1.\n- Exact `ACTIVE` labels: 0.\n- Horizontal overflow: none (`scrollWidth 375`, `innerWidth 390`).\n- Browser console errors: none.\n- Visual comparison: `/tmp/esaa-in-progress-label-comparison.png`.\n\nThe visible roadmap projection and its internal counter selector now use the same canonical `in_progress` state as the state machine.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-ESAA-RUNTIME-LABEL-FIX-QA-001.md",
+  "source_path": "docs/qa/SITE-ESAA-RUNTIME-LABEL-FIX-QA-001.md",
+  "ts": "2026-07-13T02:20:41Z"
+}
