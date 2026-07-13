@@ -1,0 +1,13 @@
+{
+  "after_sha256": "5de60d3af499f6466e6065a337300925d6b7cf08eecd52f167e763c53fdf4b59",
+  "artifact_id": "ART-5de60d3af499f6466e6065a337300925d6b7cf08eecd52f167e763c53fdf4b59",
+  "artifact_sha256": "723a7a1ff64663cf5b60570a69a8f511aff4d1e4ac25d83c38c0ea95ca4c34eb",
+  "before_sha256": null,
+  "bytes": 1175,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260713-PUBLISH-001\n\n## Resultado\n\nArtigo diário aberto publicado em português e inglês.\n\n## Evidências\n\n- Commit de conteúdo: `81d3545`\n- Push: `main -> origin/main`\n- Workflow: `Deploy static hub to GitHub Pages`\n- Run: `29256606868`\n- URL do workflow: <https://github.com/elzobrito/elzobrito.github.io/actions/runs/29256606868>\n- Build: sucesso em 29 segundos.\n- Deploy: sucesso em 14 segundos.\n- PT: <https://elzobrito.github.io/blog/as-bordas-frageis-dos-agentes-revisao-raciocinio-e-imagens/>\n- EN: <https://elzobrito.github.io/en/blog/the-fragile-edges-of-agents-reviews-reasoning-and-images/>\n- As duas páginas responderam HTTP 200 com título, canonical e hreflang PT/EN recíprocos.\n\n## Estado antes do push\n\n- `HEAD...origin/main`: `0 0`.\n- O staging explícito incluiu somente os dois posts, o documento QA e os artefatos ESAA deste fluxo.\n- O documento PACER preexistente e o artefato ESAA preexistente de hash iniciado por `8055` permaneceram fora do commit.\n\n## Observação\n\nO workflow exibiu aviso não bloqueante sobre actions declaradas para Node.js 20 serem executadas com Node.js 24. Build e deploy concluíram com sucesso.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260713-PUBLISH-001.md",
+  "ts": "2026-07-13T14:08:59Z"
+}
