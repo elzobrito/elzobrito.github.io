@@ -1,0 +1,13 @@
+{
+  "after_sha256": "de6ca8b85e9914558934172305756a3276ea21825542e8ee992e4df6e5d7315f",
+  "artifact_id": "ART-de6ca8b85e9914558934172305756a3276ea21825542e8ee992e4df6e5d7315f",
+  "artifact_sha256": "a340c889d265647ffabf0b834d5adbf446e15d71761a26c03829f91e37ce0e35",
+  "before_sha256": "de6ca8b85e9914558934172305756a3276ea21825542e8ee992e4df6e5d7315f",
+  "bytes": 1065,
+  "content": "# Commit — SITE-BLOG-DAILY-AI-20260714-COMMIT-001\n\nData local: 2026-07-14 (America/Sao_Paulo)\n\n## Escopo do commit\n\n- post PT e par EN;\n- capa local em PNG;\n- evidências de QA e commit;\n- event store, projeções e recibos ESAA gerados por este ciclo.\n\nO staging foi montado por caminhos explícitos. Permaneceram fora do commit os arquivos preexistentes `.roadmap/artifacts/file-effects/8055c3df83f444364f4e84462b9af216d0e16f207508d339a60dc8aa6c1fab5d.json` e `docs/qa/SITE-BLOG-DAILY-AI-AUTOMATION-GOV-001.md`.\n\n## Validações anteriores ao commit\n\n- `npm test`: aprovado;\n- auditoria de privacidade: 0 ocorrências proibidas nos novos artigos;\n- traduções recíprocas e rotas PT/EN: aprovadas;\n- capa PNG: decodificação aprovada;\n- `git diff --check`: aprovado;\n- `esaa --root . verify`: aprovado.\n\n## Política de publicação\n\nFoi autorizado apenas commit local. Nenhum `git push`, deploy ou publicação foi executado. O hash final é obtido por `git rev-parse HEAD` depois da revisão ESAA e do amend que incorpora o estado final da própria tarefa.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-AI-20260714-COMMIT-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-AI-20260714-COMMIT-001.md",
+  "ts": "2026-07-14T18:07:44Z"
+}

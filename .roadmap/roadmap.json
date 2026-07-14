@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 762,
-      "projection_hash_sha256": "21602ddfd2c3ebe9a27ebde75e265e9a1958c177894c51b16c7fc73c150d374a",
+      "last_event_seq": 813,
+      "projection_hash_sha256": "b0ef4541c57fd3e603bac76decdf5518672fc4c4ec7807227b154d88866a1862",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-14T14:38:26Z"
+    "updated_at": "2026-07-14T18:07:45Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1787,15 +1787,130 @@
         ]
       },
       "completed_at": "2026-07-14T14:38:26Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-20260714-POST-001",
+      "task_kind": "impl",
+      "title": "Criar post PACER diario PT e EN de 2026-07-14",
+      "description": "Produzir artigo autonomo bilingue a partir dos tres materiais diarios, com capa e navegacao cruzada, sem expor a origem.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "Post PT/EN e imagem de capa"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "public/images/posts/**"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-14T18:01:52Z",
+      "verification": {
+        "checks": [
+          "Par bilingue criado com translations reciprocas e capa local"
+        ]
+      },
+      "completed_at": "2026-07-14T18:04:55Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-20260714-QA-001",
+      "task_kind": "qa",
+      "title": "Validar PACER build privacidade e links bilingues de 2026-07-14",
+      "description": "Executar testes, auditoria de privacidade e validar par bilingue e capa.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-AI-20260714-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-AI-20260714-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-AI-20260714-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-14T18:05:09Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado; auditoria publica e rg com zero ocorrencias; PNG decodificado; git diff --check aprovado"
+        ]
+      },
+      "completed_at": "2026-07-14T18:07:00Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-20260714-COMMIT-001",
+      "task_kind": "qa",
+      "title": "Criar commit local PACER de 2026-07-14",
+      "description": "Registrar evidencias finais e criar commit local sem push.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-AI-20260714-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-AI-20260714-COMMIT-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-AI-20260714-COMMIT-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-14T18:07:02Z",
+      "verification": {
+        "checks": [
+          "Commit local criado; arquivos preexistentes fora do staging; nenhum push ou deploy"
+        ]
+      },
+      "completed_at": "2026-07-14T18:07:45Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-AI-20260714-ASSET-HOTFIX-001",
+      "task_kind": "impl",
+      "title": "Restaurar capa binaria PACER de 2026-07-14",
+      "description": "Restaurar PNG corrompido pela serializacao textual de file_updates e validar decodificacao.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "public/images/posts/desacelerar-a-ia-e-um-problema-de-engenharia.png"
+      ],
+      "outputs": {
+        "files": [
+          "Capa PNG valida"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-14T18:06:15Z",
+      "verification": {
+        "checks": [
+          "ImageMagick identify decodificou PNG 1400x788; sha256 registrado no log"
+        ]
+      },
+      "completed_at": "2026-07-14T18:06:19Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 59
+      "done": 63
     },
     "by_kind": {
-      "impl": 29,
-      "qa": 24,
+      "impl": 31,
+      "qa": 26,
       "spec": 6
     }
   }
