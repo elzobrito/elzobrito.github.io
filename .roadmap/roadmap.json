@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 723,
-      "projection_hash_sha256": "3db77b5e5282f461049a82ff2cbe18b37848d30b13bc478617235354b4d89b26",
+      "last_event_seq": 755,
+      "projection_hash_sha256": "2b4824785735ea0850f2ad83103551bfd92c905cb148e696d744553dfd577878",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-13T14:09:09Z"
+    "updated_at": "2026-07-14T14:36:53Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1692,15 +1692,102 @@
         ]
       },
       "completed_at": "2026-07-13T14:09:09Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260714-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN",
+      "description": "Produzir artigo bilíngue sobre verificadores, ciência de dados, provas formais, backends executáveis e inteligência documental.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/quando-a-ia-precisa-de-um-verificador.md",
+        "src/content/posts/en/when-ai-needs-a-checker.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/quando-a-ia-precisa-de-um-verificador.md",
+          "src/content/posts/en/when-ai-needs-a-checker.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-14T14:34:32Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias vinculadas diretamente",
+          "Comparações limitadas aos experimentos e releases publicados",
+          "Frontmatter PT e EN com traduções recíprocas"
+        ]
+      },
+      "completed_at": "2026-07-14T14:35:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260714-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto",
+      "description": "Validar fontes, rigor, schema, privacidade, adaptação editorial, links e npm test.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260714-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-14T14:35:57Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado com 81 páginas",
+          "Frontmatter e traduções recíprocas validados",
+          "Quatro fontes primárias responderam HTTP 200",
+          "Auditoria pública e git diff --check aprovados"
+        ]
+      },
+      "completed_at": "2026-07-14T14:36:53Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260714-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto",
+      "description": "Fazer commit explícito, push em main, aguardar GitHub Pages e registrar evidências HTTP das URLs PT e EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260714-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-14T14:36:53Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 56
+      "done": 58,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 28,
-      "qa": 22,
+      "impl": 29,
+      "qa": 24,
       "spec": 6
     }
   }

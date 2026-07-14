@@ -1,0 +1,13 @@
+{
+  "after_sha256": "8d842b19a4689545226d14737d68bd1483ecdb7d067d57b75fec8bf30dac6385",
+  "artifact_id": "ART-8d842b19a4689545226d14737d68bd1483ecdb7d067d57b75fec8bf30dac6385",
+  "artifact_sha256": "9aefa079361ad03a81bb67766a75ee2fbf92b30f926e16ce7a7f9e76429ed12d",
+  "before_sha256": "8d842b19a4689545226d14737d68bd1483ecdb7d067d57b75fec8bf30dac6385",
+  "bytes": 1889,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260714-QA-001\n\n## Escopo\n\nValidação editorial, técnica e pública do artigo bilíngue sobre verificadores para sistemas de IA.\n\n## Janela editorial e fontes primárias\n\nJanela: 2026-07-13 11:00 a 2026-07-14 11:00 em America/Sao_Paulo.\n\n- Positron 2026.07, publicado em 2026-07-13: <https://opensource.posit.co/blog/2026-07-13_positron-2026-07-release/>\n- TreeThink, submetido em 2026-07-13 08:40:33 UTC: <https://arxiv.org/abs/2607.11258>\n- BackendForge, submetido em 2026-07-13 03:13:21 UTC: <https://arxiv.org/abs/2607.11042>\n- MonkeyOCRv2, submetido em 2026-07-13 13:43:39 UTC: <https://arxiv.org/abs/2607.11562>\n\nAs quatro páginas responderam HTTP 200. As alegações quantitativas foram limitadas às configurações reportadas pelos autores: aceleração de até 6,3 vezes no experimento assíncrono do TreeThink; 55,4% e 28,6% nos oráculos base e final do BackendForge; corpus de 113 milhões de imagens, diferença de 2,8 pontos percentuais e encoder cerca de 11 vezes menor no MonkeyOCRv2. O texto explicita que esses resultados não são garantias universais.\n\n## Validação técnica\n\n- `npm test`: aprovado.\n- `astro check`: 27 arquivos, 0 erros, 0 avisos e 0 sugestões.\n- `astro build`: 81 páginas geradas.\n- `audit:public`: 92 arquivos, 11 rotas obrigatórias e 0 ocorrências vedadas.\n- Frontmatter: campos obrigatórios presentes, data 2026-07-14, locales PT/EN e traduções recíprocas.\n- `git diff --check`: aprovado.\n- Links das quatro fontes: HTTP 200.\n\n## Auditoria editorial e de privacidade\n\nA varredura foi limitada aos dois novos posts públicos e não encontrou menções vedadas, caminhos locais ou referências a artefatos internos.\n\nA edição em inglês preserva tese, fatos, ressalvas e fontes, com ritmo e construções adaptados ao idioma em vez de tradução palavra por palavra.\n\n## Decisão\n\nAprovado para publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-QA-001.md",
+  "ts": "2026-07-14T14:36:52Z"
+}
