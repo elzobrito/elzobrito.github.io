@@ -1,0 +1,13 @@
+{
+  "after_sha256": "dc1d14949cab1e8fb456d5bca95e6e0bf168636b78988947739ce7c2c621aa62",
+  "artifact_id": "ART-dc1d14949cab1e8fb456d5bca95e6e0bf168636b78988947739ce7c2c621aa62",
+  "artifact_sha256": "5b990a68f37ee17d2922276e1bf1543bc31741106791b1671d93187a9e7e0b8b",
+  "before_sha256": "dc1d14949cab1e8fb456d5bca95e6e0bf168636b78988947739ce7c2c621aa62",
+  "bytes": 1120,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260714-PUBLISH-001\n\n## Resultado\n\nArtigo diário aberto publicado em português e inglês.\n\n## Evidências\n\n- Commit de conteúdo: `9eeb031`\n- Push: `main -> origin/main`\n- Workflow: `Deploy static hub to GitHub Pages`\n- Run: `29341662370`\n- URL do workflow: <https://github.com/elzobrito/elzobrito.github.io/actions/runs/29341662370>\n- Build: sucesso em 25 segundos.\n- Deploy: sucesso em 9 segundos.\n- PT: <https://elzobrito.github.io/blog/quando-a-ia-precisa-de-um-verificador/>\n- EN: <https://elzobrito.github.io/en/blog/when-ai-needs-a-checker/>\n- As duas páginas responderam HTTP 200 com título, canonical e hreflang PT/EN recíprocos.\n\n## Estado antes do push\n\n- `HEAD...origin/main`: `0 0`.\n- O staging explícito incluiu somente os dois posts, o documento QA e os artefatos ESAA deste fluxo.\n- O documento PACER preexistente e o artefato ESAA preexistente de hash iniciado por `8055` permaneceram fora do commit.\n\n## Observação\n\nO workflow exibiu aviso não bloqueante sobre actions declaradas para Node.js 20 serem executadas com Node.js 24. Build e deploy concluíram com sucesso.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260714-PUBLISH-001.md",
+  "ts": "2026-07-14T14:38:26Z"
+}
