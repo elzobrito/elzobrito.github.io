@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 813,
-      "projection_hash_sha256": "b0ef4541c57fd3e603bac76decdf5518672fc4c4ec7807227b154d88866a1862",
+      "last_event_seq": 845,
+      "projection_hash_sha256": "fde32ecd83b7862e7e90dc29d73a52468d1bac716dabcf256c0a5de65bb8764e",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-14T18:07:45Z"
+    "updated_at": "2026-07-15T14:05:17Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1902,15 +1902,94 @@
         ]
       },
       "completed_at": "2026-07-14T18:06:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260715-POST-001",
+      "task_kind": "impl",
+      "title": "Create bilingual open AI briefing for 2026-07-15",
+      "description": "Create the Portuguese and English daily editorial posts from primary sources published in the last 24 hours.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-15T14:02:30Z",
+      "verification": {
+        "checks": [
+          "Primary-source dates and factual claims reviewed",
+          "Frontmatter and reciprocal translation slugs checked"
+        ]
+      },
+      "completed_at": "2026-07-15T14:04:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260715-QA-001",
+      "task_kind": "qa",
+      "title": "QA bilingual open AI briefing for 2026-07-15",
+      "description": "Review sources, rigor, schema, privacy, translation fidelity, links and build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260715-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260715-QA-001.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-15T14:04:14Z",
+      "verification": {
+        "checks": [
+          "npm test passed with 85 pages",
+          "Public audit passed with zero forbidden matches",
+          "Both primary sources returned HTTP 200",
+          "git diff --check passed"
+        ]
+      },
+      "completed_at": "2026-07-15T14:05:16Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260715-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publish bilingual open AI briefing for 2026-07-15",
+      "description": "Commit, push, verify GitHub Pages deployment and record HTTP evidence.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260715-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260715-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-15T14:05:17Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 63
+      "done": 65,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 31,
-      "qa": 26,
+      "impl": 32,
+      "qa": 28,
       "spec": 6
     }
   }
