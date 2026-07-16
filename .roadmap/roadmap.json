@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 869,
-      "projection_hash_sha256": "9e92e6b4304a2cd222923d937c7311cd9d8d8eb6bb9fdce335528ccae41669c9",
+      "last_event_seq": 881,
+      "projection_hash_sha256": "74f06da94d7368aea1e340ea98fa0ed02375438ce45e56b28a9dd554686945b1",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-16T01:09:43Z"
+    "updated_at": "2026-07-16T01:20:00Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2036,15 +2036,44 @@
         ]
       },
       "completed_at": "2026-07-16T01:09:43Z"
+    },
+    {
+      "task_id": "SITE-PUSH-MAIN-20260715",
+      "task_kind": "impl",
+      "title": "Push authorized local main history",
+      "description": "Push the four user-authorized commits from local main to origin/main, then record and publish the ESAA evidence without including unrelated untracked files.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        ".roadmap/activity.jsonl",
+        ".roadmap/roadmap.json",
+        ".roadmap/issues.json",
+        ".roadmap/lessons.json"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-16T01:19:40Z",
+      "verification": {
+        "checks": [
+          "git fetch confirmed origin/main was 795ff7e before the push and local main contained exactly the four commits authorized by the user.",
+          "git push origin main advanced the remote from 795ff7e to a11d730 and git ls-remote matched local HEAD."
+        ]
+      },
+      "completed_at": "2026-07-16T01:20:00Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 67,
+      "done": 68,
       "in_progress": 1
     },
     "by_kind": {
-      "impl": 34,
+      "impl": 35,
       "qa": 28,
       "spec": 6
     }
