@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { paths, type Locale } from '../i18n';
-import portrait from '../../assets/foto-elzo.jpg';
 const { locale } = Astro.props as { locale: Locale };
 const pt = locale === 'pt';
 const p = paths[locale];
@@ -47,16 +46,16 @@ const copy = pt ? {
   <span id="atuacao" class="anchor-alias"></span><span id="consultorias" class="anchor-alias"></span><span id="pesquisa" class="anchor-alias"></span>
   <section class="section about-section" id="sobre">
     <div class="wrap about-grid">
-      <div class="portrait-wrap"><img src={portrait.src} width={portrait.width} height={portrait.height} alt={pt ? 'Retrato profissional de Elzo Brito' : 'Professional portrait of Elzo Brito'} loading="lazy" /></div>
-      <div><p class="eyebrow">02 — {pt ? 'Sobre' : 'About'}</p><h2>{copy.about}</h2><p class="about-copy">{copy.aboutText}</p><div class="mini-links"><a href="https://github.com/elzobrito">GitHub ↗</a><a href="https://www.linkedin.com/in/elzobrito">LinkedIn ↗</a></div></div>
+      <div class="about-heading"><p class="eyebrow">02 — {pt ? 'Sobre' : 'About'}</p><h2>{copy.about}</h2></div>
+      <div class="about-content"><p class="about-copy">{copy.aboutText}</p><div class="mini-links"><a href="https://github.com/elzobrito">GitHub ↗</a><a href="https://www.linkedin.com/in/elzobrito">LinkedIn ↗</a></div></div>
     </div>
   </section>
   <section class="section wrap contact-section" id="contato">
-    <p class="eyebrow">03 — {pt ? 'Contato' : 'Contact'}</p><h2>{copy.contact}</h2><p>{copy.contactText}</p><a class="contact-link" href="mailto:elzobrito@gmail.com">elzobrito@gmail.com ↗</a>
+    <p class="eyebrow">03 — {pt ? 'Contato' : 'Contact'}</p><h2>{copy.contact}</h2><p>{copy.contactText}</p><div class="contact-links"><a class="contact-link" href="mailto:elzobrito@gmail.com">elzobrito@gmail.com ↗</a><a class="contact-social" href="https://twitter.com/elzobrito" rel="me">Twitter @elzobrito ↗</a></div>
   </section>
 </BaseLayout>
 <style>
   .esaa-card { box-shadow: inset 0 5px 0 var(--esaa); }.consulting-card{box-shadow:inset 0 5px 0 var(--consulting)}.blog-card{box-shadow:inset 0 5px 0 var(--blog)}
-  .about-section { background: var(--ink); color: var(--paper); margin-top: 4rem; }.about-grid{display:grid;grid-template-columns:minmax(240px,420px) 1fr;gap:clamp(2rem,7vw,8rem);align-items:center}.portrait-wrap{aspect-ratio:4/5;overflow:hidden;border-radius:50% 50% 16px 16px}.portrait-wrap img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%)}.about-section .eyebrow{color:#f0a06f}.about-copy{font-size:clamp(1.15rem,2vw,1.5rem);max-width:700px;color:#c9c5bb}.mini-links{display:flex;gap:1.3rem;margin-top:2rem}.contact-section{text-align:center;max-width:900px}.contact-section p:not(.eyebrow){max-width:650px;margin:1rem auto;color:var(--muted);font-size:1.15rem}.contact-link{font-family:var(--serif);display:inline-block;font-size:clamp(1.5rem,5vw,4rem);margin-top:2rem}.anchor-alias{display:block;position:relative;top:-80px;visibility:hidden}
-  @media(max-width:800px){.about-grid{grid-template-columns:1fr}.portrait-wrap{max-width:320px}}
+  .about-section { background: var(--ink); color: var(--paper); margin-top: 4rem; }.about-grid{display:grid;grid-template-columns:minmax(240px,.85fr) minmax(0,1.15fr);gap:clamp(2rem,7vw,8rem);align-items:end}.about-heading h2{max-width:560px}.about-section .eyebrow{color:#f0a06f}.about-copy{font-size:clamp(1.15rem,2vw,1.5rem);max-width:700px;color:#c9c5bb;margin:0}.mini-links{display:flex;flex-wrap:wrap;gap:1.3rem;margin-top:2rem}.contact-section{text-align:center;max-width:900px}.contact-section p:not(.eyebrow){max-width:650px;margin:1rem auto;color:var(--muted);font-size:1.15rem}.contact-links{display:flex;flex-direction:column;align-items:center;gap:1.25rem;margin-top:2rem}.contact-link{font-family:var(--serif);display:inline-block;font-size:clamp(1.5rem,5vw,4rem)}.contact-social{display:inline-flex;padding:.65rem 1rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:700}.contact-social:hover{border-color:var(--accent);color:var(--accent)}.anchor-alias{display:block;position:relative;top:-80px;visibility:hidden}
+  @media(max-width:800px){.about-grid{grid-template-columns:1fr;align-items:start}.about-content{max-width:700px}}
 </style>
