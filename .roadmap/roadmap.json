@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 881,
-      "projection_hash_sha256": "74f06da94d7368aea1e340ea98fa0ed02375438ce45e56b28a9dd554686945b1",
+      "last_event_seq": 913,
+      "projection_hash_sha256": "59fa2de7edb63af2ab903c323ff41c4fd69962156cc584ea51a76c745b317a92",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-16T01:20:00Z"
+    "updated_at": "2026-07-16T14:50:30Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2065,16 +2065,98 @@
         ]
       },
       "completed_at": "2026-07-16T01:20:00Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260716-POST-001",
+      "task_kind": "impl",
+      "title": "Create bilingual daily AI article for 2026-07-16",
+      "description": "Create the Portuguese and English posts from primary sources published in the editorial window.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/quando-a-defesa-tambem-aprende-a-atacar.md",
+          "src/content/posts/en/when-defense-also-learns-to-attack.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-16T14:48:06Z",
+      "verification": {
+        "checks": [
+          "PT and EN posts created with reciprocal translation slugs and primary-source links."
+        ]
+      },
+      "completed_at": "2026-07-16T14:49:25Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260716-QA-001",
+      "task_kind": "qa",
+      "title": "Validate bilingual daily AI article for 2026-07-16",
+      "description": "Review sources, rigor, schema, privacy, adaptation, links and build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260716-POST-001"
+      ],
+      "targets": [
+        "docs/qa/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260716-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-16T14:49:26Z",
+      "verification": {
+        "checks": [
+          "npm test passed: 27 checked files, 87 built pages, 98 audited public files, zero forbidden matches.",
+          "Primary-source claims, reciprocal translations, frontmatter, links and public privacy audit reviewed."
+        ]
+      },
+      "completed_at": "2026-07-16T14:50:30Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260716-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publish bilingual daily AI article for 2026-07-16",
+      "description": "Commit, push, verify Pages deployment and record public evidence.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260716-QA-001"
+      ],
+      "targets": [
+        "docs/qa/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260716-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-16T14:50:22Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 68,
-      "in_progress": 1
+      "done": 70,
+      "in_progress": 2
     },
     "by_kind": {
-      "impl": 35,
-      "qa": 28,
+      "impl": 36,
+      "qa": 30,
       "spec": 6
     }
   }
