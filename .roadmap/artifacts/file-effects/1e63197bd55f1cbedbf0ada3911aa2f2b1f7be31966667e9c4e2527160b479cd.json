@@ -1,0 +1,13 @@
+{
+  "after_sha256": "6924d47d2b4a63462b017e183b774af91332c3a4e111479078d540641f11a7c3",
+  "artifact_id": "ART-6924d47d2b4a63462b017e183b774af91332c3a4e111479078d540641f11a7c3",
+  "artifact_sha256": "1e63197bd55f1cbedbf0ada3911aa2f2b1f7be31966667e9c4e2527160b479cd",
+  "before_sha256": "6924d47d2b4a63462b017e183b774af91332c3a4e111479078d540641f11a7c3",
+  "bytes": 1115,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260716-PUBLISH-001\n\n## Escopo\n\nEvidência de commit, push e publicação do artigo bilíngue de 2026-07-16.\n\n## Pré-publicação\n\n- `git fetch origin`: concluído.\n- Divergência antes do commit: `HEAD...origin/main = 0 0`.\n- `npm test`: aprovado, com 87 páginas geradas.\n- `git diff --check`: aprovado.\n- Staging: restrito aos posts PT/EN, documentos QA e artefatos ESAA do prefixo `SITE-BLOG-DAILY-OPEN-20260716`.\n\n## Publicação\n\n- Commit de conteúdo: `38fe349` (`Publish daily AI briefing 2026-07-16`).\n- Push: `origin/main` atualizado sem força.\n- Workflow: `29508449701`, `Deploy static hub to GitHub Pages`, conclusão `success`.\n- URL PT: <https://elzobrito.github.io/blog/quando-a-defesa-tambem-aprende-a-atacar/>, HTTP 200, título, canonical e alternates `pt-BR`, `en` e `x-default` confirmados.\n- URL EN: <https://elzobrito.github.io/en/blog/when-defense-also-learns-to-attack/>, HTTP 200, título, canonical e alternates `pt-BR`, `en` e `x-default` confirmados.\n\n## Decisão\n\nPublicação aprovada. Resta registrar o fechamento ESAA e enviar o commit final de evidência.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260716-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260716-PUBLISH-001.md",
+  "ts": "2026-07-16T14:52:23Z"
+}
