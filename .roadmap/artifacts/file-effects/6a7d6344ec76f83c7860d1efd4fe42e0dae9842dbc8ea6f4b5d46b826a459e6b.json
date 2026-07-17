@@ -1,0 +1,13 @@
+{
+  "after_sha256": "5f43ad4c7373ed8a53ce55d04aea47ec90c92b0d470b47064394f6d7ce7467a1",
+  "artifact_id": "ART-5f43ad4c7373ed8a53ce55d04aea47ec90c92b0d470b47064394f6d7ce7467a1",
+  "artifact_sha256": "6a7d6344ec76f83c7860d1efd4fe42e0dae9842dbc8ea6f4b5d46b826a459e6b",
+  "before_sha256": "5f43ad4c7373ed8a53ce55d04aea47ec90c92b0d470b47064394f6d7ce7467a1",
+  "bytes": 1156,
+  "content": "---\nimport { paths, ui, type Locale } from '../i18n';\ninterface Props { locale: Locale; alternate: string; section?: 'hub' | 'esaa'; }\nconst { locale, alternate, section = 'hub' } = Astro.props;\nconst t = ui[locale];\nconst p = paths[locale];\n---\n<a class=\"skip-link\" href=\"#conteudo\">{t.skip}</a>\n<header class:list={[\"site-header\", { \"esaa-header\": section === 'esaa' }]}>\n  <a class=\"brand\" href={p.home} aria-label=\"Elzo Brito — início\">\n    <span class=\"brand-mark\" aria-hidden=\"true\">EB</span><span>Elzo Brito</span>\n  </a>\n  <nav aria-label={locale === 'pt' ? 'Navegação principal' : 'Main navigation'}>\n    <a href={`${p.home}#projetos`}>{t.nav.projects}</a>\n    <a href={p.consulting}>{t.nav.consulting}</a>\n    <a href={p.articles}>{t.nav.articles}</a>\n    <a href={p.blog}>{t.nav.blog}</a>\n    <a class=\"nav-esaa\" href={p.esaa}>ESAA</a>\n  </nav>\n  <div class=\"header-actions\">\n    <a class=\"language\" href={alternate} hreflang={locale === 'pt' ? 'en' : 'pt'}>{t.language}</a>\n    <button class=\"theme-toggle\" type=\"button\" title={t.theme}><span class=\"sr-only\">{t.theme}</span><span aria-hidden=\"true\">◐</span></button>\n  </div>\n</header>\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/components/Header.astro",
+  "source_path": "src/components/Header.astro",
+  "ts": "2026-07-17T01:41:29Z"
+}

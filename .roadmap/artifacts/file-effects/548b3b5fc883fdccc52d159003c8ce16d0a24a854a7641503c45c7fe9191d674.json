@@ -1,0 +1,13 @@
+{
+  "after_sha256": "918d39bf1cb6c87b1549026fe7212be00f3213f846bfc72c83e26037225448ec",
+  "artifact_id": "ART-918d39bf1cb6c87b1549026fe7212be00f3213f846bfc72c83e26037225448ec",
+  "artifact_sha256": "548b3b5fc883fdccc52d159003c8ce16d0a24a854a7641503c45c7fe9191d674",
+  "before_sha256": "918d39bf1cb6c87b1549026fe7212be00f3213f846bfc72c83e26037225448ec",
+  "bytes": 871,
+  "content": "export type Locale = 'pt' | 'en';\n\nexport const ui = {\n  pt: {\n    nav: { projects: 'Projetos', consulting: 'Consultoria', articles: 'Artigos', blog: 'Blog', about: 'Sobre', contact: 'Contato' },\n    explore: 'Explorar projetos', language: 'English', languageUrl: '/en/', theme: 'Alternar tema', skip: 'Pular para o conteúdo'\n  },\n  en: {\n    nav: { projects: 'Projects', consulting: 'Consulting', articles: 'Articles', blog: 'Blog', about: 'About', contact: 'Contact' },\n    explore: 'Explore projects', language: 'Português', languageUrl: '/', theme: 'Toggle theme', skip: 'Skip to content'\n  }\n} as const;\n\nexport const paths = {\n  pt: { home: '/', consulting: '/consultoria/', articles: '/artigos/', blog: '/blog/', esaa: '/esaa/' },\n  en: { home: '/en/', consulting: '/en/consulting/', articles: '/en/articles/', blog: '/en/blog/', esaa: '/en/esaa/' }\n} as const;\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/i18n.ts",
+  "source_path": "src/i18n.ts",
+  "ts": "2026-07-17T01:41:29Z"
+}

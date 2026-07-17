@@ -1,0 +1,13 @@
+{
+  "after_sha256": "356036d348ee71b6e30de1b2530e560f7312f58fd810fa9617f8ad431d8a2ae6",
+  "artifact_id": "ART-356036d348ee71b6e30de1b2530e560f7312f58fd810fa9617f8ad431d8a2ae6",
+  "artifact_sha256": "93c7dcd1f653716a21a38fa3fb30a0fd8267caf24464d83802c1989a926de7d6",
+  "before_sha256": "356036d348ee71b6e30de1b2530e560f7312f58fd810fa9617f8ad431d8a2ae6",
+  "bytes": 104,
+  "content": "---\nimport ArticlesIndex from '../../components/ArticlesIndex.astro';\n---\n<ArticlesIndex locale=\"pt\" />\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/pages/artigos/index.astro",
+  "source_path": "src/pages/artigos/index.astro",
+  "ts": "2026-07-17T01:41:29Z"
+}

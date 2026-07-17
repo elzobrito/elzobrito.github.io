@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { scholarProfile, scholarPublications } from '../data/scholar-publications';
+import type { Locale } from '../i18n';
+
+const { locale } = Astro.props as { locale: Locale };
+const pt = locale === 'pt';
+---
+<BaseLayout
+  title={pt ? 'Artigos e publicações — Elzo Brito' : 'Articles and publications — Elzo Brito'}
+  description={pt ? 'Produção acadêmica de Elzo Brito dos Santos Filho, com links para os registros no Google Acadêmico.' : 'Academic publications by Elzo Brito dos Santos Filho, with links to their Google Scholar records.'}
+  locale={locale}
+  alternate={pt ? '/en/articles/' : '/artigos/'}
+>
+  <section class="articles-hero wrap">
+    <div>
+      <p class="eyebrow">{pt ? 'Produção acadêmica' : 'Academic work'}</p>
+      <h1>{pt ? 'Pesquisa que conecta educação, IA e engenharia de sistemas.' : 'Research connecting education, AI, and systems engineering.'}</h1>
+      <p>{pt ? 'A lista reúne todos os 29 registros públicos do perfil, incluindo versões distintas indexadas pelo Google Acadêmico.' : 'This list includes all 29 public profile records, including distinct versions indexed by Google Scholar.'}</p>
+      <a class="button secondary" href={scholarProfile} target="_blank" rel="noreferrer">{pt ? 'Ver perfil no Google Acadêmico' : 'View Google Scholar profile'} ↗</a>
+    </div>
+    <dl class="scholar-stats" aria-label={pt ? 'Indicadores do Google Acadêmico' : 'Google Scholar metrics'}>
+      <div><dt>{pt ? 'Publicações' : 'Publications'}</dt><dd>{scholarPublications.length}</dd></div>
+      <div><dt>{pt ? 'Citações' : 'Citations'}</dt><dd>68</dd></div>
+      <div><dt>{pt ? 'Índice h' : 'h-index'}</dt><dd>4</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap publication-list" aria-label={pt ? 'Lista de publicações' : 'Publication list'}>
+    {scholarPublications.map((publication, index) => (
+      <article class="publication-card">
+        <span class="publication-number">{String(index + 1).padStart(2, '0')}</span>
+        <div>
+          <p class="publication-meta">{publication.year || (pt ? 'Ano não informado' : 'Year not listed')} · {publication.citations} {publication.citations === 1 ? (pt ? 'citação' : 'citation') : (pt ? 'citações' : 'citations')}</p>
+          <h2><a href={publication.url} target="_blank" rel="noreferrer">{publication.title}</a></h2>
+          <p>{publication.authors}</p>
+          <p class="publication-venue">{publication.venue}</p>
+        </div>
+        <a class="publication-link" href={publication.url} target="_blank" rel="noreferrer" aria-label={pt ? `Abrir registro de ${publication.title}` : `Open record for ${publication.title}`}>↗</a>
+      </article>
+    ))}
+  </section>
+</BaseLayout>
+
+<style>
+  .articles-hero{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:4rem;align-items:end;padding-block:7rem;border-bottom:1px solid var(--line)}
+  .articles-hero h1{font-family:var(--serif);font-size:clamp(3rem,7vw,6.6rem);line-height:.92;letter-spacing:-.06em;max-width:980px;margin:1rem 0 2rem}
+  .articles-hero>div>p:not(.eyebrow){max-width:700px;font-size:1.2rem;color:var(--muted);margin-bottom:2rem}
+  .scholar-stats{margin:0;border-left:1px solid var(--line)}
+  .scholar-stats div{padding:1.2rem 0 1.2rem 1.5rem;border-bottom:1px solid var(--line)}
+  .scholar-stats dt{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .scholar-stats dd{font-family:var(--serif);font-size:2.8rem;line-height:1;margin:.35rem 0 0}
+  .publication-list{padding-block:3rem}
+  .publication-card{display:grid;grid-template-columns:48px minmax(0,1fr) 40px;gap:1.25rem;align-items:start;padding:2rem 0;border-bottom:1px solid var(--line)}
+  .publication-number,.publication-meta{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+  .publication-card h2{font-family:var(--serif);font-size:clamp(1.55rem,3vw,2.45rem);line-height:1.05;margin:.45rem 0 .75rem;max-width:900px}
+  .publication-card h2 a{text-decoration:none}.publication-card h2 a:hover{text-decoration:underline}
+  .publication-card p{margin:.25rem 0;color:var(--muted);max-width:850px}
+  .publication-venue{font-style:italic}.publication-link{font-size:1.6rem;text-decoration:none}
+  @media(max-width:800px){.articles-hero{grid-template-columns:1fr;gap:2rem;padding-block:5rem}.scholar-stats{display:grid;grid-template-columns:repeat(3,1fr);border-left:0;border-top:1px solid var(--line)}.scholar-stats div{padding:1rem .5rem}.scholar-stats dd{font-size:2rem}.publication-card{grid-template-columns:32px minmax(0,1fr)}.publication-link{display:none}}
+  @media(max-width:520px){.scholar-stats{grid-template-columns:1fr}.articles-hero h1{font-size:clamp(2.8rem,15vw,4.5rem)}}
+</style>

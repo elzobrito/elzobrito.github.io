@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 920,
-      "projection_hash_sha256": "4f0e05e1f37c3cc75ac9d26e6984f2885d44ee6f0acb5b6412e3810af6c27d12",
+      "last_event_seq": 939,
+      "projection_hash_sha256": "f21f81a3068903367d23ebe59ab5f2e8f9c44655024c944d2c665a0a1b40dd68",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-16T14:52:23Z"
+    "updated_at": "2026-07-17T01:41:30Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2155,16 +2155,69 @@
         ]
       },
       "completed_at": "2026-07-16T14:52:23Z"
+    },
+    {
+      "task_id": "SITE-SCHOLAR-ARTICLES-20260716-IMPL-001",
+      "task_kind": "impl",
+      "title": "Add scholarly articles section to the site",
+      "description": "Create Portuguese and English articles pages, navigation links, and a complete linked publication list sourced from the author Google Scholar profile.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/pages/**/*.astro",
+        "src/components/*.astro",
+        "src/styles/*.css"
+      ],
+      "outputs": {
+        "files": [
+          "src/pages/artigos/index.astro",
+          "src/pages/en/articles/index.astro"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-17T01:38:50Z",
+      "verification": {
+        "checks": [
+          "Created reciprocal PT and EN publication pages with all 29 Google Scholar records and navigation entries."
+        ]
+      },
+      "completed_at": "2026-07-17T01:41:29Z"
+    },
+    {
+      "task_id": "SITE-SCHOLAR-ARTICLES-20260716-QA-001",
+      "task_kind": "qa",
+      "title": "Validate and publish scholarly articles section",
+      "description": "Validate article completeness, links, responsive presentation, build, scoped commit, push, Pages workflow and public URLs.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-SCHOLAR-ARTICLES-20260716-IMPL-001"
+      ],
+      "targets": [
+        "docs/qa/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-SCHOLAR-ARTICLES-20260716-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-17T01:41:30Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 71,
-      "in_progress": 1
+      "done": 72,
+      "in_progress": 2
     },
     "by_kind": {
-      "impl": 36,
-      "qa": 30,
+      "impl": 37,
+      "qa": 31,
       "spec": 6
     }
   }

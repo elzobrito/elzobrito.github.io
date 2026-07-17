@@ -1,0 +1,13 @@
+{
+  "after_sha256": "29db607d00e4b5f5b79fe09b416de3f054a3fd260607b824805ddca2249f8e23",
+  "artifact_id": "ART-29db607d00e4b5f5b79fe09b416de3f054a3fd260607b824805ddca2249f8e23",
+  "artifact_sha256": "b35da546f0e519631e815fa06f09f38397dde0451419d93fc42ec55f1189091f",
+  "before_sha256": "29db607d00e4b5f5b79fe09b416de3f054a3fd260607b824805ddca2249f8e23",
+  "bytes": 107,
+  "content": "---\nimport ArticlesIndex from '../../../components/ArticlesIndex.astro';\n---\n<ArticlesIndex locale=\"en\" />\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/pages/en/articles/index.astro",
+  "source_path": "src/pages/en/articles/index.astro",
+  "ts": "2026-07-17T01:41:29Z"
+}
