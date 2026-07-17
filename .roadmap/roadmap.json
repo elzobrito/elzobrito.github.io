@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 991,
-      "projection_hash_sha256": "e618e9537fe1febe8f75b5f59797a9ff7a0ebfd664e83b65a54b986f0d2b8929",
+      "last_event_seq": 998,
+      "projection_hash_sha256": "ff5f74c827be58891e452a67d854f803dc2ee146b055ba42af8a297bee556944",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-17T14:06:32Z"
+    "updated_at": "2026-07-17T14:08:23Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2281,7 +2281,7 @@
       "task_kind": "qa",
       "title": "Publish bilingual daily AI article for 2026-07-17",
       "description": "Commit, push, verify Pages deployment and record public evidence.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260717-QA-001"
       ],
@@ -2297,7 +2297,15 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-17T14:06:32Z"
+      "started_at": "2026-07-17T14:06:32Z",
+      "verification": {
+        "checks": [
+          "Commit 3e4906d pushed to origin/main.",
+          "Pages workflow 29586659488 completed successfully.",
+          "PT and EN URLs returned HTTP 200 with correct title, canonical and reciprocal hreflang."
+        ]
+      },
+      "completed_at": "2026-07-17T14:08:23Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260717-FIX-001",
@@ -2333,8 +2341,8 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 76,
-      "in_progress": 2
+      "done": 77,
+      "in_progress": 1
     },
     "by_kind": {
       "impl": 39,

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "5312273f579ec6142c5854f7713ac8af99c06d31486785e2c01b2fc64003d9ea",
+  "artifact_id": "ART-5312273f579ec6142c5854f7713ac8af99c06d31486785e2c01b2fc64003d9ea",
+  "artifact_sha256": "2720b57f05676e2c81cb06b6b9dcb482b69c568a199d7270f2f9086ac6d1dcc0",
+  "before_sha256": "5312273f579ec6142c5854f7713ac8af99c06d31486785e2c01b2fc64003d9ea",
+  "bytes": 1109,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260717-PUBLISH-001\n\n## Publication scope\n\n- Portuguese post: `quando-agentes-atacam-e-cadernos-executam`\n- English post: `when-agents-attack-and-notebooks-execute`\n- Commit message: `Publish daily AI briefing 2026-07-17`\n\n## Pre-push checks\n\n- `git fetch origin`: completed.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0`; local HEAD was not behind.\n- `npm test`: passed with 91 generated pages and 0 forbidden public matches.\n- `git diff --check`: passed.\n\n## Deployment evidence\n\n- Content commit: `3e4906d597dd4d5d5985bf3b3c664a9d68155927`.\n- Push: `main` advanced on `origin` without force.\n- GitHub Pages workflow: `29586659488`, conclusion `success`.\n- Workflow URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/29586659488\n- Portuguese URL: https://elzobrito.github.io/blog/quando-agentes-atacam-e-cadernos-executam/\n- English URL: https://elzobrito.github.io/en/blog/when-agents-attack-and-notebooks-execute/\n- Both public URLs returned HTTP 200 and exposed the expected title, canonical URL, reciprocal `hreflang`, and `x-default` metadata.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260717-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260717-PUBLISH-001.md",
+  "ts": "2026-07-17T14:08:23Z"
+}

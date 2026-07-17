@@ -15,4 +15,10 @@
 
 ## Deployment evidence
 
-To be completed after the scoped push and public verification.
+- Content commit: `3e4906d597dd4d5d5985bf3b3c664a9d68155927`.
+- Push: `main` advanced on `origin` without force.
+- GitHub Pages workflow: `29586659488`, conclusion `success`.
+- Workflow URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/29586659488
+- Portuguese URL: https://elzobrito.github.io/blog/quando-agentes-atacam-e-cadernos-executam/
+- English URL: https://elzobrito.github.io/en/blog/when-agents-attack-and-notebooks-execute/
+- Both public URLs returned HTTP 200 and exposed the expected title, canonical URL, reciprocal `hreflang`, and `x-default` metadata.
