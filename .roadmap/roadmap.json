@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 946,
-      "projection_hash_sha256": "d653d05ebcde77ba987276e3b6222130c0f3e2184b74de9ad0c9e224fdcde979",
+      "last_event_seq": 991,
+      "projection_hash_sha256": "e618e9537fe1febe8f75b5f59797a9ff7a0ebfd664e83b65a54b986f0d2b8929",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-17T01:44:28Z"
+    "updated_at": "2026-07-17T14:06:32Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2216,16 +2216,129 @@
         ]
       },
       "completed_at": "2026-07-17T01:44:28Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260717-POST-001",
+      "task_kind": "impl",
+      "title": "Create bilingual daily AI article for 2026-07-17",
+      "description": "Create Portuguese and English posts from primary sources published in the editorial window.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/quando-agentes-atacam-e-cadernos-executam.md",
+          "src/content/posts/en/when-agents-attack-and-notebooks-execute.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-17T14:03:34Z",
+      "verification": {
+        "checks": [
+          "PT and EN posts created with reciprocal translation slugs and primary-source links."
+        ]
+      },
+      "completed_at": "2026-07-17T14:05:10Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260717-QA-001",
+      "task_kind": "qa",
+      "title": "Validate bilingual daily AI article for 2026-07-17",
+      "description": "Review sources, rigor, schema, privacy, adaptation, links and build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260717-POST-001"
+      ],
+      "targets": [
+        "docs/qa/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260717-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-17T14:05:10Z",
+      "verification": {
+        "checks": [
+          "npm test passed: 31 checked files, 91 built pages, 102 audited public files, zero forbidden matches.",
+          "Primary-source claims, reciprocal translations, frontmatter, links and public privacy audit reviewed."
+        ]
+      },
+      "completed_at": "2026-07-17T14:06:32Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260717-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publish bilingual daily AI article for 2026-07-17",
+      "description": "Commit, push, verify Pages deployment and record public evidence.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260717-QA-001"
+      ],
+      "targets": [
+        "docs/qa/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260717-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-17T14:06:32Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260717-FIX-001",
+      "task_kind": "impl",
+      "title": "Remove process wording from daily article",
+      "description": "Apply the QA wording correction to the PT and EN public posts.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260717-POST-001"
+      ],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/quando-agentes-atacam-e-cadernos-executam.md",
+          "src/content/posts/en/when-agents-attack-and-notebooks-execute.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-17T14:06:29Z",
+      "verification": {
+        "checks": [
+          "Prohibited process terminology removed from both public posts."
+        ]
+      },
+      "completed_at": "2026-07-17T14:06:31Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 73,
-      "in_progress": 1
+      "done": 76,
+      "in_progress": 2
     },
     "by_kind": {
-      "impl": 37,
-      "qa": 31,
+      "impl": 39,
+      "qa": 33,
       "spec": 6
     }
   }
