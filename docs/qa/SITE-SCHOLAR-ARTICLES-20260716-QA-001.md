@@ -27,4 +27,12 @@ Validação e publicação da nova seção bilíngue de artigos e publicações 
 
 ## Publicação
 
-Pendente de commit, push, workflow do GitHub Pages e verificação HTTP das duas rotas.
+- Commit de implementação: `de9c860` (`Add academic articles section`).
+- Push: `origin/main` atualizado sem força após confirmação `HEAD...origin/main = 0 0`.
+- Workflow `Deploy static hub to GitHub Pages`: execução `29548150396`, conclusão `success`.
+- PT: <https://elzobrito.github.io/artigos/>, HTTP 200, 29 cards, título, canonical e hreflang confirmados.
+- EN: <https://elzobrito.github.io/en/articles/>, HTTP 200, 29 cards, título, canonical e hreflang confirmados.
+
+## Decisão
+
+Aprovado e publicado.

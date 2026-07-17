@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 939,
-      "projection_hash_sha256": "f21f81a3068903367d23ebe59ab5f2e8f9c44655024c944d2c665a0a1b40dd68",
+      "last_event_seq": 946,
+      "projection_hash_sha256": "d653d05ebcde77ba987276e3b6222130c0f3e2184b74de9ad0c9e224fdcde979",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-17T01:41:30Z"
+    "updated_at": "2026-07-17T01:44:28Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2191,7 +2191,7 @@
       "task_kind": "qa",
       "title": "Validate and publish scholarly articles section",
       "description": "Validate article completeness, links, responsive presentation, build, scoped commit, push, Pages workflow and public URLs.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-SCHOLAR-ARTICLES-20260716-IMPL-001"
       ],
@@ -2207,13 +2207,21 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-17T01:41:30Z"
+      "started_at": "2026-07-17T01:41:30Z",
+      "verification": {
+        "checks": [
+          "Google Scholar inventory and site data both contain 29 records.",
+          "npm test passed: 31 checked files, 89 built pages, 100 audited public files.",
+          "Pages workflow 29548150396 succeeded; PT and EN public routes return HTTP 200 with 29 cards and reciprocal metadata."
+        ]
+      },
+      "completed_at": "2026-07-17T01:44:28Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 72,
-      "in_progress": 2
+      "done": 73,
+      "in_progress": 1
     },
     "by_kind": {
       "impl": 37,

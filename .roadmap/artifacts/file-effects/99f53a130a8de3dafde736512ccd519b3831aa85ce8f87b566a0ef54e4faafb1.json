@@ -1,0 +1,13 @@
+{
+  "after_sha256": "e4d10ce09d9e33755686a4aad26a027bbb3365e78674c9342d3d57285b98eaf1",
+  "artifact_id": "ART-e4d10ce09d9e33755686a4aad26a027bbb3365e78674c9342d3d57285b98eaf1",
+  "artifact_sha256": "99f53a130a8de3dafde736512ccd519b3831aa85ce8f87b566a0ef54e4faafb1",
+  "before_sha256": "e4d10ce09d9e33755686a4aad26a027bbb3365e78674c9342d3d57285b98eaf1",
+  "bytes": 1873,
+  "content": "# SITE-SCHOLAR-ARTICLES-20260716-QA-001\n\n## Escopo\n\nValidação e publicação da nova seção bilíngue de artigos e publicações acadêmicas.\n\n## Fonte e completude\n\n- Perfil: <https://scholar.google.com/citations?user=hSP8J9EAAAAJ&hl=pt-BR>\n- Autor confirmado no perfil: Elzo Brito dos Santos Filho.\n- O perfil foi carregado integralmente pelo Chrome autenticado até o botão `Mostrar mais` ficar desabilitado.\n- Total no perfil: 29 registros.\n- Total em `src/data/scholar-publications.ts`: 29 registros.\n- As versões distintas mantidas pelo Google Acadêmico foram preservadas como registros separados.\n- Cada publicação aponta para seu registro individual no Google Acadêmico.\n- Indicadores exibidos: 68 citações e índice h 4, conforme o perfil consultado em 2026-07-16.\n\n## Validação técnica e visual\n\n- `npm test`: aprovado.\n- `astro check`: 31 arquivos, 0 erros, 0 avisos e 0 sugestões.\n- `astro build`: 89 páginas geradas, incluindo `/artigos/` e `/en/articles/`.\n- `audit:public`: 100 arquivos, 11 rotas obrigatórias e 0 ocorrências vedadas.\n- `git diff --check`: aprovado.\n- Inspeção local em `http://127.0.0.1:4321/artigos/`: título, hero, indicadores, navegação e 29 cards confirmados.\n- Canonical PT e alternate EN confirmados; as páginas usam o mesmo layout responsivo, tema e navegação do site.\n\n## Publicação\n\n- Commit de implementação: `de9c860` (`Add academic articles section`).\n- Push: `origin/main` atualizado sem força após confirmação `HEAD...origin/main = 0 0`.\n- Workflow `Deploy static hub to GitHub Pages`: execução `29548150396`, conclusão `success`.\n- PT: <https://elzobrito.github.io/artigos/>, HTTP 200, 29 cards, título, canonical e hreflang confirmados.\n- EN: <https://elzobrito.github.io/en/articles/>, HTTP 200, 29 cards, título, canonical e hreflang confirmados.\n\n## Decisão\n\nAprovado e publicado.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-SCHOLAR-ARTICLES-20260716-QA-001.md",
+  "source_path": "docs/qa/SITE-SCHOLAR-ARTICLES-20260716-QA-001.md",
+  "ts": "2026-07-17T01:44:28Z"
+}
