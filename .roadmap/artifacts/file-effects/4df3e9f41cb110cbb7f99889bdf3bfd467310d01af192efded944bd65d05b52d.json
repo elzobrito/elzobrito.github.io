@@ -1,0 +1,13 @@
+{
+  "after_sha256": "bbb6af433bcf656f1324cfe60b9802236d09a9dccfa271e53d98fde4efc06826",
+  "artifact_id": "ART-bbb6af433bcf656f1324cfe60b9802236d09a9dccfa271e53d98fde4efc06826",
+  "artifact_sha256": "4df3e9f41cb110cbb7f99889bdf3bfd467310d01af192efded944bd65d05b52d",
+  "before_sha256": "bbb6af433bcf656f1324cfe60b9802236d09a9dccfa271e53d98fde4efc06826",
+  "bytes": 1429,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260718-PUBLISH-001\n\n## Release scope\n\n- Portuguese post: `quando-a-ia-deixa-de-chutar-a-documentacao`\n- English post: `when-ai-stops-guessing-the-docs`\n- Publication branch: `main`\n- Commit message: `Publish daily AI briefing 2026-07-18`\n\n## Pre-push evidence\n\n- `git fetch origin`: completed.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0`; local HEAD was not behind.\n- `npm test`: passed; 93 pages built and 104 public files audited with 0 forbidden matches.\n- `git diff --check`: passed.\n- Staging is restricted to the two posts, the two QA records, and ESAA artifacts produced by this daily flow.\n\n## Deployment evidence\n\n- Content commit: `c4f554729c98e248762794c248911e0b3ffa93d7`.\n- Push: `main` advanced from `43a9f90` to `c4f5547` on `origin`.\n- GitHub Actions workflow: `Deploy static hub to GitHub Pages`, run `29647384099`, conclusion `success`.\n- Workflow URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/29647384099\n- Portuguese URL: https://elzobrito.github.io/blog/quando-a-ia-deixa-de-chutar-a-documentacao/\n- English URL: https://elzobrito.github.io/en/blog/when-ai-stops-guessing-the-docs/\n- Both public URLs returned HTTP 200 with the expected title, self-referencing canonical, reciprocal `pt-BR`/`en` hreflang, and Portuguese `x-default`.\n- The workflow emitted the existing non-blocking notice that Node.js 20 actions are forced onto Node.js 24.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260718-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260718-PUBLISH-001.md",
+  "ts": "2026-07-18T14:07:36Z"
+}
