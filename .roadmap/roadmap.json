@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 998,
-      "projection_hash_sha256": "ff5f74c827be58891e452a67d854f803dc2ee146b055ba42af8a297bee556944",
+      "last_event_seq": 1030,
+      "projection_hash_sha256": "5efddad2b2a01e80745b1886228507d8797d14b95ed7ee9eb22ba827d34d465a",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-17T14:08:23Z"
+    "updated_at": "2026-07-18T14:05:30Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2337,16 +2337,100 @@
         ]
       },
       "completed_at": "2026-07-17T14:06:31Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260718-POST-001",
+      "task_kind": "impl",
+      "title": "Create bilingual daily open AI article for 2026-07-18",
+      "description": "Create the Portuguese and English editorial article pair from primary sources published in the last 24 hours.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/quando-a-ia-deixa-de-chutar-a-documentacao.md",
+        "src/content/posts/en/when-ai-stops-guessing-the-docs.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/quando-a-ia-deixa-de-chutar-a-documentacao.md",
+          "src/content/posts/en/when-ai-stops-guessing-the-docs.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-18T14:02:52Z",
+      "verification": {
+        "checks": [
+          "Both posts have required frontmatter and reciprocal translation slugs.",
+          "Claims are linked directly to dated Google and GitHub primary sources."
+        ]
+      },
+      "completed_at": "2026-07-18T14:04:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260718-QA-001",
+      "task_kind": "qa",
+      "title": "QA bilingual daily open AI article for 2026-07-18",
+      "description": "Review sources, rigor, schema, privacy, editorial adaptation, links, and build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260718-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260718-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260718-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-18T14:04:06Z",
+      "verification": {
+        "checks": [
+          "npm test passed: 31 files checked, 93 pages built, 104 public files audited with 0 forbidden matches.",
+          "Four official source URLs returned HTTP 200 and claims were manually compared.",
+          "git diff --check passed and the focused public privacy scan returned zero matches."
+        ]
+      },
+      "completed_at": "2026-07-18T14:05:30Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260718-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publish bilingual daily open AI article for 2026-07-18",
+      "description": "Commit scoped artifacts, push main, verify Pages workflow and public PT and EN URLs, and record evidence.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260718-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260718-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260718-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-18T14:05:11Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 77,
-      "in_progress": 1
+      "done": 79,
+      "in_progress": 2
     },
     "by_kind": {
-      "impl": 39,
-      "qa": 33,
+      "impl": 40,
+      "qa": 35,
       "spec": 6
     }
   }
