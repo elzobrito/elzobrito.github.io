@@ -1,0 +1,13 @@
+{
+  "after_sha256": "be1b102236668fa15711fc58c0bc08d7a64c11b62c663cc1322cead4437e1ca5",
+  "artifact_id": "ART-be1b102236668fa15711fc58c0bc08d7a64c11b62c663cc1322cead4437e1ca5",
+  "artifact_sha256": "57943c6e74038bb21265bdd313b84b695584ffe002241c42cee54477392168fc",
+  "before_sha256": "be1b102236668fa15711fc58c0bc08d7a64c11b62c663cc1322cead4437e1ca5",
+  "bytes": 1706,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260719-QA-001\n\n## Scope\n\nEditorial and technical review of the Portuguese and English article pair for 2026-07-19.\n\n## Primary sources\n\n- Kimi, `Kimi K3 Pricing Explained: Plans and API Costs`, dated 2026-07-18: https://www.kimi.com/resources/kimi-k3-pricing\n- Kimi API Platform, current model and price listing: https://platform.kimi.ai/\n- Moonshot AI, Kimi K3 launch and model summary, dated 2026-07-16: https://www.moonshot.ai/\n\nThe 2026-07-16 launch is used only as clearly dated background. The fresh editorial development is the official access and pricing material published on 2026-07-18. Claims about context limits, multimodality, cache pricing, input pricing, and output pricing were checked against the official pages. Cost examples are direct arithmetic from published per-token rates and are labeled as examples rather than measured workloads.\n\n## Validation\n\n- `npm test`: passed; Astro reported 31 checked files with 0 diagnostics and built 95 pages.\n- Public artifact audit: passed; 106 files, 11 required routes, and 0 forbidden matches.\n- Frontmatter: all required fields are present; `published` is `2026-07-19`; locales are correct; `featured` is false.\n- Translation mapping: `o-preco-real-de-um-milhao-de-tokens` and `the-real-price-of-a-million-tokens` point to each other.\n- Editorial adaptation: the English article preserves the thesis and evidence while using its own phrasing and rhythm.\n- Public privacy scan of the two new posts: 0 occurrences of the prohibited process, local-path, governance, and internal-state terms.\n- Source URLs: all three official pages returned HTTP 200.\n- `git diff --check`: passed.\n\n## Decision\n\nApproved for publication.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260719-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260719-QA-001.md",
+  "ts": "2026-07-20T00:23:24Z"
+}
