@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1101,
-      "projection_hash_sha256": "92ab8df379a85b7013b3f92c567486e23c4940862012afce3492bc2d09cbace9",
+      "last_event_seq": 1121,
+      "projection_hash_sha256": "cd9978ab4c23d17683b8df8cd23b970783148e407878926e66282565f5961db7",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-20T14:05:10Z"
+    "updated_at": "2026-07-20T14:06:55Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2576,7 +2576,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diario aberto de 2026-07-20",
       "description": "Commit, push, deploy e evidencias HTTP do par bilingue.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260720-QA-001"
       ],
@@ -2590,16 +2590,53 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-20T14:05:10Z"
+      "started_at": "2026-07-20T14:05:10Z",
+      "verification": {
+        "checks": [
+          "workflow 29749097928: success",
+          "PT and EN URLs: HTTP 200",
+          "titles, canonical and reciprocal hreflang: passed",
+          "npm test and git diff --check after hotfix: passed"
+        ]
+      },
+      "completed_at": "2026-07-20T14:06:55Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260720-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover espaco final do frontmatter PT",
+      "description": "Corrigir a unica ocorrencia indicada por git diff --check apos o commit de conteudo.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260720-QA-001"
+      ],
+      "targets": [
+        "src/content/posts/pt/a-disputa-da-ia-desceu-para-a-pilha.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-20T14:05:42Z",
+      "verification": {
+        "checks": [
+          "npm test: passed; 97 pages",
+          "git diff --check: passed"
+        ]
+      },
+      "completed_at": "2026-07-20T14:06:18Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 84,
-      "in_progress": 3
+      "done": 86,
+      "in_progress": 2
     },
     "by_kind": {
-      "impl": 42,
+      "impl": 43,
       "qa": 39,
       "spec": 6
     }

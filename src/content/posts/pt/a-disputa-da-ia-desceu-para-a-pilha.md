@@ -1,6 +1,6 @@
 ---
 title: "A disputa da IA desceu para a pilha"
-description: "A nova arquitetura da Alibaba mostra por que agentes dependem tanto de observabilidade, roteamento e software de hardware quanto do modelo." 
+description: "A nova arquitetura da Alibaba mostra por que agentes dependem tanto de observabilidade, roteamento e software de hardware quanto do modelo."
 published: 2026-07-20
 locale: pt
 translation: the-ai-race-moves-down-the-stack

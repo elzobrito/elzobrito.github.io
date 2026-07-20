@@ -1,0 +1,13 @@
+{
+  "after_sha256": "c2cef3bdfdfd4bfe5a2806209e7f94486c2d0b1e93c4e5c238ba71e4b08f2128",
+  "artifact_id": "ART-c2cef3bdfdfd4bfe5a2806209e7f94486c2d0b1e93c4e5c238ba71e4b08f2128",
+  "artifact_sha256": "34508b1a6deefae0381754489fef68ed6e5fac471363d3142469d3da5fd9c572",
+  "before_sha256": "c2cef3bdfdfd4bfe5a2806209e7f94486c2d0b1e93c4e5c238ba71e4b08f2128",
+  "bytes": 1719,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260720-PUBLISH-001\n\n## Release scope\n\n- Portuguese post: `a-disputa-da-ia-desceu-para-a-pilha`\n- English post: `the-ai-race-moves-down-the-stack`\n- Publication branch: `main`\n- Commit message: `Publish daily AI briefing 2026-07-20`\n\n## Pre-push evidence\n\n- POST and QA tasks: approved and `done`; PUBLISH task is `in_progress` under `agent-qa`.\n- `git fetch origin`: completed.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0`; local HEAD is not behind.\n- `npm test`: passed; 97 pages built and 108 public files audited with 0 forbidden matches.\n- Three official source URLs returned HTTP 200.\n- `git diff --check`: passed.\n- Staging is restricted to the two posts, the two QA records, and ESAA artifacts produced by this daily flow.\n\n## Deployment evidence\n\n- Content commit: `a638cb98dea58f5b79190e4e34655c7834aa5597`.\n- Push: `main` advanced from `b0d9eb9` to `a638cb9` on `origin`.\n- Workflow: `29749097928`, `Deploy static hub to GitHub Pages`, completed with `success`: https://github.com/elzobrito/elzobrito.github.io/actions/runs/29749097928\n- Portuguese URL: HTTP 200, expected title, canonical, English alternate, Portuguese alternate, and `x-default`: https://elzobrito.github.io/blog/a-disputa-da-ia-desceu-para-a-pilha/\n- English URL: HTTP 200, expected title, canonical, Portuguese alternate, English alternate, and `x-default`: https://elzobrito.github.io/en/blog/the-ai-race-moves-down-the-stack/\n- A trailing space reported during the content commit was corrected under `SITE-BLOG-DAILY-OPEN-20260720-FIX-001`; `npm test` and `git diff --check` passed after the correction. The correction and final governance evidence are included in the final evidence commit.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260720-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260720-PUBLISH-001.md",
+  "ts": "2026-07-20T14:06:54Z"
+}
