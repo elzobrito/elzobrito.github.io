@@ -48,7 +48,7 @@ Os autores também reforçaram o oráculo de testes por um processo em que um ag
 
 A diferença não prova que todo agente de código falhará nessa proporção fora do benchmark. Ela mostra que testes superficiais podem superestimar bastante a completude de um backend. Implementar rotas felizes é diferente de preservar autenticação, transições de estado, erros e combinações de regras em um serviço inteiro.
 
-Para equipes, a consequência é direta: avaliar agentes por diff aceito ou build verde é pouco. O teste mais informativo atravessa a mesma fronteira que o usuário atravessa — sobe o sistema e conversa com sua interface pública.
+Para equipes, a consequência é direta: avaliar agentes por diff aceito ou build verde é pouco. O teste mais informativo atravessa a mesma fronteira que o usuário atravessa, sobe o sistema e conversa com sua interface pública.
 
 ## Documentos não são apenas imagens com letras
 

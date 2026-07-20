@@ -8,7 +8,7 @@ tags: ["IA", "Agentes", "Open source", "Engenharia"]
 featured: false
 ---
 
-Nem todo avanço importante chega na forma de um modelo novo. Nas últimas horas, duas bases abertas bastante usadas por desenvolvedores — [Codex](https://github.com/openai/codex) e [llama.cpp](https://github.com/ggml-org/llama.cpp) — publicaram correções que parecem pequenas quando lidas isoladamente. Juntas, elas expõem uma questão maior: agentes falham com frequência nas fronteiras entre componentes, não apenas no raciocínio central.
+Nem todo avanço importante chega na forma de um modelo novo. Nas últimas horas, duas bases abertas bastante usadas por desenvolvedores, [Codex](https://github.com/openai/codex) e [llama.cpp](https://github.com/ggml-org/llama.cpp), publicaram correções que parecem pequenas quando lidas isoladamente. Juntas, elas expõem uma questão maior: agentes falham com frequência nas fronteiras entre componentes, não apenas no raciocínio central.
 
 Uma revisão pode adotar a política errada. Um marcador interno pode escapar para a resposta. Uma imagem devolvida por uma ferramenta pode desaparecer durante a conversão entre formatos. Um único byte nulo pode cortar silenciosamente o restante de uma conversa.
 
@@ -22,7 +22,7 @@ O ponto importante não é apenas que um erro foi corrigido. É que um agente re
 
 Antes, era comum tratar revisão assistida por IA como uma segunda opinião quase abstrata: envia-se o diff e recebe-se uma lista de observações. Na prática, esse revisor é um sistema composto. Ele depende de uma política, de um contrato de entrada, de acesso correto às ferramentas e de critérios para decidir o que merece ser reportado.
 
-A consequência prática é simples: equipes não deveriam validar apenas se “o revisor respondeu”. Elas precisam acompanhar a qualidade e a estabilidade das conclusões entre versões. Um conjunto pequeno de mudanças conhecidas — com problemas que devem e não devem ser apontados — funciona como teste de regressão para o próprio revisor.
+A consequência prática é simples: equipes não deveriam validar apenas se “o revisor respondeu”. Elas precisam acompanhar a qualidade e a estabilidade das conclusões entre versões. Um conjunto pequeno de mudanças conhecidas, com problemas que devem e não devem ser apontados, funciona como teste de regressão para o próprio revisor.
 
 ## O raciocínio interno precisa de uma fronteira real
 
@@ -58,7 +58,7 @@ Para linguagens e APIs que tratam o byte nulo como fim de string, esse é um pro
 
 Uma defesa prática é trabalhar com pares explícitos de dados e comprimento, além de incluir entradas com bytes especiais nos testes. Também vale registrar tamanhos antes e depois de cada conversão. Quando o sistema recebe 12 mil bytes e entrega 7 mil ao tokenizador, essa diferença precisa ser observável.
 
-## A lição menos vistosa — e mais útil
+## A lição menos vistosa, e mais útil
 
 Essas correções não indicam que Codex ou llama.cpp sejam particularmente frágeis. Indicam que projetos maduros tornam falhas concretas visíveis, corrigíveis e testáveis.
 

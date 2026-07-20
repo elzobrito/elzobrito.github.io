@@ -22,4 +22,4 @@ Evidência não deve aparecer apenas no relatório final. Hipóteses, amostras, 
 
 “Humano no loop” é insuficiente quando ninguém define o que deve ser revisado. A revisão funciona melhor quando tem objeto, critério e autoridade explícitos. Casos ambíguos devem escalar; casos rotineiros podem seguir automaticamente dentro de limites conhecidos.
 
-O objetivo não é atrasar a automação. É construir confiança proporcional ao risco. Sistemas sustentáveis combinam capacidade do modelo, desenho do processo e responsabilidade institucional — nenhum desses elementos substitui os outros.
+O objetivo não é atrasar a automação. É construir confiança proporcional ao risco. Sistemas sustentáveis combinam capacidade do modelo, desenho do processo e responsabilidade institucional, nenhum desses elementos substitui os outros.

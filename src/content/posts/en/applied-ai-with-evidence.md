@@ -22,4 +22,4 @@ Evidence should not appear only in the final report. Hypotheses, samples, evalua
 
 “Human in the loop” is insufficient when nobody defines what should be reviewed. Review works best when its object, criteria and authority are explicit. Ambiguous cases should escalate; routine cases may proceed automatically within known boundaries.
 
-The goal is not to slow automation down. It is to build trust proportional to risk. Sustainable systems combine model capability, process design and institutional accountability — none of these replaces the others.
+The goal is not to slow automation down. It is to build trust proportional to risk. Sustainable systems combine model capability, process design and institutional accountability, none of these replaces the others.

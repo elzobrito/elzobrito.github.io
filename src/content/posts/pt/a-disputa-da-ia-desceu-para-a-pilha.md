@@ -16,7 +16,7 @@ No [anúncio feito durante a World Artificial Intelligence Conference (WAIC)](ht
 
 O conjunto combina AgentRun, AgentLoop e AgentTeams. O primeiro cuida do ciclo de desenvolvimento, implantação e operação; o segundo acrescenta rastreamento, avaliação e otimização; o terceiro coordena vários agentes e suas regras de governança.
 
-Antes, uma equipe podia ligar um modelo a ferramentas e chamar o resultado de agente. Isso funciona em demonstrações curtas. Em produção, surgem perguntas menos elegantes: qual etapa falhou, por que uma ferramenta foi acionada, quanto uma tentativa custou e quando uma pessoa deve interromper o fluxo? Observabilidade e controle deixam de ser acessórios porque a saída de um agente pode se tornar a entrada — ou a permissão — de outro.
+Antes, uma equipe podia ligar um modelo a ferramentas e chamar o resultado de agente. Isso funciona em demonstrações curtas. Em produção, surgem perguntas menos elegantes: qual etapa falhou, por que uma ferramenta foi acionada, quanto uma tentativa custou e quando uma pessoa deve interromper o fluxo? Observabilidade e controle deixam de ser acessórios porque a saída de um agente pode se tornar a entrada, ou a permissão, de outro.
 
 Na prática, essa camada se parece mais com operações de software do que com uma caixa de conversa. Um processo de atendimento, por exemplo, pode separar triagem, consulta a documentos e execução de uma ação. A arquitetura só é confiável se cada passagem puder ser rastreada e se a coordenação limitar o que cada participante pode fazer.
 
@@ -38,4 +38,4 @@ A terceira peça é a abertura do T-Head SAIL, pilha de software otimizada para 
 
 A Alibaba também tornou o Qwen 3.8-Max-Preview disponível em algumas de suas plataformas e disse que pretende abrir seus pesos. Como os pesos, a documentação técnica e avaliações independentes ainda não foram apresentados no anúncio, não há base para tratar a promessa como um lançamento aberto concluído.
 
-O que já pode ser analisado é a arquitetura ao redor dele. Agentes úteis precisam de modelos capazes, mas também de rastros, limites, roteamento, cache e uma camada de software que converse com o hardware. A disputa da IA está descendo pela pilha porque desempenho sem operação é apenas uma demonstração — e operação sem portabilidade troca uma dependência por outra.
+O que já pode ser analisado é a arquitetura ao redor dele. Agentes úteis precisam de modelos capazes, mas também de rastros, limites, roteamento, cache e uma camada de software que converse com o hardware. A disputa da IA está descendo pela pilha porque desempenho sem operação é apenas uma demonstração, e operação sem portabilidade troca uma dependência por outra.

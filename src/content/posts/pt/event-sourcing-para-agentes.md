@@ -24,4 +24,4 @@ Uma tarefa não “vira done” porque alguém alterou um campo. Ela percorre tr
 
 Replay não é apenas recuperação. Ele é um teste arquitetural: o mesmo histórico deve produzir o mesmo estado. Quando isso acontece, dashboards e automações deixam de depender de interpretações livres da conversa.
 
-Event Sourcing não torna o modelo determinístico. Ele cria uma fronteira determinística ao redor de suas ações — exatamente onde sistemas autônomos mais precisam dela.
+Event Sourcing não torna o modelo determinístico. Ele cria uma fronteira determinística ao redor de suas ações, exatamente onde sistemas autônomos mais precisam dela.

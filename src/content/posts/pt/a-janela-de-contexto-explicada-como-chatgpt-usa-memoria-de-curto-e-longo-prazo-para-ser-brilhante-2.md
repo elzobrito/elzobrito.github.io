@@ -26,7 +26,7 @@ A janela de contexto é o “campo de visão” do modelo: é o número de token
 
 - A janela de contexto é limitada. Em modelos como o GPT‑4 Turbo, ela pode chegar a 128k tokens. Já outros modelos experimentais alcançam até 1 milhão.
 
-Você pode imaginar a janela de contexto como a memória RAM da IA: tudo que está dentro dela é usado para pensar; tudo que está fora é ignorado — a menos que seja reintroduzido.
+Você pode imaginar a janela de contexto como a memória RAM da IA: tudo que está dentro dela é usado para pensar; tudo que está fora é ignorado, a menos que seja reintroduzido.
 
 ## Por que a Janela de Contexto é Limitada?
 
@@ -108,7 +108,7 @@ Com ela:
 
 - Evoluir a interação de forma natural e adaptativa.
 
-Essa abordagem transforma a IA em um parceiro de criação — não apenas um gerador de texto.
+Essa abordagem transforma a IA em um parceiro de criação, não apenas um gerador de texto.
 
 A janela de contexto define o que uma IA pode “ver” no momento. Expandir essa janela é um feito impressionante, mas ainda mais crucial é como usamos esse espaço com inteligência: resumindo, priorizando, arquivando e recuperando informações relevantes.
 
@@ -118,7 +118,7 @@ A arquitetura do ChatGPT combina o melhor dos dois mundos:
 
 - Memória de longo prazo inteligente (baseados em temas e interações anteriores).
 
-Dominar essa estrutura é entender como as IAs modernas pensam — e, mais ainda, como elas podem evoluir lado a lado com a gente em projetos cada vez mais complexos.
+Dominar essa estrutura é entender como as IAs modernas pensam, e, mais ainda, como elas podem evoluir lado a lado com a gente em projetos cada vez mais complexos.
 
 ## Nota de migracao
 

@@ -1,6 +1,6 @@
 ---
 title: "A Onda Autônoma: Por Que a IA Acabou de Mudar de “Copiloto” para “Piloto Automático”"
-description: "Entramos oficialmente em uma nova era da Inteligência Artificial. Por anos, a IA foi celebrada como nosso “Copiloto” — uma ferramenta poderosa que nos auxiliava em tarefas, mas que ainda exigia supervisão co..."
+description: "Entramos oficialmente em uma nova era da Inteligência Artificial. Por anos, a IA foi celebrada como nosso “Copiloto”, uma ferramenta poderosa que nos auxiliava em tarefas, mas que ainda exigia supervisão co..."
 published: 2026-02-15
 locale: pt
 translation: autonomous-wave-from-copilot-to-autopilot
@@ -8,7 +8,7 @@ tags: ["Inteligência Artificial", "IA"]
 featured: false
 ---
 
-Entramos oficialmente em uma nova era da Inteligência Artificial. Por anos, a IA foi celebrada como nosso “Copiloto” — uma ferramenta poderosa que nos auxiliava em tarefas, mas que ainda exigia supervisão constante e direção humana para a conclusão do trabalho. No entanto, o cenário mudou. Com lançamentos recentes como o GPT-5.3 Codex e o Claude Opus 4.6 em fevereiro de 2026, testemunhamos o momento em que a tecnologia cruzou o limiar, passando de uma simples ajuda para um verdadeiro “Piloto Automático” cognitivo.
+Entramos oficialmente em uma nova era da Inteligência Artificial. Por anos, a IA foi celebrada como nosso “Copiloto”, uma ferramenta poderosa que nos auxiliava em tarefas, mas que ainda exigia supervisão constante e direção humana para a conclusão do trabalho. No entanto, o cenário mudou. Com lançamentos recentes como o GPT-5.3 Codex e o Claude Opus 4.6 em fevereiro de 2026, testemunhamos o momento em que a tecnologia cruzou o limiar, passando de uma simples ajuda para um verdadeiro “Piloto Automático” cognitivo.
 
 Este não é um avanço incremental; é uma mudança fundamental que afeta a própria natureza do trabalho e da produtividade.
 

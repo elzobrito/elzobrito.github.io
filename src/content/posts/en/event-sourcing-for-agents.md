@@ -24,4 +24,4 @@ A task does not “become done” because someone changed a field. It moves thro
 
 Replay is more than recovery. It is an architectural test: the same history must produce the same state. When it does, dashboards and automation no longer depend on free-form interpretations of a conversation.
 
-Event Sourcing does not make the model deterministic. It creates a deterministic boundary around its actions — exactly where autonomous systems need it most.
+Event Sourcing does not make the model deterministic. It creates a deterministic boundary around its actions, exactly where autonomous systems need it most.

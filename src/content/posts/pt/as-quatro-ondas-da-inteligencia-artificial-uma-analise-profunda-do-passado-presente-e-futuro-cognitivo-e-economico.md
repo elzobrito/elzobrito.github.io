@@ -464,7 +464,7 @@ A questão final, “Estamos preparados?”, transcende a preparação técnica.
 
 20. Physical symbol system hypothesis – (Intro to Cognitive Science) – Vocab, Definition, Explanations | Fiveable, acessado em abril 22, 2025, https://fiveable.me/key-terms/introduction-cognitive-science/physical-symbol-system-hypothesis
 
-21. Artificial Intelligence – foundations of computational agents — 1.4.2 Representations, acessado em abril 22, 2025, https://artint.info/html1e/ArtInt_10.html
+21. Artificial Intelligence – foundations of computational agents, 1.4.2 Representations, acessado em abril 22, 2025, https://artint.info/html1e/ArtInt_10.html
 
 22. 3.7: Physical Symbol Systems – Social Sci LibreTexts, acessado em abril 22, 2025, https://socialsci.libretexts.org/Bookshelves/Psychology/Cognitive_Psychology/Mind_Body_World_-_Foundations_of_Cognitive_Science_(Dawson)/03%3A_Elements_of_Classical_Cognitive_Science/3.07%3A_Physical_Symbol_Systems
 
@@ -474,7 +474,7 @@ A questão final, “Estamos preparados?”, transcende a preparação técnica.
 
 25. History of AI: Key Milestones and Impact on Technology – Electropages, acessado em abril 22, 2025, https://www.electropages.com/blog/1970/01/history-ai-key-milestones-impact-technology
 
-26. A Brief History of AI — Making Things Think – Holloway, acessado em abril 22, 2025, https://www.holloway.com/g/making-things-think/sections/a-brief-history-of-ai
+26. A Brief History of AI, Making Things Think – Holloway, acessado em abril 22, 2025, https://www.holloway.com/g/making-things-think/sections/a-brief-history-of-ai
 
 27. History of AI | Aventine, acessado em abril 22, 2025, https://www.aventine.org/artificial-intelligence/history-of-ai/
 

@@ -8,7 +8,7 @@ tags: ["AI", "Agents", "Open source", "Engineering"]
 featured: false
 ---
 
-Not every meaningful advance arrives as a new model. Over the past several hours, two open codebases widely used by developers — [Codex](https://github.com/openai/codex) and [llama.cpp](https://github.com/ggml-org/llama.cpp) — shipped fixes that look modest in isolation. Taken together, they expose a larger engineering problem: agents often fail at the boundaries between components, not only in the reasoning core.
+Not every meaningful advance arrives as a new model. Over the past several hours, two open codebases widely used by developers, [Codex](https://github.com/openai/codex) and [llama.cpp](https://github.com/ggml-org/llama.cpp), shipped fixes that look modest in isolation. Taken together, they expose a larger engineering problem: agents often fail at the boundaries between components, not only in the reasoning core.
 
 A reviewer can follow the wrong policy. An internal marker can leak into the answer. An image returned by a tool can disappear while messages are converted between formats. A single null byte can silently cut off the rest of a conversation.
 
@@ -22,7 +22,7 @@ The important part is not merely that a bug was fixed. It is that an agent revie
 
 AI-assisted review is sometimes treated as an abstract second opinion: send a diff in and receive findings back. In practice, the reviewer is a composed system. It relies on policy, an input contract, correct tool access, and criteria for deciding what deserves attention.
 
-The practical consequence is straightforward. Teams should not validate only that “the reviewer answered.” They should track the quality and stability of its conclusions across releases. A compact set of known changes — including issues that should be caught and harmless patterns that should not — can serve as a regression suite for the reviewer itself.
+The practical consequence is straightforward. Teams should not validate only that “the reviewer answered.” They should track the quality and stability of its conclusions across releases. A compact set of known changes, including issues that should be caught and harmless patterns that should not, can serve as a regression suite for the reviewer itself.
 
 ## Internal reasoning needs an actual boundary
 

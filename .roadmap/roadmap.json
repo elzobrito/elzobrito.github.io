@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1121,
-      "projection_hash_sha256": "cd9978ab4c23d17683b8df8cd23b970783148e407878926e66282565f5961db7",
+      "last_event_seq": 1157,
+      "projection_hash_sha256": "269d76359b38d93ed4d44be0cdd59e99b705107098e321f44f55f2ad1bc795d1",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-20T14:06:55Z"
+    "updated_at": "2026-07-20T20:52:18Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2628,15 +2628,106 @@
         ]
       },
       "completed_at": "2026-07-20T14:06:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-STYLE-DASH-001",
+      "task_kind": "impl",
+      "title": "Proibir travessão editorial nos textos do blog",
+      "description": "Documentar e automatizar a regra editorial que veta a sequência espaço-travessão-espaço nos posts PT e EN, sem reescrever automaticamente o acervo legado.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "blog-editorial-policy"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-EDITORIAL-STYLE-001.md",
+          "scripts/check-editorial-style.mjs",
+          "package.json"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-20T20:47:08Z",
+      "verification": {
+        "checks": [
+          "Regra delimitada a textos editoriais PT/EN; acervo legado não será reescrito automaticamente"
+        ]
+      },
+      "completed_at": "2026-07-20T20:49:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-STYLE-DASH-002",
+      "task_kind": "impl",
+      "title": "Aplicar guarda editorial contra travessão",
+      "description": "Registrar a regra e integrar uma checagem que bloqueie a sequência espaço-travessão-espaço nos novos posts PT e EN.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "blog-editorial-policy"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-EDITORIAL-STYLE-001.md",
+          "scripts/check-editorial-style.mjs",
+          "package.json"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/spec/SITE-BLOG-EDITORIAL-STYLE-001.md",
+        "scripts/check-editorial-style.mjs",
+        "package.json"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-20T20:48:03Z",
+      "verification": {
+        "checks": [
+          "npm test: aprovado",
+          "npm run audit:editorial: nenhuma ocorrência proibida",
+          "git diff --check: aprovado"
+        ]
+      },
+      "completed_at": "2026-07-20T20:50:01Z"
+    },
+    {
+      "task_id": "SITE-BLOG-STYLE-DASH-COMMIT-001",
+      "task_kind": "impl",
+      "title": "Commitar regra editorial contra travessão",
+      "description": "Registrar em commit local a política editorial, a auditoria automática, a normalização dos posts e os eventos ESAA correspondentes.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "git-history"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-20T20:51:39Z",
+      "verification": {
+        "checks": [
+          "Commit daff29f criado",
+          "git diff --cached --check aprovado"
+        ]
+      },
+      "completed_at": "2026-07-20T20:52:18Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 86,
+      "done": 89,
       "in_progress": 2
     },
     "by_kind": {
-      "impl": 43,
+      "impl": 46,
       "qa": 39,
       "spec": 6
     }

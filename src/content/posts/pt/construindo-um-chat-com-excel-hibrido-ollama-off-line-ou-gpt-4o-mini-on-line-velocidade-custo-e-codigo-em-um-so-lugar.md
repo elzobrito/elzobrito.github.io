@@ -1,6 +1,6 @@
 ---
 title: "Construindo um chat-com-Excel híbrido: Ollama off-line ou GPT-4o-mini on-line, velocidade, custo e código em um só lugar"
-description: "Com o avanço das LLMs e a proliferação de interfaces naturais, tornou-se cada vez mais comum sonhar com aplicações que “conversam com seus dados”. PDFs, planilhas, bancos SQLite — tudo pode virar fonte de sa..."
+description: "Com o avanço das LLMs e a proliferação de interfaces naturais, tornou-se cada vez mais comum sonhar com aplicações que “conversam com seus dados”. PDFs, planilhas, bancos SQLite, tudo pode virar fonte de sa..."
 published: 2025-05-16
 locale: pt
 translation: building-a-hybrid-excel-chat-with-ollama-and-gpt-4o-mini
@@ -8,7 +8,7 @@ tags: ["Inteligência Artificial", "IA"]
 featured: false
 ---
 
-Com o avanço das LLMs e a proliferação de interfaces naturais, tornou-se cada vez mais comum sonhar com aplicações que “conversam com seus dados”. PDFs, planilhas, bancos SQLite — tudo pode virar fonte de sabedoria se bem interpretado por um bom modelo de linguagem. Mas na prática, o que vemos são aplicações lentas, pesadas ou caras demais para POCs simples. Foi diante dessa realidade que surgiu esta Prova de Conceito: uma aplicação leve e híbrida que permite ao usuário conversar com sua planilha Excel usando um modelo local (via Ollama) ou um modelo online (GPT-4o-mini da OpenAI). A ideia é simples, mas poderosa: para perguntas fechadas como “quantas linhas?” ou “quais colunas existem?”, o sistema responde instantaneamente com pandas. Já perguntas abertas como “quais insights você vê?” são roteadas para um pipeline RAG com indexação vetorial usando LlamaIndex e consulta por LLM.
+Com o avanço das LLMs e a proliferação de interfaces naturais, tornou-se cada vez mais comum sonhar com aplicações que “conversam com seus dados”. PDFs, planilhas, bancos SQLite, tudo pode virar fonte de sabedoria se bem interpretado por um bom modelo de linguagem. Mas na prática, o que vemos são aplicações lentas, pesadas ou caras demais para POCs simples. Foi diante dessa realidade que surgiu esta Prova de Conceito: uma aplicação leve e híbrida que permite ao usuário conversar com sua planilha Excel usando um modelo local (via Ollama) ou um modelo online (GPT-4o-mini da OpenAI). A ideia é simples, mas poderosa: para perguntas fechadas como “quantas linhas?” ou “quais colunas existem?”, o sistema responde instantaneamente com pandas. Já perguntas abertas como “quais insights você vê?” são roteadas para um pipeline RAG com indexação vetorial usando LlamaIndex e consulta por LLM.
 
 A arquitetura dessa PoC é compacta e clara. O frontend foi feito com TailwindCSS e JavaScript puro, mantendo um HTML estático que pode rodar até em navegadores offline. O backend usa FastAPI e três endpoints principais: /upload, que recebe a planilha e configura o índice vetorial; /chat, que testa se o modelo está respondendo com um prompt simples (“Olá, tudo bem?”); e /query, que recebe as perguntas reais. Durante o upload, a planilha é lida com pandas, convertida em documentos com DoclingReader, segmentada em blocos de 128 tokens com MarkdownNodeParser e indexada em um VectorStoreIndex. No frontend, o usuário pode alternar entre o backend local (Ollama) e remoto (OpenAI), e digitar a chave da OpenAI apenas quando necessário. O backend alterna dinamicamente entre embeddings HuggingFace e OpenAI, conforme o backend selecionado. Um sistema de fallback garante que perguntas simples nunca gastem tokens, enquanto perguntas analíticas são escaladas para o LLM.
 
@@ -263,7 +263,7 @@ Para calcular o custo, usamos a precificação oficial da OpenAI: US$ 0,15 por m
 
 TipoTokensPreço/1MTotalEntrada2000US$ 0,15US$ 0,0003Saída500US$ 0,60US$ 0,0003**Total**——**US$ 0,0006**
 
-Uma sessão com 10 perguntas analíticas consome menos de US$ 0,006, ou R$ 0,03 no câmbio atual. Isso significa que para demonstrações públicas, interfaces de baixo tráfego ou protótipos educacionais, a OpenAI se mostra mais rápida, mais precisa e absurdamente barata. Para usos offline, o Ollama continua útil — mas seu desempenho em máquinas modestas é limitado.
+Uma sessão com 10 perguntas analíticas consome menos de US$ 0,006, ou R$ 0,03 no câmbio atual. Isso significa que para demonstrações públicas, interfaces de baixo tráfego ou protótipos educacionais, a OpenAI se mostra mais rápida, mais precisa e absurdamente barata. Para usos offline, o Ollama continua útil, mas seu desempenho em máquinas modestas é limitado.
 
 ## ✅ Conclusão: uma PoC que entrega
 

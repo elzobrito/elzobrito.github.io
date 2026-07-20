@@ -1,6 +1,6 @@
 ---
 title: "Conversation ESAA: memória compartilhada entre agentes de IA"
-description: "Faz três meses publiquei aqui sobre a ESAA — Event Sourcing para Agentes Autônomos a ideia de que um agente de IA não deveria escrever direto no seu projeto, e sim emitir intenções validadas que um orquestra..."
+description: "Faz três meses publiquei aqui sobre a ESAA, Event Sourcing para Agentes Autônomos a ideia de que um agente de IA não deveria escrever direto no seu projeto, e sim emitir intenções validadas que um orquestra..."
 published: 2026-06-22
 locale: pt
 translation: conversation-esaa-shared-memory-between-ai-agents
@@ -8,7 +8,7 @@ tags: ["Conversation ESAA", "ESAA", "IA", "operacao"]
 featured: false
 ---
 
-Faz três meses publiquei aqui sobre a [ESAA — Event Sourcing para Agentes Autônomos](https://www.tabnews.com.br/elzobrito/pare-de-deixar-llms-editarem-seu-codigo-direto-conheca-a-arquitetura-esaa-event-sourcing-para-agentes-autonomos), a ideia de que um agente de IA não deveria escrever direto no seu projeto, e sim emitir intenções validadas que um orquestrador determinístico persiste num log append-only.
+Faz três meses publiquei aqui sobre a [ESAA, Event Sourcing para Agentes Autônomos](https://www.tabnews.com.br/elzobrito/pare-de-deixar-llms-editarem-seu-codigo-direto-conheca-a-arquitetura-esaa-event-sourcing-para-agentes-autonomos), a ideia de que um agente de IA não deveria escrever direto no seu projeto, e sim emitir intenções validadas que um orquestrador determinístico persiste num log append-only.
 
 Depois escrevi sobre como isso começou a virar um ecossistema: o `esaa-core` como motor, o `esaa-codex-plugin` como entrada para transformar requisitos em roadmap, e o `esaa-esd` como observador read-only do estado.
 
