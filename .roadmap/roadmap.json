@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1069,
-      "projection_hash_sha256": "1a3f55d2c5792a74d77015076c51eeef8a4d58e29581f65dd375807b223083ca",
+      "last_event_seq": 1101,
+      "projection_hash_sha256": "92ab8df379a85b7013b3f92c567486e23c4940862012afce3492bc2d09cbace9",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-20T00:23:45Z"
+    "updated_at": "2026-07-20T14:05:10Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2510,16 +2510,97 @@
       },
       "assigned_to": "agent-qa",
       "started_at": "2026-07-20T00:23:25Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260720-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diario aberto PT/EN de 2026-07-20",
+      "description": "Pesquisar fontes primarias das ultimas 24 horas e criar o par editorial bilingue.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-20T14:02:00Z",
+      "verification": {
+        "checks": [
+          "npm test: passed; 97 pages",
+          "public audit: 108 files, 0 forbidden matches",
+          "three primary URLs: HTTP 200",
+          "git diff --check: passed"
+        ]
+      },
+      "completed_at": "2026-07-20T14:04:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260720-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diario aberto de 2026-07-20",
+      "description": "Revisar fontes, rigor, schema, privacidade, traducao e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260720-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260720-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-20T14:04:58Z",
+      "verification": {
+        "checks": [
+          "npm test: passed",
+          "frontmatter and reciprocal translations: passed",
+          "public privacy audit: passed",
+          "source URLs: HTTP 200",
+          "git diff --check: passed"
+        ]
+      },
+      "completed_at": "2026-07-20T14:05:09Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260720-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diario aberto de 2026-07-20",
+      "description": "Commit, push, deploy e evidencias HTTP do par bilingue.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260720-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260720-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-20T14:05:10Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 82,
-      "in_progress": 2
+      "done": 84,
+      "in_progress": 3
     },
     "by_kind": {
-      "impl": 41,
-      "qa": 37,
+      "impl": 42,
+      "qa": 39,
       "spec": 6
     }
   }
