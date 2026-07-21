@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1157,
-      "projection_hash_sha256": "269d76359b38d93ed4d44be0cdd59e99b705107098e321f44f55f2ad1bc795d1",
+      "last_event_seq": 1189,
+      "projection_hash_sha256": "b8fa5e09b0a415b601727caa732c3366ae82e3225a142e39de5611ebc35acad0",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-20T20:52:18Z"
+    "updated_at": "2026-07-21T14:07:19Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2719,16 +2719,83 @@
         ]
       },
       "completed_at": "2026-07-20T20:52:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260721-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diario PT e EN de 2026-07-21",
+      "description": "Pesquisar fontes primarias das ultimas 24 horas e criar o par editorial bilingue.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-21T14:03:09Z",
+      "verification": {
+        "checks": [
+          "Posts PT e EN criados com frontmatter e translations reciprocas."
+        ]
+      },
+      "completed_at": "2026-07-21T14:05:07Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260721-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diario de 2026-07-21",
+      "description": "Revisar fontes, rigor, schema, privacidade, traducao e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260721-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-21T14:05:08Z",
+      "verification": {
+        "checks": [
+          "npm test: exit 0, 99 paginas, 110 arquivos publicos, 0 ocorrencias; git diff --check ok; fontes HTTP 200."
+        ]
+      },
+      "completed_at": "2026-07-21T14:07:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260721-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diario de 2026-07-21",
+      "description": "Realizar commit, push, deploy e registrar evidencias.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260721-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-21T14:07:19Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 89,
-      "in_progress": 2
+      "done": 91,
+      "in_progress": 3
     },
     "by_kind": {
-      "impl": 46,
-      "qa": 39,
+      "impl": 47,
+      "qa": 41,
       "spec": 6
     }
   }
