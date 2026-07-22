@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1274,
-      "projection_hash_sha256": "27c002ce9cc2287320f048380ac9e82673cd2a4f0d12518a58cd8a759750b7e3",
+      "last_event_seq": 1286,
+      "projection_hash_sha256": "678485d95da5379c1c7b54d6de368d6baa61e101e6302a6b31791fcd159d41eb",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-22T15:42:42Z"
+    "updated_at": "2026-07-22T19:31:10Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2982,15 +2982,45 @@
         ]
       },
       "completed_at": "2026-07-22T15:42:42Z"
+    },
+    {
+      "task_id": "T-RAG-SQLITE-BLOG",
+      "task_kind": "impl",
+      "title": "Publicar post rag-sqlite no blog (PT+EN)",
+      "description": "Adicionar par bilíngue sobre rag-sqlite, validar npm test e publicar no GitHub Pages.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/rag-sqlite-rag-local-em-um-script-python-sqlite-feito-para-agentes.md",
+          "src/content/posts/en/rag-sqlite-local-rag-in-one-python-script-plus-sqlite-built-for-agents.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-22T19:29:20Z",
+      "verification": {
+        "checks": [
+          "frontmatter PT/EN com translation cruzada e published 2026-07-22",
+          "npm test: check+build+audit:public+audit:editorial exit 0",
+          "rotas build: /blog/rag-sqlite-rag-local-em-um-script-python-sqlite-feito-para-agentes/ e EN pair"
+        ]
+      },
+      "completed_at": "2026-07-22T19:31:10Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 98,
+      "done": 99,
       "in_progress": 2
     },
     "by_kind": {
-      "impl": 49,
+      "impl": 50,
       "qa": 44,
       "spec": 7
     }
