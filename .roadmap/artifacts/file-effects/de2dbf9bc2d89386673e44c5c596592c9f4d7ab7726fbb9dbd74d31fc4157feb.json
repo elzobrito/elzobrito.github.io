@@ -1,0 +1,13 @@
+{
+  "after_sha256": "d01aa303ad0504053798c68f468b8e757dcfa5c8948bf09feb8ed6680be5ef05",
+  "artifact_id": "ART-d01aa303ad0504053798c68f468b8e757dcfa5c8948bf09feb8ed6680be5ef05",
+  "artifact_sha256": "de2dbf9bc2d89386673e44c5c596592c9f4d7ab7726fbb9dbd74d31fc4157feb",
+  "before_sha256": "d01aa303ad0504053798c68f468b8e757dcfa5c8948bf09feb8ed6680be5ef05",
+  "bytes": 1717,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260721-PUBLISH-001\n\n## Artefatos autorizados\n\n- `src/content/posts/pt/a-ia-saiu-da-tela-e-encontrou-o-mundo-fisico.md`\n- `src/content/posts/en/ai-steps-off-the-screen-and-into-the-physical-world.md`\n- `docs/qa/SITE-BLOG-DAILY-OPEN-20260721-QA-001.md`\n- `docs/qa/SITE-BLOG-DAILY-OPEN-20260721-PUBLISH-001.md`\n- Artefatos ESAA produzidos exclusivamente pelas tarefas `SITE-BLOG-DAILY-OPEN-20260721-*`.\n\n## Estado de publicação\n\nPublicado após autorização explícita para resolver o histórico que bloqueava a branch. O conteúdo diário permanece no commit `b3df76d4f2518d461edd64302e6edf9d2c4b41d1` com a mensagem `Publish daily AI briefing 2026-07-21`.\n\nEm 22 de julho, a cadeia linear formada pelo commit editorial previamente validado `e5f106e`, pelos commits do ciclo de 21 de julho e pelo commit diário de 22 de julho foi enviada para `origin/main` sem rebase, force push ou perda de histórico. Antes do push, `HEAD...origin/main = 4 0`; o branch não estava atrás do remoto.\n\n## Destinos publicados\n\n- PT: https://elzobrito.github.io/blog/a-ia-saiu-da-tela-e-encontrou-o-mundo-fisico/\n- EN: https://elzobrito.github.io/en/blog/ai-steps-off-the-screen-and-into-the-physical-world/\n\n## Evidência\n\n- `npm test`: aprovado; 32 arquivos sem diagnósticos, 101 páginas geradas, 112 artefatos públicos com 0 ocorrências proibidas e auditoria editorial aprovada.\n- Push: `500a043..83999e6 main -> main`, sem força.\n- Workflow `Deploy static hub to GitHub Pages`: `29932987375`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/29932987375.\n- As URLs PT e EN responderam HTTP 200 e apresentaram títulos, canonicals e hreflang recíprocos corretos.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260721-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260721-PUBLISH-001.md",
+  "ts": "2026-07-22T15:23:19Z"
+}

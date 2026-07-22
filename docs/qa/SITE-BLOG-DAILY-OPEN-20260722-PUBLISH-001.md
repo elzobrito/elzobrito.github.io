@@ -6,22 +6,23 @@ Evidência de publicação do par editorial de 22 de julho de 2026.
 
 ## Estado
 
-Publicação bloqueada antes do push.
+Publicado com sucesso após autorização explícita para resolver o histórico local que bloqueava a branch.
 
 ## Evidência
 
 - `npm test`: aprovado; 101 páginas e 112 artefatos públicos auditados.
 - `git fetch origin`: concluído em 22 de julho de 2026.
-- `git rev-list --left-right --count HEAD...origin/main`: `3 0`; o branch local não está atrás do remoto.
-- O histórico local anterior a este ciclo contém `e5f106e Enforce editorial style without em dashes`, seguido pelos commits `b3df76d` e `f3a587e` do ciclo diário de 21 de julho.
-- O commit `e5f106e` altera 22 arquivos fora do fluxo de 22 de julho. Um push de `main` enviaria esse histórico junto e ampliaria a autorização desta execução.
-- Nenhum push foi feito e nenhum workflow Pages foi iniciado.
+- Antes do push, `git rev-list --left-right --count HEAD...origin/main`: `4 0`; o branch local não estava atrás do remoto.
+- A cadeia linear `e5f106e..83999e6` foi enviada após autorização explícita, sem rebase nem force push: `500a043..83999e6 main -> main`.
+- Workflow `Deploy static hub to GitHub Pages`: `29932987375`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/29932987375.
+- Build remoto e deploy concluíram com `success`; houve somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.
+- As URLs PT e EN responderam HTTP 200 com títulos, canonicals e hreflang recíprocos corretos.
 
-## URLs planejadas
+## URLs publicadas
 
 - PT: https://elzobrito.github.io/blog/controle-tambem-e-parte-do-produto-de-ia/
 - EN: https://elzobrito.github.io/en/blog/control-is-also-part-of-the-ai-product/
 
-## Retomada
+## Resultado
 
-Resolver separadamente o destino de `e5f106e` e dos commits locais de 21 de julho. Depois, fazer push seguro, exigir sucesso do workflow `Deploy static hub to GitHub Pages`, validar título, canonical e hreflang nas duas URLs e concluir esta tarefa.
+Publicação concluída. O bloqueio de histórico foi removido e os artigos de 21 e 22 de julho estão disponíveis no GitHub Pages.

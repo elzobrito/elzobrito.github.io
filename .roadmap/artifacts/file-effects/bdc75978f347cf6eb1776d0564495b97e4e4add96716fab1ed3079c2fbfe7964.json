@@ -1,0 +1,13 @@
+{
+  "after_sha256": "e20556bffc31d0cf0cf543a6a9ba997b299d99e4bb691cbae7e77d229262a399",
+  "artifact_id": "ART-e20556bffc31d0cf0cf543a6a9ba997b299d99e4bb691cbae7e77d229262a399",
+  "artifact_sha256": "bdc75978f347cf6eb1776d0564495b97e4e4add96716fab1ed3079c2fbfe7964",
+  "before_sha256": "e20556bffc31d0cf0cf543a6a9ba997b299d99e4bb691cbae7e77d229262a399",
+  "bytes": 1394,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260722-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial de 22 de julho de 2026.\n\n## Estado\n\nPublicado com sucesso após autorização explícita para resolver o histórico local que bloqueava a branch.\n\n## Evidência\n\n- `npm test`: aprovado; 101 páginas e 112 artefatos públicos auditados.\n- `git fetch origin`: concluído em 22 de julho de 2026.\n- Antes do push, `git rev-list --left-right --count HEAD...origin/main`: `4 0`; o branch local não estava atrás do remoto.\n- A cadeia linear `e5f106e..83999e6` foi enviada após autorização explícita, sem rebase nem force push: `500a043..83999e6 main -> main`.\n- Workflow `Deploy static hub to GitHub Pages`: `29932987375`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/29932987375.\n- Build remoto e deploy concluíram com `success`; houve somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.\n- As URLs PT e EN responderam HTTP 200 com títulos, canonicals e hreflang recíprocos corretos.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/controle-tambem-e-parte-do-produto-de-ia/\n- EN: https://elzobrito.github.io/en/blog/control-is-also-part-of-the-ai-product/\n\n## Resultado\n\nPublicação concluída. O bloqueio de histórico foi removido e os artigos de 21 e 22 de julho estão disponíveis no GitHub Pages.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260722-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260722-PUBLISH-001.md",
+  "ts": "2026-07-22T15:23:19Z"
+}

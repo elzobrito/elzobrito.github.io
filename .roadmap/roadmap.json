@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1221,
-      "projection_hash_sha256": "71ab205bb52226fa5273bccdbb5efb6ea19415e8c056fcc4b47b47892960fae2",
+      "last_event_seq": 1235,
+      "projection_hash_sha256": "6b2e5ba80f81da0e0cef3888ed5e4eda4b66bcd47760ae47cc06df461fb2534a",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-22T14:06:56Z"
+    "updated_at": "2026-07-22T15:23:37Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2773,7 +2773,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diario de 2026-07-21",
       "description": "Realizar commit, push, deploy e registrar evidencias.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260721-QA-001"
       ],
@@ -2785,7 +2785,14 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-21T14:07:19Z"
+      "started_at": "2026-07-21T14:07:19Z",
+      "verification": {
+        "checks": [
+          "Workflow 29932987375 concluído com success.",
+          "URLs PT/EN retornaram HTTP 200 com canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-22T15:23:36Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260722-POST-001",
@@ -2846,7 +2853,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário bilíngue de 2026-07-22",
       "description": "Fazer commit e push seguros, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260722-QA-001"
       ],
@@ -2860,13 +2867,20 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-22T14:06:46Z"
+      "started_at": "2026-07-22T14:06:46Z",
+      "verification": {
+        "checks": [
+          "Workflow 29932987375 concluído com success.",
+          "URLs PT/EN retornaram HTTP 200 com canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-22T15:23:37Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 93,
-      "in_progress": 4
+      "done": 95,
+      "in_progress": 2
     },
     "by_kind": {
       "impl": 48,
