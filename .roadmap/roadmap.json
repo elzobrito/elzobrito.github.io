@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1189,
-      "projection_hash_sha256": "b8fa5e09b0a415b601727caa732c3366ae82e3225a142e39de5611ebc35acad0",
+      "last_event_seq": 1221,
+      "projection_hash_sha256": "71ab205bb52226fa5273bccdbb5efb6ea19415e8c056fcc4b47b47892960fae2",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-21T14:07:19Z"
+    "updated_at": "2026-07-22T14:06:56Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2786,16 +2786,91 @@
       },
       "assigned_to": "agent-qa",
       "started_at": "2026-07-21T14:07:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260722-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário bilíngue de IA aberta de 2026-07-22",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar os posts PT e EN no padrão editorial do site.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*",
+        "src/content/posts/en/*"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-22T14:03:13Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN criados com fontes primárias e traduções recíprocas."
+        ]
+      },
+      "completed_at": "2026-07-22T14:05:08Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260722-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário bilíngue de 2026-07-22",
+      "description": "Revisar fontes, rigor, schema, privacidade, tradução, links e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260722-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260722-QA-001.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-22T14:04:57Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 101 páginas; auditoria pública e editorial aprovadas.",
+          "Frontmatter, traduções recíprocas, links e git diff --check validados."
+        ]
+      },
+      "completed_at": "2026-07-22T14:06:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260722-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário bilíngue de 2026-07-22",
+      "description": "Fazer commit e push seguros, verificar Pages e registrar evidências.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260722-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260722-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-22T14:06:46Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 91,
-      "in_progress": 3
+      "done": 93,
+      "in_progress": 4
     },
     "by_kind": {
-      "impl": 47,
-      "qa": 41,
+      "impl": 48,
+      "qa": 43,
       "spec": 6
     }
   }
