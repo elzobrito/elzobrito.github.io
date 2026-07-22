@@ -1,14 +1,248 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { CollectionEntry } from 'astro:content';
-const { post, Content } = Astro.props as { post: CollectionEntry<'posts'>; Content: any };
+import { getCollection } from 'astro:content';
+import { AUTHOR, DEFAULT_OG_IMAGE, absoluteUrl } from '../site';
+
+const { post, Content } = Astro.props as {
+  post: CollectionEntry<'posts'>;
+  Content: any;
+};
+
 const pt = post.data.locale === 'pt';
 const prefix = pt ? '/blog/' : '/en/blog/';
-const alternate = `${pt?'/en/blog/':'/blog/'}${post.data.translation}/`;
+const slug = post.id.split('/').pop()!;
+const path = `${prefix}${slug}/`;
+const alternate = `${pt ? '/en/blog/' : '/blog/'}${post.data.translation}/`;
+const published = post.data.published;
+const modified = post.data.updated ?? post.data.published;
+const image = post.data.image ?? DEFAULT_OG_IMAGE;
+const pageUrl = absoluteUrl(path);
+
+const siblings = await getCollection(
+  'posts',
+  ({ data, id }) => data.locale === post.data.locale && id !== post.id,
+);
+const tagSet = new Set(post.data.tags.map((t) => t.toLowerCase()));
+const related = siblings
+  .map((p) => ({
+    post: p,
+    score: p.data.tags.filter((t) => tagSet.has(t.toLowerCase())).length + (p.data.featured ? 0.5 : 0),
+  }))
+  .filter((x) => x.score > 0)
+  .sort(
+    (a, b) =>
+      b.score - a.score ||
+      b.post.data.published.valueOf() - a.post.data.published.valueOf(),
+  )
+  .slice(0, 3)
+  .map((x) => x.post);
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: pt ? 'Início' : 'Home',
+      item: absoluteUrl(pt ? '/' : '/en/'),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: absoluteUrl(prefix),
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: post.data.title,
+      item: pageUrl,
+    },
+  ],
+};
+
+const blogPosting = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: published.toISOString(),
+  dateModified: modified.toISOString(),
+  inLanguage: pt ? 'pt-BR' : 'en',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+  url: pageUrl,
+  image: [absoluteUrl(image)],
+  author: {
+    '@type': 'Person',
+    name: AUTHOR.name,
+    url: AUTHOR.url,
+    sameAs: [...AUTHOR.sameAs],
+  },
+  publisher: {
+    '@type': 'Person',
+    name: AUTHOR.name,
+    url: AUTHOR.url,
+  },
+  keywords: post.data.tags.join(', '),
+  isPartOf: {
+    '@type': 'Blog',
+    name: pt ? 'Blog — Elzo Brito' : 'Blog — Elzo Brito',
+    url: absoluteUrl(prefix),
+  },
+};
 ---
-<BaseLayout title={`${post.data.title} — Elzo Brito`} description={post.data.description} locale={post.data.locale} alternate={alternate}>
- <article class="prose"><a class="back" href={prefix}>← {pt?'Todos os artigos':'All articles'}</a><header><p class="eyebrow">{post.data.tags.join(' · ')}</p><h1>{post.data.title}</h1><p class="standfirst">{post.data.description}</p><p class="meta"><time datetime={post.data.published.toISOString()}>{post.data.published.toLocaleDateString(pt?'pt-BR':'en-US',{year:'numeric',month:'long',day:'numeric'})}</time> · Elzo Brito</p></header><div class="article-body"><Content /></div><footer class="article-footer"><p>{pt?'Este texto também está disponível em inglês.':'This essay is also available in Portuguese.'}</p><a href={alternate}>{pt?'Read in English':'Ler em português'} ↗</a></footer></article>
+<BaseLayout
+  title={`${post.data.title} — Elzo Brito`}
+  description={post.data.description}
+  locale={post.data.locale}
+  alternate={alternate}
+  image={image}
+  ogType="article"
+  publishedTime={published}
+  modifiedTime={modified}
+  tags={post.data.tags}
+  jsonLd={[blogPosting, breadcrumb]}
+>
+  <article class="prose">
+    <nav class="crumbs" aria-label={pt ? 'Trilha' : 'Breadcrumb'}>
+      <a href={pt ? '/' : '/en/'}>{pt ? 'Início' : 'Home'}</a>
+      <span aria-hidden="true">/</span>
+      <a href={prefix}>Blog</a>
+      <span aria-hidden="true">/</span>
+      <span>{post.data.title}</span>
+    </nav>
+    <a class="back" href={prefix}>← {pt ? 'Todos os artigos' : 'All articles'}</a>
+    <header>
+      <p class="eyebrow">{post.data.tags.join(' · ')}</p>
+      <h1>{post.data.title}</h1>
+      <p class="standfirst">{post.data.description}</p>
+      <p class="meta">
+        <time datetime={published.toISOString()}>
+          {published.toLocaleDateString(pt ? 'pt-BR' : 'en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </time>
+        {post.data.updated && (
+          <>
+            {' · '}
+            {pt ? 'Atualizado' : 'Updated'}{' '}
+            <time datetime={modified.toISOString()}>
+              {modified.toLocaleDateString(pt ? 'pt-BR' : 'en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </time>
+          </>
+        )}
+        {' · '}
+        <a href={pt ? '/#sobre' : '/en/#sobre'}>{AUTHOR.name}</a>
+      </p>
+    </header>
+    <div class="article-body"><Content /></div>
+    <footer class="article-footer">
+      <p>
+        {pt
+          ? 'Este texto também está disponível em inglês.'
+          : 'This essay is also available in Portuguese.'}
+      </p>
+      <a href={alternate}>{pt ? 'Read in English' : 'Ler em português'} ↗</a>
+    </footer>
+    {related.length > 0 && (
+      <aside class="related" aria-label={pt ? 'Artigos relacionados' : 'Related articles'}>
+        <h2>{pt ? 'Leia também' : 'Read next'}</h2>
+        <ul>
+          {related.map((r) => {
+            const rSlug = r.id.split('/').pop();
+            return (
+              <li>
+                <a href={`${prefix}${rSlug}/`}>{r.data.title}</a>
+                <p>{r.data.description}</p>
+              </li>
+            );
+          })}
+        </ul>
+      </aside>
+    )}
+  </article>
 </BaseLayout>
 <style>
- .back{font-family:var(--mono);font-size:.75rem;text-decoration:none}.prose header{margin:4rem 0}.standfirst{font-size:1.35rem;color:var(--muted)}.article-body :global(h2){font-family:var(--serif);font-size:2.3rem}.article-body :global(p){line-height:1.85}.article-footer{margin-top:5rem;border-top:1px solid var(--line);padding-top:2rem;display:flex;justify-content:space-between;gap:2rem}
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin: 2rem 0 1rem;
+  }
+  .crumbs a {
+    text-decoration: none;
+  }
+  .crumbs span:last-child {
+    max-width: 42ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .back {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    text-decoration: none;
+  }
+  .prose header {
+    margin: 2rem 0 4rem;
+  }
+  .standfirst {
+    font-size: 1.35rem;
+    color: var(--muted);
+  }
+  .meta a {
+    text-decoration: none;
+  }
+  .article-body :global(h2) {
+    font-family: var(--serif);
+    font-size: 2.3rem;
+  }
+  .article-body :global(p) {
+    line-height: 1.85;
+  }
+  .article-footer {
+    margin-top: 5rem;
+    border-top: 1px solid var(--line);
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .related {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .related h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .related ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .related a {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    text-decoration: none;
+  }
+  .related p {
+    color: var(--muted);
+    margin: 0.4rem 0 0;
+    max-width: 70ch;
+  }
 </style>

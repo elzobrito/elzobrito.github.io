@@ -1,0 +1,13 @@
+{
+  "after_sha256": "7f6990a12ca352358a13362be2cbc7208028c9e59cf86af17668ee8232314e40",
+  "artifact_id": "ART-7f6990a12ca352358a13362be2cbc7208028c9e59cf86af17668ee8232314e40",
+  "artifact_sha256": "718c90ec97938b428ee4ed620f329fc5e41093620f472ea63f1bc17fdc88bf12",
+  "before_sha256": "7f6990a12ca352358a13362be2cbc7208028c9e59cf86af17668ee8232314e40",
+  "bytes": 1800,
+  "content": "# SITE-BLOG-SEO-GROWTH-QA-001 — QA Sprint A SEO\n\nData: 2026-07-22  \nTarefa: `SITE-BLOG-SEO-GROWTH-QA-001`  \nDepende de: `SITE-BLOG-SEO-GROWTH-IMPL-001` (done)  \nSpec: `docs/spec/SITE-BLOG-SEO-GROWTH-001.md`\n\n## Escopo verificado\n\nSprint A de SEO tecnico do hub `elzobrito.github.io`:\n\n- JSON-LD (WebSite, Person, BlogPosting, BreadcrumbList)\n- Open Graph `article` em posts\n- Social default PNG 1200x630\n- Sitemap com `lastmod` de posts\n- Posts relacionados + recentes na home\n- `llms.txt`, slot GSC em `src/site.ts`\n- Audit publico com checks SEO\n\n## Comandos\n\n```bash\nnpm test\n# = npm run check && npm run build && npm run audit:public && npm run audit:editorial\n```\n\nResultado: **aprovado** (exit 0).\n\n## Evidencias em dist/\n\n| Check | Resultado |\n|---|---|\n| Home com JSON-LD WebSite + Person | pass |\n| Post amostra com BlogPosting | pass (dist/blog/o-preco-real-de-um-milhao-de-tokens/index.html) |\n| Post com og:type article | pass |\n| BreadcrumbList no post | pass |\n| Bloco relacionados (Leia tambem / Read next) | pass |\n| `social-card.png` em public e dist | pass |\n| `llms.txt` em dist | pass |\n| `lastmod` no sitemap-0.xml | pass (count=90) |\n\n## Conformidade com a spec\n\n- Baseline e gaps: documentados\n- Sprint A entregue no codigo e auditavel no build\n- Sem analytics/cookies introduzidos\n- Runbook GSC permanece acao humana (token em `GOOGLE_SITE_VERIFICATION`)\n\n## Residual / fora do QA automatico\n\n- Verificacao da propriedade no Google Search Console (operador)\n- 301/canonical do WordPress legado e links no TabNews\n- Sprints B-D (tags, pilares, dominio custom)\n\n## Decisao\n\n**Aprovar** `SITE-BLOG-SEO-GROWTH-QA-001` — Sprint A atende os criterios de aceite tecnicos da spec.\n\n## Verificacao ESAA\n\nApos complete/review: `python -m esaa --root . verify` deve permanecer `ok`.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-SEO-GROWTH-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-SEO-GROWTH-QA-001.md",
+  "ts": "2026-07-22T15:42:35Z"
+}

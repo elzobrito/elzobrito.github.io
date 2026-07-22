@@ -1,0 +1,13 @@
+{
+  "after_sha256": "df93e1d1019a3d84d79db2fcca9b3cd3d596e2002e133697414a0cd0ec61ac7a",
+  "artifact_id": "ART-df93e1d1019a3d84d79db2fcca9b3cd3d596e2002e133697414a0cd0ec61ac7a",
+  "artifact_sha256": "52f7bf68baf1efe2e8110fd178057587039713a3cfd16726b42ca2edceaf8a55",
+  "before_sha256": "df93e1d1019a3d84d79db2fcca9b3cd3d596e2002e133697414a0cd0ec61ac7a",
+  "bytes": 1939,
+  "content": "import { defineConfig } from 'astro/config';\nimport mdx from '@astrojs/mdx';\nimport sitemap from '@astrojs/sitemap';\nimport { readdirSync, readFileSync, statSync } from 'node:fs';\nimport { join } from 'node:path';\n\n/** Build lastmod map from post frontmatter (updated || published). */\nfunction collectPostLastmods(root = 'src/content/posts') {\n  const map = new Map();\n  const walk = (dir, localePrefix) => {\n    for (const name of readdirSync(dir)) {\n      const full = join(dir, name);\n      if (statSync(full).isDirectory()) {\n        walk(full, localePrefix);\n        continue;\n      }\n      if (!/\\.mdx?$/.test(name)) continue;\n      const raw = readFileSync(full, 'utf8');\n      const fm = raw.match(/^---\\r?\\n([\\s\\S]*?)\\r?\\n---/);\n      if (!fm) continue;\n      const block = fm[1];\n      const updated = block.match(/^updated:\\s*['\"]?(\\d{4}-\\d{2}-\\d{2})/m);\n      const published = block.match(/^published:\\s*['\"]?(\\d{4}-\\d{2}-\\d{2})/m);\n      const dateStr = updated?.[1] || published?.[1];\n      if (!dateStr) continue;\n      const slug = name.replace(/\\.mdx?$/, '');\n      const path =\n        localePrefix === 'en'\n          ? `https://elzobrito.github.io/en/blog/${slug}/`\n          : `https://elzobrito.github.io/blog/${slug}/`;\n      map.set(path, new Date(`${dateStr}T00:00:00.000Z`));\n    }\n  };\n  try {\n    walk(join(root, 'pt'), 'pt');\n    walk(join(root, 'en'), 'en');\n  } catch {\n    /* content tree optional at config load in some environments */\n  }\n  return map;\n}\n\nconst postLastmods = collectPostLastmods();\n\nexport default defineConfig({\n  site: 'https://elzobrito.github.io',\n  output: 'static',\n  integrations: [\n    mdx(),\n    sitemap({\n      filter: (page) => !page.includes('/404'),\n      serialize(item) {\n        const lastmod = postLastmods.get(item.url);\n        if (lastmod) item.lastmod = lastmod;\n        return item;\n      },\n    }),\n  ],\n  markdown: { shikiConfig: { theme: 'github-dark' } },\n});\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "astro.config.mjs",
+  "source_path": "astro.config.mjs",
+  "ts": "2026-07-22T15:42:01Z"
+}

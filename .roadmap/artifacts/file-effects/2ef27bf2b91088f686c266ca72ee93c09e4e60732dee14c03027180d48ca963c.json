@@ -1,0 +1,13 @@
+{
+  "after_sha256": "c3c91f4824075f8b00e6f8fec54371f64c96512330de9cd59abcfdb68cd74672",
+  "artifact_id": "ART-c3c91f4824075f8b00e6f8fec54371f64c96512330de9cd59abcfdb68cd74672",
+  "artifact_sha256": "2ef27bf2b91088f686c266ca72ee93c09e4e60732dee14c03027180d48ca963c",
+  "before_sha256": "c3c91f4824075f8b00e6f8fec54371f64c96512330de9cd59abcfdb68cd74672",
+  "bytes": 1784,
+  "content": "<!-- esaa:bootstrap:project:begin -->\n# Elzo Brito — Hub de projetos\n\nHub bilíngue de projetos, consultoria, blog e ESAA publicado em `https://elzobrito.github.io/`.\n\n## Desenvolvimento\n\n```bash\nnpm ci\nnpm run dev\nnpm test\n```\n\nO Astro gera um site integralmente estático em `dist/`. A auditoria pública confirma as rotas obrigatórias e bloqueia padrões associados a dados operacionais privados.\n\n## Áreas\n\n- `/` e `/en/`: hub de marca pessoal e projetos.\n- `/consultoria/` e `/en/consulting/`: consultoria aplicada.\n- `/blog/` e `/en/blog/`: artigos e RSS.\n- `/esaa/` e `/en/esaa/`: apresentação pública do protocolo ESAA.\n\n## Publicação\n\nO workflow `.github/workflows/pages.yml` valida, constrói, audita e publica `dist/` pelas Actions oficiais do GitHub Pages. Não há backend, banco de dados, analytics ou infraestrutura externa.\n\n## SEO e indexação\n\nPlano completo: [`docs/spec/SITE-BLOG-SEO-GROWTH-001.md`](docs/spec/SITE-BLOG-SEO-GROWTH-001.md).\n\nResumo operacional:\n\n1. **Google Search Console** — propriedade `https://elzobrito.github.io/`; colar o token em `GOOGLE_SITE_VERIFICATION` em [`src/site.ts`](src/site.ts); enviar `https://elzobrito.github.io/sitemap-index.xml`.\n2. **Sitemap / robots / RSS** — gerados no build (`sitemap-index.xml`, `robots.txt`, `/blog/rss.xml`, `/en/blog/rss.xml`).\n3. **Structured data** — `WebSite` + `Person` na home; `BlogPosting` + breadcrumbs nos posts.\n4. **Social** — default `public/social-card.png` (1200×630); opcional `image` no frontmatter do post.\n5. **Sem analytics** — medição via Search Console / Bing, não via cookies no site.\n\nApós cada post novo: confirmar URL no ar → sitemap → solicitar indexação no GSC → compartilhar link externo no mesmo dia.\n<!-- esaa:bootstrap:project:end -->\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "README.md",
+  "source_path": "README.md",
+  "ts": "2026-07-22T15:42:01Z"
+}

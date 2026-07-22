@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f46e5f0c61bf6e526c62d7eb7267607ea7cc06f371c3b10c9bc4fa38235dfaa6",
+  "artifact_id": "ART-f46e5f0c61bf6e526c62d7eb7267607ea7cc06f371c3b10c9bc4fa38235dfaa6",
+  "artifact_sha256": "970f73529ccf9034e6318d248759afd37d3a65b5de2587cb7b27bb431983cbe9",
+  "before_sha256": "f46e5f0c61bf6e526c62d7eb7267607ea7cc06f371c3b10c9bc4fa38235dfaa6",
+  "bytes": 1351,
+  "content": "/** Site-wide SEO identity (no analytics, static only). */\nexport const SITE_URL = 'https://elzobrito.github.io';\nexport const SITE_NAME = 'Elzo Brito';\nexport const DEFAULT_OG_IMAGE = '/social-card.png';\nexport const DEFAULT_OG_IMAGE_SVG = '/social-card.svg';\n\n/** Paste Google Search Console content token here after verification setup (meta tag value only). */\nexport const GOOGLE_SITE_VERIFICATION = '';\n\nexport const AUTHOR = {\n  name: 'Elzo Brito',\n  url: `${SITE_URL}/`,\n  email: 'elzobrito@gmail.com',\n  sameAs: [\n    'https://github.com/elzobrito',\n    'https://www.linkedin.com/in/elzobrito',\n    'https://twitter.com/elzobrito',\n  ],\n} as const;\n\nexport function absoluteUrl(path: string, base = SITE_URL): string {\n  if (path.startsWith('http://') || path.startsWith('https://')) return path;\n  return new URL(path.startsWith('/') ? path : `/${path}`, base).href;\n}\n\nexport function personJsonLd() {\n  return {\n    '@context': 'https://schema.org',\n    '@type': 'Person',\n    name: AUTHOR.name,\n    url: AUTHOR.url,\n    email: AUTHOR.email,\n    sameAs: [...AUTHOR.sameAs],\n  };\n}\n\nexport function websiteJsonLd() {\n  return {\n    '@context': 'https://schema.org',\n    '@type': 'WebSite',\n    name: SITE_NAME,\n    url: SITE_URL,\n    inLanguage: ['pt-BR', 'en'],\n    author: { '@type': 'Person', name: AUTHOR.name, url: AUTHOR.url },\n  };\n}\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/site.ts",
+  "source_path": "src/site.ts",
+  "ts": "2026-07-22T15:42:01Z"
+}

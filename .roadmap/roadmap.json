@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1235,
-      "projection_hash_sha256": "6b2e5ba80f81da0e0cef3888ed5e4eda4b66bcd47760ae47cc06df461fb2534a",
+      "last_event_seq": 1274,
+      "projection_hash_sha256": "27c002ce9cc2287320f048380ac9e82673cd2a4f0d12518a58cd8a759750b7e3",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-22T15:23:37Z"
+    "updated_at": "2026-07-22T15:42:42Z"
   },
   "project": {
     "name": "esaa-core",
@@ -2875,17 +2875,124 @@
         ]
       },
       "completed_at": "2026-07-22T15:23:37Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SEO-GROWTH-SPEC-001",
+      "task_kind": "spec",
+      "title": "Plano de SEO para expandir visualizacao do blog",
+      "description": "Especificar plano de crescimento SEO do hub (indexacao, tecnico, conteudo, distribuicao, medicao) sem analytics no HTML.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "blog-seo"
+      ],
+      "outputs": {
+        "files": [
+          "docs/spec/SITE-BLOG-SEO-GROWTH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-spec",
+      "started_at": "2026-07-22T15:41:40Z",
+      "verification": {
+        "checks": [
+          "Spec cobre baseline e gaps do hub Astro",
+          "Runbook GSC e sprints A-D documentados",
+          "Sem analytics/cookies no escopo"
+        ]
+      },
+      "completed_at": "2026-07-22T15:41:50Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SEO-GROWTH-IMPL-001",
+      "task_kind": "impl",
+      "title": "Implementar Sprint A de SEO tecnico no hub Astro",
+      "description": "JSON-LD, OG article, social PNG default, lastmod sitemap, posts relacionados, home recentes, llms.txt, audit SEO e campo GSC.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-SEO-GROWTH-SPEC-001"
+      ],
+      "targets": [
+        "blog-seo"
+      ],
+      "outputs": {
+        "files": [
+          "src/site.ts",
+          "src/layouts/BaseLayout.astro",
+          "src/components/PostPage.astro",
+          "src/components/HomePage.astro",
+          "src/components/BlogIndex.astro",
+          "src/content.config.ts",
+          "astro.config.mjs",
+          "scripts/audit-public.mjs",
+          "public/llms.txt",
+          "public/social-card.png",
+          "README.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "astro.config.mjs",
+        "scripts/audit-public.mjs",
+        "public/**",
+        "README.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-22T15:42:00Z",
+      "verification": {
+        "checks": [
+          "npm test: check+build+audit public SEO+editorial aprovados",
+          "Home com WebSite/Person JSON-LD; posts com BlogPosting e og:type=article",
+          "sitemap-0.xml com lastmod; social-card.png e llms.txt em public/dist"
+        ]
+      },
+      "completed_at": "2026-07-22T15:42:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SEO-GROWTH-QA-001",
+      "task_kind": "qa",
+      "title": "QA do Sprint A de SEO growth",
+      "description": "Validar build, audit SEO, artefatos e aderencia a SITE-BLOG-SEO-GROWTH-001.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-SEO-GROWTH-IMPL-001"
+      ],
+      "targets": [
+        "blog-seo"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-SEO-GROWTH-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-22T15:42:35Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado (check+build+audit public SEO+editorial)",
+          "dist: WebSite/Person, BlogPosting, og:article, lastmod, social-card.png, llms.txt",
+          "Relatorio docs/qa/SITE-BLOG-SEO-GROWTH-QA-001.md"
+        ]
+      },
+      "completed_at": "2026-07-22T15:42:42Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 95,
+      "done": 98,
       "in_progress": 2
     },
     "by_kind": {
-      "impl": 48,
-      "qa": 43,
-      "spec": 6
+      "impl": 49,
+      "qa": 44,
+      "spec": 7
     }
   }
 }

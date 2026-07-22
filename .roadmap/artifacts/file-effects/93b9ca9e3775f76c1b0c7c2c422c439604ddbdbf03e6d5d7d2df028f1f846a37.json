@@ -1,0 +1,13 @@
+{
+  "after_sha256": "5d5ad007c7a0da54544a3e011364826830c48b78fbbfdeb4f35e2fb76e5eb6c7",
+  "artifact_id": "ART-5d5ad007c7a0da54544a3e011364826830c48b78fbbfdeb4f35e2fb76e5eb6c7",
+  "artifact_sha256": "93b9ca9e3775f76c1b0c7c2c422c439604ddbdbf03e6d5d7d2df028f1f846a37",
+  "before_sha256": "5d5ad007c7a0da54544a3e011364826830c48b78fbbfdeb4f35e2fb76e5eb6c7",
+  "bytes": 600,
+  "content": "import { defineCollection, z } from 'astro:content';\nimport { glob } from 'astro/loaders';\n\nconst posts = defineCollection({\n  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/posts' }),\n  schema: z.object({\n    title: z.string(),\n    description: z.string(),\n    published: z.coerce.date(),\n    updated: z.coerce.date().optional(),\n    locale: z.enum(['pt', 'en']),\n    translation: z.string(),\n    tags: z.array(z.string()),\n    featured: z.boolean().default(false),\n    image: z.string().optional(),\n    series: z.string().optional(),\n  }),\n});\n\nexport const collections = { posts };\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "src/content.config.ts",
+  "source_path": "src/content.config.ts",
+  "ts": "2026-07-22T15:42:01Z"
+}

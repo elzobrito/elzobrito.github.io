@@ -1,0 +1,13 @@
+{
+  "after_sha256": "7ab329fe8c356aa538af2167dd287b17a737acfafe55b496ec31f12f5419f456",
+  "artifact_id": "ART-7ab329fe8c356aa538af2167dd287b17a737acfafe55b496ec31f12f5419f456",
+  "artifact_sha256": "528b224aef29d302a111360536f5f65e4388ecbc99524e93718582f80373458c",
+  "before_sha256": "7ab329fe8c356aa538af2167dd287b17a737acfafe55b496ec31f12f5419f456",
+  "bytes": 1176,
+  "content": "# Elzo Brito\n\n> Hub de projetos, consultoria e blog sobre IA aplicada, agentes autônomos e governança com evidência.\n\nSite: https://elzobrito.github.io/\nAuthor: Elzo Brito\nLanguages: pt-BR, en\n\n## Primary pages\n\n- Home (pt): https://elzobrito.github.io/\n- Home (en): https://elzobrito.github.io/en/\n- Blog (pt): https://elzobrito.github.io/blog/\n- Blog (en): https://elzobrito.github.io/en/blog/\n- ESAA (pt): https://elzobrito.github.io/esaa/\n- ESAA (en): https://elzobrito.github.io/en/esaa/\n- Consulting (pt): https://elzobrito.github.io/consultoria/\n- Consulting (en): https://elzobrito.github.io/en/consulting/\n- Articles / Scholar: https://elzobrito.github.io/artigos/\n\n## Feeds\n\n- RSS (pt): https://elzobrito.github.io/blog/rss.xml\n- RSS (en): https://elzobrito.github.io/en/blog/rss.xml\n- Sitemap: https://elzobrito.github.io/sitemap-index.xml\n\n## Focus topics\n\n- ESAA — Event Sourcing for Autonomous Agents\n- Agent governance, review loops and evidence\n- Applied AI, security and operational control\n- Practical tooling (local LLMs, prompts, workflows)\n\n## Source repos\n\n- https://github.com/elzobrito/ESAA-Core\n- https://github.com/elzobrito/elzobrito.github.io\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "public/llms.txt",
+  "source_path": "public/llms.txt",
+  "ts": "2026-07-22T15:42:01Z"
+}

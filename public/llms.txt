@@ -1,0 +1,37 @@
+# Elzo Brito
+
+> Hub de projetos, consultoria e blog sobre IA aplicada, agentes autônomos e governança com evidência.
+
+Site: https://elzobrito.github.io/
+Author: Elzo Brito
+Languages: pt-BR, en
+
+## Primary pages
+
+- Home (pt): https://elzobrito.github.io/
+- Home (en): https://elzobrito.github.io/en/
+- Blog (pt): https://elzobrito.github.io/blog/
+- Blog (en): https://elzobrito.github.io/en/blog/
+- ESAA (pt): https://elzobrito.github.io/esaa/
+- ESAA (en): https://elzobrito.github.io/en/esaa/
+- Consulting (pt): https://elzobrito.github.io/consultoria/
+- Consulting (en): https://elzobrito.github.io/en/consulting/
+- Articles / Scholar: https://elzobrito.github.io/artigos/
+
+## Feeds
+
+- RSS (pt): https://elzobrito.github.io/blog/rss.xml
+- RSS (en): https://elzobrito.github.io/en/blog/rss.xml
+- Sitemap: https://elzobrito.github.io/sitemap-index.xml
+
+## Focus topics
+
+- ESAA — Event Sourcing for Autonomous Agents
+- Agent governance, review loops and evidence
+- Applied AI, security and operational control
+- Practical tooling (local LLMs, prompts, workflows)
+
+## Source repos
+
+- https://github.com/elzobrito/ESAA-Core
+- https://github.com/elzobrito/elzobrito.github.io
