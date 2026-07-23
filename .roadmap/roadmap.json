@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1318,
-      "projection_hash_sha256": "6c8dab5a6bc80d0f0cba909c3bce986589d1786eed46985b25407c90105d9e91",
+      "last_event_seq": 1325,
+      "projection_hash_sha256": "a5e0e7841f67187992a04d4f1295ffa3e0e8efaa497260a1a501d3180e200f25",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-23T14:04:13Z"
+    "updated_at": "2026-07-23T14:05:52Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3071,7 +3071,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário bilíngue de IA de 2026-07-23",
       "description": "Fazer commit e push autorizados, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260723-QA-001"
       ],
@@ -3085,13 +3085,19 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-23T14:04:13Z"
+      "started_at": "2026-07-23T14:04:13Z",
+      "verification": {
+        "checks": [
+          "Push concluído; workflow 30014114125 success; URLs PT/EN HTTP 200 com canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-23T14:05:52Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 101,
-      "in_progress": 3
+      "done": 102,
+      "in_progress": 2
     },
     "by_kind": {
       "impl": 51,

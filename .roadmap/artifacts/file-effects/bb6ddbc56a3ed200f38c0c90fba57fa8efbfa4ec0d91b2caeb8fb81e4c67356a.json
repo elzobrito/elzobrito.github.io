@@ -1,0 +1,13 @@
+{
+  "after_sha256": "c94d06f118ba5b45bb194067e68877643eefe795b8635b042902481d4f7650f0",
+  "artifact_id": "ART-c94d06f118ba5b45bb194067e68877643eefe795b8635b042902481d4f7650f0",
+  "artifact_sha256": "bb6ddbc56a3ed200f38c0c90fba57fa8efbfa4ec0d91b2caeb8fb81e4c67356a",
+  "before_sha256": "c94d06f118ba5b45bb194067e68877643eefe795b8635b042902481d4f7650f0",
+  "bytes": 1285,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260723-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial de 23 de julho de 2026.\n\n## Estado\n\nPublicado com sucesso.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/a-ia-de-codigo-entrou-na-fase-da-prestacao-de-contas/\n- EN: https://elzobrito.github.io/en/blog/coding-ai-enters-its-accountability-phase/\n\n## Evidência\n\n- Validação local: `npm test` aprovado; 105 páginas e 118 artefatos públicos auditados.\n- Antes do commit, `git fetch origin` foi concluído e `git rev-list --left-right --count HEAD...origin/main` retornou `0 0`.\n- Commit de conteúdo e QA: `10f7f9df17b72f21310822d9c7593b0d3ec60bbd` (`Publish daily AI briefing 2026-07-23`).\n- Push para `origin/main`: concluído sem force push.\n- Workflow `Deploy static hub to GitHub Pages`: `30014114125`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30014114125.\n- O workflow exibiu somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.\n- As URLs PT e EN responderam HTTP 200.\n- Os títulos publicados correspondem ao frontmatter.\n- Canonicals e `hreflang` em português, inglês e `x-default` estão corretos e recíprocos.\n\n## Resultado\n\nPublicação concluída e verificada no GitHub Pages.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260723-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260723-PUBLISH-001.md",
+  "ts": "2026-07-23T14:05:51Z"
+}
