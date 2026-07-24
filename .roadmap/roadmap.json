@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1360,
-      "projection_hash_sha256": "9c2765ac76c257326a81af5293f1050afc64da845d662824611e9a76daa60a04",
+      "last_event_seq": 1389,
+      "projection_hash_sha256": "658ce658fd9b0c920945664646999d5f73ee539eef4d3e4b912e84af542b8ea9",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-24T14:05:26Z"
+    "updated_at": "2026-07-24T14:11:59Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3151,7 +3151,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário bilíngue de IA de 2026-07-24",
       "description": "Fazer commit e push autorizados, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260724-QA-001"
       ],
@@ -3165,14 +3165,20 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-24T14:05:26Z"
+      "started_at": "2026-07-24T14:05:26Z",
+      "verification": {
+        "checks": [
+          "Push concluído; workflow 30099573510 success; URLs PT/EN HTTP 200 com canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-24T14:07:04Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260724-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo diário bilíngue de IA de 2026-07-24",
       "description": "Publicar chamadas canônicas no LinkedIn e no X sem duplicação e registrar evidências.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260724-PUBLISH-001"
       ],
@@ -3184,18 +3190,50 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-24T14:07:05Z",
+      "verification": {
+        "checks": [
+          "LinkedIn e X confirmaram envio e forneceram URLs públicas sem duplicação."
+        ]
+      },
+      "completed_at": "2026-07-24T14:11:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260724-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Validar evidência social de 2026-07-24",
+      "description": "Registrar e revisar URLs públicas e textos efetivamente publicados no LinkedIn e no X.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260724-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-24T14:11:58Z",
+      "verification": {
+        "checks": [
+          "LinkedIn e X possuem URLs públicas canônicas e textos efetivos registrados."
+        ]
+      },
+      "completed_at": "2026-07-24T14:11:59Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 104,
-      "in_progress": 3,
-      "todo": 1
+      "done": 107,
+      "in_progress": 2
     },
     "by_kind": {
       "impl": 53,
-      "qa": 48,
+      "qa": 49,
       "spec": 7
     }
   }

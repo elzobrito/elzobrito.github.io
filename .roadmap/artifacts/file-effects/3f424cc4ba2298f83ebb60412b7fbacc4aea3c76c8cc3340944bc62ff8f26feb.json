@@ -1,0 +1,13 @@
+{
+  "after_sha256": "79f7f24b7ac023a5f0c77d67c25b30735d1acd66e6f5698e7389066000092182",
+  "artifact_id": "ART-79f7f24b7ac023a5f0c77d67c25b30735d1acd66e6f5698e7389066000092182",
+  "artifact_sha256": "3f424cc4ba2298f83ebb60412b7fbacc4aea3c76c8cc3340944bc62ff8f26feb",
+  "before_sha256": "79f7f24b7ac023a5f0c77d67c25b30735d1acd66e6f5698e7389066000092182",
+  "bytes": 1256,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260724-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial de 24 de julho de 2026.\n\n## Estado\n\nPublicado com sucesso.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/agentes-ganharam-freios-mas-nao-muros/\n- EN: https://elzobrito.github.io/en/blog/agents-got-brakes-not-walls/\n\n## Evidência\n\n- Validação local: `npm test` aprovado; 107 páginas e 120 artefatos públicos auditados.\n- Antes do commit, `git fetch origin` foi concluído e `git rev-list --left-right --count HEAD...origin/main` retornou `0 0`.\n- Commit de conteúdo e QA: `30fc008c044b4fb32618393b86db18f43aecb974` (`Publish daily AI briefing 2026-07-24`).\n- Push para `origin/main`: concluído sem force push.\n- Workflow `Deploy static hub to GitHub Pages`: `30099573510`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30099573510.\n- O workflow exibiu somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.\n- As URLs PT e EN responderam HTTP 200.\n- Os títulos publicados correspondem ao frontmatter.\n- Canonicals e `hreflang` em português, inglês e `x-default` estão corretos e recíprocos.\n\n## Resultado\n\nPublicação concluída e verificada no GitHub Pages.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260724-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260724-PUBLISH-001.md",
+  "ts": "2026-07-24T14:07:04Z"
+}
