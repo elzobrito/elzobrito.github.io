@@ -4,8 +4,8 @@
     "esaa_version": "0.4.x",
     "generated_by": "esaa.project",
     "source_event_store": ".roadmap/activity.jsonl",
-    "last_event_seq": 1325,
-    "updated_at": "2026-07-23T14:05:52Z"
+    "last_event_seq": 1360,
+    "updated_at": "2026-07-24T14:05:26Z"
   },
   "issues": [],
   "indexes": {

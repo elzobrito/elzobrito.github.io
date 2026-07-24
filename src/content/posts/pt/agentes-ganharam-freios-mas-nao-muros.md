@@ -1,0 +1,43 @@
+---
+title: "Agentes ganharam freios, mas não muros"
+description: "Novos controles no GitHub tornam ações de agentes revisáveis e explicáveis, enquanto o MCP elimina sessões para escalar. A diferença entre supervisão e segurança ficou mais nítida."
+published: 2026-07-24
+locale: pt
+translation: agents-got-brakes-not-walls
+tags: ["IA", "Agentes", "Governança", "Desenvolvimento de software"]
+featured: false
+---
+
+Um agente que altera uma tarefa parece simples até a mudança fechar o item errado, trocar o responsável ou apagar um sinal importante de prioridade. O problema não está apenas em fazer a ação correta. Está em deixar claro por que ela foi proposta, quanta confiança existe e quem pode interrompê-la.
+
+Os [novos controles para agentes no GitHub Issues](https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview/) atacam exatamente essa camada. Em prévia pública, alterações de rótulos, campos, tipo, responsáveis e fechamento podem carregar justificativa, nível de confiança e uma etapa opcional de aprovação. No mesmo dia, o [GitHub MCP Server adotou antecipadamente a próxima especificação do Model Context Protocol](https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/), ou MCP, protocolo que conecta modelos a ferramentas e dados.
+
+Os dois anúncios parecem separados. Juntos, mostram uma arquitetura emergente: interações mais leves e escaláveis na infraestrutura, decisões mais explícitas e revisáveis na aplicação.
+
+## Confiança virou uma regra operacional
+
+No GitHub Issues, o agente pode classificar cada ação suportada como de confiança alta, média ou baixa. Mudanças de confiança alta podem ser aplicadas diretamente; as demais ficam como sugestões. Administradores escolhem o limiar, e a busca `has:suggestions` localiza itens aguardando revisão.
+
+Antes, equipes precisavam escolher entre aplicar a mudança ou pedir que o agente escrevesse um comentário para alguém interpretar. Agora a intenção acompanha a ação de forma estruturada. Isso reduz ruído e permite políticas diferentes: um repositório pequeno pode aceitar mais ações diretamente, enquanto um projeto público pode reter casos incertos.
+
+Há uma ressalva decisiva no próprio anúncio: aprovação é conveniência de fluxo, não controle de segurança. Ela não cria uma barreira no servidor. Se o agente possui permissão para alterar um item, ainda pode aplicar a mudança sem sugeri-la. Em termos práticos, confiança e justificativa melhoram supervisão e auditoria, mas não substituem permissões mínimas, isolamento e validação independente.
+
+## O protocolo perde a sessão
+
+Na camada de infraestrutura, a próxima especificação do MCP remove sessões e a chamada `initialize`. O núcleo passa a ser sem estado: cada requisição leva o contexto necessário, clientes podem realizar partes da conexão em paralelo e servidores deixam de depender de memória compartilhada entre chamadas.
+
+No servidor do GitHub, isso eliminou sessões em Redis, escritas durante a inicialização e leituras de banco em cada chamada. Informações necessárias para registro e detecção de segredos passam por cabeçalhos HTTP definidos pelo protocolo, evitando inspecionar profundamente cada corpo de requisição. A implementação de elicitação, usada quando uma ferramenta precisa pedir informação ao usuário, também foi adaptada para múltiplas requisições independentes.
+
+Para quem opera muitos agentes, a consequência é concreta. Um serviço sem estado pode distribuir requisições entre instâncias com menos coordenação e recuperar falhas com mais facilidade. A contrapartida é arquitetural: o estado útil não desaparece; ele precisa ser colocado explicitamente no cliente, em armazenamento durável ou no domínio da aplicação.
+
+## O agente atravessa ferramentas, o controle precisa acompanhá-lo
+
+O [Copilot cloud agent também chegou à disponibilidade geral no Linear](https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available/). Uma tarefa pode ser atribuída ao agente, que trabalha em ambiente efêmero, abre um pull request em rascunho, envia progresso ao Linear e solicita revisão ao concluir. Modelo, agente personalizado, branches de trabalho e de destino podem ser definidos, e comentários permitem redirecionar a sessão.
+
+Isso desloca o agente de uma caixa de conversa para o caminho entre tarefa, ambiente de execução e revisão de código. A aplicação prática não é apenas iniciar trabalho a partir do Linear. É preservar contexto e limites quando a atividade atravessa sistemas: qual branch pode receber mudanças, qual identidade executa, quais ações exigem revisão e qual evidência retorna ao lugar onde a tarefa nasceu.
+
+## Freios não são muros
+
+A combinação é promissora porque separa responsabilidades. O MCP simplifica transporte e escala. O ambiente efêmero separa execuções. Intenções, confiança e justificativas tornam decisões observáveis. Aprovações inserem julgamento humano onde a incerteza é maior.
+
+Nenhuma dessas peças, sozinha, garante segurança ou correção. Freios ajudam a conduzir; muros definem onde o veículo não pode entrar. Sistemas de agentes maduros precisarão dos dois: controles que as pessoas consigam entender e limites que o software não consiga contornar.
