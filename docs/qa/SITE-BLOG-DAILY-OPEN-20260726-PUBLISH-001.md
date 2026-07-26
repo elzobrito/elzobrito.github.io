@@ -6,9 +6,9 @@ Evidência de publicação do par editorial de 26 de julho de 2026.
 
 ## Estado
 
-Publicação em andamento.
+Publicado com sucesso.
 
-## URLs planejadas
+## URLs publicadas
 
 - PT: https://elzobrito.github.io/blog/a-infraestrutura-de-ia-aprendeu-a-dizer-nao/
 - EN: https://elzobrito.github.io/en/blog/ai-infrastructure-learns-to-say-no/
@@ -22,6 +22,16 @@ Publicação em andamento.
 - `git fetch origin`: concluído.
 - `git rev-list --left-right --count HEAD...origin/main`: `0 0`.
 
-## Retomada
+## Evidência de publicação
 
-Registrar commit, push, workflow Pages e verificações HTTP antes de concluir esta tarefa.
+- Commit de conteúdo e QA: `710228553361133822a41b542383a6cdde506653` (`Publish daily AI briefing 2026-07-26`).
+- Push para `origin/main`: concluído sem force push.
+- Workflow `Deploy static hub to GitHub Pages`: `30205428158`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30205428158.
+- O workflow exibiu somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.
+- As URLs PT e EN responderam HTTP 200.
+- Os títulos publicados correspondem ao frontmatter.
+- Canonicals e `hreflang` em português, inglês e `x-default` estão corretos e recíprocos.
+
+## Resultado
+
+Publicação concluída e verificada no GitHub Pages. A divulgação social pode usar somente as URLs canônicas acima.

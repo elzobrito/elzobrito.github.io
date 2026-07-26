@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f81719f528c050538428134eec1159085be330e9a9bf434b84d34549ba5c593e",
+  "artifact_id": "ART-f81719f528c050538428134eec1159085be330e9a9bf434b84d34549ba5c593e",
+  "artifact_sha256": "20f12d5d60d9cb2c75ea1d770bb7bd8b83ac1a9322737a6e5b9b0c19c5ffc9f1",
+  "before_sha256": "f81719f528c050538428134eec1159085be330e9a9bf434b84d34549ba5c593e",
+  "bytes": 958,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001\n\n## Escopo\n\nRegistro idempotente da divulgação do artigo bilíngue de 26 de julho de 2026.\n\n## URLs canônicas do artigo\n\n- PT: https://elzobrito.github.io/blog/a-infraestrutura-de-ia-aprendeu-a-dizer-nao/\n- EN: https://elzobrito.github.io/en/blog/ai-infrastructure-learns-to-say-no/\n\n## LinkedIn\n\n- Estado: pendente.\n- URL pública: não registrada.\n\n## X\n\n- Estado: pendente.\n- URL pública: não registrada.\n\n## Bloqueio atual\n\nO Google Chrome está instalado, a ChatGPT Chrome Extension está instalada e habilitada no perfil selecionado e o host nativo está correto, mas o navegador não está em execução. Nenhuma tentativa de envio foi feita.\n\n## Regra de retomada\n\nApós autorização explícita para abrir o Chrome, confirmar novamente que cada canal continua sem URL pública neste documento, na memória e na tarefa SOCIAL. Publicar apenas os canais ausentes e não repetir um canal já concluído.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001.md",
+  "ts": "2026-07-26T14:09:57Z"
+}
