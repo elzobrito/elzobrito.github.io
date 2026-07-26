@@ -1,0 +1,13 @@
+{
+  "after_sha256": "c2f9f4624025e0dbf2e9d725461c50e1b32f31c21cffceec33748cc7dd15cd44",
+  "artifact_id": "ART-c2f9f4624025e0dbf2e9d725461c50e1b32f31c21cffceec33748cc7dd15cd44",
+  "artifact_sha256": "e38b85f451fa5ba35764de48349b8acce707ec17586a1765cda963b35d0dfc6b",
+  "before_sha256": "c2f9f4624025e0dbf2e9d725461c50e1b32f31c21cffceec33748cc7dd15cd44",
+  "bytes": 1208,
+  "content": "# SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial sobre Gates e o desaparecimento do computador (26 jul 2026).\n\n## Estado\n\nPublicado com sucesso.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/quando-o-computador-some-gates-ia-e-a-interface-por-intencao/\n- EN: https://elzobrito.github.io/en/blog/when-the-computer-disappears-gates-ai-and-the-interface-of-intent/\n\n## Evidência pré-publicação\n\n- `npm test`: aprovado; 117 páginas e 130 artefatos públicos auditados.\n- QA: `SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001`.\n- `git rev-list --left-right --count HEAD...origin/main` antes do push: `0 0`.\n\n## Evidência de publicação\n\n- Commit de conteúdo e QA: `78b0d0c82d4026518af464f97be1b3054e12b204` (`Publish Gates essay on computers that disappear 2026-07-26`).\n- Push para `origin/main`: concluído sem force push.\n- Workflow de deploy: `30212123082`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30212123082.\n- As URLs PT e EN responderam HTTP 200.\n- Os títulos publicados correspondem ao frontmatter.\n\n## Resultado\n\nPublicação concluída e verificada no GitHub Pages.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001.md",
+  "ts": "2026-07-26T17:14:22Z"
+}

@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1587,
-      "projection_hash_sha256": "27ad39e3cd14c5e8b1486a4cab90f323f54753299377403273ce6677b12858f3",
+      "last_event_seq": 1591,
+      "projection_hash_sha256": "a0740a769f448d0b11c5592fa74bdbbb68c8a47a544cb40c205e7e7d79768077",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T17:13:24Z"
+    "updated_at": "2026-07-26T17:14:22Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3710,7 +3710,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo Gates/computador que some 2026-07-26",
       "description": "Commit, push origin/main, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001"
       ],
@@ -3729,14 +3729,21 @@
         "docs/qa/**"
       ],
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-26T17:13:24Z"
+      "started_at": "2026-07-26T17:13:24Z",
+      "verification": {
+        "checks": [
+          "commit 78b0d0c push origin/main",
+          "Actions run 30212123082 success",
+          "PT e EN HTTP 200 com títulos corretos"
+        ]
+      }
     }
   ],
   "indexes": {
     "by_status": {
       "done": 117,
-      "in_progress": 5,
-      "review": 5
+      "in_progress": 4,
+      "review": 6
     },
     "by_kind": {
       "impl": 61,
