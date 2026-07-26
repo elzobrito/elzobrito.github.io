@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f2318094edfa70644d4f5269d1b2c518a41e4058a1ded2e5a743636fa8faa1a3",
+  "artifact_id": "ART-f2318094edfa70644d4f5269d1b2c518a41e4058a1ded2e5a743636fa8faa1a3",
+  "artifact_sha256": "53c421151c40aae1bab68a20c2cb1be30d16c384e840cae0198ae34a69a3173d",
+  "before_sha256": "f2318094edfa70644d4f5269d1b2c518a41e4058a1ded2e5a743636fa8faa1a3",
+  "bytes": 1240,
+  "content": "# SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001\n\n## Escopo\n\nValidação do par bilíngue denso sobre a entrevista de Elon Musk ao *The Economist* (23 jul 2026).\n\n## Arquivos\n\n- `src/content/posts/pt/elon-musk-economist-2026-abundancia-ia-e-o-preco-do-controle.md`\n- `src/content/posts/en/elon-musk-economist-2026-abundance-ai-and-the-price-of-control.md`\n\n## Checks\n\n- `npm test`: aprovado.\n- `astro check`: 0 erros, 0 warnings, 0 hints.\n- Build estático: 115 páginas.\n- `audit:public`: 128 arquivos, 13 rotas obrigatórias, SEO ok, 0 matches proibidos.\n- `audit:editorial`: sem sequência espaço-travessão-espaço.\n- Auditoria dedicada (`rg` nos dois posts): 0 ocorrências de `/home/`, `.roadmap`, `activity.jsonl`, `conversation-esaa` e termo interno `prompt`.\n- `git diff --check`: sem problemas de whitespace.\n- Rotas geradas no build:\n  - `/blog/elon-musk-economist-2026-abundancia-ia-e-o-preco-do-controle/`\n  - `/en/blog/elon-musk-economist-2026-abundance-ai-and-the-price-of-control/`\n- Frontmatter: `translation` recíproca, `locale` coerente, `published: 2026-07-26`, `featured: true`.\n- Fonte primária vinculada: https://www.youtube.com/watch?v=8TjK-s0468w\n\n## Resultado\n\nQA aprovada. Pronta para publicação em `origin/main`.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001.md",
+  "ts": "2026-07-26T17:00:03Z"
+}

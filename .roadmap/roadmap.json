@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1531,
-      "projection_hash_sha256": "d6119449054ce600c73e299543dad0a036eea8d21c64654fc06306eed33bf0cd",
+      "last_event_seq": 1557,
+      "projection_hash_sha256": "76b0c71f2c3a29eaf55d52d2a3fa76767562474c55a21ccaacc8bf724be46bd6",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T14:09:57Z"
+    "updated_at": "2026-07-26T17:00:03Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3540,16 +3540,109 @@
         ]
       },
       "completed_at": "2026-07-26T14:09:57Z"
+    },
+    {
+      "task_id": "SITE-BLOG-MUSK-ECONOMIST-20260726-POST-001",
+      "task_kind": "impl",
+      "title": "Artigo denso: entrevista Elon Musk ao The Economist (jul/2026)",
+      "description": "Escrever post bilíngue PT/EN denso em informação sobre a entrevista completa de Elon Musk ao The Economist (23 jul 2026, vídeo 8TjK-s0468w). Cobrir abundância, IA digital+física, dinheiro, risco existencial, governança de modelos de fronteira, China/energia/chips, trabalho e política/Europa. Sem travessão proibido; sem caminhos locais; sem termos internos vedados.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/elon-musk-economist-2026-abundancia-ia-e-o-preco-do-controle.md",
+          "src/content/posts/en/elon-musk-economist-2026-abundance-ai-and-the-price-of-control.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "src/content/posts/**"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T16:55:19Z",
+      "verification": {
+        "checks": [
+          "Frontmatter PT/EN com translation recíproca e tags",
+          "Sem sequencia espaco-travessao-espaco (audit editorial)",
+          "Sem caminhos /home ou .roadmap no corpo",
+          "Densidade: PT ~2876 palavras, EN ~2691 palavras, multiplas secoes analiticas"
+        ]
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001",
+      "task_kind": "qa",
+      "title": "QA artigo Musk/Economist 2026-07-26",
+      "description": "Validar par bilíngue denso da entrevista Musk ao Economist: editorial, build, audit public, links e translations.",
+      "status": "review",
+      "depends_on": [
+        "SITE-BLOG-MUSK-ECONOMIST-20260726-POST-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/**"
+      ],
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T16:59:40Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado (check+build+audit public+editorial)",
+          "115 páginas no build; rotas PT/EN do post presentes",
+          "Auditoria dedicada sem termos/caminhos proibidos"
+        ]
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo Musk/Economist 2026-07-26",
+      "description": "Commitar, push para origin/main, verificar GitHub Pages e registrar evidências de publicação do par bilíngue.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/**"
+      ],
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T17:00:03Z"
     }
   ],
   "indexes": {
     "by_status": {
       "done": 117,
-      "in_progress": 4
+      "in_progress": 5,
+      "review": 2
     },
     "by_kind": {
-      "impl": 59,
-      "qa": 55,
+      "impl": 60,
+      "qa": 57,
       "spec": 7
     }
   }
