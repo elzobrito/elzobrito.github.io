@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f36b247a155321941afad31046a28a2649efd9511a4e42db3acd7e061e2f8e80",
+  "artifact_id": "ART-f36b247a155321941afad31046a28a2649efd9511a4e42db3acd7e061e2f8e80",
+  "artifact_sha256": "18c64c094235fd2bfa506495d45b694d9619efe0e7f7eeb3928476668f25acf4",
+  "before_sha256": "f36b247a155321941afad31046a28a2649efd9511a4e42db3acd7e061e2f8e80",
+  "bytes": 867,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001\n\n## Escopo\n\nRegistro idempotente da divulgação do artigo bilíngue de 25 de julho de 2026.\n\n## URLs canônicas do artigo\n\n- PT: https://elzobrito.github.io/blog/inteligencia-virou-uma-variavel-de-orcamento/\n- EN: https://elzobrito.github.io/en/blog/intelligence-is-now-a-budget-variable/\n\n## LinkedIn\n\n- Estado: pendente.\n- URL pública: não registrada.\n\n## X\n\n- Estado: pendente.\n- URL pública: não registrada.\n\n## Bloqueio atual\n\nO Chrome está instalado e a ChatGPT Chrome Extension está instalada e habilitada no perfil selecionado, mas o navegador não está em execução. Nenhuma tentativa de envio foi feita.\n\n## Regra de retomada\n\nAntes de cada envio, confirmar novamente que o canal continua sem URL pública neste documento, na memória e na tarefa SOCIAL. Não repetir um canal que venha a ser concluído.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001.md",
+  "ts": "2026-07-26T00:44:15Z"
+}

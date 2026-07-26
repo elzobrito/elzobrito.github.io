@@ -1,0 +1,13 @@
+{
+  "after_sha256": "be2dda61970b3f0b05fc2875778696d848a6314e5e7c962aa51e50071acc3c75",
+  "artifact_id": "ART-be2dda61970b3f0b05fc2875778696d848a6314e5e7c962aa51e50071acc3c75",
+  "artifact_sha256": "59411fbc20d693527de886f81beab8ce2baec8489edb54e6fa2db20097d05843",
+  "before_sha256": "be2dda61970b3f0b05fc2875778696d848a6314e5e7c962aa51e50071acc3c75",
+  "bytes": 1470,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial de 25 de julho de 2026.\n\n## Estado\n\nPublicado com sucesso.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/inteligencia-virou-uma-variavel-de-orcamento/\n- EN: https://elzobrito.github.io/en/blog/intelligence-is-now-a-budget-variable/\n\n## Evidência\n\n- `npm test`: aprovado; 109 páginas e 122 artefatos públicos auditados.\n- Auditoria dedicada dos dois novos posts: 0 ocorrências proibidas.\n- `git diff --check`: aprovado.\n- Três fontes primárias responderam HTTP 200.\n- Antes do commit, `git fetch origin` foi concluído e `git rev-list --left-right --count HEAD...origin/main` retornou `0 0`.\n- Commit de conteúdo e QA: `42c51125ae9c9afee9fc6949b89d45ccc4c1c9f1` (`Publish daily AI briefing 2026-07-25`).\n- Push para `origin/main`: concluído sem force push.\n- Workflow `Deploy static hub to GitHub Pages`: `30181602234`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30181602234.\n- O workflow exibiu somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.\n- As URLs PT e EN responderam HTTP 200.\n- Os títulos publicados correspondem ao frontmatter.\n- Canonicals e `hreflang` em português, inglês e `x-default` estão corretos e recíprocos.\n\n## Resultado\n\nPublicação concluída e verificada no GitHub Pages. A divulgação social pode usar somente as URLs canônicas acima.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001.md",
+  "ts": "2026-07-26T00:44:12Z"
+}

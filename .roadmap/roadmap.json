@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1437,
-      "projection_hash_sha256": "b1fce841ec6f2d954239a5bf2f7b915790bf204ace5afd622eaec901c47a93d0",
+      "last_event_seq": 1460,
+      "projection_hash_sha256": "d6f67a1addc5d1350739d5ca76eb3d4ae0c47a67b6695856399634faab1fabdd",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T00:41:28Z"
+    "updated_at": "2026-07-26T00:44:16Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3283,7 +3283,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário bilíngue de IA de 2026-07-25",
       "description": "Fazer commit e push autorizados, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260725-QA-001"
       ],
@@ -3297,14 +3297,20 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-26T00:41:28Z"
+      "started_at": "2026-07-26T00:41:28Z",
+      "verification": {
+        "checks": [
+          "Push concluído; workflow 30181602234 success; URLs PT/EN HTTP 200 com canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-26T00:44:13Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo diário bilíngue de IA de 2026-07-25",
       "description": "Publicar chamadas canônicas no LinkedIn e no X sem duplicação e registrar evidências.",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001"
       ],
@@ -3316,7 +3322,9 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T00:44:13Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260725-FIX-001",
@@ -3345,17 +3353,41 @@
         ]
       },
       "completed_at": "2026-07-26T00:40:50Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-BLOCKER-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-07-25",
+      "description": "Registrar estado idempotente dos canais enquanto o Chrome autenticado não está em execução.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T00:44:14Z",
+      "verification": {
+        "checks": [
+          "LinkedIn e X continuam sem URL pública e nenhum envio foi realizado."
+        ]
+      },
+      "completed_at": "2026-07-26T00:44:16Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 110,
-      "in_progress": 3,
-      "todo": 1
+      "done": 112,
+      "in_progress": 3
     },
     "by_kind": {
       "impl": 56,
-      "qa": 51,
+      "qa": 52,
       "spec": 7
     }
   }
