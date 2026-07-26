@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1561,
-      "projection_hash_sha256": "6530f7a5ddcd6d16811eb8c09197c9f8b88a4f395d12849398100f5fa9ae2f7b",
+      "last_event_seq": 1587,
+      "projection_hash_sha256": "27ad39e3cd14c5e8b1486a4cab90f323f54753299377403273ce6677b12858f3",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T17:01:37Z"
+    "updated_at": "2026-07-26T17:13:24Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3639,17 +3639,108 @@
           "PT e EN URLs HTTP 200 com títulos corretos"
         ]
       }
+    },
+    {
+      "task_id": "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-POST-001",
+      "task_kind": "impl",
+      "title": "Artigo bilíngue: quando o computador some (Gates e a IA)",
+      "description": "Escrever e validar par PT/EN denso sobre a tese de Gates (estrada da informação / computadores que desaparecem) e o vislumbre contemporâneo com IA, agentes e interface por intenção. Sem travessão proibido; sem caminhos locais; sem termos internos vedados.",
+      "status": "review",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/**"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/quando-o-computador-some-gates-ia-e-a-interface-por-intencao.md",
+          "src/content/posts/en/when-the-computer-disappears-gates-ai-and-the-interface-of-intent.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "src/content/posts/**"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T17:11:49Z",
+      "verification": {
+        "checks": [
+          "Frontmatter PT/EN com translation recíproca",
+          "Densidade PT~1277 EN~1201 palavras",
+          "Sem /home, .roadmap, prompt, travessão editorial no corpo"
+        ]
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001",
+      "task_kind": "qa",
+      "title": "QA artigo Gates/computador que some 2026-07-26",
+      "description": "Validar par bilíngue: editorial, build, audit public, translations.",
+      "status": "review",
+      "depends_on": [
+        "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-POST-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/**"
+      ],
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T17:13:00Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado",
+          "117 páginas; rotas PT/EN presentes",
+          "Auditoria dedicada limpa"
+        ]
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo Gates/computador que some 2026-07-26",
+      "description": "Commit, push origin/main, verificar Pages e registrar evidências.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001"
+      ],
+      "targets": [
+        "docs/qa/**"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/**"
+      ],
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T17:13:24Z"
     }
   ],
   "indexes": {
     "by_status": {
       "done": 117,
-      "in_progress": 4,
-      "review": 3
+      "in_progress": 5,
+      "review": 5
     },
     "by_kind": {
-      "impl": 60,
-      "qa": 57,
+      "impl": 61,
+      "qa": 59,
       "spec": 7
     }
   }

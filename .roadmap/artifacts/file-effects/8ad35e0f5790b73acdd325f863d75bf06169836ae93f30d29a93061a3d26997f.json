@@ -1,0 +1,13 @@
+{
+  "after_sha256": "d540970e157b1c5780676d86fb3a8ca525b770d59d00324787922bfb2202ad4d",
+  "artifact_id": "ART-d540970e157b1c5780676d86fb3a8ca525b770d59d00324787922bfb2202ad4d",
+  "artifact_sha256": "8ad35e0f5790b73acdd325f863d75bf06169836ae93f30d29a93061a3d26997f",
+  "before_sha256": "d540970e157b1c5780676d86fb3a8ca525b770d59d00324787922bfb2202ad4d",
+  "bytes": 1066,
+  "content": "# SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001\n\n## Escopo\n\nValidação do par bilíngue sobre Gates, o desaparecimento do computador e a interface por intenção.\n\n## Arquivos\n\n- `src/content/posts/pt/quando-o-computador-some-gates-ia-e-a-interface-por-intencao.md`\n- `src/content/posts/en/when-the-computer-disappears-gates-ai-and-the-interface-of-intent.md`\n\n## Checks\n\n- `npm test`: aprovado.\n- Build: 117 páginas.\n- `audit:public`: 130 arquivos, SEO ok, 0 matches proibidos.\n- `audit:editorial`: sem sequência espaço-travessão-espaço.\n- Auditoria dedicada: 0 ocorrências de `/home/`, `.roadmap`, `activity.jsonl`, `conversation-esaa`, `prompt` e travessão editorial.\n- Rotas geradas:\n  - `/blog/quando-o-computador-some-gates-ia-e-a-interface-por-intencao/`\n  - `/en/blog/when-the-computer-disappears-gates-ai-and-the-interface-of-intent/`\n- Frontmatter: `translation` recíproca, `published: 2026-07-26`, `featured: true`.\n- Link interno ao artigo Musk/Economist presente em ambos os idiomas.\n\n## Resultado\n\nQA aprovada. Pronta para publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001.md",
+  "ts": "2026-07-26T17:13:23Z"
+}
