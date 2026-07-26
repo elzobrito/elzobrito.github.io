@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1460,
-      "projection_hash_sha256": "d6f67a1addc5d1350739d5ca76eb3d4ae0c47a67b6695856399634faab1fabdd",
+      "last_event_seq": 1508,
+      "projection_hash_sha256": "399edb683dde052365b830bdab377ad373a0616e2ad53262356c2500d67ab558",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T00:44:16Z"
+    "updated_at": "2026-07-26T14:06:44Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3378,16 +3378,142 @@
         ]
       },
       "completed_at": "2026-07-26T00:44:16Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260726-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue de 26 de julho",
+      "description": "Produzir posts PT e EN a partir de fontes primárias das últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-infraestrutura-de-ia-aprendeu-a-dizer-nao.md",
+          "src/content/posts/en/ai-infrastructure-learns-to-say-no.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T14:03:40Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN criados com fontes primárias e traduções recíprocas."
+        ]
+      },
+      "completed_at": "2026-07-26T14:05:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260726-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo bilíngue de 26 de julho",
+      "description": "Validar fontes, rigor, schema, privacidade, adaptação e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260726-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T14:05:07Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 113 páginas e 126 artefatos, 0 ocorrências públicas proibidas.",
+          "Frontmatter, traduções recíprocas, fonte primária e adaptação EN aprovados."
+        ]
+      },
+      "completed_at": "2026-07-26T14:06:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260726-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo bilíngue de 26 de julho",
+      "description": "Commitar, enviar, verificar Pages e registrar evidências.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260726-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T14:06:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo bilíngue de 26 de julho",
+      "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260726-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001.md"
+      ]
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260726-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover termo público proibido dos posts",
+      "description": "Registro retrospectivo da substituição lexical exigida pela auditoria dedicada, sem mudança factual.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260726-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-infraestrutura-de-ia-aprendeu-a-dizer-nao.md",
+          "src/content/posts/en/ai-infrastructure-learns-to-say-no.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T14:05:55Z",
+      "verification": {
+        "checks": [
+          "Termo público proibido removido sem alteração factual."
+        ]
+      },
+      "completed_at": "2026-07-26T14:05:56Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 112,
-      "in_progress": 3
+      "done": 115,
+      "in_progress": 4,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 56,
-      "qa": 52,
+      "impl": 59,
+      "qa": 54,
       "spec": 7
     }
   }
