@@ -1,0 +1,13 @@
+{
+  "after_sha256": "67409cf48e740414cd0a3f209aac1524065ea2b85ce5c0418b4fe6302084ecaf",
+  "artifact_id": "ART-67409cf48e740414cd0a3f209aac1524065ea2b85ce5c0418b4fe6302084ecaf",
+  "artifact_sha256": "83fd8c3790eccdcd23bce6c433dd2236e2201c24bcb72ed5658f19fb00cde548",
+  "before_sha256": "67409cf48e740414cd0a3f209aac1524065ea2b85ce5c0418b4fe6302084ecaf",
+  "bytes": 1332,
+  "content": "# SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial denso sobre a entrevista Musk / *The Economist* (26 jul 2026).\n\n## Estado\n\nPublicado com sucesso.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/elon-musk-economist-2026-abundancia-ia-e-o-preco-do-controle/\n- EN: https://elzobrito.github.io/en/blog/elon-musk-economist-2026-abundance-ai-and-the-price-of-control/\n\n## Evidência pré-publicação\n\n- `npm test`: aprovado; 115 páginas e 128 artefatos públicos auditados.\n- QA: `SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001`.\n- Auditoria dedicada dos dois posts: 0 ocorrências proibidas.\n- `git fetch origin`: concluído.\n- `git rev-list --left-right --count HEAD...origin/main` antes do push: `0 0`.\n\n## Evidência de publicação\n\n- Commit de conteúdo e QA: `7540d89a79f0905ca22242375d481f771e17bfa2` (`Publish dense Musk Economist interview analysis 2026-07-26`).\n- Push para `origin/main`: concluído sem force push.\n- Workflow de deploy: `30211657561`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30211657561.\n- As URLs PT e EN responderam HTTP 200.\n- Os títulos publicados correspondem ao frontmatter.\n- Canonical e `hreflang` presentes na página PT.\n\n## Resultado\n\nPublicação concluída e verificada no GitHub Pages.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001.md",
+  "ts": "2026-07-26T17:01:37Z"
+}

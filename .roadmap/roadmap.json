@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1557,
-      "projection_hash_sha256": "76b0c71f2c3a29eaf55d52d2a3fa76767562474c55a21ccaacc8bf724be46bd6",
+      "last_event_seq": 1561,
+      "projection_hash_sha256": "6530f7a5ddcd6d16811eb8c09197c9f8b88a4f395d12849398100f5fa9ae2f7b",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T17:00:03Z"
+    "updated_at": "2026-07-26T17:01:37Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3612,7 +3612,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo Musk/Economist 2026-07-26",
       "description": "Commitar, push para origin/main, verificar GitHub Pages e registrar evidências de publicação do par bilíngue.",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001"
       ],
@@ -3631,14 +3631,21 @@
         "docs/qa/**"
       ],
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-26T17:00:03Z"
+      "started_at": "2026-07-26T17:00:03Z",
+      "verification": {
+        "checks": [
+          "commit 7540d89 push origin/main",
+          "Actions run 30211657561 success",
+          "PT e EN URLs HTTP 200 com títulos corretos"
+        ]
+      }
     }
   ],
   "indexes": {
     "by_status": {
       "done": 117,
-      "in_progress": 5,
-      "review": 2
+      "in_progress": 4,
+      "review": 3
     },
     "by_kind": {
       "impl": 60,
