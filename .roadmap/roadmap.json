@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1389,
-      "projection_hash_sha256": "658ce658fd9b0c920945664646999d5f73ee539eef4d3e4b912e84af542b8ea9",
+      "last_event_seq": 1437,
+      "projection_hash_sha256": "b1fce841ec6f2d954239a5bf2f7b915790bf204ace5afd622eaec901c47a93d0",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-24T14:11:59Z"
+    "updated_at": "2026-07-26T00:41:28Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3224,16 +3224,138 @@
         ]
       },
       "completed_at": "2026-07-24T14:11:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260725-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário bilíngue de IA de 2026-07-25",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar os posts PT/EN no padrão editorial do site.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/<slug-pt>.md",
+          "src/content/posts/en/<slug-en>.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T00:37:59Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN criados com frontmatter e traduções recíprocas."
+        ]
+      },
+      "completed_at": "2026-07-26T00:39:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260725-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário bilíngue de IA de 2026-07-25",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260725-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T00:40:06Z",
+      "verification": {
+        "checks": [
+          "npm test, fontes HTTP 200, auditoria pública dedicada e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-07-26T00:41:27Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário bilíngue de IA de 2026-07-25",
+      "description": "Fazer commit e push autorizados, verificar Pages e registrar evidências.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260725-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-26T00:41:28Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário bilíngue de IA de 2026-07-25",
+      "description": "Publicar chamadas canônicas no LinkedIn e no X sem duplicação e registrar evidências.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260725-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover termo vedado do artigo de 2026-07-25",
+      "description": "Substituir menção técnica vedada na auditoria pública dedicada sem alterar a tese factual.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260725-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/inteligencia-virou-uma-variavel-de-orcamento.md",
+          "src/content/posts/en/intelligence-is-now-a-budget-variable.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-26T00:40:49Z",
+      "verification": {
+        "checks": [
+          "Auditoria dedicada não encontra termos proibidos."
+        ]
+      },
+      "completed_at": "2026-07-26T00:40:50Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 107,
-      "in_progress": 2
+      "done": 110,
+      "in_progress": 3,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 53,
-      "qa": 49,
+      "impl": 56,
+      "qa": 51,
       "spec": 7
     }
   }
