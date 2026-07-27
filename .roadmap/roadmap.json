@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1591,
-      "projection_hash_sha256": "a0740a769f448d0b11c5592fa74bdbbb68c8a47a544cb40c205e7e7d79768077",
+      "last_event_seq": 1626,
+      "projection_hash_sha256": "4bc4a8ec6dcdc09077b694a056d56030f6f0e764115b40e161fd26684353be4f",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-26T17:14:22Z"
+    "updated_at": "2026-07-27T13:21:59Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3737,17 +3737,115 @@
           "PT e EN HTTP 200 com títulos corretos"
         ]
       }
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260727-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue de 27 de julho",
+      "description": "Produzir posts PT e EN a partir de fontes primárias das últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/antes-de-agir-o-agente-precisa-provar-que-esta-pronto.md",
+          "src/content/posts/en/before-acting-an-agent-must-prove-it-is-ready.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-27T13:18:57Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN criados com fontes primárias e traduções recíprocas."
+        ]
+      },
+      "completed_at": "2026-07-27T13:20:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260727-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo bilíngue de 27 de julho",
+      "description": "Validar fontes, rigor, schema, privacidade, adaptação e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260727-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-27T13:20:45Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 119 páginas e 132 artefatos, 0 ocorrências públicas proibidas.",
+          "Frontmatter, traduções recíprocas, fontes primárias e adaptação EN aprovados."
+        ]
+      },
+      "completed_at": "2026-07-27T13:21:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo bilíngue de 27 de julho",
+      "description": "Commitar, enviar, verificar Pages e registrar evidências.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260727-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-27T13:21:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo bilíngue de 27 de julho",
+      "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001.md"
+      ]
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 117,
-      "in_progress": 4,
-      "review": 6
+      "done": 119,
+      "in_progress": 5,
+      "review": 6,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 61,
-      "qa": 59,
+      "impl": 63,
+      "qa": 61,
       "spec": 7
     }
   }

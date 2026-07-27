@@ -1,0 +1,43 @@
+---
+title: "Before acting, an agent must prove it is ready"
+description: "NemoClaw and MinerU reveal a quiet shift in AI infrastructure: readiness, uncertainty, and shutdown need verifiable contracts."
+published: 2026-07-27
+locale: en
+translation: antes-de-agir-o-agente-precisa-provar-que-esta-pronto
+tags: ["AI", "Agents", "Open source", "Reliability"]
+featured: false
+---
+
+The most visible artificial intelligence releases usually begin with capability: a model reasons better, an API accepts more context, or an agent receives another tool. Two smaller changes today start from the question that arrives after the demo: is the system actually ready to run?
+
+[NemoClaw introduced a versioned system-readiness contract](https://github.com/NVIDIA/NemoClaw/commit/75871ccef2963abaa2ddb8d883f60adee7446f44), while [MinerU 4.0.0a4](https://github.com/opendatalab/MinerU/releases/tag/v4.0.0a4) moved its document-parsing server to a dedicated control channel. Neither change makes a model more intelligent. Both make the software around it less likely to mistake intended behavior for real state.
+
+## Readiness is not a boolean
+
+NemoClaw's new contract defines a read-only report through JSON Schema, a format for validating the structure of JSON data. Its result is not limited to ready or not ready. A system can be `supported`, `incompatible`, or `inconclusive`, with deterministic exit codes 0, 2, and 3.
+
+The third answer is the crucial one. `Inconclusive` acknowledges that a check may be unable to observe the whole system. Installation scripts and command-line tools have often collapsed missing evidence into either success or a generic failure. An explicit uncertainty state lets the caller choose whether to block execution, request another inspection, or proceed only with capabilities that have already been established.
+
+The report also separates observations, capabilities, qualifications, findings, and evidence. Every entry has a stable identifier, and references between collections must resolve. A vague conclusion such as "this machine looks compatible" can become something another tool can audit: which capability was observed, which requirement it satisfies, and which evidence supports that conclusion.
+
+One small field carries an important guarantee: `mutated` must be `false`. Generating the report cannot alter the host or NemoClaw state. This is the difference between an examination and a treatment. A readiness check that installs packages or reconfigures services to produce an answer changes the very state it claims to measure.
+
+The project is explicit that this contract is the first part of a larger sequence and does not yet expose a complete user workflow. It would therefore be inaccurate to say that every NemoClaw agent now performs a comprehensive inspection. What exists today is the agreement that future probes and interfaces can share.
+
+## Shutdown belongs in the protocol too
+
+MinerU addresses the other end of the lifecycle. The tool turns documents, including PDFs, into structured content for downstream work. Its parsing server may initialize heavy models in the background, and a process in that phase does not always respond promptly to a shutdown request.
+
+The [technical design shipped with the release](https://github.com/opendatalab/MinerU/blob/v4.0.0a4/docs/plans/2026-07-22-managed-parse-server-stop-budget-design.md) replaces standard input with a dedicated control channel: `AF_UNIX` on Unix systems and `AF_PIPE` on Windows. Commands and payload data no longer compete for the same passage. It is much like separating the cockpit from the cargo hold.
+
+More importantly, shutdown time becomes one total budget. Previously, graceful shutdown, terminate, and kill stages could each receive ten seconds, allowing the sequence to consume as much as thirty seconds. They now share a single monotonic deadline. An established process gets more time to cooperate; a process still loading a model gets a shorter window; the system can then terminate, kill, and reap it without restarting the clock at every stage.
+
+This prevents a familiar operational failure: the interface says a service stopped, but the old process still owns a lock, port, or block of memory. The next startup then produces what looks like a new error even though the real cause is incomplete shutdown.
+
+## The contract around intelligence
+
+These changes cover complementary sides of one problem. NemoClaw formalizes what it means to be fit to begin. MinerU bounds what it means to have finished after receiving a stop command.
+
+For agent builders, the practical lesson is concrete. Record capabilities and evidence in a stable format before delegating work. Do not reduce an observation failure to `false`. Use exit codes that programs can distinguish. For supporting processes, separate the control channel, share one deadline across shutdown stages, and verify that resources have actually been released.
+
+Probabilistic models increase the need for these contracts rather than reducing it. The more flexible the intelligence at the center becomes, the more explicit its operational boundaries must be. A dependable agent is not merely one that finds a path to action. It can show that it is safe to start, admit what it could not verify, and prove that it truly stopped.
