@@ -11,7 +11,7 @@ Artigo bilíngue sobre o projeto open source down-youtube e divulgação no Link
 
 ## LinkedIn
 
-- Estado: pendente (preencher URL pública após publicar).
+- Estado: **bloqueado sem sessão** no Chrome do MCP (redirect para login). Publicar manualmente ou após login no perfil do chrome-devtools-mcp.
 - Texto preparado:
 
 > Transcrição de YouTube não precisa ser SaaS caro nem áudio na nuvem de terceiros.
