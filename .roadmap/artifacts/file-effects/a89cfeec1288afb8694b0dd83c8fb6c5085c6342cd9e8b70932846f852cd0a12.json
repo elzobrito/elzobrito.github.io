@@ -1,0 +1,13 @@
+{
+  "after_sha256": "be0d1993aeecb7fdf2b96e8d5e6a5d94e8dbd7207234b8bf47d9b9baf6fd3129",
+  "artifact_id": "ART-be0d1993aeecb7fdf2b96e8d5e6a5d94e8dbd7207234b8bf47d9b9baf6fd3129",
+  "artifact_sha256": "a89cfeec1288afb8694b0dd83c8fb6c5085c6342cd9e8b70932846f852cd0a12",
+  "before_sha256": "be0d1993aeecb7fdf2b96e8d5e6a5d94e8dbd7207234b8bf47d9b9baf6fd3129",
+  "bytes": 1533,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001\n\n## Escopo\n\nEvidência de publicação do par editorial de 27 de julho de 2026.\n\n## Estado\n\nPublicado com sucesso.\n\n## URLs publicadas\n\n- PT: https://elzobrito.github.io/blog/antes-de-agir-o-agente-precisa-provar-que-esta-pronto/\n- EN: https://elzobrito.github.io/en/blog/before-acting-an-agent-must-prove-it-is-ready/\n\n## Evidência pré-publicação\n\n- `npm test`: aprovado; 119 páginas e 132 artefatos públicos auditados.\n- Auditoria dedicada dos dois novos posts: 0 ocorrências proibidas.\n- `git diff --check`: aprovado.\n- Fontes primárias publicadas dentro da janela editorial de 24 horas.\n- `git fetch origin`: concluído.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0`.\n\n## Evidência de publicação\n\n- Commit de conteúdo e QA: `43aabaf884b96cdab393ecb86f4a76ba0c5ad5af` (`Publish daily AI briefing 2026-07-27`).\n- Push para `origin/main`: concluído sem force push.\n- Workflow `Deploy static hub to GitHub Pages`: `30269965410`, conclusão `success`, https://github.com/elzobrito/elzobrito.github.io/actions/runs/30269965410.\n- O workflow exibiu somente o aviso não bloqueante de migração das Actions de Node.js 20 para Node.js 24.\n- As URLs PT e EN responderam HTTP 200.\n- Os títulos publicados correspondem ao frontmatter.\n- Canonicals e `hreflang` em português, inglês e `x-default` estão corretos e recíprocos.\n\n## Resultado\n\nPublicação concluída e verificada no GitHub Pages. A divulgação social pode usar somente as URLs canônicas acima.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001.md",
+  "ts": "2026-07-27T13:23:36Z"
+}

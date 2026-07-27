@@ -1,0 +1,13 @@
+{
+  "after_sha256": "269c37f6281fba51c70d4f9517d8951d443e01b9993a151d283bac7662e7fd60",
+  "artifact_id": "ART-269c37f6281fba51c70d4f9517d8951d443e01b9993a151d283bac7662e7fd60",
+  "artifact_sha256": "30794d4a02f5b572deb9a292df59b3b05a11250f6a25c923b23be9f428885793",
+  "before_sha256": "269c37f6281fba51c70d4f9517d8951d443e01b9993a151d283bac7662e7fd60",
+  "bytes": 1974,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001\n\n## Escopo\n\nRegistro idempotente da divulgação do artigo bilíngue de 27 de julho de 2026.\n\n## URLs canônicas do artigo\n\n- PT: https://elzobrito.github.io/blog/antes-de-agir-o-agente-precisa-provar-que-esta-pronto/\n- EN: https://elzobrito.github.io/en/blog/before-acting-an-agent-must-prove-it-is-ready/\n\n## LinkedIn\n\n- Estado: publicado.\n- Horário local: 2026-07-27 10:25 -03.\n- Texto publicado:\n\n> Modelos probabilísticos precisam de fronteiras determinísticas.\n>\n> Duas mudanças open source de hoje mostram por quê: o NemoClaw passou a distinguir sistemas compatíveis, incompatíveis e inconclusivos; o MinerU transformou o encerramento de processos em um orçamento total verificável.\n>\n> A pergunta útil para um agente não é apenas “você consegue agir?”, mas “você consegue provar que está pronto, admitir o que não verificou e confirmar que realmente parou?”.\n>\n> https://elzobrito.github.io/blog/antes-de-agir-o-agente-precisa-provar-que-esta-pronto/\n>\n> English version: https://elzobrito.github.io/en/blog/before-acting-an-agent-must-prove-it-is-ready/\n>\n> #IA #OpenSource\n\n- URL pública: https://www.linkedin.com/feed/update/urn:li:share:7487498406765047808\n\n## X\n\n- Estado: publicado.\n- Horário local: 2026-07-27 10:28 -03.\n- Texto publicado:\n\n> AI agents should prove readiness, separate uncertainty from failure, and confirm processes really stopped. NemoClaw and MinerU show why operational contracts matter. https://elzobrito.github.io/en/blog/before-acting-an-agent-must-prove-it-is-ready/ #AI\n\n- URL pública: https://x.com/elzobrito/status/2081733288469668343\n\n## Regra de idempotência\n\nAntes de cada envio, confirmar neste documento, na memória da execução e na tarefa SOCIAL que o canal continua sem URL pública. Um canal concluído não deve ser repetido se o outro falhar.\n\n## Resultado\n\nLinkedIn e X concluídos, cada um com uma única publicação e URL pública registrada.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001.md",
+  "ts": "2026-07-27T13:29:36Z"
+}

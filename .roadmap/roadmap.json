@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1626,
-      "projection_hash_sha256": "4bc4a8ec6dcdc09077b694a056d56030f6f0e764115b40e161fd26684353be4f",
+      "last_event_seq": 1643,
+      "projection_hash_sha256": "41db50febc423bfa3620c8669e5c73152a596311a243d2cd8fcafc4dcf5b7a66",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-27T13:21:59Z"
+    "updated_at": "2026-07-27T13:29:50Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3797,7 +3797,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo bilíngue de 27 de julho",
       "description": "Commitar, enviar, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260727-QA-001"
       ],
@@ -3811,14 +3811,21 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-27T13:21:59Z"
+      "started_at": "2026-07-27T13:21:59Z",
+      "verification": {
+        "checks": [
+          "Workflow 30269965410 concluído com success.",
+          "URLs PT/EN HTTP 200 com título, canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-27T13:23:36Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo bilíngue de 27 de julho",
       "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260727-PUBLISH-001"
       ],
@@ -3833,15 +3840,23 @@
       },
       "boundary_grant": [
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260727-SOCIAL-001.md"
-      ]
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-27T13:23:37Z",
+      "verification": {
+        "checks": [
+          "LinkedIn publicado com URL pública canônica registrada",
+          "X publicado com URL pública canônica registrada"
+        ]
+      },
+      "completed_at": "2026-07-27T13:29:50Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 119,
-      "in_progress": 5,
-      "review": 6,
-      "todo": 1
+      "done": 121,
+      "in_progress": 4,
+      "review": 6
     },
     "by_kind": {
       "impl": 63,
