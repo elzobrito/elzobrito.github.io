@@ -1,0 +1,69 @@
+---
+title: "Agentes escrevem o código, mas não carregam a prova"
+description: "Oito projetos de computação científica mostram que agentes já conseguem reescrever e acelerar software complexo. O gargalo agora é validar, interpretar e manter."
+published: 2026-07-28
+locale: pt
+translation: agents-write-the-code-not-the-proof
+tags: ["IA", "Ciência", "Engenharia de software", "Agentes"]
+featured: false
+---
+
+Agentes de programação já conseguem trocar o motor de uma biblioteca científica, reescrever dezenas de milhares de linhas em outra linguagem e encontrar atalhos que reduzem horas de processamento a minutos. O que eles ainda não conseguem fazer sozinhos, de forma confiável, é estabelecer que o novo sistema preserva o significado científico do anterior.
+
+Essa é a conclusão mais importante de [*Scientific computing in the age of agentic AI: an exploratory field report*](https://cdn.openai.com/pdf/scientific-computing-in-the-age-of-agentic-ai-an-exploratory-field-report.pdf), relatório assinado por pesquisadores da OpenAI e colaboradores de universidades, institutos e projetos de bioinformática. O texto reúne oito estudos de caso, quase todos em ciências da vida, que vão da modernização de pacotes a reescritas completas em Rust e CUDA.
+
+Os números impressionam. Mas o relatório é mais interessante quando mostra por que esses números não bastam.
+
+## O déficit que os agentes conseguem atacar
+
+Software científico costuma nascer em condições diferentes das de um produto comercial maduro. Uma equipe pequena implementa um método para sustentar um artigo ou projeto financiado. A publicação e a novidade científica recebem reconhecimento; testes, documentação, empacotamento e manutenção de longo prazo disputam o tempo que sobrou.
+
+O protótipo, porém, pode virar infraestrutura de uma área inteira. Anos depois, pesquisadores dependem de código difícil de instalar, preso a bibliotecas antigas e repleto de comportamentos que nunca foram formalmente documentados. Em genômica, o problema cresce com o volume de dados: o sequenciamento ficou mais barato mais rápido do que sua análise, elevando o peso de computação, armazenamento e trabalho especializado.
+
+É justamente nesse estoque de dívida de engenharia que agentes de código encontram terreno fértil. Eles não precisam inventar uma nova teoria biológica para modernizar uma configuração de build, ampliar testes ou traduzir uma implementação existente. Precisam operar sobre um objetivo delimitado, um repositório e algum critério observável de sucesso.
+
+O relatório organiza os projetos em seis formas que se sobrepõem: manutenção leve, otimização localizada, migração entre frameworks, tradução para outra linguagem, reescrita orientada a desempenho e criação de novas capacidades. A autonomia variou muito, mas um padrão se repetiu: quanto mais clara a referência externa, melhor a colaboração funcionou.
+
+## De dez mil linhas a sessenta vezes menos tempo
+
+No MHCflurry, uma ferramenta que prevê quais fragmentos de proteínas podem ser apresentados a células T, agentes ajudaram a substituir uma pilha antiga de TensorFlow e Keras por PyTorch. A mudança atingiu quase 10 mil linhas em aproximadamente 130 arquivos. Modelos já publicados continuaram carregando os mesmos pesos, e as previsões permaneceram dentro de pequenas tolerâncias numéricas. A migração chegou à versão 2.2.0 do projeto original.
+
+O rustar-aligner enfrentou uma superfície ainda maior: recriar em Rust o comportamento acumulado em mais de 20 mil linhas de C e C++ do alinhador de RNA STAR. Em 10 mil leituras de levedura, o novo programa reportou concordância de 99,815% em dados de uma ponta e 99,883% em pares, considerando posição, CIGAR, qualidade de mapeamento e outras propriedades. Ultrapassar 90% de paridade, porém, exigiu rastrear leituras individuais pelas duas implementações para descobrir divergências.
+
+O RustQC escolheu outra arquitetura. Em vez de executar 15 ferramentas de controle de qualidade que percorriam repetidamente os mesmos arquivos, consolidou o trabalho em uma passagem. Em um conjunto com 186 milhões de leituras, a soma sequencial das tarefas caiu de 15 horas e 34 minutos para 14 minutos e 54 segundos, enquanto o tráfego de disco caiu de 2,5 para 0,1 terabyte. Os autores reportaram equivalência numérica dos resultados.
+
+A HelixForge levou a inserção de mutações em leituras de DNA para uma implementação nativa de GPU. No cenário avaliado, a etapa de edição ficou 98,6 vezes mais rápida e o fluxo completo, 59,6 vezes. O hifiasm ganhou otimizações mais localizadas: 25,1% de redução em dados sintéticos reservados para teste, mas 14,7% em leituras reais de um cromossomo humano.
+
+Esses casos mostram uma capacidade que já é prática. Um agente pode explorar uma base desconhecida, formular hipóteses de desempenho e implementar mudanças de grande alcance. A parte perigosa é confundir velocidade de produção com evidência de correção.
+
+## Uma saída plausível pode estar cientificamente errada
+
+O caso bayesm torna o risco explícito. Agentes reimplementaram em Rust modelos e amostradores bayesianos de um pacote R e depois acrescentaram extensões estatísticas. As primeiras versões das extensões produziram resultados agregados plausíveis. Mesmo assim, estavam defeituosas.
+
+Os problemas apareceram quando a avaliação deixou de olhar apenas para médias e passou a incluir diagnóstico de convergência, calibração baseada em simulação e comparação com a implementação original. O sistema não entregava lixo visível; entregava uma resposta com aparência científica suficiente para atravessar uma revisão superficial.
+
+O próprio instrumento de validação também pode errar. Na HelixForge, uma auditoria inicial indicou falsamente um desequilíbrio entre fitas por causa de uma amostragem. O agente reagiu alterando a implementação de GPU, embora o defeito estivesse no teste. Não basta auditar o código gerado: é preciso auditar o mecanismo que decide se o código está correto.
+
+Dados sintéticos aceleram a iteração porque são pequenos e têm propriedades conhecidas. Eles não substituem cargas reais. No RustQC, dados públicos em escala revelaram casos ausentes nos exemplos mínimos. No hifiasm, o ganho de desempenho diminuiu quando o teste saiu do cenário sintético e chegou a leituras humanas reais.
+
+A lição operacional é direta: compilação, testes internos e uma saída visualmente razoável são apenas o começo. Software científico precisa de equivalência definida no nível certo, tolerâncias estabelecidas antes da avaliação, conjuntos representativos, métricas de domínio e inspeção das discrepâncias, não apenas da média final.
+
+## O humano não sai do circuito; muda de função
+
+Em sete dos oito estudos, o trabalho humano se concentrou em definir o problema, projetar a validação, escolher dados representativos e julgar diferenças entre implementações. O agente assumiu mais da engenharia; o especialista passou a atuar como especificador, orquestrador e autoridade sobre o que conta como evidência.
+
+Essa mudança pode ser economicamente importante. Menos tempo gasto em empacotamento, compatibilidade e otimizações libera mantenedores para decisões que exigem contexto. Reduções de runtime podem poupar recursos em fluxos executados milhões de vezes. E uma ideia científica que antes morreria como protótipo pode alcançar uma implementação utilizável.
+
+Mas código barato também cria um risco novo: forks baratos. Se qualquer grupo consegue produzir rapidamente outra versão de uma ferramenta conhecida, a atenção de usuários e revisores pode se dividir entre implementações quase equivalentes, nenhuma validada o bastante para uso real.
+
+Por isso o relatório trata *stewardship*, a responsabilidade continuada pelo software, como parte do resultado técnico. Algumas mudanças foram integradas ao projeto original. Em outros casos, uma reescrita foi acolhida por um consórcio capaz de sustentá-la. Compatibilidade, licença, atribuição, tratamento de bugs e manutenção depois do lançamento não são detalhes administrativos. Eles determinam se a reescrita vira infraestrutura ou apenas uma demonstração.
+
+## Um relatório de campo, não um placar universal
+
+Os próprios autores delimitam o alcance das conclusões. Os projetos foram reunidos retrospectivamente, não seguiram um protocolo comum e formam uma amostra pequena e selecionada. Os benchmarks e ganhos são reportados pelos responsáveis de cada caso e não foram todos reproduzidos de maneira independente. Estimativas econômicas apresentadas no texto são cenários ilustrativos, não medições de economia realizada.
+
+Isso impede usar o relatório como placar universal de agentes ou como prova de que qualquer software científico pode ser reescrito com o mesmo sucesso. Ainda assim, os oito casos expõem uma regularidade valiosa: agentes funcionam melhor quando há uma referência externa contra a qual perder.
+
+A nova fronteira não é fazer a IA produzir mais código. É construir contratos que tornem esse código refutável: saída idêntica quando a identidade importa, tolerância numérica quando a matemática exige, calibração quando a média engana, dados reais quando o sintético esconde bordas e responsabilidade institucional quando o lançamento não encerra o trabalho.
+
+O agente pode escrever a implementação. A prova continua sendo um projeto humano.

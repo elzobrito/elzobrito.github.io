@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1708,
-      "projection_hash_sha256": "39fb8c73cfca0168f01b47f4bd5096a6c47e38f57026f973ee218aa35e3552a0",
+      "last_event_seq": 1743,
+      "projection_hash_sha256": "b81fd914db2d2a5c3cda460ef0ed63189a553b696b7c1f6f1e8b38d5d9739631",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-28T14:00:35Z"
+    "updated_at": "2026-07-28T20:14:40Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3994,17 +3994,115 @@
         ]
       },
       "completed_at": "2026-07-28T13:48:53Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SCIENCE-AGENTS-20260728-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue sobre agentes na computação científica",
+      "description": "Produzir posts PT e EN a partir do relatório de campo da OpenAI, com tese editorial própria e limites metodológicos explícitos.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/agentes-escrevem-o-codigo-mas-nao-carregam-a-prova.md",
+          "src/content/posts/en/agents-write-the-code-not-the-proof.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-28T20:11:32Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN criados com fonte primária, números contextualizados e tradução recíproca."
+        ]
+      },
+      "completed_at": "2026-07-28T20:13:11Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SCIENCE-AGENTS-20260728-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo sobre agentes na computação científica",
+      "description": "Validar fidelidade ao PDF, distinção editorial, schema, privacidade e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-SCIENCE-AGENTS-20260728-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-SCIENCE-AGENTS-20260728-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-28T20:13:21Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 125 páginas, 138 artefatos, 0 ocorrências proibidas.",
+          "Fonte, números, limitações, frontmatter, traduções e distinção editorial revisados."
+        ]
+      },
+      "completed_at": "2026-07-28T20:14:39Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SCIENCE-AGENTS-20260728-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo sobre agentes na computação científica",
+      "description": "Commitar, enviar ao main, verificar Pages e registrar evidências.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-SCIENCE-AGENTS-20260728-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-SCIENCE-AGENTS-20260728-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-28T20:14:40Z"
+    },
+    {
+      "task_id": "SITE-BLOG-SCIENCE-AGENTS-20260728-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo científico no LinkedIn e X",
+      "description": "Publicar chamadas únicas no LinkedIn e no X após a verificação do blog.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-SCIENCE-AGENTS-20260728-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-SCIENCE-AGENTS-20260728-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-SCIENCE-AGENTS-20260728-SOCIAL-001.md"
+      ]
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 126,
-      "in_progress": 4,
-      "review": 6
+      "done": 128,
+      "in_progress": 5,
+      "review": 6,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 66,
-      "qa": 63,
+      "impl": 68,
+      "qa": 65,
       "spec": 7
     }
   }
