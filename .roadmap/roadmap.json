@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1743,
-      "projection_hash_sha256": "b81fd914db2d2a5c3cda460ef0ed63189a553b696b7c1f6f1e8b38d5d9739631",
+      "last_event_seq": 1750,
+      "projection_hash_sha256": "160596a47417d17b7cec70b2c116faff51b9b78224e7117e2f717fa1c9e84c5a",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-28T20:14:40Z"
+    "updated_at": "2026-07-28T20:16:27Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4054,7 +4054,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo sobre agentes na computação científica",
       "description": "Commitar, enviar ao main, verificar Pages e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-SCIENCE-AGENTS-20260728-QA-001"
       ],
@@ -4068,7 +4068,14 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-28T20:14:40Z"
+      "started_at": "2026-07-28T20:14:40Z",
+      "verification": {
+        "checks": [
+          "Workflow 30395503290 concluído com success.",
+          "PT e EN retornaram HTTP 200 com canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-07-28T20:16:27Z"
     },
     {
       "task_id": "SITE-BLOG-SCIENCE-AGENTS-20260728-SOCIAL-001",
@@ -4095,8 +4102,8 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 128,
-      "in_progress": 5,
+      "done": 129,
+      "in_progress": 4,
       "review": 6,
       "todo": 1
     },
