@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1691,
-      "projection_hash_sha256": "19979d9907149c85ceed056834fc3d68465057e183217519352e5680e6173bf8",
+      "last_event_seq": 1708,
+      "projection_hash_sha256": "39fb8c73cfca0168f01b47f4bd5096a6c47e38f57026f973ee218aa35e3552a0",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-28T13:50:10Z"
+    "updated_at": "2026-07-28T14:00:35Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3911,7 +3911,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo bilíngue de 28 de julho",
       "description": "Fazer commit, push, deploy e registrar evidências públicas.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260728-QA-001"
       ],
@@ -3925,14 +3925,21 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-28T13:49:56Z"
+      "started_at": "2026-07-28T13:49:56Z",
+      "verification": {
+        "checks": [
+          "Workflow 30365404513 concluído com success",
+          "URLs PT/EN em HTTP 200 com canonical e hreflang corretos"
+        ]
+      },
+      "completed_at": "2026-07-28T13:52:00Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260728-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo bilíngue de 28 de julho",
       "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260728-PUBLISH-001"
       ],
@@ -3947,7 +3954,17 @@
       },
       "boundary_grant": [
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260728-SOCIAL-001.md"
-      ]
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-28T13:52:01Z",
+      "verification": {
+        "checks": [
+          "LinkedIn canonical URL recorded",
+          "X canonical URL recorded",
+          "No duplicate channel publication"
+        ]
+      },
+      "completed_at": "2026-07-28T14:00:35Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260728-FIX-001",
@@ -3981,10 +3998,9 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 124,
-      "in_progress": 5,
-      "review": 6,
-      "todo": 1
+      "done": 126,
+      "in_progress": 4,
+      "review": 6
     },
     "by_kind": {
       "impl": 66,
