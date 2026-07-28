@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1643,
-      "projection_hash_sha256": "41db50febc423bfa3620c8669e5c73152a596311a243d2cd8fcafc4dcf5b7a66",
+      "last_event_seq": 1691,
+      "projection_hash_sha256": "19979d9907149c85ceed056834fc3d68465057e183217519352e5680e6173bf8",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-27T13:29:50Z"
+    "updated_at": "2026-07-28T13:50:10Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3850,17 +3850,145 @@
         ]
       },
       "completed_at": "2026-07-27T13:29:50Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260728-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue de 28 de julho",
+      "description": "Criar artigo PT/EN diário a partir de fontes primárias das últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-28T13:42:36Z",
+      "verification": {
+        "checks": [
+          "Artigo PT criado com fontes primárias e tese editorial específica",
+          "Adaptação EN criada com slugs recíprocos"
+        ]
+      },
+      "completed_at": "2026-07-28T13:45:01Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260728-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo bilíngue de 28 de julho",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação EN e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260728-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260728-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-28T13:45:02Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 123 páginas e 136 artefatos públicos",
+          "Fontes, schema, privacidade e adaptação EN revisados"
+        ]
+      },
+      "completed_at": "2026-07-28T13:50:10Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260728-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo bilíngue de 28 de julho",
+      "description": "Fazer commit, push, deploy e registrar evidências públicas.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260728-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260728-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-28T13:49:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260728-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo bilíngue de 28 de julho",
+      "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260728-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260728-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260728-SOCIAL-001.md"
+      ]
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260728-FIX-001",
+      "task_kind": "impl",
+      "title": "Corrigir janela editorial do artigo de 28 de julho",
+      "description": "Substituir pauta fora da janela estrita por fontes primárias publicadas nas últimas 24 horas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260728-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-28T13:47:16Z",
+      "verification": {
+        "checks": [
+          "Fontes selecionadas publicadas entre 2026-07-28 08:54 e 11:43 UTC",
+          "Pauta anterior fora da janela removida antes de commit"
+        ]
+      },
+      "completed_at": "2026-07-28T13:48:53Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 121,
-      "in_progress": 4,
-      "review": 6
+      "done": 124,
+      "in_progress": 5,
+      "review": 6,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 63,
-      "qa": 61,
+      "impl": 66,
+      "qa": 63,
       "spec": 7
     }
   }

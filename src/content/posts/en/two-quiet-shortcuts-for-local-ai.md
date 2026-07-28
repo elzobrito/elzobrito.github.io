@@ -1,0 +1,53 @@
+---
+title: "Two quiet shortcuts for local AI"
+description: "llama.cpp added Eagle3-v3 support for GPT-OSS and a Hadamard kernel for Apple Metal, showing two distinct ways inference can avoid wasted work."
+published: 2026-07-28
+locale: en
+translation: dois-atalhos-silenciosos-para-a-ia-local
+tags: ["AI", "Inference", "Open source", "Performance"]
+featured: false
+---
+
+A language model does not have to become less capable in order to compute less. It can save work by proposing several steps before asking for confirmation, or by replacing a generic hardware path with an implementation built for one recurring mathematical operation.
+
+Both ideas reached [llama.cpp](https://github.com/ggml-org/llama.cpp) in releases published this morning. [Build b10158](https://github.com/ggml-org/llama.cpp/releases/tag/b10158) added NVIDIA Eagle3-v3 support for GPT-OSS. A few hours later, [b10159](https://github.com/ggml-org/llama.cpp/releases/tag/b10159) brought the Fast Walsh-Hadamard Transform to the Metal backend on Apple chips.
+
+These are small changes compared with a new frontier model, yet they reveal more about how local AI improves. Performance does not come only from adding memory or compute. It also comes from avoiding unnecessary work and keeping specialized operations away from generic execution paths.
+
+## First shortcut: propose several tokens, verify once
+
+Autoregressive language models generate text one token at a time. Each new token usually requires another pass through the main model, even when the continuation is predictable. For a large model, that repetition costs latency and memory traffic.
+
+Speculative decoding adds a smaller auxiliary, or *draft*, model. It anticipates a sequence of tokens. The main model verifies those candidates together and accepts the longest compatible prefix. When the prediction is good, one effective step returns more than one token without replacing the main model's judgment.
+
+[NVIDIA's Eagle3-v3 variant](https://huggingface.co/nvidia/gpt-oss-120b-Eagle3-v3) builds its draft from internal states of GPT-OSS 120B. Rather than observing only emitted tokens, the auxiliary receives representations extracted from selected layers of the target model and learns to propose likely continuations.
+
+The [pull request merged into llama.cpp](https://github.com/ggml-org/llama.cpp/pull/25794) resolves two concrete compatibility gaps. Eagle3-v3 explicitly selects which internal layers should feed the auxiliary, including the output of the final layer. The previous implementation relied on predetermined positions and did not expose that final state through the same interface.
+
+The converter now reads `eagle_aux_hidden_state_layer_ids` from the model configuration, preserving the old calculation only as a fallback. For the last layer, the runtime reuses its multi-token prediction, or MTP, interface to retrieve the final hidden state. It also represents the normalization applied before the auxiliary projection.
+
+In practical terms, this makes the Eagle3-v3 checkpoint compatible with the 20B and 120B GPT-OSS GGUF variants in the llama.cpp ecosystem. Potential gains depend on acceptance length: how many proposed tokens survive verification by the main model. NVIDIA reports a 2.95 average on SPEED-Bench with seven candidates and temperature zero, but that is not a 2.95-times speedup. Draft latency, bandwidth, batch size, and rejection rate still determine end-to-end performance.
+
+That distinction is essential. Supporting an acceleration technique is not the same as benchmarking it on a user's machine. The release enables the path; the actual advantage still has to be measured for the selected model, context, and hardware.
+
+## Second shortcut: give Metal the right operation
+
+The other release works at a lower layer. The Fast Walsh-Hadamard Transform, or FWHT, combines values through structured additions and subtractions. In quantized inference, rotations of this kind can spread extreme values across dimensions, reducing the effect of outliers before weights or activations are represented with fewer bits.
+
+llama.cpp already had a dedicated CUDA kernel. On Apple Metal, the operation fell back to generic matrix multiplication. The mathematical result could be equivalent, but the GPU was using a much broader tool than the problem required.
+
+The [new Metal kernel](https://github.com/ggml-org/llama.cpp/pull/25924) directly implements sizes 64, 128, 256, and 512. It distributes transform exchanges across SIMD groups, units that apply the same instruction to multiple data elements, and selects two groups per threadgroup after measuring several configurations.
+
+In the contributor's microbenchmarks, the operation became roughly 1.5 to 2.5 times faster across several shapes. The largest case dropped from 184.98 to 76.88 microseconds. The report also provides its own warning against overclaiming: the transform represented about 2% of prefill and decoding time in the tested models, so the improvement was absorbed by noise in end-to-end measurements.
+
+That does not make the kernel irrelevant. Models that use Hadamard transforms in every layer may increase its share of total runtime, and the lack of a native path left Metal behind CUDA for this operation. What remains is representative model-level testing, especially for architectures that invoke the transform much more frequently.
+
+## Useful optimization starts with the right question
+
+The two shortcuts operate at different scales. Eagle3 tries to reduce how many times the large model must advance to produce a sequence. The Metal kernel reduces the cost of an internal operation when that work must still happen.
+
+For local AI practitioners, the practical consequence is a measurement discipline. With speculative decoding, track accepted tokens per proposal, draft-model latency, tokens per second, and extra memory. With a kernel, measure the isolated operation, then its share of the full profile, and finally its effect on a real model.
+
+That sequence avoids two common mistakes. The first is confusing component speed with application speed. The second is dismissing a structural improvement because it has not yet moved a benchmark dominated by other bottlenecks.
+
+The least glamorous work in open AI often happens here: configurations stop being assumed, internal states gain compatible interfaces, and specialized operations reach hardware that previously treated them as generic cases. The next major local speedup may not look large in a single commit. It may emerge from many places where the system finally stopped doing work it never needed.
