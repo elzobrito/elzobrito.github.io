@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1750,
-      "projection_hash_sha256": "160596a47417d17b7cec70b2c116faff51b9b78224e7117e2f717fa1c9e84c5a",
+      "last_event_seq": 1760,
+      "projection_hash_sha256": "4e381df7059aa5fc986f76d72b28cfb56ef25898cf9c405802af07228d9f67e5",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-28T20:16:27Z"
+    "updated_at": "2026-07-28T20:23:49Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4082,7 +4082,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo científico no LinkedIn e X",
       "description": "Publicar chamadas únicas no LinkedIn e no X após a verificação do blog.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-SCIENCE-AGENTS-20260728-PUBLISH-001"
       ],
@@ -4097,15 +4097,23 @@
       },
       "boundary_grant": [
         "docs/qa/SITE-BLOG-SCIENCE-AGENTS-20260728-SOCIAL-001.md"
-      ]
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-28T20:17:03Z",
+      "verification": {
+        "checks": [
+          "LinkedIn confirmou publicação em urn:li:share:7487965455157112832.",
+          "X confirmou publicação no status 2082200173870997695 após checagem idempotente do perfil."
+        ]
+      },
+      "completed_at": "2026-07-28T20:23:49Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 129,
+      "done": 130,
       "in_progress": 4,
-      "review": 6,
-      "todo": 1
+      "review": 6
     },
     "by_kind": {
       "impl": 68,
