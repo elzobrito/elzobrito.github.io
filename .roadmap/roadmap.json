@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1875,
-      "projection_hash_sha256": "cb38843231e07e85ea91390d4abc5299031b38141e89c42d0d74621b489fc2cf",
+      "last_event_seq": 1901,
+      "projection_hash_sha256": "494e29a4e5a0b102e72478708143b4f27fca4ead45e4c2e16754b28609ee4d6c",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-29T15:16:04Z"
+    "updated_at": "2026-07-29T15:25:19Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4328,7 +4328,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo Codex Security",
       "description": "Fazer commit, push, aguardar Pages e verificar URLs canônicas PT e EN.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-CODEX-SECURITY-20260729-QA-001"
       ],
@@ -4342,14 +4342,21 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-29T15:16:04Z"
+      "started_at": "2026-07-29T15:16:04Z",
+      "verification": {
+        "checks": [
+          "workflow Pages 30465041195 concluído com success",
+          "URLs PT e EN responderam HTTP 200 com canonical e hreflang recíprocos"
+        ]
+      },
+      "completed_at": "2026-07-29T15:17:49Z"
     },
     {
       "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo Codex Security no LinkedIn e X",
       "description": "Publicar chamadas idempotentes nos dois canais após confirmação do Pages.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-CODEX-SECURITY-20260729-PUBLISH-001"
       ],
@@ -4359,14 +4366,23 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-29T15:19:41Z",
+      "verification": {
+        "checks": [
+          "LinkedIn confirmou Publicação bem-sucedida e o post público contém o texto e os links PT/EN esperados: https://www.linkedin.com/feed/update/urn:li:share:7488252775513055233/",
+          "X confirmou Seu post foi enviado e o post público @elzobrito contém o texto e o link EN esperado: https://x.com/elzobrito/status/2082487293315572021"
+        ]
+      },
+      "completed_at": "2026-07-29T15:24:44Z"
     },
     {
       "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-EVIDENCE-001",
       "task_kind": "qa",
       "title": "Registrar evidências sociais do artigo Codex Security",
       "description": "Registrar textos efetivos, horários e URLs canônicas de LinkedIn e X.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001"
       ],
@@ -4378,15 +4394,22 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-29T15:24:54Z",
+      "verification": {
+        "checks": [
+          "URLs canônicas abertas em sessões autenticadas e conteúdo público comparado com os textos enviados"
+        ]
+      },
+      "completed_at": "2026-07-29T15:25:19Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 138,
-      "in_progress": 5,
-      "review": 6,
-      "todo": 2
+      "done": 141,
+      "in_progress": 4,
+      "review": 6
     },
     "by_kind": {
       "impl": 73,

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "477f170ce17b3d92c021289d91b44e1505ad48e4f10de56a184850498ed6e40b",
+  "artifact_id": "ART-477f170ce17b3d92c021289d91b44e1505ad48e4f10de56a184850498ed6e40b",
+  "artifact_sha256": "a2a49812c28ed9ab65d9096c95882a84f66d07d844497c54ad7838753bf4e50b",
+  "before_sha256": null,
+  "bytes": 1193,
+  "content": "# Publicação — SITE-BLOG-CODEX-SECURITY-20260729\n\n## Commit de conteúdo\n\n- Commit: `8518b884147267249f441a698da935ee4c45220b`\n- Mensagem: `Publish Codex Security article`\n- Branch: `main`\n- Push: concluído em `origin/main` sem force push.\n- Staging: restrito aos posts PT/EN, QA e artefatos ESAA deste fluxo.\n\n## GitHub Pages\n\n- Workflow: `Deploy static hub to GitHub Pages`\n- Run: `30465041195`\n- URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/30465041195\n- Resultado: `success`.\n\n## Verificação pública\n\n### Português\n\n- URL: https://elzobrito.github.io/blog/seguranca-de-codigo-sai-do-painel-e-entra-no-terminal/\n- HTTP: `200`.\n- Título: `A segurança de código saiu do painel e entrou no terminal — Elzo Brito`.\n- Canonical: correto.\n- Alternates: `pt-BR`, `en` e `x-default` corretos.\n\n### Inglês\n\n- URL: https://elzobrito.github.io/en/blog/code-security-leaves-the-dashboard-and-enters-the-terminal/\n- HTTP: `200`.\n- Título: `Code security leaves the dashboard and enters the terminal — Elzo Brito`.\n- Canonical: correto.\n- Alternates: `pt-BR`, `en` e `x-default` corretos.\n\n## Resultado\n\nArtigo bilíngue publicado e apto para divulgação social.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-PUBLISH-001.md",
+  "ts": "2026-07-29T15:17:39Z"
+}

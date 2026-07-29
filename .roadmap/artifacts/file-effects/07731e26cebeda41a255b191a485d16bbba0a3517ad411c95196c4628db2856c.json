@@ -1,0 +1,13 @@
+{
+  "after_sha256": "3674b6cbbecfbba31272d7a5997cf41dd52fe7f56eecc65dc623299cb67868c5",
+  "artifact_id": "ART-3674b6cbbecfbba31272d7a5997cf41dd52fe7f56eecc65dc623299cb67868c5",
+  "artifact_sha256": "07731e26cebeda41a255b191a485d16bbba0a3517ad411c95196c4628db2856c",
+  "before_sha256": null,
+  "bytes": 1693,
+  "content": "# SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001 — Evidências sociais\n\nData da verificação: 2026-07-29T12:24:53-03:00\n\n## LinkedIn\n\n- Status observado: `Publicação bem-sucedida.`\n- URL canônica: https://www.linkedin.com/feed/update/urn:li:share:7488252775513055233/\n- Verificação pública: o post exibe o texto esperado, cita a camada aberta Apache-2.0 do CLI/SDK, explicita que o serviço continua em beta e inclui os links PT e EN.\n\nTexto publicado:\n\n> Segurança de código não ganhou apenas mais um painel. Com o CLI e o SDK abertos do Codex Security, modelos de ameaça, scans de diff e working tree, validação, cobertura explícita e histórico chegam ao terminal e ao CI.\n>\n> A parte mais interessante é o limite: o repositório Apache-2.0 abre a camada de integração, enquanto o serviço de análise continua em beta e exige acesso. E “nenhum achado” só significa algo quando a cobertura diz o que foi realmente revisado.\n>\n> PT: https://elzobrito.github.io/blog/seguranca-de-codigo-sai-do-painel-e-entra-no-terminal/\n> EN: https://elzobrito.github.io/en/blog/code-security-leaves-the-dashboard-and-enters-the-terminal/\n\n## X\n\n- Status observado: `Seu post foi enviado.`\n- Perfil confirmado: `@elzobrito`.\n- URL canônica: https://x.com/elzobrito/status/2082487293315572021\n- Verificação pública: o post exibe o texto esperado e o card/link do artigo EN.\n\nTexto publicado:\n\n> Codex Security now has an open-source CLI and TypeScript SDK: repo, diff and deep scans, explicit coverage, SARIF and scan history. The key limit: the analysis service still requires access. https://elzobrito.github.io/en/blog/code-security-leaves-the-dashboard-and-enters-the-terminal/\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001.md",
+  "ts": "2026-07-29T15:25:13Z"
+}
