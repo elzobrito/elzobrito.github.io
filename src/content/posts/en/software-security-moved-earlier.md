@@ -1,0 +1,55 @@
+---
+title: "Software security moved earlier"
+description: "npm, GitHub Actions, Dependabot, and CodeQL are shifting controls ahead of package availability, workflow execution, and malicious-code propagation."
+published: 2026-07-29
+locale: en
+translation: a-seguranca-do-software-mudou-de-lugar
+tags: ["Security", "Open source", "DevSecOps", "Software supply chain"]
+featured: false
+---
+
+Software supply-chain security has long been treated mainly as an inventory problem: identify the dependencies inside a project, compare their versions against a vulnerability database, and repair what is already installed. That work remains necessary, but it arrives late when a package is malicious, a credential has been stolen, or a continuous integration workflow is about to run hostile code.
+
+Four GitHub changes announced on July 28 and 29 move the decision to earlier points in the chain. [npm now scans packages at publish time](https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata/). [GitHub Actions holds certain potentially malicious runs](https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/). [Dependabot has expanded its malware advisory coverage](https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems/). And [CodeQL 2.26.1 refined its data-flow models](https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage/) across Go, Java, Kotlin, JavaScript, TypeScript, and Rust applications.
+
+The shared idea matters more than any individual feature: security is no longer only about finding something bad. It is increasingly about deciding when an artifact has earned the right to move forward.
+
+## Publishing no longer means immediate availability
+
+New versions submitted to npm will be scanned before they become installable. A package can be released normally, sent for manual review, or blocked. GitHub says the delay will typically be around five minutes, but may reach 15 minutes or more during peak periods or depending on package size and content. The announcement explicitly says these timings may change and are not a service guarantee.
+
+That delay breaks a common release-pipeline assumption: a successful `npm publish` does not prove that the version can already be consumed. A workflow that publishes, immediately installs the same version, and starts smoke tests will need to tolerate eventual availability. It trades a little immediacy for a chance to stop malware before the first installation.
+
+The harder case is dual-use software: legitimate security-relevant tools whose capabilities can resemble malware. A new `contentPolicy` field in `package.json` lets maintainers declare that status, accompanied by a text-only `DISCLOSURE` file explaining both the functionality and its intended legitimate use. The declaration is not a free pass. It may trigger specialized scanning and case-by-case review.
+
+Identity becomes part of the policy too. Dual-use packages must be published through a method that enforces two-factor authentication, such as OpenID Connect (OIDC) trusted publishing, an authenticated interactive session, or staged publishing. Once declared, future releases cannot quietly drop the metadata. Context and provenance become persistent properties of the package.
+
+## A human decision before the runner
+
+GitHub Actions addresses another high-impact boundary. Recent supply-chain attacks have used compromised GitHub credentials to add malicious workflows that steal continuous integration and delivery secrets and enable further attacks. For public repositories on GitHub.com, certain runs identified as potentially malicious are now suspended until a collaborator with write access approves them through an authenticated web session.
+
+Previously, possession of a valid credential could be enough to turn a configuration change into execution on a runner with access to other resources. The new barrier separates two capabilities: submitting code and authorizing a suspicious run. It resembles a bank transaction that requires confirmation outside the channel where the order was created.
+
+The control is automatic, but its boundaries are explicit. It applies to public repositories on GitHub.com and is not currently available in GitHub Enterprise Server. It also does not replace least-privilege permissions, protected environments, or narrowly scoped secrets. Automated classification can be wrong; human approval only prevents some cases from advancing without a second decision.
+
+## After entry, expand the ecosystem's memory
+
+Not every malicious package will be stopped at the first gate. Dependabot now incorporates advisories from the community-run [OpenSSF malicious-packages](https://github.com/ossf/malicious-packages) repository into the GitHub Advisory Database. Alerts can therefore recognize more malware across ecosystems including npm and the Python Package Index (PyPI), rather than focusing only on accidental vulnerabilities in otherwise legitimate software.
+
+The distinction changes the response. A vulnerability is usually an exploitable defect; malware was created or modified with hostile intent. Fixing the first may mean upgrading to a patched version. Finding the second should also trigger investigation of credentials, accessed data, executed scripts, and related releases.
+
+Repositories that already have malware alerting enabled receive the expanded coverage automatically. At larger organizations, the `type:malware` filter can separate this work from the routine vulnerable-dependency queue. The operational gain is not merely finding more issues, but assigning a response that matches their nature.
+
+## Static analysis must understand frameworks
+
+CodeQL sits at another layer: it searches for dangerous flows in source code before they become incidents. Version 2.26.1 adds models for structured logging in Go, Apache POI in Java and Kotlin, and Angular message handlers. It also recognizes Java `@Pattern` validation as sanitization, reducing false positives, and treats Spring WebFlux's `uri` method as a relevant server-side request forgery sink.
+
+These details explain why static analysis is not just sophisticated text search. To trace whether untrusted input reaches a sensitive operation, the engine must understand how each framework carries, transforms, or blocks data. Missing coverage overlooks real flows; an imprecise model produces excess alerts and drains reviewers' attention.
+
+## The new cost of trust
+
+The four controls charge different prices: a few minutes before a package becomes available, an extra approval before execution, more signals to investigate, and analysis models that must keep pace with evolving frameworks. None provides complete certainty.
+
+The architecture is still stronger than placing every defense at the end. A package can be examined before circulation, a run can stop before receiving secrets, a known malicious dependency can generate a distinct alert, and source code can be analyzed with framework-level knowledge. Each gate reduces the volume and impact of what reaches the next one.
+
+The useful question for development teams is no longer simply “which security tool should we install?” It is “what evidence must exist before this artifact crosses its next boundary?” Speed still matters. The shift is recognizing that, in an automated chain, waiting a few minutes can be far cheaper than executing a few seconds too soon.

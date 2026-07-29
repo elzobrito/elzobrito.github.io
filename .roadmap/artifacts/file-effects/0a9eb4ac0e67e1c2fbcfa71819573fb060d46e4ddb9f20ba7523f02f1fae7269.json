@@ -1,0 +1,13 @@
+{
+  "after_sha256": "804b447d7cd222aa10b0df2fbeaef60e2b8bf0448cc29f1951f6028e51b24e31",
+  "artifact_id": "ART-804b447d7cd222aa10b0df2fbeaef60e2b8bf0448cc29f1951f6028e51b24e31",
+  "artifact_sha256": "0a9eb4ac0e67e1c2fbcfa71819573fb060d46e4ddb9f20ba7523f02f1fae7269",
+  "before_sha256": "804b447d7cd222aa10b0df2fbeaef60e2b8bf0448cc29f1951f6028e51b24e31",
+  "bytes": 1896,
+  "content": "# QA — SITE-BLOG-DAILY-OPEN-20260729\n\n- Data editorial: 2026-07-29, America/Sao_Paulo.\n- Post PT: `src/content/posts/pt/a-seguranca-do-software-mudou-de-lugar.md`.\n- Post EN: `src/content/posts/en/software-security-moved-earlier.md`.\n\n## Janela e fontes\n\nForam usadas fontes primárias publicadas em 28 e 29 de julho de 2026, dentro da janela editorial:\n\n- https://github.blog/changelog/2026-07-28-npm-publish-time-malware-scanning-and-dual-use-metadata/\n- https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/\n- https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems/\n- https://github.blog/changelog/2026-07-29-codeql-2-26-1-improves-analysis-accuracy-and-framework-coverage/\n- https://github.com/ossf/malicious-packages\n\nAs cinco URLs responderam HTTP 200 em 2026-07-29.\n\n## Validação\n\n- `npm test`: aprovado; Astro sem diagnósticos, build de 127 páginas, auditoria pública de 140 arquivos e auditoria editorial aprovadas.\n- Frontmatter: campos obrigatórios presentes; `published`, `locale`, `featured`, tags e descrições válidos.\n- Traduções: `a-seguranca-do-software-mudou-de-lugar` e `software-security-moved-earlier` apontam reciprocamente.\n- Auditoria focal com `rg` nos dois novos posts: zero ocorrências após correção governada em `SITE-BLOG-DAILY-OPEN-20260729-FIX-001`.\n- `git diff --check`: aprovado.\n- Fontes e alegações: tempos de inspeção do npm foram descritos como típicos, não como garantia; limites do controle do Actions e do GitHub Enterprise Server foram preservados; cobertura do Dependabot e mudanças do CodeQL foram apresentadas sem extrapolar os anúncios.\n- Adaptação EN: fiel à tese e aos fatos, com redação própria em inglês.\n\n## Resultado\n\nAprovado para publicação. Nenhuma afirmação específica sem sustentação identificada.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-QA-001.md",
+  "ts": "2026-07-29T14:06:37Z"
+}

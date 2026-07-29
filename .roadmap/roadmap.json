@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1760,
-      "projection_hash_sha256": "4e381df7059aa5fc986f76d72b28cfb56ef25898cf9c405802af07228d9f67e5",
+      "last_event_seq": 1808,
+      "projection_hash_sha256": "b2eb85838667115d587ad6cfd05ce51887f127b3d3f81c553c6066ec7eb6f063",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-28T20:23:49Z"
+    "updated_at": "2026-07-29T14:06:47Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4107,17 +4107,138 @@
         ]
       },
       "completed_at": "2026-07-28T20:23:49Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260729-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN de 2026-07-29",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar o par editorial bilíngue.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-29T14:03:01Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias publicadas em 28 e 29 de julho de 2026 confirmadas; slugs e translations recíprocos."
+        ]
+      },
+      "completed_at": "2026-07-29T14:04:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260729-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-07-29",
+      "description": "Revisar fontes, rigor, schema, privacidade, tradução e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260729-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-29T14:05:13Z",
+      "verification": {
+        "checks": [
+          "npm test: 127 páginas; audit:public 140 arquivos, zero ocorrências; audit:editorial aprovado; cinco fontes HTTP 200; git diff --check aprovado."
+        ]
+      },
+      "completed_at": "2026-07-29T14:06:38Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260729-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-07-29",
+      "description": "Commitar, enviar main, verificar Pages e URLs canônicas PT e EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260729-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-29T14:06:47Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260729-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-07-29",
+      "description": "Publicar chamadas canônicas independentes no LinkedIn e no X sem duplicação.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260729-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260729-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover termo público proibido do artigo de 2026-07-29",
+      "description": "Substituir a ocorrência detectada pelo QA sem alterar a tese editorial.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260729-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-seguranca-do-software-mudou-de-lugar.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-29T14:05:51Z",
+      "verification": {
+        "checks": [
+          "Auditoria focal sem ocorrência proibida após a correção."
+        ]
+      },
+      "completed_at": "2026-07-29T14:06:10Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 130,
-      "in_progress": 4,
-      "review": 6
+      "done": 133,
+      "in_progress": 5,
+      "review": 6,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 68,
-      "qa": 65,
+      "impl": 71,
+      "qa": 67,
       "spec": 7
     }
   }
