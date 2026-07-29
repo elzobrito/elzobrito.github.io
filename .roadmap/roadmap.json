@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1837,
-      "projection_hash_sha256": "97ed71ccd925b874de8c7e2d5cc94b40ac5805120f2c2728be9e713c6cccdfc9",
+      "last_event_seq": 1875,
+      "projection_hash_sha256": "cb38843231e07e85ea91390d4abc5299031b38141e89c42d0d74621b489fc2cf",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-29T14:14:38Z"
+    "updated_at": "2026-07-29T15:16:04Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4268,17 +4268,129 @@
         ]
       },
       "completed_at": "2026-07-29T14:14:38Z"
+    },
+    {
+      "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo PT e EN sobre o Codex Security",
+      "description": "Produzir artigo editorial bilíngue sobre o projeto openai/codex-security usando apenas fontes oficiais.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/seguranca-de-codigo-sai-do-painel-e-entra-no-terminal.md",
+          "src/content/posts/en/code-security-leaves-the-dashboard-and-enters-the-terminal.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-29T15:12:03Z",
+      "verification": {
+        "checks": [
+          "fontes oficiais do GitHub, OpenAI Help Center, anúncio da OpenAI e documentação do CLI revisadas"
+        ]
+      },
+      "completed_at": "2026-07-29T15:14:15Z"
+    },
+    {
+      "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo Codex Security",
+      "description": "Revisar fontes, rigor, limitações, frontmatter, tradução, privacidade e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-CODEX-SECURITY-20260729-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-29T15:14:25Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado com 129 páginas e 142 artefatos públicos",
+          "git diff --check, auditoria focal e quatro fontes oficiais verificadas"
+        ]
+      },
+      "completed_at": "2026-07-29T15:15:51Z"
+    },
+    {
+      "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo Codex Security",
+      "description": "Fazer commit, push, aguardar Pages e verificar URLs canônicas PT e EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-CODEX-SECURITY-20260729-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-29T15:16:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo Codex Security no LinkedIn e X",
+      "description": "Publicar chamadas idempotentes nos dois canais após confirmação do Pages.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-CODEX-SECURITY-20260729-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidências sociais do artigo Codex Security",
+      "description": "Registrar textos efetivos, horários e URLs canônicas de LinkedIn e X.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-CODEX-SECURITY-20260729-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 136,
-      "in_progress": 4,
-      "review": 6
+      "done": 138,
+      "in_progress": 5,
+      "review": 6,
+      "todo": 2
     },
     "by_kind": {
-      "impl": 71,
-      "qa": 68,
+      "impl": 73,
+      "qa": 71,
       "spec": 7
     }
   }
