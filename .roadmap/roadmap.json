@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1808,
-      "projection_hash_sha256": "b2eb85838667115d587ad6cfd05ce51887f127b3d3f81c553c6066ec7eb6f063",
+      "last_event_seq": 1837,
+      "projection_hash_sha256": "97ed71ccd925b874de8c7e2d5cc94b40ac5805120f2c2728be9e713c6cccdfc9",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-29T14:06:47Z"
+    "updated_at": "2026-07-29T14:14:38Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4166,7 +4166,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário aberto de 2026-07-29",
       "description": "Commitar, enviar main, verificar Pages e URLs canônicas PT e EN.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260729-QA-001"
       ],
@@ -4180,14 +4180,20 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-29T14:06:47Z"
+      "started_at": "2026-07-29T14:06:47Z",
+      "verification": {
+        "checks": [
+          "Commit 0a0a7fd; workflow 30459287495 success; PT e EN HTTP 200 com título, canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-07-29T14:08:35Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260729-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-07-29",
       "description": "Publicar chamadas canônicas independentes no LinkedIn e no X sem duplicação.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260729-PUBLISH-001"
       ],
@@ -4199,7 +4205,15 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-29T14:09:04Z",
+      "verification": {
+        "checks": [
+          "LinkedIn share 7488234500628320256; X status 2082469586243395769; idempotência verificada por canal."
+        ]
+      },
+      "completed_at": "2026-07-29T14:14:29Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260729-FIX-001",
@@ -4227,18 +4241,44 @@
         ]
       },
       "completed_at": "2026-07-29T14:06:10Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260729-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social de 2026-07-29",
+      "description": "Registro posterior necessário porque agent-impl não possui fronteira de escrita em docs/qa.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260729-SOCIAL-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-29T14:14:30Z",
+      "verification": {
+        "checks": [
+          "Documento contém URLs canônicas, horários locais, textos efetivos e controle de tentativa ambígua no X."
+        ]
+      },
+      "completed_at": "2026-07-29T14:14:38Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 133,
-      "in_progress": 5,
-      "review": 6,
-      "todo": 1
+      "done": 136,
+      "in_progress": 4,
+      "review": 6
     },
     "by_kind": {
       "impl": 71,
-      "qa": 67,
+      "qa": 68,
       "spec": 7
     }
   }

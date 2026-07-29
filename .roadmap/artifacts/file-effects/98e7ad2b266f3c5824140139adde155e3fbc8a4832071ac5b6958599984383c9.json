@@ -1,0 +1,13 @@
+{
+  "after_sha256": "a70636ba3105d8163536c7aed73de2e866d8d6473a0e8bff6f1a9df49b684b34",
+  "artifact_id": "ART-a70636ba3105d8163536c7aed73de2e866d8d6473a0e8bff6f1a9df49b684b34",
+  "artifact_sha256": "98e7ad2b266f3c5824140139adde155e3fbc8a4832071ac5b6958599984383c9",
+  "before_sha256": "a70636ba3105d8163536c7aed73de2e866d8d6473a0e8bff6f1a9df49b684b34",
+  "bytes": 1021,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260729\n\n- Data editorial: 2026-07-29, America/Sao_Paulo.\n- Branch: `main`.\n- Divergência antes do commit: `HEAD...origin/main = 0 0`.\n- Testes: `npm test` aprovado; 127 páginas.\n- URL PT planejada: https://elzobrito.github.io/blog/a-seguranca-do-software-mudou-de-lugar/\n- URL EN planejada: https://elzobrito.github.io/en/blog/software-security-moved-earlier/\n\n## Estado\n\n- Commit de conteúdo: `0a0a7fd4871a16ef30b0ec9bfcc21a19afc8f1ce`.\n- Push: `origin/main`, concluído sem force push.\n- Workflow: `30459287495`, `success`.\n- Workflow URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/30459287495\n- PT: HTTP 200, título `A segurança do software mudou de lugar`, canonical próprio e `hreflang` para EN confirmados.\n- EN: HTTP 200, título `Software security moved earlier`, canonical próprio e `hreflang` para PT-BR confirmados.\n- Aviso não bloqueante: ações baseadas em Node.js 20 foram executadas pelo runner com Node.js 24.\n\nPublicação aprovada.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260729-PUBLISH-001.md",
+  "ts": "2026-07-29T14:08:34Z"
+}
