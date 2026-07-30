@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1901,
-      "projection_hash_sha256": "494e29a4e5a0b102e72478708143b4f27fca4ead45e4c2e16754b28609ee4d6c",
+      "last_event_seq": 1936,
+      "projection_hash_sha256": "58c977e6482b02fe3a46c7f556bbb18a2b1a45f8d95dfd13e586c1ec3fcd55c5",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-29T15:25:19Z"
+    "updated_at": "2026-07-30T14:07:48Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4403,17 +4403,111 @@
         ]
       },
       "completed_at": "2026-07-29T15:25:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260730-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN de 2026-07-30",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar o par editorial bilíngue.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-30T14:03:34Z",
+      "verification": {
+        "checks": [
+          "Data de submissão, desenho, recursos, resultados, limitações e slugs recíprocos conferidos."
+        ]
+      },
+      "completed_at": "2026-07-30T14:05:55Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260730-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-07-30",
+      "description": "Revisar fontes, rigor, schema, privacidade, tradução e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260730-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260730-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-30T14:05:57Z",
+      "verification": {
+        "checks": [
+          "npm test: 131 páginas; audit:public 144 arquivos, zero ocorrências; audit:editorial aprovado; duas fontes primárias HTTP 200; git diff --check aprovado."
+        ]
+      },
+      "completed_at": "2026-07-30T14:07:47Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260730-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-07-30",
+      "description": "Validar commit, push, deploy e evidência pública PT e EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260730-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260730-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-30T14:07:48Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-07-30",
+      "description": "Publicar no LinkedIn e no X sem duplicação e registrar URLs canônicas.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260730-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 141,
-      "in_progress": 4,
-      "review": 6
+      "done": 143,
+      "in_progress": 5,
+      "review": 6,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 73,
-      "qa": 71,
+      "impl": 75,
+      "qa": 73,
       "spec": 7
     }
   }
