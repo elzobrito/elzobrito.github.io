@@ -22,4 +22,18 @@
 
 ## Evidência de deploy
 
-Pendente do commit, push, workflow `Deploy static hub to GitHub Pages` e verificação HTTP das duas URLs.
+- Commit de conteúdo: `ad06b3d3ebc18a2edfc99b6a3d5b1e5ea4ea2b57`.
+- Push: `origin/main` atualizado sem force push.
+- Workflow `Deploy static hub to GitHub Pages`: `30550235156`.
+- URL do workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/30550235156
+- Conclusão: `success`; jobs `build` e `deploy` aprovados.
+- Observação não bloqueante: ações baseadas em Node.js 20 foram executadas pelo GitHub em Node.js 24.
+
+## Verificação pública
+
+Em 2026-07-30, após o workflow:
+
+- PT respondeu HTTP 200, com o título `O agente fez o experimento, mas não fez a pesquisa`, canonical próprio e `hreflang` recíproco para EN.
+- EN respondeu HTTP 200, com o título `The agent ran the experiment but did not do the research`, canonical próprio e `hreflang` recíproco para PT-BR.
+
+Resultado: publicação aprovada. A divulgação social pode começar, mantendo LinkedIn e X como canais independentes e idempotentes.

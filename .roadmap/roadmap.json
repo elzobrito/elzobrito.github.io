@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1936,
-      "projection_hash_sha256": "58c977e6482b02fe3a46c7f556bbb18a2b1a45f8d95dfd13e586c1ec3fcd55c5",
+      "last_event_seq": 1959,
+      "projection_hash_sha256": "4098f351dcc01a54fe0c93382797696f4a075e3424b5620c5687149e710976f0",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-30T14:07:48Z"
+    "updated_at": "2026-07-30T14:14:10Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4462,7 +4462,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário aberto de 2026-07-30",
       "description": "Validar commit, push, deploy e evidência pública PT e EN.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260730-QA-001"
       ],
@@ -4476,14 +4476,20 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-30T14:07:48Z"
+      "started_at": "2026-07-30T14:07:48Z",
+      "verification": {
+        "checks": [
+          "Workflow 30550235156 success; PT e EN HTTP 200 com título, canonical e hreflang recíproco."
+        ]
+      },
+      "completed_at": "2026-07-30T14:09:38Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-07-30",
       "description": "Publicar no LinkedIn e no X sem duplicação e registrar URLs canônicas.",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260730-PUBLISH-001"
       ],
@@ -4495,19 +4501,47 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-30T14:09:39Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social parcial de 2026-07-30",
+      "description": "Registrar URL confirmada do X e bloqueio retomável do LinkedIn sem duplicação.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260730-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-30T14:13:40Z",
+      "verification": {
+        "checks": [
+          "X confirmado em URL canônica; LinkedIn sem envio e sem URL; tarefa SOCIAL permanece in_progress."
+        ]
+      },
+      "completed_at": "2026-07-30T14:14:10Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 143,
+      "done": 145,
       "in_progress": 5,
-      "review": 6,
-      "todo": 1
+      "review": 6
     },
     "by_kind": {
       "impl": 75,
-      "qa": 73,
+      "qa": 74,
       "spec": 7
     }
   }
