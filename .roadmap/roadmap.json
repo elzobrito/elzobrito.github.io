@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2001,
-      "projection_hash_sha256": "b2ed5082851483432fd7fa53da941cb66479b939eda611029f03073d029a627c",
+      "last_event_seq": 2004,
+      "projection_hash_sha256": "fc9e899a4ff210316d54665f18f72813534970b3c00da80db68fc7eba12614e2",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-31T14:08:46Z"
+    "updated_at": "2026-07-31T14:09:42Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4620,7 +4620,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-07-31",
       "description": "Publicar no LinkedIn e no X após o deploy, com controle idempotente por canal.",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001"
       ],
@@ -4635,15 +4635,16 @@
       },
       "boundary_grant": [
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-SOCIAL-001.md"
-      ]
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-31T14:09:42Z"
     }
   ],
   "indexes": {
     "by_status": {
       "done": 148,
-      "in_progress": 5,
-      "review": 6,
-      "todo": 1
+      "in_progress": 6,
+      "review": 6
     },
     "by_kind": {
       "impl": 77,
