@@ -1,0 +1,13 @@
+{
+  "after_sha256": "af9d7a001f77344739015c2ba801d9399462fa966d265e0222a37451990f3987",
+  "artifact_id": "ART-af9d7a001f77344739015c2ba801d9399462fa966d265e0222a37451990f3987",
+  "artifact_sha256": "664dbb14f80e4bcf0cdedc73f2deac475efc02802197b1977254d1b5c5b5f546",
+  "before_sha256": "af9d7a001f77344739015c2ba801d9399462fa966d265e0222a37451990f3987",
+  "bytes": 1115,
+  "content": "# Publicação do artigo diário aberto de 2026-07-31\n\n## Artefatos\n\n- PT: https://elzobrito.github.io/blog/a-ia-precisa-mostrar-o-caminho/\n- EN: https://elzobrito.github.io/en/blog/ai-needs-to-show-its-work/\n\n## Estado antes do envio\n\n- `git fetch origin`: aprovado.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0`.\n- `npm test`: aprovado com 133 páginas.\n- Staging limitado aos posts, documentos QA e artefatos ESAA do prefixo de 2026-07-31.\n\n## Deploy\n\n- Commit de conteúdo: `ece40f825b207dca13efa52b744ff87e044afce0`.\n- Workflow `Deploy static hub to GitHub Pages`: `30637238993`, `success`.\n- URL do workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/30637238993.\n- PT: HTTP 200, título `A IA precisa mostrar o caminho — Elzo Brito`, canonical próprio e alternates `pt-BR`, `en` e `x-default` corretos.\n- EN: HTTP 200, título `AI needs to show its work — Elzo Brito`, canonical próprio e alternates `pt-BR`, `en` e `x-default` corretos.\n\n## Resultado\n\nPublicação aprovada. As duas versões canônicas estavam disponíveis antes de qualquer divulgação social.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001.md",
+  "ts": "2026-07-31T14:08:45Z"
+}

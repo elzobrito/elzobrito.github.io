@@ -14,6 +14,12 @@
 
 ## Deploy
 
-- Commit de conteúdo: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Verificação HTTP, título, canonical e `hreflang`: pendente.
+- Commit de conteúdo: `ece40f825b207dca13efa52b744ff87e044afce0`.
+- Workflow `Deploy static hub to GitHub Pages`: `30637238993`, `success`.
+- URL do workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/30637238993.
+- PT: HTTP 200, título `A IA precisa mostrar o caminho — Elzo Brito`, canonical próprio e alternates `pt-BR`, `en` e `x-default` corretos.
+- EN: HTTP 200, título `AI needs to show its work — Elzo Brito`, canonical próprio e alternates `pt-BR`, `en` e `x-default` corretos.
+
+## Resultado
+
+Publicação aprovada. As duas versões canônicas estavam disponíveis antes de qualquer divulgação social.
