@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 1959,
-      "projection_hash_sha256": "4098f351dcc01a54fe0c93382797696f4a075e3424b5620c5687149e710976f0",
+      "last_event_seq": 1994,
+      "projection_hash_sha256": "5fcdaf5e47b731f65db2b5d584b2d8278e99e5e131fd1b51ff968114cef819fa",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-30T14:14:10Z"
+    "updated_at": "2026-07-31T14:06:27Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4531,17 +4531,116 @@
         ]
       },
       "completed_at": "2026-07-30T14:14:10Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260731-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN de 2026-07-31",
+      "description": "Criar par editorial bilíngue sobre evidência verificável em agentes e síntese científica.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-ia-precisa-mostrar-o-caminho.md",
+          "src/content/posts/en/ai-needs-to-show-its-work.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-07-31T14:03:24Z",
+      "verification": {
+        "checks": [
+          "Frontmatter e translations recíprocas conferidos."
+        ]
+      },
+      "completed_at": "2026-07-31T14:05:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260731-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo diário aberto de 2026-07-31",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação EN e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260731-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-31T14:05:20Z",
+      "verification": {
+        "checks": [
+          "npm test: aprovado; 133 páginas.",
+          "audit:public: 146 arquivos, zero ocorrências.",
+          "git diff --check e fontes HTTP 200."
+        ]
+      },
+      "completed_at": "2026-07-31T14:06:27Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-07-31",
+      "description": "Commitar, enviar, verificar Pages e registrar evidências PT e EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260731-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-07-31T14:06:27Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260731-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-07-31",
+      "description": "Publicar no LinkedIn e no X após o deploy, com controle idempotente por canal.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-SOCIAL-001.md"
+      ]
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 145,
-      "in_progress": 5,
-      "review": 6
+      "done": 147,
+      "in_progress": 6,
+      "review": 6,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 75,
-      "qa": 74,
+      "impl": 77,
+      "qa": 76,
       "spec": 7
     }
   }

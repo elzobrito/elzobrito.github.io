@@ -1,0 +1,13 @@
+{
+  "after_sha256": "145eddf62c58e8884d62a6355ffe7691bb595e77587641e99f38dcbc47a32486",
+  "artifact_id": "ART-145eddf62c58e8884d62a6355ffe7691bb595e77587641e99f38dcbc47a32486",
+  "artifact_sha256": "ba35cdd0fbdf48716f37008959b504adbc7365766e41ac377e853d9ce6d45fcb",
+  "before_sha256": "145eddf62c58e8884d62a6355ffe7691bb595e77587641e99f38dcbc47a32486",
+  "bytes": 1461,
+  "content": "# QA do artigo diário aberto de 2026-07-31\n\n## Escopo\n\n- PT: `src/content/posts/pt/a-ia-precisa-mostrar-o-caminho.md`\n- EN: `src/content/posts/en/ai-needs-to-show-its-work.md`\n- Fontes primárias: OSReward (`arXiv:2607.28609`) e AskChem (`arXiv:2607.28618`), ambos submetidos em 2026-07-30.\n\n## Revisão factual e editorial\n\n- Datas, dimensões dos modelos, corpus, custos e métricas foram comparados com os resumos oficiais e a página pública do AskChem.\n- O texto identifica OSReward como trabalho em andamento.\n- O texto limita a interpretação do AskChem-Bench ao domínio avaliado e registra que ele contém 30 perguntas.\n- Siglas DOI e MCP são explicadas na primeira ocorrência.\n- A versão EN preserva tese, limites e evidências, com adaptação idiomática própria.\n- O título foi comparado com os artigos recentes e evita repetir as estruturas `Quando...`, `O agente...` e `A segurança...`.\n\n## Validação\n\n- `npm test`: aprovado; `astro check` sem diagnósticos; 133 páginas geradas.\n- `audit:public`: aprovado em 146 arquivos, 13 rotas obrigatórias e zero ocorrências proibidas.\n- `audit:editorial`: aprovado.\n- `git diff --check`: aprovado.\n- Frontmatter e `translation` recíprocos: aprovados.\n- Fontes `https://arxiv.org/abs/2607.28609` e `https://arxiv.org/abs/2607.28618`: HTTP 200.\n- Varredura focal dos dois posts para termos vedados: zero ocorrências.\n\n## Resultado\n\nQA aprovado. O par bilíngue está apto para publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-QA-001.md",
+  "ts": "2026-07-31T14:06:14Z"
+}
