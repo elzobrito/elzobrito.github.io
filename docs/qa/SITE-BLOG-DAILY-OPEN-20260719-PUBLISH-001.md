@@ -1,21 +1,20 @@
 # SITE-BLOG-DAILY-OPEN-20260719-PUBLISH-001
 
-## Release scope
+## Escopo
 
-- Portuguese post: `o-preco-real-de-um-milhao-de-tokens`
-- English post: `the-real-price-of-a-million-tokens`
-- Publication branch: `main`
-- Commit message: `Publish daily AI briefing 2026-07-19`
+Evidência reconciliada da publicação do artigo bilíngue de 2026-07-19.
 
-## Pre-push evidence
+## Estado atual
 
-- `git fetch origin`: completed.
-- `git rev-list --left-right --count HEAD...origin/main`: `0 0`; local HEAD was not behind.
-- `npm test`: passed; 95 pages built and 106 public files audited with 0 forbidden matches.
-- Three official source URLs returned HTTP 200.
-- `git diff --check`: passed.
-- Staging is restricted to the two posts, the two QA records, and ESAA artifacts produced by this daily flow.
+Publicado. A anotação anterior de push pendente tornou-se obsoleta após a incorporação do commit ao `origin/main`. Esta conclusão é retrospectiva e não representa novo push.
 
-## Deployment evidence
+## Evidência
 
-Pending push, GitHub Pages workflow success, and public HTTP verification.
+- Commit de conteúdo: `b0d9eb9` (`Publish daily AI briefing 2026-07-19`), confirmado como ancestral de `origin/main` em 2026-08-01.
+- PT: https://elzobrito.github.io/blog/o-preco-real-de-um-milhao-de-tokens/ — HTTP 200, canonical e alternates presentes.
+- EN: https://elzobrito.github.io/en/blog/the-real-price-of-a-million-tokens/ — HTTP 200, canonical e alternates presentes.
+- Nenhum novo push ou republicação foi realizado durante a reconciliação.
+
+## Resultado
+
+Publicação efetivamente concluída; tarefa reconciliada retrospectivamente com o estado público.

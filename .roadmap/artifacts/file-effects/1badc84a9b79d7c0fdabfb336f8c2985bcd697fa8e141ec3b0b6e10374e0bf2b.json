@@ -1,0 +1,13 @@
+{
+  "after_sha256": "88711efeb8366b588fc76456eb11f4393551f11494989db350ee9be21528937a",
+  "artifact_id": "ART-88711efeb8366b588fc76456eb11f4393551f11494989db350ee9be21528937a",
+  "artifact_sha256": "1badc84a9b79d7c0fdabfb336f8c2985bcd697fa8e141ec3b0b6e10374e0bf2b",
+  "before_sha256": null,
+  "bytes": 908,
+  "content": "# QA do isolamento por data da automação diária\n\n## Cenários validados\n\n1. LinkedIn de D-1 pendente e artigo de D ausente: o ciclo editorial de D deve pesquisar, criar, revisar e publicar normalmente.\n2. X de D-1 já possui URL canônica: qualquer retomada de D-1 deve atuar somente no LinkedIn ausente.\n3. Artigo de D já publicado e apenas um canal de D pendente: a retomada não refaz conteúdo nem repete o canal concluído.\n4. Backlog social de múltiplas datas: cada tarefa SOCIAL permanece independente, sem bloquear novas datas editoriais.\n\n## Evidência\n\nA definição ativa contém o invariante de que pendências anteriores não bloqueiam a data corrente e preserva a avaliação idempotente por data e canal. Agenda diária, modelo, ambiente e escopo autorizado permaneceram inalterados.\n\n## Resultado\n\nAprovado. O bloqueio indevido observado em 2026-08-01 foi removido da regra operacional.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-QA-001.md",
+  "ts": "2026-08-01T14:29:49Z"
+}

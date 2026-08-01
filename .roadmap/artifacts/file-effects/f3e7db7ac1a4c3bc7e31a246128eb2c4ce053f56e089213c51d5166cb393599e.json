@@ -1,0 +1,13 @@
+{
+  "after_sha256": "996622f7a3f00c8d291486ffd6982378de50ed4fee4a7171fa3935fee316356b",
+  "artifact_id": "ART-996622f7a3f00c8d291486ffd6982378de50ed4fee4a7171fa3935fee316356b",
+  "artifact_sha256": "f3e7db7ac1a4c3bc7e31a246128eb2c4ce053f56e089213c51d5166cb393599e",
+  "before_sha256": null,
+  "bytes": 1731,
+  "content": "# QA do artigo diário aberto de 2026-08-01\n\n## Escopo\n\nRevisão do par PT/EN sobre isolamento de cache de prefixos em ambientes multiusuário.\n\n## Fontes primárias\n\n- PR vLLM `#49498`, mesclado em 2026-08-01 07:36 UTC: https://github.com/vllm-project/vllm/pull/49498\n- Issue vLLM `#46688`, fechado pela mudança: https://github.com/vllm-project/vllm/issues/46688\n- Documentação do servidor compatível com OpenAI: https://docs.vllm.ai/en/stable/serving/online_serving/openai_compatible_server/\n\nA fonte nova foi mesclada dentro da janela editorial das últimas 24 horas. O texto distingue reutilização do cálculo de prefixo de reutilização de respostas e apresenta o risco como sinal lateral descrito pelo projeto, sem afirmar vazamento direto de conteúdo.\n\n## Verificações editoriais e técnicas\n\n- `npm test`: aprovado.\n- `astro check`: 33 arquivos, 0 erros, 0 avisos e 0 sugestões.\n- Build: 135 páginas.\n- `audit:public`: 148 artefatos, 13 rotas obrigatórias, SEO aprovado e 0 ocorrências proibidas.\n- `audit:editorial`: aprovado.\n- Varredura focal dos dois novos posts: nenhuma ocorrência de termos internos, caminhos locais ou linguagem de processo.\n- `git diff --check`: aprovado.\n- Frontmatter PT/EN com data 2026-08-01, locales coerentes e translations recíprocas.\n- A versão EN é adaptação editorial fiel, sem tradução mecânica frase a frase.\n\n## Limites preservados\n\nO artigo registra que o colaborador não executou a suíte completa localmente por ausência de CUDA/PyTorch e que operadores devem validar a versão implantada. `cache_salt` não é apresentado como substituto de autenticação, autorização, criptografia ou separação de memória.\n\n## Resultado\n\nAprovado para publicação.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-QA-001.md",
+  "ts": "2026-08-01T14:38:06Z"
+}

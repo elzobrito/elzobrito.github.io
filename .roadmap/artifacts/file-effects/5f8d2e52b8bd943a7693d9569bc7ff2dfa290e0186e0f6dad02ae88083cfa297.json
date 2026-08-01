@@ -1,0 +1,13 @@
+{
+  "after_sha256": "33410bf00b51dfee2cd2aeca762b1cf27d289447aa520cdd756050f28c1dbe08",
+  "artifact_id": "ART-33410bf00b51dfee2cd2aeca762b1cf27d289447aa520cdd756050f28c1dbe08",
+  "artifact_sha256": "5f8d2e52b8bd943a7693d9569bc7ff2dfa290e0186e0f6dad02ae88083cfa297",
+  "before_sha256": "b910ad7c6b29281c4be36baf7982ebcfdfa5c46946f19b57134cfbdf2d25f825",
+  "bytes": 933,
+  "content": "# SITE-BLOG-DAILY-OPEN-20260715-PUBLISH-001\n\n## Escopo\n\nEvidência reconciliada da publicação do artigo bilíngue de 2026-07-15.\n\n## Estado atual\n\nPublicado. O bloqueio original deixou de representar o estado efetivo depois que o histórico foi incorporado ao `origin/main`. Esta conclusão é retrospectiva e não representa novo push.\n\n## Evidência\n\n- Commit de conteúdo: `8391227` (`Publish daily AI briefing 2026-07-15`), confirmado como ancestral de `origin/main` em 2026-08-01.\n- PT: https://elzobrito.github.io/blog/seguranca-por-ia-chega-antes-do-merge/ — HTTP 200, canonical e alternates presentes.\n- EN: https://elzobrito.github.io/en/blog/ai-security-moves-before-the-merge/ — HTTP 200, canonical e alternates presentes.\n- Nenhum novo push ou republicação foi realizado durante a reconciliação.\n\n## Resultado\n\nPublicação efetivamente concluída; tarefa reconciliada retrospectivamente com o estado público.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260715-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260715-PUBLISH-001.md",
+  "ts": "2026-08-01T14:31:00Z"
+}

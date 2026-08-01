@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2004,
-      "projection_hash_sha256": "fc9e899a4ff210316d54665f18f72813534970b3c00da80db68fc7eba12614e2",
+      "last_event_seq": 2110,
+      "projection_hash_sha256": "48ec1f46f97ca3a20b973fac3e2dcad8d1e82bf125b1847c281dc61dcd30e9ca",
       "verify_status": "ok"
     },
-    "updated_at": "2026-07-31T14:09:42Z"
+    "updated_at": "2026-08-01T14:38:26Z"
   },
   "project": {
     "name": "esaa-core",
@@ -1965,7 +1965,7 @@
       "task_kind": "qa",
       "title": "Publish bilingual open AI briefing for 2026-07-15",
       "description": "Commit, push, verify GitHub Pages deployment and record HTTP evidence.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260715-QA-001"
       ],
@@ -1979,7 +1979,14 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-15T14:05:17Z"
+      "started_at": "2026-07-15T14:05:17Z",
+      "verification": {
+        "checks": [
+          "Commit 8391227 é ancestral de origin/main.",
+          "PT e EN responderam HTTP 200 com canonical e hreflang."
+        ]
+      },
+      "completed_at": "2026-08-01T14:31:01Z"
     },
     {
       "task_id": "SITE-HOME-CONTACT-20260715",
@@ -2495,7 +2502,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diario aberto de 2026-07-19",
       "description": "Commit, push, deploy e evidencias HTTP do par bilingue.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260719-QA-001"
       ],
@@ -2509,7 +2516,14 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-07-20T00:23:25Z"
+      "started_at": "2026-07-20T00:23:25Z",
+      "verification": {
+        "checks": [
+          "Commit b0d9eb9 é ancestral de origin/main.",
+          "PT e EN responderam HTTP 200 com canonical e hreflang."
+        ]
+      },
+      "completed_at": "2026-08-01T14:31:02Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260720-POST-001",
@@ -3546,7 +3560,7 @@
       "task_kind": "impl",
       "title": "Artigo denso: entrevista Elon Musk ao The Economist (jul/2026)",
       "description": "Escrever post bilíngue PT/EN denso em informação sobre a entrevista completa de Elon Musk ao The Economist (23 jul 2026, vídeo 8TjK-s0468w). Cobrir abundância, IA digital+física, dinheiro, risco existencial, governança de modelos de fronteira, China/energia/chips, trabalho e política/Europa. Sem travessão proibido; sem caminhos locais; sem termos internos vedados.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "src/content/posts/**"
@@ -3572,14 +3586,15 @@
           "Sem caminhos /home ou .roadmap no corpo",
           "Densidade: PT ~2876 palavras, EN ~2691 palavras, multiplas secoes analiticas"
         ]
-      }
+      },
+      "completed_at": "2026-08-01T14:31:03Z"
     },
     {
       "task_id": "SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001",
       "task_kind": "qa",
       "title": "QA artigo Musk/Economist 2026-07-26",
       "description": "Validar par bilíngue denso da entrevista Musk ao Economist: editorial, build, audit public, links e translations.",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-MUSK-ECONOMIST-20260726-POST-001"
       ],
@@ -3605,14 +3620,15 @@
           "115 páginas no build; rotas PT/EN do post presentes",
           "Auditoria dedicada sem termos/caminhos proibidos"
         ]
-      }
+      },
+      "completed_at": "2026-08-01T14:31:04Z"
     },
     {
       "task_id": "SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001",
       "task_kind": "qa",
       "title": "Publicar artigo Musk/Economist 2026-07-26",
       "description": "Commitar, push para origin/main, verificar GitHub Pages e registrar evidências de publicação do par bilíngue.",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001"
       ],
@@ -3638,14 +3654,15 @@
           "Actions run 30211657561 success",
           "PT e EN URLs HTTP 200 com títulos corretos"
         ]
-      }
+      },
+      "completed_at": "2026-08-01T14:31:05Z"
     },
     {
       "task_id": "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-POST-001",
       "task_kind": "impl",
       "title": "Artigo bilíngue: quando o computador some (Gates e a IA)",
       "description": "Escrever e validar par PT/EN denso sobre a tese de Gates (estrada da informação / computadores que desaparecem) e o vislumbre contemporâneo com IA, agentes e interface por intenção. Sem travessão proibido; sem caminhos locais; sem termos internos vedados.",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "targets": [
         "src/content/posts/**"
@@ -3670,14 +3687,15 @@
           "Densidade PT~1277 EN~1201 palavras",
           "Sem /home, .roadmap, prompt, travessão editorial no corpo"
         ]
-      }
+      },
+      "completed_at": "2026-08-01T14:31:05Z"
     },
     {
       "task_id": "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001",
       "task_kind": "qa",
       "title": "QA artigo Gates/computador que some 2026-07-26",
       "description": "Validar par bilíngue: editorial, build, audit public, translations.",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-POST-001"
       ],
@@ -3703,14 +3721,15 @@
           "117 páginas; rotas PT/EN presentes",
           "Auditoria dedicada limpa"
         ]
-      }
+      },
+      "completed_at": "2026-08-01T14:31:06Z"
     },
     {
       "task_id": "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001",
       "task_kind": "qa",
       "title": "Publicar artigo Gates/computador que some 2026-07-26",
       "description": "Commit, push origin/main, verificar Pages e registrar evidências.",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001"
       ],
@@ -3736,7 +3755,8 @@
           "Actions run 30212123082 success",
           "PT e EN HTTP 200 com títulos corretos"
         ]
-      }
+      },
+      "completed_at": "2026-08-01T14:31:07Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260727-POST-001",
@@ -4638,17 +4658,198 @@
       ],
       "assigned_to": "agent-impl",
       "started_at": "2026-07-31T14:09:42Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260801-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN de 2026-08-01",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar o par editorial bilíngue de 01/08, com frontmatter válido, traduções recíprocas e sem linguagem de processo.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-01T14:35:16Z",
+      "verification": {
+        "checks": [
+          "Fonte primária mesclada em 2026-08-01 07:36 UTC, dentro da janela editorial.",
+          "Frontmatter e translations recíprocas conferidos."
+        ]
+      },
+      "completed_at": "2026-08-01T14:37:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260801-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo diário aberto de 2026-08-01",
+      "description": "Validar fontes, janela temporal, rigor editorial, schema, privacidade pública, adaptação EN, links e build completo.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260801-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-01T14:37:24Z",
+      "verification": {
+        "checks": [
+          "npm test: aprovado; 135 páginas e 148 artefatos públicos.",
+          "Varredura focal e git diff --check sem ocorrências.",
+          "Fonte primária e limite de validação do autor preservados."
+        ]
+      },
+      "completed_at": "2026-08-01T14:38:07Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260801-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-01",
+      "description": "Commitar somente o escopo diário, enviar para origin/main, aguardar Pages e registrar HTTP, canonical e hreflang do par PT/EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260801-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-01T14:38:26Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-01",
+      "description": "Após o deploy, publicar chamadas idempotentes no LinkedIn e no X, tratar canais independentemente e registrar somente URLs efetivamente confirmadas.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260801-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001.md"
+      ]
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001",
+      "task_kind": "impl",
+      "title": "Separar ciclo editorial diário das pendências sociais anteriores",
+      "description": "Corrigir a automação blog-di-rio-ia-aberta-bil-ngue para que pendências sociais de D-1 sejam retomáveis sem bloquear pesquisa, conteúdo, QA e publicação do dia D; preservar idempotência por data e canal.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-01T14:28:40Z",
+      "verification": {
+        "checks": [
+          "automation.toml contém o novo invariante de isolamento por data."
+        ]
+      },
+      "completed_at": "2026-08-01T14:29:47Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-QA-001",
+      "task_kind": "qa",
+      "title": "Validar isolamento por data da automação diária",
+      "description": "Testar cenários em que LinkedIn ou X de uma data anterior permanecem pendentes, confirmando que o artigo da data atual continua elegível e que nenhum canal concluído é repetido.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-01T14:29:48Z",
+      "verification": {
+        "checks": [
+          "Cenário D-1 LinkedIn pendente não bloqueia artigo D validado na regra.",
+          "Idempotência por data e por canal permanece explícita."
+        ]
+      },
+      "completed_at": "2026-08-01T14:29:50Z"
+    },
+    {
+      "task_id": "SITE-BLOG-ESAA-STATE-RECONCILE-20260801-QA-001",
+      "task_kind": "qa",
+      "title": "Reconciliar tarefas ESAA antigas com publicações já comprovadas",
+      "description": "Auditar as oito tarefas antigas de POST, QA e PUBLISH ainda abertas, comparar commits, workflows e URLs HTTP 200 e aplicar somente as transições canônicas cabíveis, sem republicar conteúdo nem alterar tarefas done.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-ESAA-STATE-RECONCILE-20260801-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-01T14:30:16Z",
+      "verification": {
+        "checks": [
+          "Oito tarefas antigas agora estão done.",
+          "Oito URLs PT/EN verificadas com HTTP 200, canonical e hreflang."
+        ]
+      },
+      "completed_at": "2026-08-01T14:31:28Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 148,
-      "in_progress": 6,
-      "review": 6
+      "done": 161,
+      "in_progress": 5,
+      "todo": 1
     },
     "by_kind": {
-      "impl": 77,
-      "qa": 76,
+      "impl": 80,
+      "qa": 80,
       "spec": 7
     }
   }

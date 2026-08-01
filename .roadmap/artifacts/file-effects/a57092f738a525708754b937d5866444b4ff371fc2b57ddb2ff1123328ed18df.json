@@ -1,0 +1,13 @@
+{
+  "after_sha256": "aad01db12eab0b00083d47e4c0bc6593ae84240b27de38f770bb6225f6a819e9",
+  "artifact_id": "ART-aad01db12eab0b00083d47e4c0bc6593ae84240b27de38f770bb6225f6a819e9",
+  "artifact_sha256": "a57092f738a525708754b937d5866444b4ff371fc2b57ddb2ff1123328ed18df",
+  "before_sha256": null,
+  "bytes": 954,
+  "content": "# Isolamento entre ciclos editoriais e pendências sociais\n\n## Mudança aplicada\n\nA automação `blog-di-rio-ia-aberta-bil-ngue` foi atualizada sem alterar agenda, modelo, ambiente ou autorização externa. A regra de idempotência agora determina explicitamente que pendências de deploy ou divulgação social de datas anteriores continuam retomáveis, mas não podem bloquear pesquisa, conteúdo, QA ou publicação da data corrente.\n\n## Invariante\n\nCada data editorial é um ciclo independente. A idempotência social é avaliada por data e por canal. Um LinkedIn ou X pendente em D-1 não impede o artigo de D. Canais com URL canônica registrada nunca devem ser repetidos.\n\n## Verificação\n\n- Definição da automação preserva `FREQ=DAILY;BYHOUR=11;BYMINUTE=0;BYSECOND=0`.\n- Estado permanece `ACTIVE`.\n- Repositório, branch, modelo e ambiente foram preservados.\n- A nova regra aparece imediatamente após as regras de idempotência existentes.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001.md",
+  "ts": "2026-08-01T14:29:46Z"
+}

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "6f76c9db963bf6c4aebfc052a1995ce23e84207d36567541d8ad8b578481aba9",
+  "artifact_id": "ART-6f76c9db963bf6c4aebfc052a1995ce23e84207d36567541d8ad8b578481aba9",
+  "artifact_sha256": "9d5012823ba38f0c5d14bd89a44649a19a7158cc9e3b85e7e5679d8e360838fb",
+  "before_sha256": null,
+  "bytes": 1239,
+  "content": "# Reconciliação de tarefas ESAA antigas do blog\n\n## Escopo\n\nReconciliação retrospectiva, sem republicação, de oito tarefas cujo estado ESAA não refletia publicações já presentes no `origin/main` e no GitHub Pages.\n\n## Tarefas reconciliadas\n\n- `SITE-BLOG-DAILY-OPEN-20260715-PUBLISH-001`: complete + review approve.\n- `SITE-BLOG-DAILY-OPEN-20260719-PUBLISH-001`: complete + review approve.\n- `SITE-BLOG-MUSK-ECONOMIST-20260726-POST-001`: review approve.\n- `SITE-BLOG-MUSK-ECONOMIST-20260726-QA-001`: review approve.\n- `SITE-BLOG-MUSK-ECONOMIST-20260726-PUBLISH-001`: review approve.\n- `SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-POST-001`: review approve.\n- `SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-QA-001`: review approve.\n- `SITE-BLOG-GATES-COMPUTERS-DISAPPEAR-20260726-PUBLISH-001`: review approve.\n\n## Evidência\n\nOs commits `8391227` e `b0d9eb9` são ancestrais de `origin/main`. As oito URLs PT/EN dos quatro pares responderam HTTP 200 e expuseram canonical e `hreflang` recíprocos. Os documentos Musk e Gates já registravam workflows Pages concluídos com sucesso.\n\n## Resultado\n\nAs oito tarefas estão em `done`. Nenhum post foi republicado, nenhuma tarefa `done` foi reaberta e nenhum canal social foi repetido.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-ESAA-STATE-RECONCILE-20260801-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-ESAA-STATE-RECONCILE-20260801-QA-001.md",
+  "ts": "2026-08-01T14:31:27Z"
+}

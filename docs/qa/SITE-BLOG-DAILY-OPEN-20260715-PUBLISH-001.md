@@ -2,22 +2,19 @@
 
 ## Escopo
 
-Evidência de commit, push e publicação do artigo bilíngue de 2026-07-15.
+Evidência reconciliada da publicação do artigo bilíngue de 2026-07-15.
 
-## Pré-publicação
+## Estado atual
 
-- `git fetch origin`: concluído.
-- Divergência antes do commit: `HEAD...origin/main = 1 0`; o commit local anterior pertence ao fluxo PACER de 2026-07-14 e foi preservado sem alteração.
-- `npm test`: aprovado, com 85 páginas geradas.
-- `git diff --check`: aprovado.
-- Staging: restrito aos posts PT/EN, documentos QA e artefatos ESAA do prefixo `SITE-BLOG-DAILY-OPEN-20260715`.
+Publicado. O bloqueio original deixou de representar o estado efetivo depois que o histórico foi incorporado ao `origin/main`. Esta conclusão é retrospectiva e não representa novo push.
 
-## Publicação
+## Evidência
 
-Bloqueada antes do push.
+- Commit de conteúdo: `8391227` (`Publish daily AI briefing 2026-07-15`), confirmado como ancestral de `origin/main` em 2026-08-01.
+- PT: https://elzobrito.github.io/blog/seguranca-por-ia-chega-antes-do-merge/ — HTTP 200, canonical e alternates presentes.
+- EN: https://elzobrito.github.io/en/blog/ai-security-moves-before-the-merge/ — HTTP 200, canonical e alternates presentes.
+- Nenhum novo push ou republicação foi realizado durante a reconciliação.
 
-- Commit do artigo: `8391227` (`Publish daily AI briefing 2026-07-15`).
-- O histórico local anterior contém `849e9d8` (`Add daily AI PACER post 2026-07-14`), ausente em `origin/main`.
-- Um push de `main` publicaria os dois commits. A autorização deste fluxo não permite publicar artefatos PACER nem ampliar a autorização para mudanças alheias.
-- Nenhum push foi executado; nenhum workflow de Pages foi iniciado para o artigo de 2026-07-15.
-- A tarefa de publicação permanece `in_progress` até que o commit PACER seja autorizado para push ou removido do caminho de publicação por uma decisão explícita do usuário.
+## Resultado
+
+Publicação efetivamente concluída; tarefa reconciliada retrospectivamente com o estado público.
