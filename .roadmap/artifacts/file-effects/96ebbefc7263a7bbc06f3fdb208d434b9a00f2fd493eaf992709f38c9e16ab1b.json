@@ -1,0 +1,13 @@
+{
+  "after_sha256": "f7388d3e96c81e51615832fb6423493e6cf78a6b04d1ae2834b98c301f5de473",
+  "artifact_id": "ART-f7388d3e96c81e51615832fb6423493e6cf78a6b04d1ae2834b98c301f5de473",
+  "artifact_sha256": "96ebbefc7263a7bbc06f3fdb208d434b9a00f2fd493eaf992709f38c9e16ab1b",
+  "before_sha256": null,
+  "bytes": 1021,
+  "content": "# Publicação do artigo diário aberto de 2026-08-01\n\n## Escopo\n\nPublicação do par PT/EN sobre isolamento de cache de prefixos em ambientes multiusuário.\n\n## Commits\n\n- Governança e reconciliação: `2a5f8a1` (`Repair blog workflow governance state`).\n- Conteúdo e QA: `09f6530` (`Publish daily AI briefing 2026-08-01`).\n- Push para `origin/main`: concluído sem force push.\n\n## GitHub Pages\n\n- Workflow: `30704209817`, `Deploy static hub to GitHub Pages`.\n- Resultado: `success`.\n- URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/30704209817\n\n## URLs públicas\n\n- PT: https://elzobrito.github.io/blog/o-cache-que-acelera-a-ia-tambem-precisa-separar-usuarios/\n- EN: https://elzobrito.github.io/en/blog/the-cache-that-speeds-up-ai-must-also-separate-users/\n\nAmbas responderam HTTP 200, com títulos corretos, canonical próprio e `hreflang` recíproco para PT, EN e `x-default`.\n\n## Resultado\n\nPublicação concluída e verificada. A divulgação social pode usar apenas as URLs canônicas acima.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-PUBLISH-001.md",
+  "ts": "2026-08-01T14:40:28Z"
+}

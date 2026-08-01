@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2110,
-      "projection_hash_sha256": "48ec1f46f97ca3a20b973fac3e2dcad8d1e82bf125b1847c281dc61dcd30e9ca",
+      "last_event_seq": 2117,
+      "projection_hash_sha256": "8c4f4ecc0afa8b484d542c5618a8026bc8e78e24fc1e6112c1e0d6562722e6b8",
       "verify_status": "ok"
     },
-    "updated_at": "2026-08-01T14:38:26Z"
+    "updated_at": "2026-08-01T14:40:29Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4720,7 +4720,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário aberto de 2026-08-01",
       "description": "Commitar somente o escopo diário, enviar para origin/main, aguardar Pages e registrar HTTP, canonical e hreflang do par PT/EN.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260801-QA-001"
       ],
@@ -4734,7 +4734,14 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-08-01T14:38:26Z"
+      "started_at": "2026-08-01T14:38:26Z",
+      "verification": {
+        "checks": [
+          "Workflow 30704209817: success.",
+          "PT e EN HTTP 200 com títulos, canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-01T14:40:29Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001",
@@ -4843,8 +4850,8 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 161,
-      "in_progress": 5,
+      "done": 162,
+      "in_progress": 4,
       "todo": 1
     },
     "by_kind": {
