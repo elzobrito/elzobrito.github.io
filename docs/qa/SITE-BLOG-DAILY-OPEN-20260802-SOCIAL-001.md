@@ -22,7 +22,7 @@ Data editorial: 2026-08-02 (America/Sao_Paulo)
 - Estado: pendente; nenhuma sessão autenticada do X estava aberta para uso nesta execução.
 - Texto preparado (até 280 caracteres):
 
-> Faster local AI needs more than a switch: the checkpoint must support speculative decoding, tool calls must survive format variation, and profiling must be written at exit. llama.cpp’s latest releases tighten all three. https://elzobrito.github.io/en/blog/local-ai-must-treat-speed-and-protocol-as-one-problem/ #AI
+> llama.cpp's latest releases show why local AI needs three contracts: compatible speculative decoding, tool calls that survive format variation, and profiling written at exit. https://elzobrito.github.io/en/blog/local-ai-must-treat-speed-and-protocol-as-one-problem/ #AI
 
 ## Resultado parcial
 
