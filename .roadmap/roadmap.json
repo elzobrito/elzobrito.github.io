@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2117,
-      "projection_hash_sha256": "8c4f4ecc0afa8b484d542c5618a8026bc8e78e24fc1e6112c1e0d6562722e6b8",
+      "last_event_seq": 2152,
+      "projection_hash_sha256": "008ac18367c5ec17dbcde664f9f51f9065e160df85c276485cbbf02a940333db",
       "verify_status": "ok"
     },
-    "updated_at": "2026-08-01T14:40:29Z"
+    "updated_at": "2026-08-02T17:28:44Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4846,17 +4846,115 @@
         ]
       },
       "completed_at": "2026-08-01T14:31:28Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260802-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto PT e EN de 2026-08-02",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar o par editorial bilíngue de 02/08, com frontmatter válido, traduções recíprocas e sem linguagem de processo.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/*.md",
+        "src/content/posts/en/*.md"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-02T17:24:46Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias do llama.cpp verificadas dentro da janela editorial.",
+          "Frontmatter e traduções recíprocas conferidos."
+        ]
+      },
+      "completed_at": "2026-08-02T17:28:30Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260802-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo diário aberto de 2026-08-02",
+      "description": "Validar fontes, janela temporal, rigor editorial, schema, privacidade pública, adaptação EN, links e build completo.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260802-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-02T17:28:30Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: check, build, auditorias pública e editorial.",
+          "Fontes primárias, limites de medições, frontmatter, privacidade e links revisados."
+        ]
+      },
+      "completed_at": "2026-08-02T17:28:31Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260802-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-02",
+      "description": "Commitar somente o escopo diário, enviar para origin/main, aguardar Pages e registrar HTTP, canonical e hreflang do par PT/EN.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260802-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-02T17:28:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260802-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-02",
+      "description": "Após o deploy, publicar chamadas idempotentes no LinkedIn e no X, tratar canais independentemente e registrar somente URLs efetivamente confirmadas.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260802-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-SOCIAL-001.md"
+      ]
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 162,
-      "in_progress": 4,
-      "todo": 1
+      "done": 164,
+      "in_progress": 5,
+      "todo": 2
     },
     "by_kind": {
-      "impl": 80,
-      "qa": 80,
+      "impl": 82,
+      "qa": 82,
       "spec": 7
     }
   }
