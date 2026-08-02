@@ -1,0 +1,13 @@
+{
+  "after_sha256": "862e45d05554b36ec1601f55af052c39dd91dc29da25b4fa7a3effb9e21f297c",
+  "artifact_id": "ART-862e45d05554b36ec1601f55af052c39dd91dc29da25b4fa7a3effb9e21f297c",
+  "artifact_sha256": "fb3ca6e05a17a4a9dde6463f134e3063ce460ca253add737181d5bdaa889118a",
+  "before_sha256": "862e45d05554b36ec1601f55af052c39dd91dc29da25b4fa7a3effb9e21f297c",
+  "bytes": 1208,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260802\n\nData editorial: 2026-08-02 (America/Sao_Paulo)\n\n## Commit e envio\n\n- Commit de conteúdo e QA: `fac1319353bb5730b0789a09c3c2e15742d1d456` — `Publish daily AI briefing 2026-08-02`.\n- Antes do envio: `git fetch origin` e `git rev-list --left-right --count HEAD...origin/main` retornaram `0 0`.\n- Envio: `git push origin main` concluído.\n\n## Deploy\n\n- Workflow: [Deploy static hub to GitHub Pages #30758959809](https://github.com/elzobrito/elzobrito.github.io/actions/runs/30758959809) — `success`.\n- URL PT: https://elzobrito.github.io/blog/ia-local-precisa-tratar-velocidade-e-protocolo-como-um-so-problema/\n- URL EN: https://elzobrito.github.io/en/blog/local-ai-must-treat-speed-and-protocol-as-one-problem/\n\n## Verificação pública\n\n- As URLs PT e EN responderam HTTP 200.\n- Títulos publicados conferidos com os títulos do frontmatter.\n- Cada página expõe URL canônica própria e `hreflang` recíproco `pt-BR`/`en`, além de `x-default` para PT.\n- Após a verificação: `HEAD...origin/main = 0 0`.\n\n## Resultado\n\nO par bilíngue está publicado e verificável. A divulgação social é um passo posterior, independente e idempotente por canal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-PUBLISH-001.md",
+  "ts": "2026-08-02T17:30:07Z"
+}
