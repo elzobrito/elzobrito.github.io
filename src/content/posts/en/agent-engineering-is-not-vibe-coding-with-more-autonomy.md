@@ -1,0 +1,48 @@
+---
+title: "Agent engineering is not vibe coding with more autonomy"
+description: "The distinction between programming a flow, delegating to an agent, and building a reliable agent system lies in boundaries, evidence, and accountability."
+published: 2026-08-03
+locale: en
+translation: engenharia-de-agentes-nao-e-vibe-coding-com-mais-autonomia
+tags: ["AI", "Agents", "Software engineering", "Developer tools"]
+featured: false
+---
+
+The usual debate about agents starts with the wrong question: “Will AI write all the code?” The engineering question is: **who decides, with what evidence, within which boundaries, and with what ability to undo harm?** Once some work moves from a programmed sequence to a model that interprets context, selects tools, and attempts to correct its route, writing code is no longer the only unit of responsibility.
+
+That does not make software engineering obsolete. It makes its contracts more visible. An agent system still depends on authentication, APIs, databases, tests, version control, observability, and business rules. What changes is that a probabilistic layer can choose paths within that infrastructure. Designing that layer well is agent engineering.
+
+## The spectrum measures delegation, not talent
+
+Conventional development defines logic, states, and transitions. AI-assisted coding proposes a function or refactor while the developer integrates it into an existing design. *Vibe coding* gives natural-language intent more room, making rapid generation and adjustment useful for exploration.
+
+A coding agent goes further: it may decompose work, inspect files, run tests, edit a repository, and choose a next action from intermediate results. OpenAI's [practical guide](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) distinguishes systems that merely use a model from systems in which a model manages workflow execution and selects tools under explicit guardrails.
+
+Agent engineering begins when the question changes from “what did the model write?” to “what environment lets it act without turning a hypothesis into an irreversible change?” It is not a status hierarchy. It is a change in delegation, and therefore in the controls required.
+
+## Probabilistic does not mean unconstrained
+
+Traditional systems also face concurrency, network failures, bad data, and people. But their significant transitions are normally expressed as code and rules. An agent adds an interpretive decision: which file to inspect, which tool to call, when a task is complete, when to retry, and when to hand control back.
+
+The model is therefore not the whole system. The agent *harness* processes input, orchestrates tool calls, and returns results. Anthropic's [discussion of agent evaluations](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) makes the consequence clear: multi-step agents modify state, call tools, and adapt. Evaluating only their final text is like approving a database migration from a screenshot.
+
+The design goal is not to make an agent look autonomous. It is to prevent autonomy from becoming operational ambiguity.
+
+## The action contract becomes the unit of design
+
+Every tool an agent receives should be treated as a public API: a clear name, validated input, structured output, least privilege, time bounds, and reversible effects when possible. “Send email,” “change production,” and “delete records” are not merely more capable calls; they have different risk profiles.
+
+Four practices matter:
+
+1. Separate reading from writing. An agent that investigates logs does not need permission to deploy.
+2. Turn vague goals into verifiable criteria. “Fix the bug” is a goal; “test X passes, metric Y does not regress, and no migration runs” is a contract.
+3. Preserve the trail: tool choice, arguments, result, environment version, and human decision.
+4. Design stopping conditions. Limit retries, cost, time, and scope; escalation is a designed behavior, not an agent failure.
+
+## Developers move closer to stewardship
+
+Developers do not disappear. They model context, expose safe tools, define acceptance criteria, and investigate behavioral failures. Domain expertise becomes more important because an agent cannot infer which simplification is unacceptable, which data is sensitive, or which exception invalidates a plausible answer.
+
+That is why “it worked once” is weak evidence. A demonstration can hide a wrong tool selection, invented reasoning, or an action that was correct for the wrong reason. Real cases, adversarial variation, and trajectory review expose what a demo conceals.
+
+Vibe coding is valuable because it lowers the cost of exploration. But as output becomes consequential, speed must give way to tests, boundaries, and review. Agent engineering is not permission to automate without understanding. It is the discipline of deciding **where** to delegate, **what** to prove before acting, and **when** to reclaim human control.

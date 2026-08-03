@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2220,
-      "projection_hash_sha256": "a36bb624be2290c69ba1a7e0b4fc6bd503be279671d32546694bbd2534d3f77f",
+      "last_event_seq": 2252,
+      "projection_hash_sha256": "5e9f19999a8455d8951bae7eaefae570c0c1d366be3d7329505f2a4027f69ebd",
       "verify_status": "ok"
     },
-    "updated_at": "2026-08-03T14:07:15Z"
+    "updated_at": "2026-08-03T14:44:42Z"
   },
   "project": {
     "name": "esaa-core",
@@ -5081,17 +5081,90 @@
         ]
       },
       "completed_at": "2026-08-03T14:05:08Z"
+    },
+    {
+      "task_id": "SITE-BLOG-AGENT-ENGINEERING-20260803-POST-001",
+      "task_kind": "impl",
+      "title": "Redigir artigo sobre engenharia de agentes",
+      "description": "Converter a tese fornecida em artigo denso, técnico e editorial em português.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/engenharia-de-agentes-nao-e-vibe-coding-com-mais-autonomia.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-03T14:41:54Z",
+      "verification": {
+        "checks": [
+          "Artigo denso em PT validado pelo schema e auditoria focal."
+        ]
+      },
+      "completed_at": "2026-08-03T14:43:33Z"
+    },
+    {
+      "task_id": "SITE-BLOG-AGENT-ENGINEERING-20260803-TRANSLATION-001",
+      "task_kind": "impl",
+      "title": "Adaptar artigo de engenharia de agentes para inglês",
+      "description": "Criar o par EN exigido pelo schema para o artigo em português.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-AGENT-ENGINEERING-20260803-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/en/agent-engineering-is-not-vibe-coding-with-more-autonomy.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-03T14:43:34Z",
+      "verification": {
+        "checks": [
+          "Adaptação EN configurada com translation recíproca e validada por Astro check."
+        ]
+      },
+      "completed_at": "2026-08-03T14:43:36Z"
+    },
+    {
+      "task_id": "SITE-BLOG-AGENT-ENGINEERING-20260803-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo sobre engenharia de agentes",
+      "description": "Validar, enviar ao main, acompanhar Pages e registrar as URLs canônicas.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-AGENT-ENGINEERING-20260803-TRANSLATION-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-AGENT-ENGINEERING-20260803-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-03T14:44:42Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 169,
-      "in_progress": 6,
+      "done": 171,
+      "in_progress": 7,
       "todo": 1
     },
     "by_kind": {
-      "impl": 85,
-      "qa": 84,
+      "impl": 87,
+      "qa": 85,
       "spec": 7
     }
   }
