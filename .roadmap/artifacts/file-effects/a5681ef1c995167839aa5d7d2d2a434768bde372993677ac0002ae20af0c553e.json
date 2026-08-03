@@ -1,0 +1,13 @@
+{
+  "after_sha256": "e7550d16669aca5385931668a384e4e375baff337e89d84db29f2e0c140c3604",
+  "artifact_id": "ART-e7550d16669aca5385931668a384e4e375baff337e89d84db29f2e0c140c3604",
+  "artifact_sha256": "a5681ef1c995167839aa5d7d2d2a434768bde372993677ac0002ae20af0c553e",
+  "before_sha256": "e7550d16669aca5385931668a384e4e375baff337e89d84db29f2e0c140c3604",
+  "bytes": 1708,
+  "content": "# QA — SITE-BLOG-DAILY-OPEN-20260803\n\nData editorial: 2026-08-03 (America/Sao_Paulo)\n\n## Escopo editorial\n\n- PT: `src/content/posts/pt/transparencia-em-ia-virou-requisito-de-interface.md`\n- EN: `src/content/posts/en/ai-transparency-became-an-interface-requirement.md`\n- Fonte primária: https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3/\n- Decisão: a busca de 24 horas não identificou lançamento técnico suficientemente forte. A nota é curta e se limita ao evento concreto de 3 de agosto: a retirada do Copilot Billing Preview e a migração de controles de uso para a área nativa de cobrança.\n\n## Revisão factual e editorial\n\n- A fonte oficial confirma a retirada em 2026-08-03 e descreve os controles mantidos na área de billing: agrupamento, filtros, exportação, orçamentos, centros de custo, limites por usuário e relatórios/API.\n- O texto não atribui nova capacidade de modelo, métrica de qualidade ou efeito financeiro não publicado pela fonte.\n- PT e EN são adaptações editoriais equivalentes; `translation` é recíproco e os slugs são únicos.\n- Frontmatter contém todos os campos exigidos, com `published: 2026-08-03` e `featured: false`.\n\n## Validação executada\n\n- `npm test` — aprovado: Astro check sem diagnósticos; build com 139 páginas; auditoria pública de 152 arquivos e auditoria editorial aprovadas.\n- `curl -fsSIL <fonte>` — HTTP 200.\n- Varredura focal de termos proibidos nos dois posts — 0 ocorrências após revisão.\n- `git diff --check` — aprovado.\n\n## Resultado\n\nConteúdo apto para commit e publicação. A evidência de deploy será registrada no documento PUBLISH após o GitHub Pages concluir.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260803-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260803-QA-001.md",
+  "ts": "2026-08-03T14:05:04Z"
+}

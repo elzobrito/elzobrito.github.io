@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2162,
-      "projection_hash_sha256": "f971908da9680e8865791cbf56eee75aec80df27e056b53c3f7d813a1eee206e",
+      "last_event_seq": 2210,
+      "projection_hash_sha256": "d2381e0a196c45f007ec0511c2bc16eb24e59f5f38cce84395a0a64f22fcee89",
       "verify_status": "ok"
     },
-    "updated_at": "2026-08-02T17:30:59Z"
+    "updated_at": "2026-08-03T14:05:09Z"
   },
   "project": {
     "name": "esaa-core",
@@ -4953,17 +4953,137 @@
       ],
       "assigned_to": "agent-impl",
       "started_at": "2026-08-02T17:30:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260803-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto de 2026-08-03",
+      "description": "Criar post editorial PT/EN a partir de fontes primárias verificadas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/transparencia-em-ia-virou-requisito-de-interface.md",
+          "src/content/posts/en/ai-transparency-became-an-interface-requirement.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-03T14:02:17Z",
+      "verification": {
+        "checks": [
+          "Editorial note drafted in PT/EN from GitHub primary source; reciprocal translations configured."
+        ]
+      },
+      "completed_at": "2026-08-03T14:03:39Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260803-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo diário aberto de 2026-08-03",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação PT/EN e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260803-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260803-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-03T14:03:42Z",
+      "verification": {
+        "checks": [
+          "npm test passed; primary source returned HTTP 200; frontmatter and reciprocal translation reviewed; focused public audit and diff check passed."
+        ]
+      },
+      "completed_at": "2026-08-03T14:05:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260803-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-03",
+      "description": "Realizar commit, push, deploy Pages e registrar evidência.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260803-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260803-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-03T14:05:09Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260803-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-03",
+      "description": "Publicar LinkedIn e X sem duplicação e registrar URLs.",
+      "status": "todo",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260803-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260803-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      }
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260803-FIX-001",
+      "task_kind": "impl",
+      "title": "Registrar correção editorial de 2026-08-03",
+      "description": "Registro retrospectivo da troca de termo proibido na adaptação EN, trabalho realizado durante QA antes do registro.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260803-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/en/ai-transparency-became-an-interface-requirement.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-03T14:05:07Z",
+      "verification": {
+        "checks": [
+          "Revisão focal removeu a ocorrência de termo proibido; npm test e auditoria pública passaram."
+        ]
+      },
+      "completed_at": "2026-08-03T14:05:08Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 165,
-      "in_progress": 5,
-      "todo": 1
+      "done": 168,
+      "in_progress": 6,
+      "todo": 2
     },
     "by_kind": {
-      "impl": 82,
-      "qa": 82,
+      "impl": 85,
+      "qa": 84,
       "spec": 7
     }
   }
