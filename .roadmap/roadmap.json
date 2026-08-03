@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2210,
-      "projection_hash_sha256": "d2381e0a196c45f007ec0511c2bc16eb24e59f5f38cce84395a0a64f22fcee89",
+      "last_event_seq": 2220,
+      "projection_hash_sha256": "a36bb624be2290c69ba1a7e0b4fc6bd503be279671d32546694bbd2534d3f77f",
       "verify_status": "ok"
     },
-    "updated_at": "2026-08-03T14:05:09Z"
+    "updated_at": "2026-08-03T14:07:15Z"
   },
   "project": {
     "name": "esaa-core",
@@ -5012,7 +5012,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo diário aberto de 2026-08-03",
       "description": "Realizar commit, push, deploy Pages e registrar evidência.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260803-QA-001"
       ],
@@ -5026,14 +5026,20 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-08-03T14:05:09Z"
+      "started_at": "2026-08-03T14:05:09Z",
+      "verification": {
+        "checks": [
+          "Commit dd210b8 pushed to origin/main; Pages workflow 30821040419 succeeded; PT/EN HTTP 200, titles, canonicals and reciprocal hreflang verified."
+        ]
+      },
+      "completed_at": "2026-08-03T14:07:13Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260803-SOCIAL-001",
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-08-03",
       "description": "Publicar LinkedIn e X sem duplicação e registrar URLs.",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260803-PUBLISH-001"
       ],
@@ -5045,7 +5051,9 @@
       },
       "immutability": {
         "done_is_immutable": true
-      }
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-03T14:07:15Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260803-FIX-001",
@@ -5077,9 +5085,9 @@
   ],
   "indexes": {
     "by_status": {
-      "done": 168,
+      "done": 169,
       "in_progress": 6,
-      "todo": 2
+      "todo": 1
     },
     "by_kind": {
       "impl": 85,
