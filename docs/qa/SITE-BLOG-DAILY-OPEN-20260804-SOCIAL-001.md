@@ -13,7 +13,7 @@ Data editorial: 2026-08-04 (America/Sao_Paulo)
 | Canal | Estado | Evidência | Texto preparado |
 | --- | --- | --- | --- |
 | LinkedIn | bloqueado | Não havia sessão do Chrome em execução; nenhuma tentativa de envio foi feita. | "A IA local está ganhando voz, mas a mudança no `llama-tts` lembra que uma interface de terminal também é contrato de integração. O suporte ao Qwen3-TTS no llama.cpp é útil justamente porque vem com aviso de incompatibilidade: capacidade nova exige migração consciente. PT: https://elzobrito.github.io/blog/voz-local-ganha-novo-modelo-mas-perde-compatibilidade/ · EN: https://elzobrito.github.io/en/blog/local-voice-gains-a-new-model-but-loses-compatibility/" |
-| X | bloqueado | Não havia sessão do Chrome em execução; nenhuma tentativa de envio foi feita. | "Local AI voice gets a new Qwen3-TTS path in llama.cpp, but `llama-tts` now breaks its old CLI. The key question is not only whether a model runs: can the rest of the system still talk to it? https://elzobrito.github.io/en/blog/local-voice-gains-a-new-model-but-loses-compatibility/" |
+| X | bloqueado | Não havia sessão do Chrome em execução; nenhuma tentativa de envio foi feita. | "Local AI voice gets a new Qwen3-TTS path in llama.cpp, but `llama-tts` breaks its old CLI. The key question is not only whether a model runs: can the rest of the system still talk to it? https://elzobrito.github.io/en/blog/local-voice-gains-a-new-model-but-loses-compatibility/" |
 
 ## Retomada
 
