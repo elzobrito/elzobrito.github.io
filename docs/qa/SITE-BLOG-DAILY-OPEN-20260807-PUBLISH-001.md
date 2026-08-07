@@ -18,9 +18,10 @@ Data editorial: 2026-08-07 (America/Sao_Paulo)
 
 ## Evidência de envio
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
+- Commit de conteúdo: `19854ac7b6001a5431f8269f1f96daf9cf92eaf7` (`Publish daily AI briefing 2026-08-07`).
+- Push para `origin/main`: concluído.
+- Workflow `Deploy static hub to GitHub Pages`: `31186097232`, conclusão `success`.
+- URL do workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/31186097232
 
 ## URLs canônicas esperadas
 
@@ -29,4 +30,10 @@ Data editorial: 2026-08-07 (America/Sao_Paulo)
 
 ## Verificação pública
 
-Pendente de workflow concluído com sucesso e confirmação HTTP de título, canonical e `hreflang` recíproco.
+- PT: HTTP 200; título `Memória escassa vira política de inferência — Elzo Brito`; canonical correto; alternates `pt-BR`, `en` e `x-default` presentes.
+- EN: HTTP 200; título `Scarce memory becomes inference policy — Elzo Brito`; canonical correto; alternates `pt-BR`, `en` e `x-default` presentes.
+- Os `hreflang` PT/EN são recíprocos.
+
+## Resultado
+
+Publicação aprovada. O workflow terminou com sucesso e as duas páginas canônicas foram verificadas antes de qualquer divulgação social.
