@@ -22,9 +22,12 @@
 
 ## Estado
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Verificação pública PT/EN: pendente.
+- Commit de conteúdo: `f8971b1d537c7a6f519b09d67d83ee83e55b132d` (`Publish daily AI briefing 2026-08-08`).
+- Push para `origin/main`: concluído.
+- Workflow `Deploy static hub to GitHub Pages`: [31265943929](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31265943929), `success` em 2026-08-08 16:02:33 UTC.
+- Verificação pública PT: HTTP 200; título `Uma pasta não é uma permissão — Elzo Brito`; canonical próprio; alternates `en`, `pt-BR` e `x-default` corretos.
+- Verificação pública EN: HTTP 200; título `A folder is not a permission — Elzo Brito`; canonical próprio; alternates `pt-BR`, `en` e `x-default` corretos.
 
-Este documento será atualizado após o workflow e a inspeção pública de HTTP, título, canonical e `hreflang`.
+## Resultado
+
+Publicação aprovada. O conteúdo entregue pelo Pages corresponde ao par bilíngue validado localmente, e as duas rotas canônicas estão prontas para divulgação social.
