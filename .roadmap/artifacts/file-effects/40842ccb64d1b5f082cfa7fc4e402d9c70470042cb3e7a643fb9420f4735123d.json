@@ -1,0 +1,13 @@
+{
+  "after_sha256": "52254673127ff7f57a573983ad2763ff3ad0fc879eb84f0cbdb65504f5d40f5c",
+  "artifact_id": "ART-52254673127ff7f57a573983ad2763ff3ad0fc879eb84f0cbdb65504f5d40f5c",
+  "artifact_sha256": "40842ccb64d1b5f082cfa7fc4e402d9c70470042cb3e7a643fb9420f4735123d",
+  "before_sha256": "52254673127ff7f57a573983ad2763ff3ad0fc879eb84f0cbdb65504f5d40f5c",
+  "bytes": 1883,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260810\n\n## Artefatos\n\n- PT: `src/content/posts/pt/o-agente-cabe-em-24-gb-a-confianca-nao.md`\n- EN: `src/content/posts/en/the-agent-fits-in-24-gb-trust-does-not.md`\n- QA: `docs/qa/SITE-BLOG-DAILY-OPEN-20260810-QA-001.md`\n\n## URLs canônicas planejadas\n\n- PT: https://elzobrito.github.io/blog/o-agente-cabe-em-24-gb-a-confianca-nao/\n- EN: https://elzobrito.github.io/en/blog/the-agent-fits-in-24-gb-trust-does-not/\n\n## Gate pré-publicação\n\n- `npm test`: aprovado com 155 páginas e 168 artefatos públicos.\n- `git diff --check`: aprovado.\n- Fontes primárias: HTTP 200 e publicações ou merges dentro da janela editorial.\n- `esaa --root . verify`: aprovado antes das tarefas, após o conteúdo e após a QA.\n- `git fetch origin`: executado.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes do commit.\n- Alterações preexistentes em `.roadmap` e no documento de publicação do artigo independente de 2026-08-03 foram mantidas fora do staging.\n\n## Estado\n\n- Commit de conteúdo: `1b4035919b637b41dedf3bf5c729ae81c7f8ac4c` (`Publish daily AI briefing 2026-08-10`).\n- Push para `origin/main`: concluído.\n- Workflow `Deploy static hub to GitHub Pages`: [31396544192](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31396544192), `success` em 2026-08-10 14:09:15 UTC.\n- Verificação pública PT: HTTP 200; título `O agente cabe em 24 GB; a confiança, não — Elzo Brito`; canonical próprio; alternates `en`, `pt-BR` e `x-default` corretos.\n- Verificação pública EN: HTTP 200; título `The agent fits in 24 GB; trust does not — Elzo Brito`; canonical próprio; alternates `pt-BR`, `en` e `x-default` corretos.\n\n## Resultado\n\nPublicação aprovada. O conteúdo entregue pelo Pages corresponde ao par bilíngue validado localmente, e as duas rotas canônicas estão prontas para divulgação social.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-PUBLISH-001.md",
+  "ts": "2026-08-10T14:09:49Z"
+}

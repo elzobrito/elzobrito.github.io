@@ -23,11 +23,12 @@
 
 ## Estado
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Verificação pública PT/EN: pendente.
+- Commit de conteúdo: `1b4035919b637b41dedf3bf5c729ae81c7f8ac4c` (`Publish daily AI briefing 2026-08-10`).
+- Push para `origin/main`: concluído.
+- Workflow `Deploy static hub to GitHub Pages`: [31396544192](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31396544192), `success` em 2026-08-10 14:09:15 UTC.
+- Verificação pública PT: HTTP 200; título `O agente cabe em 24 GB; a confiança, não — Elzo Brito`; canonical próprio; alternates `en`, `pt-BR` e `x-default` corretos.
+- Verificação pública EN: HTTP 200; título `The agent fits in 24 GB; trust does not — Elzo Brito`; canonical próprio; alternates `pt-BR`, `en` e `x-default` corretos.
 
 ## Resultado
 
-Publicação em andamento. A tarefa só será concluída após workflow `success` e verificação HTTP de título, canonical e `hreflang` nas duas rotas.
+Publicação aprovada. O conteúdo entregue pelo Pages corresponde ao par bilíngue validado localmente, e as duas rotas canônicas estão prontas para divulgação social.
