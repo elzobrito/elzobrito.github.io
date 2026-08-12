@@ -20,16 +20,16 @@
 
 ## Evidência remota
 
-- Commit de conteúdo: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Estado do workflow: pendente.
-- Verificação PT: pendente.
-- Verificação EN: pendente.
-- Paridade após o deploy: pendente.
+- Commit de conteúdo: `397776ae36d801f89246625c373dcd067e14f051`.
+- Workflow `Deploy static hub to GitHub Pages`: [31621837588](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31621837588).
+- Estado do workflow: `success`.
+- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.
+- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.
+- Paridade após o deploy: `HEAD...origin/main = 0 0`.
 
 ## URLs públicas
 
 - PT: https://elzobrito.github.io/blog/compatibilidade-nao-herda-seguranca/
 - EN: https://elzobrito.github.io/en/blog/compatibility-does-not-inherit-security/
 
-Publicação ainda não confirmada.
+Publicação confirmada em 2026-08-12 14:18 -03.
