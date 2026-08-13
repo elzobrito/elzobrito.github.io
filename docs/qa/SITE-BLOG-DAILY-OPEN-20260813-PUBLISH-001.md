@@ -20,13 +20,16 @@
 
 ## Evidência remota
 
-- Commit de conteúdo: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Verificação PT: pendente.
-- Verificação EN: pendente.
-- Paridade após o deploy: pendente.
+- Commit de conteúdo: `120b11e9d4e6e1c80058f1c2f8e867a8ad855f26`.
+- Workflow `Deploy static hub to GitHub Pages`: [31710175001](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31710175001).
+- Estado do workflow: `success`.
+- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.
+- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.
+- Paridade após o deploy: `HEAD...origin/main = 0 0`.
 
 ## URLs públicas
 
 - PT: https://elzobrito.github.io/blog/a-ia-mudou-sem-trocar-um-unico-peso/
 - EN: https://elzobrito.github.io/en/blog/ai-changed-without-changing-a-single-weight/
+
+Publicação confirmada em 2026-08-13 11:27 -03.
