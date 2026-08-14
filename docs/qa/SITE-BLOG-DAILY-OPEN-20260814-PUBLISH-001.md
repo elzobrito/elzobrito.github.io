@@ -20,16 +20,16 @@
 
 ## Evidência remota
 
-- Commit de conteúdo: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Estado do workflow: pendente.
-- Verificação PT: pendente.
-- Verificação EN: pendente.
-- Paridade após o deploy: pendente.
+- Commit de conteúdo: `2a4c14097565e3b9d8e6421be8aa3d8b291984a5`.
+- Workflow `Deploy static hub to GitHub Pages`: [31837586313](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31837586313).
+- Estado do workflow: `success`.
+- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.
+- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.
+- Paridade após o deploy: `HEAD...origin/main = 0 0`.
 
 ## URLs públicas
 
 - PT: https://elzobrito.github.io/blog/o-raciocinio-ganhou-um-botao/
 - EN: https://elzobrito.github.io/en/blog/reasoning-got-a-control-knob/
 
-Publicação ainda não confirmada.
+Publicação confirmada em 2026-08-14 17:23 -03.
