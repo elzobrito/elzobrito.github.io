@@ -20,14 +20,16 @@
 
 ## Evidência remota
 
-- Commit de conteúdo: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
-- Estado do workflow: pendente.
-- Verificação PT: pendente.
-- Verificação EN: pendente.
-- Paridade após o deploy: pendente.
+- Commit de conteúdo: `867eae3d7396e2c7374cc430ce37220d3dfd7eca`.
+- Workflow `Deploy static hub to GitHub Pages`: [31954153866](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31954153866).
+- Estado do workflow: `success`.
+- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.
+- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.
+- Paridade após o deploy: `HEAD...origin/main = 0 0`.
 
 ## URLs públicas
 
-- PT: pendente.
-- EN: pendente.
+- PT: https://elzobrito.github.io/blog/autonomia-comeca-antes-da-primeira-linha-de-codigo/
+- EN: https://elzobrito.github.io/en/blog/autonomy-starts-before-the-first-line-of-code/
+
+Publicação confirmada em 2026-08-16 11:57 -03.
