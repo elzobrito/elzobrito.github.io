@@ -16,16 +16,18 @@
 
 ## Publicação
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
+- Commit de conteúdo: `95d5f266e2607d03594eaaa9a2eeae03f7298c27` (`Publish daily AI briefing 2026-08-19`).
+- Push para `origin/main`: concluído sem força.
+- Workflow `Deploy static hub to GitHub Pages`: execução [32261992529](https://github.com/elzobrito/elzobrito.github.io/actions/runs/32261992529), conclusão `success`.
 
 ## URLs canônicas
 
 - PT: https://elzobrito.github.io/blog/o-agente-aprendeu-a-falar-sem-parar-de-trabalhar/
 - EN: https://elzobrito.github.io/en/blog/the-agent-learned-to-speak-without-stopping/
-- HTTP, título, `canonical` e `hreflang`: pendentes de verificação após o deploy.
+- PT: HTTP 200; título esperado; `canonical` próprio; alternâncias `en`, `pt-BR` e `x-default` corretas.
+- EN: HTTP 200; título esperado; `canonical` próprio; alternâncias `pt-BR`, `en` e `x-default` corretas.
+- Verificação ao vivo concluída em 2026-08-19 11:07 -03.
 
 ## Estado
 
-Publicação em andamento. A tarefa PUBLISH permanece aberta até o workflow concluir com sucesso e as duas páginas serem verificadas ao vivo.
+Publicação concluída. O workflow terminou com sucesso e as duas versões canônicas estão acessíveis e reciprocamente ligadas.
