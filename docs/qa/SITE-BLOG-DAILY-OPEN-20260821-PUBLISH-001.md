@@ -18,9 +18,10 @@
 
 ## Commit e deploy
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
+- Commit de conteúdo: `03c0dded97452bc91c5ff7a269cf0c6fbfb99b4d` (`Publish daily AI briefing 2026-08-21`).
+- Push para `origin/main`: concluído sem força.
+- Workflow `Deploy static hub to GitHub Pages`: [32505668458](https://github.com/elzobrito/elzobrito.github.io/actions/runs/32505668458), `success`.
+- Execução: criada em 2026-08-21 16:58:06 UTC e concluída em 2026-08-21 16:58:53 UTC.
 
 ## URLs esperadas
 
@@ -29,4 +30,10 @@
 
 ## Verificação pública
 
-Pendente. A tarefa PUBLISH só será concluída após o workflow retornar `success` e ambas as páginas responderem HTTP 200 com título, canonical e `hreflang` corretos.
+- PT: HTTP 200; título `A tela registra passos, não explica o trabalho — Elzo Brito`; canonical próprio; alternates `en`, `pt-BR` e `x-default` corretos.
+- EN: HTTP 200; título `A screen records steps, not the work — Elzo Brito`; canonical próprio; alternates `pt-BR`, `en` e `x-default` corretos.
+- Verificação realizada com `curl -L` e inspeção focal do HTML publicado.
+
+## Resultado
+
+Publicação aprovada. O artigo bilíngue está disponível nas duas URLs canônicas e a divulgação social pode começar sem antecipar o deploy.
