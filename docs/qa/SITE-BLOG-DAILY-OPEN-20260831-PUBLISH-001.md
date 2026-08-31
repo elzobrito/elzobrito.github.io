@@ -15,9 +15,15 @@
 
 ## Estado
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
+- Commit de conteúdo: `039504989c4a9847570d6e185ad7d3ef4d7e3750` (`Publish daily AI briefing 2026-08-31`).
+- Push para `origin/main`: concluído, sem force push.
+- Workflow `Deploy static hub to GitHub Pages`: execução `33401343933`, conclusão `success` em 2026-08-31 11:13:56 -03.
+- Workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/33401343933
 - URL PT: https://elzobrito.github.io/blog/a-latencia-multimodal-comeca-antes-da-gpu/
 - URL EN: https://elzobrito.github.io/en/blog/multimodal-latency-starts-before-the-gpu/
-- Verificação HTTP, título, canonical e hreflang: pendente.
+- URL PT: HTTP 200; título `A latência multimodal começa antes da GPU — Elzo Brito`; canonical PT e alternates `pt-BR`/`en` corretos.
+- URL EN: HTTP 200; título `Multimodal latency starts before the GPU — Elzo Brito`; canonical EN e alternates `pt-BR`/`en` corretos.
+
+## Resultado
+
+Publicação aprovada. O conteúdo canônico está disponível nos dois idiomas e a divulgação social pode começar de forma idempotente por canal.
