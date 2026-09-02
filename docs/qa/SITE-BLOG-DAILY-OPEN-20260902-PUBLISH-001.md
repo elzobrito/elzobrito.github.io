@@ -8,19 +8,22 @@
 
 ## Segurança do Git
 
-- `git fetch origin`: pendente.
-- `git rev-list --left-right --count HEAD...origin/main`: pendente.
+- `git fetch origin`: concluído antes do commit e do push.
+- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes do commit; `0 0` após o push e a verificação pública.
+- Base confirmada antes do commit: `41a32594eb7c693fa71ea50dd366b5e5184bbb05`, igual em `HEAD` e `origin/main`.
 - Staging: limitado aos dois posts e aos documentos QA deste ciclo.
 
 ## Estado
 
-- Commit de conteúdo: pendente.
-- Push para `origin/main`: pendente.
-- Workflow `Deploy static hub to GitHub Pages`: pendente.
+- Commit de conteúdo: `601a07a265b25a4418feb37fe586d9f18194cae3` (`Publish daily AI briefing 2026-09-02`).
+- Push para `origin/main`: concluído, sem force push.
+- Workflow `Deploy static hub to GitHub Pages`: execução `33644734942`, conclusão `success` em 2026-09-02 11:51:50 -03.
+- Workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/33644734942
 - URL PT: https://elzobrito.github.io/blog/a-inteligencia-agora-depende-do-cracha/
 - URL EN: https://elzobrito.github.io/en/blog/intelligence-now-depends-on-the-badge/
-- Verificação HTTP, título, canonical e `hreflang`: pendente.
+- URL PT: HTTP 200; título `A inteligência agora depende do crachá — Elzo Brito`; canonical PT e alternates `pt-BR`, `en` e `x-default` corretos.
+- URL EN: HTTP 200; título `Intelligence now depends on the badge — Elzo Brito`; canonical EN e alternates `pt-BR`, `en` e `x-default` corretos.
 
 ## Resultado
 
-Publicação em andamento. A divulgação social permanece bloqueada até o Pages concluir com sucesso e as duas rotas públicas serem verificadas.
+Publicação aprovada. O conteúdo canônico está disponível nos dois idiomas e a divulgação social pode começar de forma idempotente por canal.
