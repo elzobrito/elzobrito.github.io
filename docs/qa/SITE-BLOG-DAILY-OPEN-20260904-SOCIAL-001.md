@@ -2,14 +2,14 @@
 
 ## Pré-condições
 
-- Artigo PT: https://elzobrito.github.io/blog/a-ia-ficou-mais-alinhada-e-mais-dificil-de-auditar/ — publicação pendente.
-- Artigo EN: https://elzobrito.github.io/en/blog/ai-got-more-aligned-and-harder-to-audit/ — publicação pendente.
-- PUBLISH: pendente.
+- Artigo PT: https://elzobrito.github.io/blog/a-ia-ficou-mais-alinhada-e-mais-dificil-de-auditar/ — HTTP 200, canonical e `hreflang` verificados.
+- Artigo EN: https://elzobrito.github.io/en/blog/ai-got-more-aligned-and-harder-to-audit/ — HTTP 200, canonical e `hreflang` verificados.
+- PUBLISH: `done` após o workflow Pages `33881873582` concluir com `success`.
 - Memória, tarefa SOCIAL e este documento não registram URL pública de LinkedIn nem de X para 2026-09-04.
 
 ## LinkedIn
 
-- Estado: **pendente**.
+- Estado: **pronto, aguardando confirmação de envio**.
 - URL pública: ausente.
 - Envio realizado: não.
 - Texto preparado:
@@ -24,7 +24,7 @@
 
 ## X
 
-- Estado: **pendente**.
+- Estado: **pronto, aguardando confirmação de envio**.
 - URL pública: ausente.
 - Envio realizado: não.
 - Texto preparado:
@@ -34,3 +34,10 @@
 ## Retomada
 
 Antes de cada canal, reconfirmar memória, tarefa e este documento. Publicar somente o canal ainda sem URL e registrar horário local, texto efetivo e URL pública canônica. A tarefa SOCIAL só será concluída quando ambos os canais tiverem URL.
+
+## Evidência de prontidão
+
+- Horário da checagem: 2026-09-04 11:09 -03.
+- A sessão externa existente está autenticada como Elzo Brito dos Santos Filho no LinkedIn e como `@elzobrito` no X.
+- O editor do LinkedIn está aberto e o compositor do X está disponível, ambos sem texto inserido e sem envio.
+- Os dois canais aguardam confirmação imediatamente antes da comunicação pública. Nenhuma URL social foi criada nesta etapa.
