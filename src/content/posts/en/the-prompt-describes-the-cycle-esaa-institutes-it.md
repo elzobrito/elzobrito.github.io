@@ -14,7 +14,7 @@ That does not replace architecture. It only makes the gap easier to see.
 
 ## Context: ESAA already argued for the cycle
 
-In February 2026, the paper [ESAA: Event Sourcing for Autonomous Agents in LLM-Based Software Engineering](https://arxiv.org/abs/2602.23193) (arXiv:2602.23193) formalized a simple separation: the agent emits structured intentions; a deterministic orchestrator validates, records, applies effects, and projects state. The agent does not write directly to the project. It emits `agent.result` or `issue.report` as validated JSON; the orchestrator persists events in append-only `activity.jsonl`, projects `roadmap.json`, and closes the loop with `esaa verify` and a SHA-256 hash of the projection. Completed tasks do not regress (*done* immutability); a defect opens a new path via `issue.report` without rewriting history.
+In February 2026, the paper [ESAA: Event Sourcing for Autonomous Agents in LLM-Based Software Engineering](https://arxiv.org/abs/2602.23193) (arXiv:2602.23193) formalized a simple separation: the agent emits structured intentions; a deterministic orchestrator validates, records, applies effects, and projects state. The agent does not write directly to the project. It emits `agent.result` or `issue.report` as validated JSON; the orchestrator persists events in an append-only activity event log, projects `roadmap.json`, and closes the loop with `esaa verify` and a SHA-256 hash of the projection. Completed tasks do not regress (*done* immutability); a defect opens a new path via `issue.report` without rewriting history.
 
 The paper’s case studies are concrete: a landing page (9 tasks, 49 events) and a clinical dashboard (50 tasks, 86 events, 4 heterogeneous agents across 8 phases), both ending with `run.status=success` and `verify_status=ok`. The canonical vocabulary includes `claim` and `complete` — claiming a task and completing it with acceptance results.
 
@@ -46,7 +46,7 @@ The commercial prompt is, in part, *writing the exam*. ESAA is one way to *admin
 
 ## Limits
 
-I do not claim the dump is published official policy, nor that it covers every Codex variant in production. Dumps and collections can mix fragments, overrides, and session templates. I do not claim that GPT-6 or Codex implement event sourcing, `activity.jsonl`, `roadmap.json`, or `esaa verify`. I do not claim historical priority, nor that the industry has “converged on ESAA” as a market standard.
+I do not claim the dump is published official policy, nor that it covers every Codex variant in production. Dumps and collections can mix fragments, overrides, and session templates. I do not claim that GPT-6 or Codex implement event sourcing, an append-only activity event log, `roadmap.json`, or `esaa verify`. I do not claim historical priority, nor that the industry has “converged on ESAA” as a market standard.
 
 I also do not treat Guardian, sandboxing, and `AGENTS.md` as equivalents of `AGENT_CONTRACT.yaml`. They are trust and approval layers; the ESAA paper adds a canonical log, a hashed projection, and done immutability as properties of the state system.
 
