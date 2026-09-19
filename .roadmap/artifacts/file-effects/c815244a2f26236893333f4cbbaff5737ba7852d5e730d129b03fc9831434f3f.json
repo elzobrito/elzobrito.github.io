@@ -1,0 +1,13 @@
+{
+  "after_sha256": "96ff687242842643a3449911f5f4159417230fc36547f44bafb6881fc4ee06a5",
+  "artifact_id": "ART-96ff687242842643a3449911f5f4159417230fc36547f44bafb6881fc4ee06a5",
+  "artifact_sha256": "c815244a2f26236893333f4cbbaff5737ba7852d5e730d129b03fc9831434f3f",
+  "before_sha256": null,
+  "bytes": 1568,
+  "content": "# Divulgação social — SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-X-001\n\n## Resultado\n\n- Canal: X (Twitter)\n- Estado: encerrado sem envio, a pedido do operador\n- Motivo: a sessão Chrome do computer-use redirecionou `https://x.com/compose/post` para login/onboarding; o operador informou que não seria possível autenticar no x.com com a tarefa aberta\n- URL pública: nenhuma\n- Envios: 0\n\n## Pré-condição conferida antes do encerramento\n\n- EN: https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n- PT: https://elzobrito.github.io/blog/o-modelo-e-um-cerebro-numa-jarra/\n- PUBLISH `SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001` em `done`\n- LinkedIn desta publicação já tinha URL pública e não foi repetido\n\n## Evidência do bloqueio\n\n- Destino tentado: `https://x.com/compose/post`\n- URL observada: `https://x.com/i/jf/onboarding/web?redirect_after_login=%2Fcompose%2Fpost&mode=login`\n- Diálogo de login visível (`See what's happening`, `Email or username`, `Continue with Google`)\n- Nenhum campo de senha foi preenchido\n- Nenhuma API, token ou navegador alternativo foi usado\n- Nenhum tweet foi composto nem enviado\n\n## Texto preparado (não enviado)\n\n> A model on its own is a brain in a jar. Two products can share it and still feel different: the harness is tools, memory, and verification. https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n\n## Encerramento\n\nA tarefa foi fechada sem `done` de publicação. Não há URL pública no X. Uma nova tarefa será necessária se a divulgação no X for retomada depois do login.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-X-001.md",
+  "source_path": "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-X-001.md",
+  "ts": "2026-08-25T15:28:15Z"
+}

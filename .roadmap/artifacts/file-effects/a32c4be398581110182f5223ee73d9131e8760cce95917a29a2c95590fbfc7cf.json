@@ -1,0 +1,13 @@
+{
+  "after_sha256": "4c99c9164482c63a904b7e6589af6145bc2337367d2c5777458a1ab23ec71c2a",
+  "artifact_id": "ART-4c99c9164482c63a904b7e6589af6145bc2337367d2c5777458a1ab23ec71c2a",
+  "artifact_sha256": "a32c4be398581110182f5223ee73d9131e8760cce95917a29a2c95590fbfc7cf",
+  "before_sha256": null,
+  "bytes": 2193,
+  "content": "# Social — SITE-BLOG-DAILY-OPEN-20260805\n\nData editorial: 2026-08-05 (America/Sao_Paulo)\n\n## Pré-condição\n\n- PT publicado e validado: https://elzobrito.github.io/blog/metricas-tornam-a-inferencia-especulativa-auditavel/\n- EN publicado e validado: https://elzobrito.github.io/en/blog/metrics-make-speculative-decoding-auditable/\n- GitHub Pages `31019631388`: success.\n- Antes dos envios, memória e documentos do ciclo não continham URL social pública para 2026-08-05.\n\n## Estado por canal\n\n### X — publicado\n\n- Horário efetivo: 2026-08-05 12:28 -03.\n- URL canônica: https://x.com/elzobrito/status/2085023900077813831\n- Confirmação observada: `Seu post foi enviado. Você tem 1 hora para fazer edições.`\n- Texto efetivo: `Speculative decoding is useful only when its effect is measurable. llama.cpp now exposes counters through /metrics, aligned with vLLM, so teams can test whether the optimization actually pays off. https://elzobrito.github.io/en/blog/metrics-make-speculative-decoding-auditable/`\n\n### LinkedIn — bloqueado e pendente\n\n- Conta autenticada confirmada.\n- Editor de publicação aberto e preservado como handoff.\n- O campo `Editor de texto para criação de conteúdo` recusou entrada pelas interfaces Playwright, DOM e controle visual suportadas; o botão `Publicar` permaneceu desabilitado.\n- Nenhum envio ocorreu e não existe URL pública do LinkedIn para este ciclo.\n- Texto preparado: `Uma otimização só merece virar configuração padrão quando seu efeito pode ser medido. O llama.cpp passou a expor contadores de decodificação especulativa em /metrics, alinhados ao esquema do vLLM. Isso muda a conversa: menos “ativamos uma técnica de aceleração”, mais “medimos o que ela entregou nesta carga e neste hardware”. PT: https://elzobrito.github.io/blog/metricas-tornam-a-inferencia-especulativa-auditavel/ EN: https://elzobrito.github.io/en/blog/metrics-make-speculative-decoding-auditable/`\n\n## Retomada idempotente\n\nNão republicar no X. Retomar somente o LinkedIn na aba preservada, inserir o texto preparado, publicar uma vez e registrar a URL pública canônica. A tarefa SOCIAL permanece `in_progress` até essa evidência existir.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001.md",
+  "ts": "2026-08-05T15:30:15Z"
+}

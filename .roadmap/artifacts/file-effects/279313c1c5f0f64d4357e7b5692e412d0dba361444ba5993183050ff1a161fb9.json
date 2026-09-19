@@ -1,0 +1,13 @@
+{
+  "after_sha256": "3575ee6f572969f899a3983d516a670520ea1e0b3cade7ea00e026d2416781d1",
+  "artifact_id": "ART-3575ee6f572969f899a3983d516a670520ea1e0b3cade7ea00e026d2416781d1",
+  "artifact_sha256": "279313c1c5f0f64d4357e7b5692e412d0dba361444ba5993183050ff1a161fb9",
+  "before_sha256": "3575ee6f572969f899a3983d516a670520ea1e0b3cade7ea00e026d2416781d1",
+  "bytes": 1683,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001\n\n## Artefatos\n\n- PT: `src/content/posts/pt/a-inteligencia-agora-depende-do-cracha.md`.\n- EN: `src/content/posts/en/intelligence-now-depends-on-the-badge.md`.\n- QA: `docs/qa/SITE-BLOG-DAILY-OPEN-20260902-QA-001.md`.\n\n## Segurança do Git\n\n- `git fetch origin`: concluído antes do commit e do push.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes do commit; `0 0` após o push e a verificação pública.\n- Base confirmada antes do commit: `41a32594eb7c693fa71ea50dd366b5e5184bbb05`, igual em `HEAD` e `origin/main`.\n- Staging: limitado aos dois posts e aos documentos QA deste ciclo.\n\n## Estado\n\n- Commit de conteúdo: `601a07a265b25a4418feb37fe586d9f18194cae3` (`Publish daily AI briefing 2026-09-02`).\n- Push para `origin/main`: concluído, sem force push.\n- Workflow `Deploy static hub to GitHub Pages`: execução `33644734942`, conclusão `success` em 2026-09-02 11:51:50 -03.\n- Workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/33644734942\n- URL PT: https://elzobrito.github.io/blog/a-inteligencia-agora-depende-do-cracha/\n- URL EN: https://elzobrito.github.io/en/blog/intelligence-now-depends-on-the-badge/\n- URL PT: HTTP 200; título `A inteligência agora depende do crachá — Elzo Brito`; canonical PT e alternates `pt-BR`, `en` e `x-default` corretos.\n- URL EN: HTTP 200; título `Intelligence now depends on the badge — Elzo Brito`; canonical EN e alternates `pt-BR`, `en` e `x-default` corretos.\n\n## Resultado\n\nPublicação aprovada. O conteúdo canônico está disponível nos dois idiomas e a divulgação social pode começar de forma idempotente por canal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001.md",
+  "ts": "2026-09-02T14:52:41Z"
+}

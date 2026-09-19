@@ -1,0 +1,13 @@
+{
+  "after_sha256": "edca0931d28977db7f7892c437f13c8657eb8d2ee583b0ee7737f06cbec9decd",
+  "artifact_id": "ART-edca0931d28977db7f7892c437f13c8657eb8d2ee583b0ee7737f06cbec9decd",
+  "artifact_sha256": "31b49bd4bc3c0b13bd4a21f107449f2ca45883874193c50b37f1013a4b652fe6",
+  "before_sha256": "edca0931d28977db7f7892c437f13c8657eb8d2ee583b0ee7737f06cbec9decd",
+  "bytes": 1548,
+  "content": "# Publicação — artigo diário aberto — 2026-08-13\n\n## Artefatos\n\n- PT: `a-ia-mudou-sem-trocar-um-unico-peso`\n- EN: `ai-changed-without-changing-a-single-weight`\n- URL PT planejada: https://elzobrito.github.io/blog/a-ia-mudou-sem-trocar-um-unico-peso/\n- URL EN planejada: https://elzobrito.github.io/en/blog/ai-changed-without-changing-a-single-weight/\n\n## Pré-publicação\n\n- `npm test`: aprovado, 161 páginas.\n- Auditoria pública: 174 arquivos, 13 rotas obrigatórias, SEO aprovado e 0 ocorrências vedadas.\n- Auditoria editorial: aprovada.\n- `git diff --check`: aprovado.\n- Fontes primárias: três respostas HTTP 200.\n- Branch: `main`.\n- Comparação inicial com `origin/main`: 0 à frente, 0 atrás.\n- Alterações anteriores e não relacionadas permanecem fora do staging.\n\n## Evidência remota\n\n- Commit de conteúdo: `120b11e9d4e6e1c80058f1c2f8e867a8ad855f26`.\n- Workflow `Deploy static hub to GitHub Pages`: [31710175001](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31710175001).\n- Estado do workflow: `success`.\n- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.\n- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.\n- Paridade após o deploy: `HEAD...origin/main = 0 0`.\n\n## URLs públicas\n\n- PT: https://elzobrito.github.io/blog/a-ia-mudou-sem-trocar-um-unico-peso/\n- EN: https://elzobrito.github.io/en/blog/ai-changed-without-changing-a-single-weight/\n\nPublicação confirmada em 2026-08-13 11:27 -03.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260813-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260813-PUBLISH-001.md",
+  "ts": "2026-08-13T14:27:56Z"
+}

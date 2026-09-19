@@ -1,0 +1,13 @@
+{
+  "after_sha256": "d560d1f77e92d7b5c89e429901922ae7ecfc74565bd93b1670af6c00bcfe6b45",
+  "artifact_id": "ART-d560d1f77e92d7b5c89e429901922ae7ecfc74565bd93b1670af6c00bcfe6b45",
+  "artifact_sha256": "b4f4c692c6c7f5c60fb520c8c9507d9e138384e3dc3be374bd73caf76d0229c7",
+  "before_sha256": "d560d1f77e92d7b5c89e429901922ae7ecfc74565bd93b1670af6c00bcfe6b45",
+  "bytes": 796,
+  "content": "# Social — SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001\n\n## Escopo\n\nEncerramento documental da divulgação do artigo diário aberto de 2026-08-01.\nNenhum envio em LinkedIn ou X.\n\n## URLs canônicas do artigo (PUBLISH done)\n\n- PT: https://elzobrito.github.io/blog/o-cache-que-acelera-a-ia-tambem-precisa-separar-usuarios/\n- EN: https://elzobrito.github.io/en/blog/the-cache-that-speeds-up-ai-must-also-separate-users/\n\n## LinkedIn\n\n- Estado: encerrado sem envio.\n- URL pública: ausente.\n\n## X\n\n- Estado: encerrado sem envio.\n- URL pública: ausente.\n\n## Encerramento\n\n- Data: 2026-09-18\n- Decisão do operador: não executar a divulgação em LinkedIn e X.\n- LinkedIn: não enviado; URL pública ausente.\n- X: não enviado; URL pública ausente.\n- Não retomar este SOCIAL salvo nova tarefa ESAA.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001.md",
+  "ts": "2026-09-19T01:53:37Z"
+}

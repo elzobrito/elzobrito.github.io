@@ -54,3 +54,11 @@ Cada canal só muda para `publicado` após a captura de sua URL pública canôni
 2. Com uma sessão Chrome já aberta e autenticada, verificar novamente memória, tarefa e este documento separadamente para cada canal.
 3. Publicar apenas o canal que continuar sem URL pública.
 4. Registrar horário local, texto efetivamente enviado e URL canônica imediatamente após cada sucesso.
+
+## Encerramento
+
+- Data: 2026-09-18
+- Decisão do operador: não executar a divulgação em LinkedIn e X.
+- LinkedIn: não enviado; URL pública ausente.
+- X: não enviado; URL pública ausente.
+- Não retomar este SOCIAL salvo nova tarefa ESAA.

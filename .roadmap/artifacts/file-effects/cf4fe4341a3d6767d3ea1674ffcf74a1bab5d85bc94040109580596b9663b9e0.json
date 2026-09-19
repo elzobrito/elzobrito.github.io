@@ -1,0 +1,13 @@
+{
+  "after_sha256": "b4e543895c93507196c40ce0f319785f30eede0f00683bd6c078ebdffcf3f24d",
+  "artifact_id": "ART-b4e543895c93507196c40ce0f319785f30eede0f00683bd6c078ebdffcf3f24d",
+  "artifact_sha256": "cf4fe4341a3d6767d3ea1674ffcf74a1bab5d85bc94040109580596b9663b9e0",
+  "before_sha256": "b4e543895c93507196c40ce0f319785f30eede0f00683bd6c078ebdffcf3f24d",
+  "bytes": 1907,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001\n\n## Escopo\n\n- PT: `src/content/posts/pt/a-tela-registra-passos-nao-explica-o-trabalho.md`\n- EN: `src/content/posts/en/a-screen-records-steps-not-the-work.md`\n- QA: `docs/qa/SITE-BLOG-DAILY-OPEN-20260821-QA-001.md`\n- Branch autorizada: `main`.\n\n## Gate pré-publicação\n\n- `npm test`: aprovado, 173 páginas.\n- `git diff --check`: aprovado.\n- `git fetch origin`: concluído.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes do commit.\n- Staging limitado aos dois posts e aos documentos QA/PUBLISH deste ciclo.\n- Alterações preexistentes em `.roadmap` e em `docs/qa/SITE-BLOG-AGENT-ENGINEERING-20260803-PUBLISH-001.md` permanecem fora do staging.\n\n## Commit e deploy\n\n- Commit de conteúdo: `03c0dded97452bc91c5ff7a269cf0c6fbfb99b4d` (`Publish daily AI briefing 2026-08-21`).\n- Push para `origin/main`: concluído sem força.\n- Workflow `Deploy static hub to GitHub Pages`: [32505668458](https://github.com/elzobrito/elzobrito.github.io/actions/runs/32505668458), `success`.\n- Execução: criada em 2026-08-21 16:58:06 UTC e concluída em 2026-08-21 16:58:53 UTC.\n\n## URLs esperadas\n\n- PT: https://elzobrito.github.io/blog/a-tela-registra-passos-nao-explica-o-trabalho/\n- EN: https://elzobrito.github.io/en/blog/a-screen-records-steps-not-the-work/\n\n## Verificação pública\n\n- PT: HTTP 200; título `A tela registra passos, não explica o trabalho — Elzo Brito`; canonical próprio; alternates `en`, `pt-BR` e `x-default` corretos.\n- EN: HTTP 200; título `A screen records steps, not the work — Elzo Brito`; canonical próprio; alternates `pt-BR`, `en` e `x-default` corretos.\n- Verificação realizada com `curl -L` e inspeção focal do HTML publicado.\n\n## Resultado\n\nPublicação aprovada. O artigo bilíngue está disponível nas duas URLs canônicas e a divulgação social pode começar sem antecipar o deploy.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001.md",
+  "ts": "2026-08-21T17:00:17Z"
+}

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "4d5bceec996563f014b959e1961e2ca892d150a1b129dcf14f819b4493989d08",
+  "artifact_id": "ART-4d5bceec996563f014b959e1961e2ca892d150a1b129dcf14f819b4493989d08",
+  "artifact_sha256": "329d6c647c3ce8c712921d7f2213e0209a0d72bff43c4b63ce49e55aba222544",
+  "before_sha256": null,
+  "bytes": 1786,
+  "content": "# QA — SITE-BLOG-DAILY-OPEN-20260805\n\nData editorial: 2026-08-05 (America/Sao_Paulo)\n\n## Escopo\n\nValidação do artigo diário bilíngue sobre os novos contadores de decodificação especulativa expostos pelo `llama.cpp` no endpoint Prometheus `/metrics`.\n\n## Fonte primária e janela temporal\n\n- PR primário: https://github.com/ggml-org/llama.cpp/pull/26389\n- Estado observado: merged em 2026-08-05.\n- Commit de merge informado pelo GitHub: `a035a88`.\n- Evidência factual: o PR adiciona quatro famílias de contadores de speculative decoding ao endpoint `/metrics` e declara alinhamento com o esquema de contadores do vLLM.\n- Janela: fonte mesclada na própria data editorial, dentro das 24 horas exigidas.\n\n## Artefatos revisados\n\n- `src/content/posts/pt/metricas-tornam-a-inferencia-especulativa-auditavel.md`\n- `src/content/posts/en/metrics-make-speculative-decoding-auditable.md`\n\n## Verificações\n\n- Frontmatter PT/EN válido, com data `2026-08-05` e slugs de tradução recíprocos.\n- Inglês revisado como adaptação editorial, preservando a tese sem tradução mecânica.\n- Texto público restrito ao argumento técnico; varredura focal sem vazamento de automação, scraping ou processo editorial.\n- `git diff --check -- <posts PT/EN>`: aprovado.\n- `npm test`: aprovado.\n  - Astro check: 0 errors, 0 warnings, 0 hints.\n  - Build: 145 páginas.\n  - Auditoria pública: 158 arquivos, 13 rotas obrigatórias, SEO aprovado, 0 termos proibidos.\n  - Auditoria editorial: nenhum travessão proibido.\n\n## Resultado\n\nQA aprovado. O par PT/EN está apto para commit, push e verificação pública nas rotas:\n\n- https://elzobrito.github.io/blog/metricas-tornam-a-inferencia-especulativa-auditavel/\n- https://elzobrito.github.io/en/blog/metrics-make-speculative-decoding-auditable/\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-QA-001.md",
+  "ts": "2026-08-05T15:17:45Z"
+}

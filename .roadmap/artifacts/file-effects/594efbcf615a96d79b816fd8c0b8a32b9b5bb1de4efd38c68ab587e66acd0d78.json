@@ -1,0 +1,13 @@
+{
+  "after_sha256": "da04314535619de984a7b345a90044d0b9fc9e01a121a61c344d992d07943e01",
+  "artifact_id": "ART-da04314535619de984a7b345a90044d0b9fc9e01a121a61c344d992d07943e01",
+  "artifact_sha256": "594efbcf615a96d79b816fd8c0b8a32b9b5bb1de4efd38c68ab587e66acd0d78",
+  "before_sha256": "da04314535619de984a7b345a90044d0b9fc9e01a121a61c344d992d07943e01",
+  "bytes": 1629,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260808\n\n## Artefatos\n\n- PT: `src/content/posts/pt/uma-pasta-nao-e-uma-permissao.md`\n- EN: `src/content/posts/en/a-folder-is-not-a-permission.md`\n- QA: `docs/qa/SITE-BLOG-DAILY-OPEN-20260808-QA-001.md`\n\n## URLs canônicas planejadas\n\n- PT: https://elzobrito.github.io/blog/uma-pasta-nao-e-uma-permissao/\n- EN: https://elzobrito.github.io/en/blog/a-folder-is-not-a-permission/\n\n## Gate pré-publicação\n\n- `npm test`: aprovado com 151 páginas.\n- `git diff --check`: aprovado.\n- Fontes primárias: HTTP 200 e merges dentro da janela editorial.\n- `esaa --root . verify`: aprovado antes da criação das tarefas.\n- `git fetch origin`: executado.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes do início do ciclo.\n\n## Estado\n\n- Commit de conteúdo: `f8971b1d537c7a6f519b09d67d83ee83e55b132d` (`Publish daily AI briefing 2026-08-08`).\n- Push para `origin/main`: concluído.\n- Workflow `Deploy static hub to GitHub Pages`: [31265943929](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31265943929), `success` em 2026-08-08 16:02:33 UTC.\n- Verificação pública PT: HTTP 200; título `Uma pasta não é uma permissão — Elzo Brito`; canonical próprio; alternates `en`, `pt-BR` e `x-default` corretos.\n- Verificação pública EN: HTTP 200; título `A folder is not a permission — Elzo Brito`; canonical próprio; alternates `pt-BR`, `en` e `x-default` corretos.\n\n## Resultado\n\nPublicação aprovada. O conteúdo entregue pelo Pages corresponde ao par bilíngue validado localmente, e as duas rotas canônicas estão prontas para divulgação social.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001.md",
+  "ts": "2026-08-08T16:03:12Z"
+}

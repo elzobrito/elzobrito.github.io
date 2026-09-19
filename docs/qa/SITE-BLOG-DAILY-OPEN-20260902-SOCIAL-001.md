@@ -45,3 +45,11 @@ Antes de cada canal, reconfirmar memória, tarefa e este documento. Publicar som
 - O Google Chrome não estava em execução.
 - Nenhum envio foi realizado e nenhuma URL pública foi criada.
 - Nenhuma janela foi aberta; Edge, navegador interno, API, script de postagem, credenciais e contorno de autenticação não foram usados.
+
+## Encerramento
+
+- Data: 2026-09-18
+- Decisão do operador: não executar a divulgação em LinkedIn e X.
+- LinkedIn: não enviado; URL pública ausente.
+- X: não enviado; URL pública ausente.
+- Não retomar este SOCIAL salvo nova tarefa ESAA.

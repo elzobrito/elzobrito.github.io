@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 2252,
-      "projection_hash_sha256": "5e9f19999a8455d8951bae7eaefae570c0c1d366be3d7329505f2a4027f69ebd",
+      "last_event_seq": 3807,
+      "projection_hash_sha256": "4e0a9cb96504285c7392cd1d9c7efe2d09588f2ebc30a1876ee7438938297fd4",
       "verify_status": "ok"
     },
-    "updated_at": "2026-08-03T14:44:42Z"
+    "updated_at": "2026-09-19T01:53:38Z"
   },
   "project": {
     "name": "esaa-core",
@@ -3324,7 +3324,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário bilíngue de IA de 2026-07-25",
       "description": "Publicar chamadas canônicas no LinkedIn e no X sem duplicação e registrar evidências.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260725-PUBLISH-001"
       ],
@@ -3338,7 +3338,13 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-impl",
-      "started_at": "2026-07-26T00:44:13Z"
+      "started_at": "2026-07-26T00:44:13Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260725-SOCIAL-001.md registra divulgacao pendente sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:52Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260725-FIX-001",
@@ -3480,7 +3486,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo bilíngue de 26 de julho",
       "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260726-PUBLISH-001"
       ],
@@ -3497,7 +3503,13 @@
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001.md"
       ],
       "assigned_to": "agent-impl",
-      "started_at": "2026-07-26T14:08:50Z"
+      "started_at": "2026-07-26T14:08:50Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260726-SOCIAL-001.md registra divulgacao pendente sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:53Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260726-FIX-001",
@@ -4509,7 +4521,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-07-30",
       "description": "Publicar no LinkedIn e no X sem duplicação e registrar URLs canônicas.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260730-PUBLISH-001"
       ],
@@ -4523,7 +4535,13 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-impl",
-      "started_at": "2026-07-30T14:09:39Z"
+      "started_at": "2026-07-30T14:09:39Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-001.md registra X https://x.com/elzobrito/status/2082831776251093254 e LinkedIn bloqueado; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:53Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260730-SOCIAL-EVIDENCE-001",
@@ -4640,7 +4658,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-07-31",
       "description": "Publicar no LinkedIn e no X após o deploy, com controle idempotente por canal.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260731-PUBLISH-001"
       ],
@@ -4657,7 +4675,13 @@
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-SOCIAL-001.md"
       ],
       "assigned_to": "agent-impl",
-      "started_at": "2026-07-31T14:09:42Z"
+      "started_at": "2026-07-31T14:09:42Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260731-SOCIAL-001.md registra X https://x.com/elzobrito/status/2083194197658476924 e LinkedIn bloqueado; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:54Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260801-POST-001",
@@ -4748,7 +4772,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-08-01",
       "description": "Após o deploy, publicar chamadas idempotentes no LinkedIn e no X, tratar canais independentemente e registrar somente URLs efetivamente confirmadas.",
-      "status": "todo",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260801-PUBLISH-001"
       ],
@@ -4763,7 +4787,15 @@
       },
       "boundary_grant": [
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260801-SOCIAL-001.md"
-      ]
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-09-19T01:53:37Z",
+      "verification": {
+        "checks": [
+          "Operador dispensou execucao LinkedIn/X em 2026-09-18; nenhum envio; recibo SOCIAL sem URL publica."
+        ]
+      },
+      "completed_at": "2026-09-19T01:53:38Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-DATE-ISOLATION-IMPL-001",
@@ -4935,7 +4967,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-08-02",
       "description": "Após o deploy, publicar chamadas idempotentes no LinkedIn e no X, tratar canais independentemente e registrar somente URLs efetivamente confirmadas.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260802-PUBLISH-001"
       ],
@@ -4952,7 +4984,13 @@
         "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-SOCIAL-001.md"
       ],
       "assigned_to": "agent-impl",
-      "started_at": "2026-08-02T17:30:59Z"
+      "started_at": "2026-08-02T17:30:59Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260802-SOCIAL-001.md registra nenhum envio e X sem sessao autenticada; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:55Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260803-POST-001",
@@ -5039,7 +5077,7 @@
       "task_kind": "impl",
       "title": "Divulgar artigo diário aberto de 2026-08-03",
       "description": "Publicar LinkedIn e X sem duplicação e registrar URLs.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-DAILY-OPEN-20260803-PUBLISH-001"
       ],
@@ -5053,7 +5091,13 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-impl",
-      "started_at": "2026-08-03T14:07:15Z"
+      "started_at": "2026-08-03T14:07:15Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260803-SOCIAL-001.md ausente; claim 2026-08-03T14:07:15Z sem complete/file.write; POST/QA/PUBLISH da data done; nenhuma URL social registrada."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:56Z"
     },
     {
       "task_id": "SITE-BLOG-DAILY-OPEN-20260803-FIX-001",
@@ -5139,7 +5183,7 @@
       "task_kind": "qa",
       "title": "Publicar artigo sobre engenharia de agentes",
       "description": "Validar, enviar ao main, acompanhar Pages e registrar as URLs canônicas.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-BLOG-AGENT-ENGINEERING-20260803-TRANSLATION-001"
       ],
@@ -5153,18 +5197,3281 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-08-03T14:44:42Z"
+      "started_at": "2026-08-03T14:44:42Z",
+      "verification": {
+        "checks": [
+          "npm test passed; workflow 30824239141 succeeded; PT/EN URLs returned HTTP 200 with correct titles."
+        ]
+      },
+      "completed_at": "2026-08-03T14:47:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260804-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto de 2026-08-04",
+      "description": "Criar e validar posts editoriais PT/EN com fontes primárias da janela de 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-04T17:01:50Z",
+      "verification": {
+        "checks": [
+          "Fonte primária e janela de publicação verificadas.",
+          "Posts PT/EN criados com traduções recíprocas."
+        ]
+      },
+      "completed_at": "2026-08-04T17:02:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260804-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo diário aberto de 2026-08-04",
+      "description": "Revisar fontes, rigor editorial, schema, privacidade, tradução e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260804-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-04T17:02:57Z",
+      "verification": {
+        "checks": [
+          "Fonte primária relida e afirmações específicas conferidas.",
+          "npm test aprovado.",
+          "Auditoria focal e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-04T17:03:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260804-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-04",
+      "description": "Commit, push, deploy Pages e evidência pública.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260804-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-04T17:03:44Z",
+      "verification": {
+        "checks": [
+          "Commit e push explícitos concluídos sem alterações alheias.",
+          "Workflow Pages 30932158763 concluído com sucesso.",
+          "URLs PT e EN retornam HTTP 200 com canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-04T17:05:31Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260804-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-04",
+      "description": "Publicar e registrar LinkedIn e X sem duplicação.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260804-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-04T17:05:32Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-SOCIAL-001.md registra divulgacao bloqueada; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-05",
+      "description": "Produzir os posts PT/EN sobre os contadores de decodificação especulativa expostos pelo llama.cpp.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/metricas-tornam-a-inferencia-especulativa-auditavel.md",
+          "src/content/posts/en/metrics-make-speculative-decoding-auditable.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-05T14:57:20Z",
+      "verification": {
+        "checks": [
+          "Primary release and PR inspected; PT/EN posts written with reciprocal translations"
+        ]
+      },
+      "completed_at": "2026-08-05T14:58:21Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-05",
+      "description": "Revisar fontes, rigor editorial, tradução, schema, privacidade e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260805-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-05T14:58:11Z",
+      "verification": {
+        "checks": [
+          "PR primário 26389 confirmado como merged em 2026-08-05 e conteúdo factual revisado.",
+          "npm test aprovado com 145 páginas, 158 artefatos públicos e auditorias pública/editorial aprovadas.",
+          "Frontmatter, traduções recíprocas, privacidade editorial e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-05T15:17:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-05",
+      "description": "Fazer commit, push, deploy Pages e registrar evidências públicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260805-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-05T15:18:09Z",
+      "verification": {
+        "checks": [
+          "Staging estrito e HEAD...origin/main 0 0 antes e depois do push.",
+          "GitHub Pages 31019631388 concluído com sucesso.",
+          "PT e EN retornam HTTP 200 com title, canonical e hreflang recíproco corretos."
+        ]
+      },
+      "completed_at": "2026-08-05T15:20:09Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-05",
+      "description": "Publicar e registrar LinkedIn e X sem duplicação.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260805-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-05T15:20:42Z",
+      "verification": {
+        "checks": [
+          "X preservado: https://x.com/elzobrito/status/2085023900077813831",
+          "LinkedIn canônico: https://www.linkedin.com/posts/elzobrito_metrics-make-speculative-decoding-auditable-activity-7490817571634438144-TAbt"
+        ]
+      },
+      "completed_at": "2026-08-05T17:16:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social de 2026-08-05",
+      "description": "Registrar URL pública do X e o estado bloqueado do LinkedIn sem duplicação.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-05T15:29:48Z",
+      "verification": {
+        "checks": [
+          "X confirmou envio e forneceu URL pública canônica 2085023900077813831.",
+          "LinkedIn permaneceu sem URL pública e com botão Publicar desabilitado; nenhum envio ambíguo ocorreu."
+        ]
+      },
+      "completed_at": "2026-08-05T15:30:26Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-EVIDENCE-002",
+      "task_kind": "qa",
+      "title": "Registrar re-tentativa LinkedIn 2026-08-05",
+      "description": "Registrar re-tentativa LinkedIn 2026-08-05",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-05T17:08:14Z",
+      "verification": {
+        "checks": [
+          "PT/EN live HTTP 200 e X URL pública 2085023900077813831 intacta",
+          "LinkedIn redirecionou para /login; sem sessão autenticada no browser MCP; nenhum post enviado"
+        ]
+      },
+      "completed_at": "2026-08-05T17:08:38Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-EVIDENCE-003",
+      "task_kind": "qa",
+      "title": "Registrar URLs sociais finais 2026-08-05",
+      "description": "Registrar URLs sociais finais 2026-08-05",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-05T17:16:35Z",
+      "verification": {
+        "checks": [
+          "LinkedIn activity 7490817571634438144 confirmado em recent-activity com carimbo agora",
+          "URL canônica resolvida via redirect HTTP 200"
+        ]
+      },
+      "completed_at": "2026-08-05T17:16:41Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260806-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário bilíngue de 2026-08-06",
+      "description": "Produzir posts PT/EN sobre a modularização do vLLM a partir de fontes primárias integradas nas últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/a-pilha-de-inferencia-aprende-a-funcionar-por-partes.md",
+        "src/content/posts/en/the-inference-stack-learns-to-work-in-pieces.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-pilha-de-inferencia-aprende-a-funcionar-por-partes.md",
+          "src/content/posts/en/the-inference-stack-learns-to-work-in-pieces.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-06T15:04:40Z",
+      "verification": {
+        "checks": [
+          "Frontmatter obrigatório presente e slugs translation recíprocos.",
+          "Fontes primárias vLLM 50289 e 49453 integradas em 2026-08-06."
+        ]
+      },
+      "completed_at": "2026-08-06T15:06:23Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260806-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-06",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260806-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-06T15:06:13Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 147 páginas e 160 artefatos públicos.",
+          "Varredura focal, tradução recíproca e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-06T15:09:10Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-06",
+      "description": "Commitar, enviar main, exigir Pages success e verificar URLs PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260806-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-06T15:09:14Z",
+      "verification": {
+        "checks": [
+          "Run 31114500088 concluído com success para o commit 111f3cc.",
+          "PT e EN retornam HTTP 200 com título, canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-06T15:18:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-06",
+      "description": "Publicar chamadas idempotentes no LinkedIn e X após a publicação do site.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-06T15:19:24Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001.md registra X https://x.com/elzobrito/status/2085386349868175669 e LinkedIn bloqueado; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:57Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social de 2026-08-06",
+      "description": "Registrar X publicado e bloqueio retomável do LinkedIn sem concluir a tarefa SOCIAL.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-06T15:25:03Z",
+      "verification": {
+        "checks": [
+          "X público verificado em https://x.com/elzobrito/status/2085386349868175669.",
+          "LinkedIn sem URL pública e sem tentativa de contornar autenticação ou interface."
+        ]
+      },
+      "completed_at": "2026-08-06T15:25:40Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260807-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário bilíngue de 2026-08-07",
+      "description": "Produzir posts PT/EN sobre gestão de memória escassa em servidores de inferência a partir de fontes primárias integradas nas últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/memoria-escassa-vira-politica-de-inferencia.md",
+        "src/content/posts/en/scarce-memory-becomes-inference-policy.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/memoria-escassa-vira-politica-de-inferencia.md",
+          "src/content/posts/en/scarce-memory-becomes-inference-policy.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-07T14:03:28Z",
+      "verification": {
+        "checks": [
+          "Frontmatter obrigatório presente e slugs translation recíprocos.",
+          "Fontes primárias integradas em 2026-08-07 e dentro da janela editorial."
+        ]
+      },
+      "completed_at": "2026-08-07T14:04:46Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260807-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-07",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260807-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-07T14:04:47Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 149 páginas e 162 artefatos públicos.",
+          "Varredura focal, tradução recíproca e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-07T14:07:49Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260807-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-07",
+      "description": "Commitar, enviar main, exigir Pages success e verificar URLs PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260807-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-07T14:07:49Z",
+      "verification": {
+        "checks": [
+          "Run 31186097232 concluído com success para o commit 19854ac.",
+          "PT e EN retornam HTTP 200 com título, canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-07T14:11:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-07",
+      "description": "Publicar chamadas idempotentes no LinkedIn e X após a publicação do site.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260807-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-07T14:11:06Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001.md registra divulgacao bloqueada sem envio; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-08-07",
+      "description": "Registrar bloqueio retomável de LinkedIn e X sem concluir a tarefa SOCIAL.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260807-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260807-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-07T14:12:19Z",
+      "verification": {
+        "checks": [
+          "Memória, tarefa e documento não contêm URL pública social para 2026-08-07.",
+          "Nenhum navegador alternativo, API ou bypass foi usado."
+        ]
+      },
+      "completed_at": "2026-08-07T14:12:52Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260808-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário bilíngue de 2026-08-08",
+      "description": "Produzir posts PT/EN sobre isolamento inicial de ferramentas via Docker e exposição de diretório de trabalho orientada por capacidades no llama.cpp.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/uma-pasta-nao-e-uma-permissao.md",
+        "src/content/posts/en/a-folder-is-not-a-permission.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/uma-pasta-nao-e-uma-permissao.md",
+          "src/content/posts/en/a-folder-is-not-a-permission.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-08T15:58:32Z",
+      "verification": {
+        "checks": [
+          "Frontmatter obrigatório presente e slugs translation recíprocos.",
+          "PRs 26507 e 26762 integradas dentro da janela editorial de 24 horas."
+        ]
+      },
+      "completed_at": "2026-08-08T16:00:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260808-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-08",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260808-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-08T16:00:07Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 151 páginas; auditoria pública em 164 arquivos e 13 rotas, com 0 ocorrências proibidas.",
+          "git diff --check, fontes HTTP 200, reciprocidade e varredura focal aprovados."
+        ]
+      },
+      "completed_at": "2026-08-08T16:01:15Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-08",
+      "description": "Commitar, enviar, validar Pages e registrar evidências públicas PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260808-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-08T16:01:16Z",
+      "verification": {
+        "checks": [
+          "Workflow Deploy static hub to GitHub Pages 31265943929 concluído com success.",
+          "URLs PT e EN retornam HTTP 200 com canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-08T16:03:12Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-08",
+      "description": "Publicar chamadas independentes no LinkedIn e no X somente após a verificação pública do artigo.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-08T16:04:28Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social de 2026-08-08",
+      "description": "Registrar textos preparados e bloqueio independente de LinkedIn e X sem concluir a tarefa de envio.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260808-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260808-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-08T16:04:29Z",
+      "verification": {
+        "checks": [
+          "Memória, tarefa e documento sem URL social para 2026-08-08 antes da tentativa.",
+          "Chrome ausente em execução; nenhum navegador foi aberto e nenhum canal foi enviado."
+        ]
+      },
+      "completed_at": "2026-08-08T16:05:39Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260809-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário bilíngue de 2026-08-09",
+      "description": "Produzir posts PT/EN sobre identidade curta de workload e não herança do contexto de lançamento no Codex.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/o-agente-ganhou-uma-identidade-que-expira.md",
+        "src/content/posts/en/the-agent-got-an-identity-that-expires.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-agente-ganhou-uma-identidade-que-expira.md",
+          "src/content/posts/en/the-agent-got-an-identity-that-expires.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-09T14:03:07Z",
+      "verification": {
+        "checks": [
+          "Frontmatter obrigatório presente e slugs translation recíprocos.",
+          "PRs 37610 e 37607 integradas dentro da janela editorial de 24 horas."
+        ]
+      },
+      "completed_at": "2026-08-09T14:04:29Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260809-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-09",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260809-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-09T14:04:29Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 153 páginas; auditoria pública em 166 arquivos e 13 rotas, com 0 ocorrências proibidas.",
+          "git diff --check, fontes HTTP 200, reciprocidade, canonical local e varredura focal aprovados."
+        ]
+      },
+      "completed_at": "2026-08-09T14:05:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260809-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-09",
+      "description": "Commitar, enviar main, exigir Pages success e verificar URLs PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260809-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-09T14:05:59Z",
+      "verification": {
+        "checks": [
+          "Workflow Deploy static hub to GitHub Pages 31317584205 concluído com success.",
+          "URLs PT e EN retornam HTTP 200 com canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-09T14:08:09Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-09",
+      "description": "Publicar chamadas independentes no LinkedIn e X somente após a verificação pública do artigo.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260809-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-09T14:09:49Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001.md registra divulgacao bloqueada; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:30:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social de 2026-08-09",
+      "description": "Registrar textos preparados e bloqueio independente de LinkedIn e X sem concluir a tarefa de envio.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260809-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260809-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-09T14:09:50Z",
+      "verification": {
+        "checks": [
+          "Memória, tarefa e documentos sem URL social para 2026-08-09 antes da tentativa.",
+          "Chrome ausente em execução; nenhum navegador foi aberto e nenhum canal foi enviado."
+        ]
+      },
+      "completed_at": "2026-08-09T14:10:30Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260810-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-10",
+      "description": "Pesquisar fontes primárias nas últimas 24 horas e criar os artigos PT/EN do ciclo diário.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-10T14:02:30Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias e horários conferidos; frontmatter recíproco; varredura pública e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-10T14:05:20Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260810-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-10",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260810-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-10T14:05:29Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 155 páginas, 168 artefatos públicos, 0 erros e 0 ocorrências proibidas; canonical e hreflang locais confirmados; git diff --check aprovado."
+        ]
+      },
+      "completed_at": "2026-08-10T14:06:36Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260810-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-10",
+      "description": "Executar commit, push, deploy e registrar evidência pública PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260810-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-10T14:06:55Z",
+      "verification": {
+        "checks": [
+          "Workflow 31396544192 success; PT e EN HTTP 200 com títulos, canonical e hreflang corretos."
+        ]
+      },
+      "completed_at": "2026-08-10T14:09:49Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260810-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-10",
+      "description": "Publicar chamadas idempotentes no LinkedIn e no X após deploy verificado.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260810-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-10T14:11:26Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-SOCIAL-001.md registra divulgacao bloqueada; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:00Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260810-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover linha final excedente do post PT de 2026-08-10",
+      "description": "Registro retrospectivo: a correção mecânica foi aplicada após o gate de git diff --check e antes do commit; governança formalizada imediatamente após a detecção.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260810-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-agente-cabe-em-24-gb-a-confianca-nao.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-10T14:08:03Z",
+      "verification": {
+        "checks": [
+          "git diff --check aprovado para o post corrigido."
+        ]
+      },
+      "completed_at": "2026-08-10T14:08:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260810-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-08-10",
+      "description": "Registrar o estado independente dos canais e a ausência da sessão Chrome autorizada sem concluir a divulgação.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260810-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260810-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-10T14:12:25Z",
+      "verification": {
+        "checks": [
+          "Chrome ausente; extensão e native host corretos; textos preparados; URLs públicas sociais ausentes."
+        ]
+      },
+      "completed_at": "2026-08-10T14:12:26Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260811-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-11",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar artigos PT/EN recíprocos.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/",
+          "src/content/posts/en/"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-11T14:02:59Z",
+      "verification": {
+        "checks": [
+          "Fontes, janela temporal, reciprocidade, varredura pública e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-11T14:08:31Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260811-QA-001",
+      "task_kind": "qa",
+      "title": "Revisar artigo diário aberto de 2026-08-11",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260811-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260811-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-11T14:08:32Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 157 páginas, 170 arquivos públicos, 13 rotas, 0 ocorrências vedadas; fontes HTTP 200 e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-11T14:11:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260811-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-11",
+      "description": "Commitar, enviar a main, aguardar Pages e verificar URLs canônicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260811-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260811-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-11T14:11:04Z",
+      "verification": {
+        "checks": [
+          "Workflow 31500221834 success; PT/EN HTTP 200; títulos, canonical e hreflang confirmados; paridade 0 0."
+        ]
+      },
+      "completed_at": "2026-08-11T14:13:42Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260811-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-11",
+      "description": "Publicar uma chamada no LinkedIn e uma no X após deploy, com idempotência por canal.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260811-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260811-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-11T14:13:43Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260811-SOCIAL-001.md registra divulgacao bloqueada sem envio; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:01Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260811-FIX-001",
+      "task_kind": "impl",
+      "title": "Corrigir estilo editorial do artigo de 2026-08-11",
+      "description": "Registro retrospectivo: a necessidade de ajuste foi detectada no gate editorial após a criação dos posts; remover duas construções tipográficas proibidas sem alterar fatos.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260811-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-benchmark-agora-vem-com-instrucoes-de-montagem.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-11T14:09:12Z",
+      "verification": {
+        "checks": [
+          "Varredura focal e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-11T14:09:28Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260811-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar evidência social de 2026-08-11",
+      "description": "Registrar estados independentes de LinkedIn e X após verificação da sessão autorizada.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260811-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260811-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-11T14:15:40Z",
+      "verification": {
+        "checks": [
+          "URLs sociais ausentes; navegador autorizado indisponível; textos preparados; nenhum canal publicado."
+        ]
+      },
+      "completed_at": "2026-08-11T14:15:50Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-12",
+      "description": "Criar artigo diário aberto bilíngue de 2026-08-12",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/compatibilidade-nao-herda-seguranca.md",
+          "src/content/posts/en/compatibility-does-not-inherit-security.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-12T17:13:46Z",
+      "verification": {
+        "checks": [
+          "PT/EN redigidos com fontes primárias na janela, frontmatter recíproco e varredura pública focal sem ocorrências."
+        ]
+      },
+      "completed_at": "2026-08-12T17:15:15Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-12",
+      "description": "Validar artigo diário aberto de 2026-08-12",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260812-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-12T17:15:15Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 159 páginas, 172 arquivos públicos, 13 rotas, 0 ocorrências vedadas; fontes HTTP 200, reciprocidade e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-12T17:16:36Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-12",
+      "description": "Publicar artigo diário aberto de 2026-08-12",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260812-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-12T17:16:37Z",
+      "verification": {
+        "checks": [
+          "Commit 397776a enviado; workflow 31621837588 success; PT/EN HTTP 200 com canonical e hreflang; paridade 0 0."
+        ]
+      },
+      "completed_at": "2026-08-12T17:18:27Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-12",
+      "description": "Divulgar artigo diário aberto de 2026-08-12",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260812-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-12T17:19:04Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:01Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-08-12",
+      "description": "Registrar bloqueio social de 2026-08-12",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260812-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-12T17:19:05Z",
+      "verification": {
+        "checks": [
+          "Blog confirmado; LinkedIn e X sem URL; Chrome indisponível; nenhum envio; textos e retomada registrados."
+        ]
+      },
+      "completed_at": "2026-08-12T17:19:32Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-COPY-FIX-001",
+      "task_kind": "qa",
+      "title": "Corrigir contagem da chamada no X de 2026-08-12",
+      "description": "Corrigir contagem da chamada no X de 2026-08-12",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-EVIDENCE-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-12T17:19:43Z",
+      "verification": {
+        "checks": [
+          "Contagem recalculada: 273 caracteres, abaixo do limite de 280."
+        ]
+      },
+      "completed_at": "2026-08-12T17:19:56Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-LINKEDIN-001",
+      "task_kind": "qa",
+      "title": "Registrar publicação LinkedIn de 2026-08-12",
+      "description": "Registrar URL pública do LinkedIn do artigo diário aberto de 2026-08-12 e manter X como único canal pendente.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-COPY-FIX-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-12T17:25:59Z",
+      "verification": {
+        "checks": [
+          "alerta Publicação concluída com URL urn:li:share:7493356366439440384",
+          "página da publicação HTTP carregada com texto do artigo e preview EN"
+        ]
+      },
+      "completed_at": "2026-08-12T17:26:11Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260813-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto de 2026-08-13",
+      "description": "Criar o par editorial PT/EN com fontes primárias das últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-13T14:21:17Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN completos e slugs de tradução recíprocos"
+        ]
+      },
+      "completed_at": "2026-08-13T14:24:19Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260813-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-13",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260813-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260813-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-13T14:24:20Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 161 páginas, 174 arquivos públicos, 13 rotas, 0 ocorrências vedadas; fontes HTTP 200, reciprocidade e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-13T14:25:44Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260813-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-13",
+      "description": "Commitar, enviar, verificar Pages e registrar evidências.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260813-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260813-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-13T14:25:45Z",
+      "verification": {
+        "checks": [
+          "Workflow 31710175001 success; PT/EN HTTP 200 com título, canonical e hreflang; HEAD em paridade."
+        ]
+      },
+      "completed_at": "2026-08-13T14:27:57Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260813-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-13",
+      "description": "Publicar LinkedIn e X após verificação das URLs canônicas, sem duplicação por canal.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260813-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260813-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-13T14:27:58Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260813-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:02Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260814-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diario aberto bilingue de 2026-08-14",
+      "description": "Criar artigo diario aberto bilingue de 2026-08-14",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-raciocinio-ganhou-um-botao.md",
+          "src/content/posts/en/reasoning-got-a-control-knob.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-14T20:17:04Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN completos e fontes primarias vinculadas"
+        ]
+      },
+      "completed_at": "2026-08-14T20:18:47Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260814-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diario aberto de 2026-08-14",
+      "description": "Validar artigo diario aberto de 2026-08-14",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260814-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-14T20:18:48Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 163 paginas, 176 arquivos publicos, 13 rotas, 0 ocorrencias vedadas; fontes HTTP 200, reciprocidade e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-14T20:21:34Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260814-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diario aberto de 2026-08-14",
+      "description": "Publicar artigo diario aberto de 2026-08-14",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260814-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-14T20:21:34Z",
+      "verification": {
+        "checks": [
+          "Workflow 31837586313 success; PT/EN HTTP 200 com canonical e hreflang reciprocos; paridade 0 0."
+        ]
+      },
+      "completed_at": "2026-08-14T20:24:02Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260814-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diario aberto de 2026-08-14",
+      "description": "Divulgar artigo diario aberto de 2026-08-14",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260814-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-14T20:24:41Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:03Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260814-FIX-001",
+      "task_kind": "impl",
+      "title": "Precisar marco temporal do Qwen3.8",
+      "description": "Precisar marco temporal do Qwen3.8",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260814-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-raciocinio-ganhou-um-botao.md",
+          "src/content/posts/en/reasoning-got-a-control-knob.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-14T20:20:03Z",
+      "verification": {
+        "checks": [
+          "Marco temporal verificavel na ficha oficial de 2026-08-14"
+        ]
+      },
+      "completed_at": "2026-08-14T20:20:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260814-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-08-14",
+      "description": "Registrar bloqueio social de 2026-08-14",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260814-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-14T20:25:47Z",
+      "verification": {
+        "checks": [
+          "Chrome nao estava em execucao; extensao e native host integros; zero envios e zero URLs sociais."
+        ]
+      },
+      "completed_at": "2026-08-14T20:25:49Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260816-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diario aberto bilingue de 2026-08-16",
+      "description": "Criar artigo diario aberto bilingue de 2026-08-16",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-16T14:51:33Z",
+      "verification": {
+        "checks": [
+          "Posts PT/EN completos, fontes vinculadas e traduções recíprocas"
+        ]
+      },
+      "completed_at": "2026-08-16T14:54:07Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260816-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diario aberto de 2026-08-16",
+      "description": "Validar artigo diario aberto de 2026-08-16",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260816-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260816-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-16T14:54:08Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 165 páginas, 178 arquivos públicos, 13 rotas, 0 ocorrências vedadas; fontes HTTP 200, reciprocidade e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-16T14:55:35Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260816-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diario aberto de 2026-08-16",
+      "description": "Publicar artigo diario aberto de 2026-08-16",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260816-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260816-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-16T14:55:36Z",
+      "verification": {
+        "checks": [
+          "Workflow 31954153866 success; PT/EN HTTP 200; canonical, hreflang e paridade 0 0 confirmados."
+        ]
+      },
+      "completed_at": "2026-08-16T14:57:28Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260816-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diario aberto de 2026-08-16",
+      "description": "Divulgar artigo diario aberto de 2026-08-16",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260816-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260816-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-16T14:58:45Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260816-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260816-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar estado social de 2026-08-16",
+      "description": "Registrar estado social de 2026-08-16",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260816-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260816-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-16T14:58:46Z",
+      "verification": {
+        "checks": [
+          "Ausência de URLs sociais reconfirmada; Chrome não executava; extensão e host nativo válidos; texto X com 270 caracteres."
+        ]
+      },
+      "completed_at": "2026-08-16T14:59:32Z"
+    },
+    {
+      "task_id": "SITE-BLOG-ANTHROPIC-WATERMARK-20260816-POST-001",
+      "task_kind": "impl",
+      "title": "Escrever artigo bilingue sobre marcas d agua de texto do Claude",
+      "description": "Criar artigo PT e adaptacao EN com fontes primarias, separando fatos, inferencias e limites.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-carimbo-invisivel-do-claude-e-mais-fragil-do-que-parece.md",
+          "src/content/posts/en/claudes-invisible-mark-is-more-fragile-than-it-looks.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-16T20:37:29Z",
+      "verification": {
+        "checks": [
+          "Documentacao primaria da Anthropic, AI Act, Comissao Europeia e SynthID confrontada com cada afirmacao central."
+        ]
+      },
+      "completed_at": "2026-08-16T20:40:34Z"
+    },
+    {
+      "task_id": "SITE-BLOG-ANTHROPIC-WATERMARK-20260816-PUBLISH-001",
+      "task_kind": "impl",
+      "title": "Publicar artigo bilingue sobre marca de texto do Claude",
+      "description": "Fazer commit e push exclusivamente dos dois posts aprovados, preservando alteracoes preexistentes e nao relacionadas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-ANTHROPIC-WATERMARK-20260816-POST-001"
+      ],
+      "targets": [
+        "origin/main"
+      ],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-16T20:42:14Z",
+      "verification": {
+        "checks": [
+          "Commit e7e2858 contem somente os dois posts e HEAD...origin/main terminou em 0 0.",
+          "Workflow Pages 31971334256 passou; PT e EN retornaram HTTP 200 com canonical e hreflang reciprocos."
+        ]
+      },
+      "completed_at": "2026-08-16T20:44:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260817-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diario aberto bilingue de 2026-08-17",
+      "description": "Pesquisar fontes primarias das ultimas 24 horas e criar artigos PT/EN reciprocos.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-17T14:03:20Z",
+      "verification": {
+        "checks": [
+          "Fontes primarias confirmadas por GitHub API com merges em 2026-08-16T22:21:56Z, 23:09:47Z e 2026-08-17T06:29:41Z.",
+          "Frontmatter e traducoes reciprocas inspecionados."
+        ]
+      },
+      "completed_at": "2026-08-17T14:08:43Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260817-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diario aberto de 2026-08-17",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptacao e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260817-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260817-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-17T14:08:36Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 169 paginas, 182 arquivos publicos, 13 rotas, 0 ocorrencias vedadas; fontes HTTP 200, reciprocidade, duplicidade semantica e diff check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-17T14:10:03Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260817-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diario aberto de 2026-08-17",
+      "description": "Commitar, enviar main, aguardar Pages e verificar URLs canonicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260817-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260817-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-17T14:10:04Z",
+      "verification": {
+        "checks": [
+          "Commit 46c9b0c; workflow 32038112867 success; PT/EN HTTP 200; canonical, hreflang e paridade 0 0 confirmados."
+        ]
+      },
+      "completed_at": "2026-08-17T14:11:49Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260817-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diario aberto de 2026-08-17",
+      "description": "Publicar LinkedIn e X apos deploy, com idempotencia por canal.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260817-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260817-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-17T14:14:49Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260817-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:04Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260817-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar estado social de 2026-08-17",
+      "description": "Registrar textos preparados e bloqueio independente de LinkedIn e X sem concluir a tarefa de envio.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260817-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260817-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-17T14:14:51Z",
+      "verification": {
+        "checks": [
+          "Memoria, tarefa e documento sem URLs para 2026-08-17; Chrome indisponivel; textos preparados; X com 277 caracteres."
+        ]
+      },
+      "completed_at": "2026-08-17T14:15:29Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260819-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diario aberto bilingue de 2026-08-19",
+      "description": "Pesquisar fontes primarias das ultimas 24 horas e criar artigos PT/EN reciprocos.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt",
+          "src/content/posts/en"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-19T14:02:24Z",
+      "verification": {
+        "checks": [
+          "PRs 39312, 39319, 39372 e 39452 confirmadas pela API do GitHub com merged_at entre 2026-08-18T14:01Z e 2026-08-19T14:01Z.",
+          "Frontmatter e traducoes reciprocas inspecionados."
+        ]
+      },
+      "completed_at": "2026-08-19T14:04:15Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260819-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diario aberto de 2026-08-19",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptacao e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260819-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-19T14:04:05Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 171 paginas, 184 arquivos publicos e zero ocorrencias vedadas.",
+          "Quatro fontes primarias HTTP 200 e merges confirmados dentro da janela.",
+          "git diff --check e reciprocidade PT/EN aprovados."
+        ]
+      },
+      "completed_at": "2026-08-19T14:05:24Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260819-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diario aberto de 2026-08-19",
+      "description": "Commitar, enviar main, aguardar Pages e verificar URLs canonicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260819-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-19T14:05:25Z",
+      "verification": {
+        "checks": [
+          "Commit 95d5f266e2607d03594eaaa9a2eeae03f7298c27 enviado para origin/main.",
+          "Workflow 32261992529 concluido com success.",
+          "PT e EN HTTP 200 com titulo, canonical e hreflang reciprocos."
+        ]
+      },
+      "completed_at": "2026-08-19T14:07:52Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260819-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diario aberto de 2026-08-19",
+      "description": "Publicar LinkedIn e X apos deploy, com idempotencia por canal.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260819-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-19T14:08:32Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-SOCIAL-001.md registra divulgacao bloqueada sem envio; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:05Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260819-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar estado social de 2026-08-19",
+      "description": "Registrar textos preparados e bloqueio independente de LinkedIn e X sem concluir a tarefa de envio.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260819-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-19T14:09:14Z",
+      "verification": {
+        "checks": [
+          "Idempotencia por canal reconfirmada antes da verificacao.",
+          "Chrome indisponivel; diagnostico passivo confirmou navegador nao executando e extensao habilitada.",
+          "Texto X validado com 278 caracteres."
+        ]
+      },
+      "completed_at": "2026-08-19T14:09:16Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260821-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-21",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar os posts PT e EN reciprocamente vinculados.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-21T16:52:54Z",
+      "verification": {
+        "checks": [
+          "git diff --check e auditoria focal aprovados"
+        ]
+      },
+      "completed_at": "2026-08-21T16:56:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260821-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-21",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260821-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-21T16:56:07Z",
+      "verification": {
+        "checks": [
+          "npm test: 173 páginas; audit:public 186 arquivos; audit:editorial e git diff --check aprovados"
+        ]
+      },
+      "completed_at": "2026-08-21T16:57:34Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-21",
+      "description": "Fazer commit e push, aguardar Pages e registrar evidência das URLs públicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260821-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-21T16:57:34Z",
+      "verification": {
+        "checks": [
+          "Pages success e verificação HTTP/canonical/hreflang aprovadas"
+        ]
+      },
+      "completed_at": "2026-08-21T17:00:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260821-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-21",
+      "description": "Publicar uma chamada idempotente no LinkedIn e no X após o deploy verificado.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-21T17:00:38Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-SOCIAL-001.md registra divulgacao bloqueada sem URL publica; operador encerrou claim stale."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260821-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-08-21",
+      "description": "Registrar retrospectivamente a evidência do bloqueio observado após a tentativa de conexão suportada ao Chrome; manter SOCIAL retomável.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260821-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260821-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-21T17:02:27Z",
+      "verification": {
+        "checks": [
+          "Bloqueio Chrome documentado e zero envios confirmados"
+        ]
+      },
+      "completed_at": "2026-08-21T17:02:28Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260824-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-24",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar os posts PT e EN reciprocamente vinculados.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-24T14:02:21Z",
+      "verification": {
+        "checks": [
+          "Fontes primárias e horários de merge confirmados; reciprocidade, auditoria focal e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-24T14:04:49Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260824-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-24",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260824-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260824-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-24T14:04:49Z",
+      "verification": {
+        "checks": [
+          "npm test: 175 páginas; audit:public 188 arquivos; fontes HTTP 200; auditoria editorial e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-24T14:06:25Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260824-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-24",
+      "description": "Fazer commit e push, aguardar Pages e registrar evidência das URLs públicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260824-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260824-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-24T14:06:26Z",
+      "verification": {
+        "checks": [
+          "Pages success e verificação HTTP, título, canonical e hreflang aprovadas."
+        ]
+      },
+      "completed_at": "2026-08-24T14:10:14Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260824-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-24",
+      "description": "Publicar uma chamada idempotente no LinkedIn e no X após o deploy verificado.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260824-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260824-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-24T14:10:30Z",
+      "verification": {
+        "checks": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260824-SOCIAL-001.md registra LinkedIn e X bloqueados, sem URL publica e sem envio."
+        ]
+      },
+      "completed_at": "2026-08-25T14:31:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260824-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-08-24",
+      "description": "Registrar retrospectivamente a evidência do bloqueio observado após a tentativa de conexão suportada ao Chrome; manter SOCIAL retomável.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260824-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260824-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-24T14:11:28Z",
+      "verification": {
+        "checks": [
+          "Diagnóstico passivo confirmou Chrome instalado, extensão habilitada, host íntegro e navegador não executando; textos preparados e X com 278 caracteres."
+        ]
+      },
+      "completed_at": "2026-08-24T14:12:02Z"
+    },
+    {
+      "task_id": "SITE-BLOG-MODEL-HARNESS-20260825-POST-001",
+      "task_kind": "impl",
+      "title": "Redigir artigo bilíngue sobre modelo e harness agente",
+      "description": "Converter a tese fornecida em artigo editorial PT/EN: modelo como cérebro numa jarra, harness com ferramentas, memória e loop, e por que a distinção importa.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-modelo-e-um-cerebro-numa-jarra.md",
+          "src/content/posts/en/the-model-is-a-brain-in-a-jar.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-25T14:56:42Z",
+      "verification": {
+        "checks": [
+          "npm test: 177 páginas; audit:public 190 arquivos; auditoria editorial ok; 5 fontes primárias HTTP 200; translation recíproca."
+        ]
+      },
+      "completed_at": "2026-08-25T14:59:00Z"
+    },
+    {
+      "task_id": "SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo sobre modelo e harness agente",
+      "description": "Fazer commit e push dos posts PT/EN, aguardar GitHub Pages e registrar evidência das URLs públicas.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-MODEL-HARNESS-20260825-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-25T15:07:45Z",
+      "verification": {
+        "checks": [
+          "gh run 32863871916 conclusion=success; PT e EN HTTP 200 com título, canonical e hreflang recíproco."
+        ]
+      },
+      "completed_at": "2026-08-25T15:09:40Z"
+    },
+    {
+      "task_id": "SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-LINKEDIN-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo de modelo e harness no LinkedIn via computer-use",
+      "description": "Publicar no LinkedIn, via computer-use, a chamada do artigo já no ar.\n\nArtigo:\n- PT: https://elzobrito.github.io/blog/o-modelo-e-um-cerebro-numa-jarra/\n- EN: https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n- PUBLISH: SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001 done; Pages 32863871916 success.\n\nMétodo obrigatório: computer-use no Chrome já aberto e autenticado (browser-use/CDP). Proibido abrir Chrome, usar API, credencial, desafio de segurança, Edge ou qualquer contorno.\n\nAceite:\n1. Usar somente computer-use numa sessão Chrome já aberta e autenticada no LinkedIn.\n2. Antes de postar, confirmar HTTP 200 das URLs canônicas PT/EN e ausência de URL pública LinkedIn desta publicação.\n3. Publicar uma única vez o texto preparado; registrar horário local America/Sao_Paulo, texto efetivo e URL pública canônica.\n4. Se Chrome não estiver em execução ou a sessão não estiver autenticada, parar sem envio, registrar o bloqueio e manter a tarefa retomável.\n\nTexto preparado (colar sem alterar, salvo ajuste mínimo exigido pela UI):\nDois produtos de IA podem usar o mesmo modelo e parecer sistemas diferentes. Num chat, o modelo responde e para. Numa ferramenta de desenvolvimento, com arquivos, terminal e verificação, ele trabalha por horas.\n\nA diferença não está só na rede neural. Está no harness: ferramentas, memória e o loop que transforma raciocínio em ação.\n\nO modelo, sozinho, é um cérebro numa jarra.\n\nPT: https://elzobrito.github.io/blog/o-modelo-e-um-cerebro-numa-jarra/\nEN: https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n\nDestino: feed autenticado do LinkedIn. Após Post, capturar a URL pública canônica do share. Output: docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-LINKEDIN-001.md.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-LINKEDIN-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/**"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-25T15:23:12Z",
+      "verification": {
+        "checks": [
+          "Toast Publicação concluída; URL https://www.linkedin.com/feed/update/urn:li:share:7498037489287266305/; texto efetivo visível no feed autenticado."
+        ]
+      },
+      "completed_at": "2026-08-25T15:25:17Z"
+    },
+    {
+      "task_id": "SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-X-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo de modelo e harness no X via computer-use",
+      "description": "Publicar no X (Twitter), via computer-use, a chamada do artigo já no ar.\n\nArtigo:\n- EN: https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n- PT: https://elzobrito.github.io/blog/o-modelo-e-um-cerebro-numa-jarra/\n- Perfil: https://x.com/elzobrito\n- PUBLISH: SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001 done; Pages 32863871916 success.\n\nMétodo obrigatório: computer-use no Chrome já aberto e autenticado em x.com (browser-use/CDP). Proibido abrir Chrome, usar API, credencial, desafio de segurança, Edge ou qualquer contorno.\n\nAceite:\n1. Usar somente computer-use numa sessão Chrome já aberta e autenticada no X.\n2. Antes de postar, confirmar HTTP 200 da URL EN e ausência de URL pública X desta publicação.\n3. Publicar uma única vez o texto preparado (limite ponderado < 280; URL conta 23); registrar horário local America/Sao_Paulo, texto efetivo, contagem e URL pública https://x.com/elzobrito/status/<id>.\n4. Se o compositor não confirmar envio, recarregar o perfil público antes de qualquer nova tentativa. Não duplicar.\n5. Se Chrome não estiver em execução, a sessão redirecionar para login/onboarding, ou não houver autenticação, parar sem envio, registrar o bloqueio e manter a tarefa retomável.\n\nTexto preparado (163 caracteres ponderados com t.co):\nA model on its own is a brain in a jar. Two products can share it and still feel different: the harness is tools, memory, and verification. https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n\nDestino: https://x.com/compose/post na sessão autenticada. Output: docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-X-001.md.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-X-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/**"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-25T15:24:36Z",
+      "verification": {
+        "checks": [
+          "URL observada era x.com/i/jf/onboarding/web mode=login; zero envios; nenhuma URL publica X."
+        ]
+      },
+      "completed_at": "2026-08-25T15:28:21Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260826-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue diário aberto de 2026-08-26",
+      "description": "Criar os posts PT e EN com fontes primárias das últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-26T15:39:19Z",
+      "verification": {
+        "checks": [
+          "Frontmatter, reciprocidade, fontes, privacidade pública e diff verificados."
+        ]
+      },
+      "completed_at": "2026-08-26T15:42:59Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260826-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo bilíngue diário aberto de 2026-08-26",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260826-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-26T15:43:00Z",
+      "verification": {
+        "checks": [
+          "npm test: 179 páginas; audit:public 192 arquivos; fontes HTTP 200; auditoria editorial e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-26T15:44:43Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo bilíngue diário aberto de 2026-08-26",
+      "description": "Commitar, enviar, acompanhar Pages e registrar evidências PT e EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260826-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-26T15:44:45Z",
+      "verification": {
+        "checks": [
+          "Commit ea7b3bc; workflow 32986076413 success; PT/EN HTTP 200 e metadados corretos."
+        ]
+      },
+      "completed_at": "2026-08-26T15:51:23Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260826-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-26",
+      "description": "Publicar uma chamada no LinkedIn e uma no X, registrando cada canal de forma idempotente.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-26T15:51:43Z",
+      "verification": {
+        "checks": [
+          "Operador dispensou execucao LinkedIn/X em 2026-09-18; nenhum envio; recibo SOCIAL sem URL publica."
+        ]
+      },
+      "completed_at": "2026-09-19T01:53:29Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260826-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar estado social diário aberto de 2026-08-26",
+      "description": "Registrar retrospectivamente o bloqueio já observado sob SOCIAL sem declarar envio inexistente.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-26T15:53:28Z",
+      "verification": {
+        "checks": [
+          "PUBLISH done; Chrome não executando; extensão e host nativo íntegros; nenhum envio."
+        ]
+      },
+      "completed_at": "2026-08-26T15:53:30Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260828-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue diário aberto de 2026-08-28",
+      "description": "Criar os posts PT e EN com fontes primárias das últimas 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-pilha-de-gpu-agora-vem-com-um-agente-de-operacoes.md",
+          "src/content/posts/en/the-gpu-stack-now-comes-with-an-operations-agent.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-28T14:03:16Z",
+      "verification": {
+        "checks": [
+          "Frontmatter, reciprocidade, janela de 24 horas, fontes HTTP 200, privacidade pública e diff verificados."
+        ]
+      },
+      "completed_at": "2026-08-28T14:05:23Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260828-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo bilíngue diário aberto de 2026-08-28",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260828-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260828-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-28T14:05:15Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 181 páginas; auditoria pública 194 arquivos, 13 rotas e 0 ocorrências; fontes HTTP 200; reciprocidade e diff aprovados."
+        ]
+      },
+      "completed_at": "2026-08-28T14:07:25Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260828-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo bilíngue diário aberto de 2026-08-28",
+      "description": "Commitar, enviar, acompanhar Pages e registrar evidências PT e EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260828-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260828-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-28T14:07:26Z",
+      "verification": {
+        "checks": [
+          "Commit 421ea7f; workflow 33178624100 success; PT/EN HTTP 200 e metadados corretos."
+        ]
+      },
+      "completed_at": "2026-08-28T14:09:14Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260828-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-28",
+      "description": "Publicar uma chamada no LinkedIn e uma no X, registrando cada canal de forma idempotente.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260828-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260828-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260828-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-28T14:09:15Z",
+      "verification": {
+        "checks": [
+          "Operador dispensou execucao LinkedIn/X em 2026-09-18; nenhum envio; recibo SOCIAL sem URL publica."
+        ]
+      },
+      "completed_at": "2026-09-19T01:53:31Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260828-FIX-001",
+      "task_kind": "impl",
+      "title": "Corrigir estilo editorial do artigo de 2026-08-28",
+      "description": "Remover sequência tipográfica rejeitada pela auditoria editorial sem alterar a tese ou as fontes.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260828-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-pilha-de-gpu-agora-vem-com-um-agente-de-operacoes.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-28T14:05:55Z",
+      "verification": {
+        "checks": [
+          "Falha editorial reproduzida e linha corrigida."
+        ]
+      },
+      "completed_at": "2026-08-28T14:06:11Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260828-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar estado social diário aberto de 2026-08-28",
+      "description": "Registrar retrospectivamente o bloqueio já observado sob SOCIAL sem declarar envio inexistente.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260828-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260828-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-28T14:10:39Z",
+      "verification": {
+        "checks": [
+          "PUBLISH done; Chrome não executando; extensão e host nativo íntegros; zero envios."
+        ]
+      },
+      "completed_at": "2026-08-28T14:11:18Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260831-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-08-31",
+      "description": "Criar o par editorial PT/EN sobre a preparação concorrente de mídia multimodal no vLLM, com fontes primárias dentro da janela de 24 horas.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-latencia-multimodal-comeca-antes-da-gpu.md",
+          "src/content/posts/en/multimodal-latency-starts-before-the-gpu.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-31T14:04:47Z",
+      "verification": {
+        "checks": [
+          "Par PT/EN criado e frontmatter recíproco conferido."
+        ]
+      },
+      "completed_at": "2026-08-31T14:07:15Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260831-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-08-31",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial, testes e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260831-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260831-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-31T14:07:15Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 183 páginas, 196 arquivos públicos, 0 ocorrências.",
+          "Fonte HTTP 200, auditoria focal e git diff --check aprovados."
+        ]
+      },
+      "completed_at": "2026-08-31T14:12:07Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260831-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-08-31",
+      "description": "Fazer commit e push escopados, aguardar Pages e verificar URLs canônicas PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260831-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260831-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-31T14:12:29Z",
+      "verification": {
+        "checks": [
+          "Workflow 33401343933 success.",
+          "PT/EN HTTP 200 com título, canonical e hreflang recíprocos."
+        ]
+      },
+      "completed_at": "2026-08-31T14:16:15Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260831-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-08-31",
+      "description": "Publicar chamadas idempotentes no LinkedIn e no X após confirmação das URLs do blog.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260831-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260831-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-31T14:16:16Z",
+      "verification": {
+        "checks": [
+          "Operador dispensou execucao LinkedIn/X em 2026-09-18; nenhum envio; recibo SOCIAL sem URL publica."
+        ]
+      },
+      "completed_at": "2026-09-19T01:53:32Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260831-FIX-001",
+      "task_kind": "impl",
+      "title": "Remover termo vedado dos posts de 2026-08-31",
+      "description": "Registrar e validar a correção textual focal identificada pela QA após POST chegar a done.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260831-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-latencia-multimodal-comeca-antes-da-gpu.md",
+          "src/content/posts/en/multimodal-latency-starts-before-the-gpu.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-08-31T14:12:04Z",
+      "verification": {
+        "checks": [
+          "Auditoria focal sem ocorrências e npm test aprovado."
+        ]
+      },
+      "completed_at": "2026-08-31T14:12:06Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260831-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar estado social de 2026-08-31",
+      "description": "Registrar textos preparados e bloqueio verificável sem concluir a tarefa SOCIAL.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260831-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260831-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-08-31T14:18:56Z",
+      "verification": {
+        "checks": [
+          "Nenhum envio realizado e nenhuma URL social pública presente."
+        ]
+      },
+      "completed_at": "2026-08-31T14:18:58Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260902-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo bilíngue diário de 2026-09-02",
+      "description": "Criar as versões PT e EN sobre Fable 5.1 e Mythos 5.1 com fontes primárias e reciprocidade editorial.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [
+        "src/content/posts/pt/a-inteligencia-agora-depende-do-cracha.md",
+        "src/content/posts/en/intelligence-now-depends-on-the-badge.md"
+      ],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/a-inteligencia-agora-depende-do-cracha.md",
+          "src/content/posts/en/intelligence-now-depends-on-the-badge.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-09-02T14:45:46Z",
+      "verification": {
+        "checks": [
+          "frontmatter, reciprocidade, fontes HTTP e auditoria focal aprovados"
+        ]
+      },
+      "completed_at": "2026-09-02T14:48:13Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260902-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário de 2026-09-02",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação EN, links e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260902-POST-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-09-02T14:48:23Z",
+      "verification": {
+        "checks": [
+          "npm test aprovado: 33 arquivos sem diagnósticos, 185 páginas, 198 arquivos públicos, 13 rotas e zero ocorrências vedadas",
+          "fontes HTTP 200, reciprocidade, HTML local, auditoria focal e git diff --check aprovados"
+        ]
+      },
+      "completed_at": "2026-09-02T14:50:08Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário de 2026-09-02",
+      "description": "Commitar artefatos escopados, enviar main, aguardar Pages e verificar URLs canônicas PT e EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260902-QA-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-09-02T14:50:22Z",
+      "verification": {
+        "checks": [
+          "workflow 33644734942 success",
+          "URLs PT e EN HTTP 200 com título, canonical e hreflang recíprocos",
+          "HEAD e origin/main em paridade após o push"
+        ]
+      },
+      "completed_at": "2026-09-02T14:52:41Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-09-02",
+      "description": "Publicar uma chamada idempotente no LinkedIn e outra no X, somente após publicação verificada.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-001.md"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-09-02T14:53:04Z",
+      "verification": {
+        "checks": [
+          "Operador dispensou execucao LinkedIn/X em 2026-09-18; nenhum envio; recibo SOCIAL sem URL publica."
+        ]
+      },
+      "completed_at": "2026-09-19T01:53:34Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-EVIDENCE-001",
+      "task_kind": "qa",
+      "title": "Registrar bloqueio social de 2026-09-02",
+      "description": "Registrar evidência verificável do estado independente de LinkedIn e X sem concluir a tarefa de envio.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260902-PUBLISH-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260902-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-09-02T14:55:13Z",
+      "verification": {
+        "checks": [
+          "memória, tarefa e documento sem URL pública para ambos os canais",
+          "Chrome ausente; extensão e host nativo íntegros; nenhum envio realizado"
+        ]
+      },
+      "completed_at": "2026-09-02T14:55:14Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260904-POST-001",
+      "task_kind": "impl",
+      "title": "Criar artigo diário aberto bilíngue de 2026-09-04",
+      "description": "Pesquisar fontes primárias das últimas 24 horas e criar os artigos PT/EN.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/*.md",
+          "src/content/posts/en/*.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-09-04T14:01:30Z",
+      "verification": {
+        "checks": [
+          "frontmatter, reciprocidade, fontes e auditoria focal aprovados"
+        ]
+      },
+      "completed_at": "2026-09-04T14:05:51Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260904-QA-001",
+      "task_kind": "qa",
+      "title": "Validar artigo diário aberto de 2026-09-04",
+      "description": "Revisar fontes, rigor, schema, privacidade, adaptação editorial e build.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260904-POST-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260904-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-09-04T14:06:26Z",
+      "verification": {
+        "checks": [
+          "npm test, fontes, frontmatter, reciprocidade, privacidade, adaptação EN e HTML local aprovados"
+        ]
+      },
+      "completed_at": "2026-09-04T14:06:29Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260904-PUBLISH-001",
+      "task_kind": "qa",
+      "title": "Publicar artigo diário aberto de 2026-09-04",
+      "description": "Commitar, enviar, verificar Pages e registrar evidências PT/EN.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260904-QA-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260904-PUBLISH-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-09-04T14:06:47Z",
+      "verification": {
+        "checks": [
+          "git parity, workflow Pages e validação pública PT/EN aprovados"
+        ]
+      },
+      "completed_at": "2026-09-04T14:08:24Z"
+    },
+    {
+      "task_id": "SITE-BLOG-DAILY-OPEN-20260904-SOCIAL-001",
+      "task_kind": "impl",
+      "title": "Divulgar artigo diário aberto de 2026-09-04",
+      "description": "Publicar uma chamada idempotente no LinkedIn e no X após deploy verificado.",
+      "status": "done",
+      "depends_on": [
+        "SITE-BLOG-DAILY-OPEN-20260904-PUBLISH-001"
+      ],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-BLOG-DAILY-OPEN-20260904-SOCIAL-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-09-04T14:10:03Z",
+      "verification": {
+        "checks": [
+          "Operador dispensou execucao LinkedIn/X em 2026-09-18; nenhum envio; recibo SOCIAL sem URL publica."
+        ]
+      },
+      "completed_at": "2026-09-19T01:53:36Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 171,
-      "in_progress": 7,
-      "todo": 1
+      "done": 296
     },
     "by_kind": {
-      "impl": 87,
-      "qa": 85,
+      "impl": 139,
+      "qa": 150,
       "spec": 7
     }
   }

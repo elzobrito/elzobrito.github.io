@@ -1,0 +1,13 @@
+{
+  "after_sha256": "e0a561617763314fd2763b3fd54eb44b3eda34a6d513a96dc7c9999f3980f589",
+  "artifact_id": "ART-e0a561617763314fd2763b3fd54eb44b3eda34a6d513a96dc7c9999f3980f589",
+  "artifact_sha256": "c073d2fa09e878b8c64bff54c92be79a9a6e9d99f6be513f7068ec594e4a8437",
+  "before_sha256": "e0a561617763314fd2763b3fd54eb44b3eda34a6d513a96dc7c9999f3980f589",
+  "bytes": 1593,
+  "content": "# Publicação — artigo diário aberto — 2026-08-19\n\n## Escopo\n\n- PT: `src/content/posts/pt/o-agente-aprendeu-a-falar-sem-parar-de-trabalhar.md`\n- EN: `src/content/posts/en/the-agent-learned-to-speak-without-stopping.md`\n- QA: `docs/qa/SITE-BLOG-DAILY-OPEN-20260819-QA-001.md`\n- Branch autorizada: `main`.\n\n## Pré-publicação\n\n- `npm test`: aprovado; 171 páginas, 184 arquivos públicos e 0 ocorrências vedadas.\n- `git diff --check`: aprovado para os arquivos do ciclo.\n- `git fetch origin`: concluído em 2026-08-19 11:05 -03.\n- Comparação `HEAD...origin/main`: `0 0`; a cópia local não estava atrás nem à frente.\n\n## Publicação\n\n- Commit de conteúdo: `95d5f266e2607d03594eaaa9a2eeae03f7298c27` (`Publish daily AI briefing 2026-08-19`).\n- Push para `origin/main`: concluído sem força.\n- Workflow `Deploy static hub to GitHub Pages`: execução [32261992529](https://github.com/elzobrito/elzobrito.github.io/actions/runs/32261992529), conclusão `success`.\n\n## URLs canônicas\n\n- PT: https://elzobrito.github.io/blog/o-agente-aprendeu-a-falar-sem-parar-de-trabalhar/\n- EN: https://elzobrito.github.io/en/blog/the-agent-learned-to-speak-without-stopping/\n- PT: HTTP 200; título esperado; `canonical` próprio; alternâncias `en`, `pt-BR` e `x-default` corretas.\n- EN: HTTP 200; título esperado; `canonical` próprio; alternâncias `pt-BR`, `en` e `x-default` corretas.\n- Verificação ao vivo concluída em 2026-08-19 11:07 -03.\n\n## Estado\n\nPublicação concluída. O workflow terminou com sucesso e as duas versões canônicas estão acessíveis e reciprocamente ligadas.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260819-PUBLISH-001.md",
+  "ts": "2026-08-19T14:07:51Z"
+}

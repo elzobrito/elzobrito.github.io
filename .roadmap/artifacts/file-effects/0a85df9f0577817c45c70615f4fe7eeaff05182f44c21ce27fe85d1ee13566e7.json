@@ -1,0 +1,13 @@
+{
+  "after_sha256": "2328d507974b9bac9a67012cbea072f93682c054674bcc9c0e2b471e88f2d46e",
+  "artifact_id": "ART-2328d507974b9bac9a67012cbea072f93682c054674bcc9c0e2b471e88f2d46e",
+  "artifact_sha256": "0a85df9f0577817c45c70615f4fe7eeaff05182f44c21ce27fe85d1ee13566e7",
+  "before_sha256": null,
+  "bytes": 1710,
+  "content": "# Divulgação social — SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-LINKEDIN-001\n\n## Resultado\n\n- Canal: LinkedIn\n- Estado: publicado\n- Método: computer-use (Chrome DevTools MCP) em sessão autenticada\n- Horário local: 2026-08-25 12:24 -03\n- URL pública: https://www.linkedin.com/feed/update/urn:li:share:7498037489287266305/\n- Confirmação da UI: `Publicação concluída.` com link `Ver publicação`\n\n## Pré-condição\n\n- PT: https://elzobrito.github.io/blog/o-modelo-e-um-cerebro-numa-jarra/ — HTTP 200\n- EN: https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/ — HTTP 200\n- PUBLISH `SITE-BLOG-MODEL-HARNESS-20260825-PUBLISH-001` em `done`\n- Sessão autenticada como Elzo Brito dos Santos Filho (`https://www.linkedin.com/in/elzobrito/`)\n- Nenhuma URL pública LinkedIn desta publicação existia antes do envio\n\n## Texto efetivo\n\n> Dois produtos de IA podem usar o mesmo modelo e parecer sistemas diferentes. Num chat, o modelo responde e para. Numa ferramenta de desenvolvimento, com arquivos, terminal e verificação, ele trabalha por horas.\n>\n> A diferença não está só na rede neural. Está no harness: ferramentas, memória e o loop que transforma raciocínio em ação.\n>\n> O modelo, sozinho, é um cérebro numa jarra.\n>\n> PT: https://elzobrito.github.io/blog/o-modelo-e-um-cerebro-numa-jarra/\n> EN: https://elzobrito.github.io/en/blog/the-model-is-a-brain-in-a-jar/\n\nA UI encurtou os links para `lnkd.in` e gerou cartão de preview da URL EN. O texto do corpo corresponde ao preparado.\n\n## Observação de envio\n\nUm único clique em `Publicar` após preencher o editor. A publicação apareceu no feed com marcação `agora` e visibilidade global. Nenhum envio duplicado.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-LINKEDIN-001.md",
+  "source_path": "docs/qa/SITE-BLOG-MODEL-HARNESS-20260825-SOCIAL-LINKEDIN-001.md",
+  "ts": "2026-08-25T15:24:30Z"
+}

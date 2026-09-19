@@ -1,0 +1,13 @@
+{
+  "after_sha256": "0018f3f636f10cb770da3cffae88d08972491d605c616d938e5242afc3857a39",
+  "artifact_id": "ART-0018f3f636f10cb770da3cffae88d08972491d605c616d938e5242afc3857a39",
+  "artifact_sha256": "65111d4d475e10e1cb3ada3cffed86ccff04e88937e285ef6e8e1708b1be8cf3",
+  "before_sha256": "0018f3f636f10cb770da3cffae88d08972491d605c616d938e5242afc3857a39",
+  "bytes": 1124,
+  "content": "# Publish — SITE-BLOG-DAILY-OPEN-20260804\n\nData editorial: 2026-08-04 (America/Sao_Paulo)\n\n## Commit e push\n\n- Commit: `55b9290b2e3eb78f72ba301a15dd1e78fac47f82` — `Publish daily AI briefing 2026-08-04`.\n- Staging explícito: os dois posts e `docs/qa/SITE-BLOG-DAILY-OPEN-20260804-QA-001.md`; alterações preexistentes de outros fluxos ficaram fora do commit.\n- `git fetch origin` e `git rev-list --left-right --count HEAD...origin/main` antes do push: `0 0`.\n- Push: `origin/main` concluído.\n\n## Deploy e verificação pública\n\n- Workflow: [Deploy static hub to GitHub Pages #30932158763](https://github.com/elzobrito/elzobrito.github.io/actions/runs/30932158763) — `success`.\n- PT: https://elzobrito.github.io/blog/voz-local-ganha-novo-modelo-mas-perde-compatibilidade/ — HTTP 200; título, canonical e hreflang recíprocos confirmados.\n- EN: https://elzobrito.github.io/en/blog/local-voice-gains-a-new-model-but-loses-compatibility/ — HTTP 200; título, canonical e hreflang recíprocos confirmados.\n\n## Resultado\n\nA publicação no GitHub Pages está concluída e apta para a divulgação social por canal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-PUBLISH-001.md",
+  "ts": "2026-08-04T17:05:31Z"
+}

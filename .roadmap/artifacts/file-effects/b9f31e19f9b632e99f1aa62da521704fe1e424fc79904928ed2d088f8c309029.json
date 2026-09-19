@@ -1,0 +1,13 @@
+{
+  "after_sha256": "8a05a5aecc46e3bdca97d47a59b66eb894e992a1e03aadc71ad863f06ef88f67",
+  "artifact_id": "ART-8a05a5aecc46e3bdca97d47a59b66eb894e992a1e03aadc71ad863f06ef88f67",
+  "artifact_sha256": "b9f31e19f9b632e99f1aa62da521704fe1e424fc79904928ed2d088f8c309029",
+  "before_sha256": "8a05a5aecc46e3bdca97d47a59b66eb894e992a1e03aadc71ad863f06ef88f67",
+  "bytes": 1768,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260806\n\nData editorial: 2026-08-06 (America/Sao_Paulo)\n\n## Commit e envio\n\n- Commit de conteúdo: `111f3ccc3bb56e6167472d3ac7b7445f1baf1fac`\n- Mensagem: `Publish daily AI briefing 2026-08-06`\n- Antes do push: `HEAD...origin/main = 0 0`.\n- Staging explícito: posts PT/EN e documento QA.\n- Push: `main -> origin/main`, concluído sem force push.\n- Alterações preexistentes em `.roadmap` e no documento de publicação do artigo de engenharia permaneceram fora do commit.\n\n## GitHub Pages\n\n- Workflow: `Deploy static hub to GitHub Pages`.\n- Run: `31114500088`.\n- URL: https://github.com/elzobrito/elzobrito.github.io/actions/runs/31114500088\n- Head SHA: `111f3ccc3bb56e6167472d3ac7b7445f1baf1fac`.\n- Resultado: `success`.\n- Observação: o deploy sofreu atraso durante o incidente público `Incident with Pages - Deployment Lag`, mas terminou com sucesso sem novo disparo.\n\n## Verificação pública\n\n### Português\n\n- URL: https://elzobrito.github.io/blog/a-pilha-de-inferencia-aprende-a-funcionar-por-partes/\n- HTTP: 200.\n- Título: `A pilha de inferência aprende a funcionar por partes — Elzo Brito`.\n- Canonical: a própria URL PT.\n- `hreflang`: `pt-BR`, `en` e `x-default` presentes; o alternativo EN aponta para a URL canônica inglesa.\n\n### English\n\n- URL: https://elzobrito.github.io/en/blog/the-inference-stack-learns-to-work-in-pieces/\n- HTTP: 200.\n- Título: `The inference stack learns to work in pieces — Elzo Brito`.\n- Canonical: a própria URL EN.\n- `hreflang`: `en`, `pt-BR` e `x-default` presentes; o alternativo PT aponta para a URL canônica portuguesa.\n\n## Resultado\n\nConteúdo publicado e verificado. A divulgação social está autorizada a prosseguir de forma independente e idempotente por canal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260806-PUBLISH-001.md",
+  "ts": "2026-08-06T15:18:17Z"
+}

@@ -1,0 +1,13 @@
+{
+  "after_sha256": "695bb7ec5fdafdbaf176f3e52e8dc41ba7b0d4aaa3f849e427fc9dcd6c4e014b",
+  "artifact_id": "ART-695bb7ec5fdafdbaf176f3e52e8dc41ba7b0d4aaa3f849e427fc9dcd6c4e014b",
+  "artifact_sha256": "f66a5ccab4c79e7e35855dc26fe037442bfab4e03545faa977cb2b83e51afcbe",
+  "before_sha256": null,
+  "bytes": 1263,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260805\n\nData editorial: 2026-08-05 (America/Sao_Paulo)\n\n## Artefatos publicados\n\n- PT: https://elzobrito.github.io/blog/metricas-tornam-a-inferencia-especulativa-auditavel/\n- EN: https://elzobrito.github.io/en/blog/metrics-make-speculative-decoding-auditable/\n- Commit: `479dbcff9a0af889008951331ee486e28b5f370c`\n- Mensagem: `Publish daily AI briefing 2026-08-05`\n- GitHub Pages: https://github.com/elzobrito/elzobrito.github.io/actions/runs/31019631388\n\n## Segurança do push\n\n- `git fetch origin`: concluído antes do commit.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes da publicação.\n- Staging restrito aos posts PT/EN e ao documento QA de 2026-08-05; alterações alheias permaneceram fora do commit.\n- Push concluído em `main`.\n- Paridade final após o deploy: `0 0`.\n\n## Evidência pública\n\n- Workflow Pages `31019631388`: `success`.\n- PT: HTTP 200; title correto; canonical da rota PT; alternates `pt-BR`, `en` e `x-default` válidos.\n- EN: HTTP 200; title correto; canonical da rota EN; alternates `pt-BR`, `en` e `x-default` válidos.\n\n## Resultado\n\nPublicação bilíngue concluída e verificável publicamente. A divulgação social pode começar de forma independente por canal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260805-PUBLISH-001.md",
+  "ts": "2026-08-05T15:20:02Z"
+}

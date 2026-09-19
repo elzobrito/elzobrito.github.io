@@ -1,0 +1,13 @@
+{
+  "after_sha256": "6fe25eaf001265f3519de223fddf35f97f0ce272d693fa80183ccbfb7028b335",
+  "artifact_id": "ART-6fe25eaf001265f3519de223fddf35f97f0ce272d693fa80183ccbfb7028b335",
+  "artifact_sha256": "52aaac836ab67ee87f20af55a742dedbc0f8200bcaacc2d8fc2c0598a3310be3",
+  "before_sha256": "6fe25eaf001265f3519de223fddf35f97f0ce272d693fa80183ccbfb7028b335",
+  "bytes": 1536,
+  "content": "# Publicação — artigo diário aberto — 2026-08-12\n\n## Artefatos\n\n- PT: `compatibilidade-nao-herda-seguranca`\n- EN: `compatibility-does-not-inherit-security`\n- URL PT planejada: https://elzobrito.github.io/blog/compatibilidade-nao-herda-seguranca/\n- URL EN planejada: https://elzobrito.github.io/en/blog/compatibility-does-not-inherit-security/\n\n## Pré-publicação\n\n- `npm test`: aprovado, 159 páginas.\n- Auditoria pública: 172 arquivos, 13 rotas obrigatórias, SEO aprovado e 0 ocorrências vedadas.\n- Auditoria editorial: aprovada.\n- `git diff --check`: aprovado.\n- Fontes primárias: três respostas HTTP 200.\n- Branch: `main`.\n- Comparação inicial com `origin/main`: 0 à frente, 0 atrás.\n- Alterações anteriores e não relacionadas permanecem fora do staging.\n\n## Evidência remota\n\n- Commit de conteúdo: `397776ae36d801f89246625c373dcd067e14f051`.\n- Workflow `Deploy static hub to GitHub Pages`: [31621837588](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31621837588).\n- Estado do workflow: `success`.\n- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.\n- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.\n- Paridade após o deploy: `HEAD...origin/main = 0 0`.\n\n## URLs públicas\n\n- PT: https://elzobrito.github.io/blog/compatibilidade-nao-herda-seguranca/\n- EN: https://elzobrito.github.io/en/blog/compatibility-does-not-inherit-security/\n\nPublicação confirmada em 2026-08-12 14:18 -03.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260812-PUBLISH-001.md",
+  "ts": "2026-08-12T17:18:26Z"
+}

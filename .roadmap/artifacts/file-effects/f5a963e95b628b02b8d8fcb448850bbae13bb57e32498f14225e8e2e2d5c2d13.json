@@ -1,0 +1,13 @@
+{
+  "after_sha256": "19142edbeb11069a44a1bd35fc806feb43795faa3db3e02387c884b9b1575e62",
+  "artifact_id": "ART-19142edbeb11069a44a1bd35fc806feb43795faa3db3e02387c884b9b1575e62",
+  "artifact_sha256": "f5a963e95b628b02b8d8fcb448850bbae13bb57e32498f14225e8e2e2d5c2d13",
+  "before_sha256": "19142edbeb11069a44a1bd35fc806feb43795faa3db3e02387c884b9b1575e62",
+  "bytes": 1791,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260904-PUBLISH-001\n\n## Artefatos\n\n- PT: `src/content/posts/pt/a-ia-ficou-mais-alinhada-e-mais-dificil-de-auditar.md`.\n- EN: `src/content/posts/en/ai-got-more-aligned-and-harder-to-audit.md`.\n- QA: `docs/qa/SITE-BLOG-DAILY-OPEN-20260904-QA-001.md`.\n\n## Segurança do Git\n\n- `git fetch origin`: concluído imediatamente antes do commit e do push.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` antes do commit e `0 0` após o push.\n- Base antes do commit: `92d8917ef82057d6d22ee48b80f346b1321c78e9`, igual em `HEAD` e `origin/main`.\n- Staging: limitado aos dois posts e aos três documentos QA deste ciclo. As alterações históricas e misturadas em `.roadmap` permaneceram fora do commit.\n\n## Estado\n\n- Commit de conteúdo: `13f4bb812efefb46a165e5181253853347cbde48` (`Publish daily AI briefing 2026-09-04`).\n- Push para `origin/main`: concluído, sem force push.\n- Workflow `Deploy static hub to GitHub Pages`: execução `33881873582`, conclusão `success` em 2026-09-04 11:07:45 -03.\n- Workflow: https://github.com/elzobrito/elzobrito.github.io/actions/runs/33881873582\n- URL PT: https://elzobrito.github.io/blog/a-ia-ficou-mais-alinhada-e-mais-dificil-de-auditar/\n- URL EN: https://elzobrito.github.io/en/blog/ai-got-more-aligned-and-harder-to-audit/\n- URL PT: HTTP 200; título `A IA ficou mais alinhada e mais difícil de auditar — Elzo Brito`; canonical PT e alternates `pt-BR`, `en` e `x-default` corretos.\n- URL EN: HTTP 200; título `AI got more aligned and harder to audit — Elzo Brito`; canonical EN e alternates `pt-BR`, `en` e `x-default` corretos.\n\n## Resultado\n\nPublicação aprovada. O conteúdo canônico está disponível nos dois idiomas e a divulgação social pode começar de forma idempotente por canal.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260904-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260904-PUBLISH-001.md",
+  "ts": "2026-09-04T14:08:23Z"
+}

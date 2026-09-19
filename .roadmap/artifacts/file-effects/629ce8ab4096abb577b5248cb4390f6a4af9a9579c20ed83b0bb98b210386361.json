@@ -1,0 +1,13 @@
+{
+  "after_sha256": "2c0d89f177738566edce266904988906146dfd454f2b558f45b8cfb0eaf88c5b",
+  "artifact_id": "ART-2c0d89f177738566edce266904988906146dfd454f2b558f45b8cfb0eaf88c5b",
+  "artifact_sha256": "629ce8ab4096abb577b5248cb4390f6a4af9a9579c20ed83b0bb98b210386361",
+  "before_sha256": "2c0d89f177738566edce266904988906146dfd454f2b558f45b8cfb0eaf88c5b",
+  "bytes": 1483,
+  "content": "# Publicação — artigo diário aberto — 2026-08-14\n\n## Artefatos\n\n- PT: `o-raciocinio-ganhou-um-botao`\n- EN: `reasoning-got-a-control-knob`\n- URL PT planejada: https://elzobrito.github.io/blog/o-raciocinio-ganhou-um-botao/\n- URL EN planejada: https://elzobrito.github.io/en/blog/reasoning-got-a-control-knob/\n\n## Pré-publicação\n\n- `npm test`: aprovado, 163 páginas.\n- Auditoria pública: 176 arquivos, 13 rotas obrigatórias, SEO aprovado e 0 ocorrências vedadas.\n- Auditoria editorial: aprovada.\n- `git diff --check`: aprovado.\n- Fontes primárias: quatro respostas HTTP 200.\n- Branch: `main`.\n- Comparação inicial com `origin/main`: 0 à frente, 0 atrás.\n- Alterações anteriores e não relacionadas permanecem fora do staging.\n\n## Evidência remota\n\n- Commit de conteúdo: `2a4c14097565e3b9d8e6421be8aa3d8b291984a5`.\n- Workflow `Deploy static hub to GitHub Pages`: [31837586313](https://github.com/elzobrito/elzobrito.github.io/actions/runs/31837586313).\n- Estado do workflow: `success`.\n- Verificação PT: HTTP 200, título e canonical corretos; alternates EN, PT-BR e `x-default` presentes.\n- Verificação EN: HTTP 200, título e canonical corretos; alternates PT-BR, EN e `x-default` presentes.\n- Paridade após o deploy: `HEAD...origin/main = 0 0`.\n\n## URLs públicas\n\n- PT: https://elzobrito.github.io/blog/o-raciocinio-ganhou-um-botao/\n- EN: https://elzobrito.github.io/en/blog/reasoning-got-a-control-knob/\n\nPublicação confirmada em 2026-08-14 17:23 -03.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260814-PUBLISH-001.md",
+  "ts": "2026-08-14T20:24:01Z"
+}

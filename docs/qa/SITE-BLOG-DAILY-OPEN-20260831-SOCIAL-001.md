@@ -44,3 +44,11 @@
 ## Retomada
 
 Com uma sessão Chrome já aberta e autenticada, reconfirmar separadamente a ausência de URL pública no LinkedIn e no X. Publicar somente o canal ainda sem URL, registrar horário, texto efetivo e URL canônica. A tarefa SOCIAL permanece `in_progress` até ambos os canais terem URL pública registrada.
+
+## Encerramento
+
+- Data: 2026-09-18
+- Decisão do operador: não executar a divulgação em LinkedIn e X.
+- LinkedIn: não enviado; URL pública ausente.
+- X: não enviado; URL pública ausente.
+- Não retomar este SOCIAL salvo nova tarefa ESAA.

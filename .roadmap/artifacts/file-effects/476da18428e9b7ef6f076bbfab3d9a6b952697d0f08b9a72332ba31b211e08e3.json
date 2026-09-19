@@ -1,0 +1,13 @@
+{
+  "after_sha256": "7a4e41e430bf2f88a70f483bf3583cfae70b9ed43d3781aa84d4df1b7bafb96c",
+  "artifact_id": "ART-7a4e41e430bf2f88a70f483bf3583cfae70b9ed43d3781aa84d4df1b7bafb96c",
+  "artifact_sha256": "476da18428e9b7ef6f076bbfab3d9a6b952697d0f08b9a72332ba31b211e08e3",
+  "before_sha256": "7a4e41e430bf2f88a70f483bf3583cfae70b9ed43d3781aa84d4df1b7bafb96c",
+  "bytes": 725,
+  "content": "# Publicação — engenharia de agentes\n\n- Data: 2026-08-03 (America/Sao_Paulo)\n- PT: `engenharia-de-agentes-nao-e-vibe-coding-com-mais-autonomia`\n- EN: `agent-engineering-is-not-vibe-coding-with-more-autonomy`\n- `npm test` aprovado: 141 páginas, auditoria pública de 154 arquivos e auditoria editorial aprovadas.\n- `git diff --check` aprovado.\n- Commit: `e0566fd` (`Publish agent engineering article`).\n- Pages: workflow `30824239141` concluído com sucesso.\n- PT: https://elzobrito.github.io/blog/engenharia-de-agentes-nao-e-vibe-coding-com-mais-autonomia/ — HTTP 200 e título correto.\n- EN: https://elzobrito.github.io/en/blog/agent-engineering-is-not-vibe-coding-with-more-autonomy/ — HTTP 200 e título correto.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-AGENT-ENGINEERING-20260803-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-AGENT-ENGINEERING-20260803-PUBLISH-001.md",
+  "ts": "2026-08-03T14:47:03Z"
+}

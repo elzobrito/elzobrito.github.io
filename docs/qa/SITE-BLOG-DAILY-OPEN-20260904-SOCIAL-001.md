@@ -41,3 +41,11 @@ Antes de cada canal, reconfirmar memória, tarefa e este documento. Publicar som
 - A sessão externa existente está autenticada como Elzo Brito dos Santos Filho no LinkedIn e como `@elzobrito` no X.
 - O editor do LinkedIn está aberto e o compositor do X está disponível, ambos sem texto inserido e sem envio.
 - Os dois canais aguardam confirmação imediatamente antes da comunicação pública. Nenhuma URL social foi criada nesta etapa.
+
+## Encerramento
+
+- Data: 2026-09-18
+- Decisão do operador: não executar a divulgação em LinkedIn e X.
+- LinkedIn: não enviado; URL pública ausente.
+- X: não enviado; URL pública ausente.
+- Não retomar este SOCIAL salvo nova tarefa ESAA.

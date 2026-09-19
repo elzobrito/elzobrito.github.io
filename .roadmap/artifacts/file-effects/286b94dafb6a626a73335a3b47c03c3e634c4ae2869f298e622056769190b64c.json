@@ -1,0 +1,13 @@
+{
+  "after_sha256": "abad218774c0c8660c1cd12323a29a37452c5d04897c5a8b4bfae5b12c6ba1fe",
+  "artifact_id": "ART-abad218774c0c8660c1cd12323a29a37452c5d04897c5a8b4bfae5b12c6ba1fe",
+  "artifact_sha256": "286b94dafb6a626a73335a3b47c03c3e634c4ae2869f298e622056769190b64c",
+  "before_sha256": "abad218774c0c8660c1cd12323a29a37452c5d04897c5a8b4bfae5b12c6ba1fe",
+  "bytes": 2063,
+  "content": "# Publicação — SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001\n\n## Estado\n\n- Estado: publicado e verificado.\n- Commit de conteúdo: `ea7b3bcab60c910e0a1110531af15879c7330a2c`.\n- Mensagem: `Publish daily AI briefing 2026-08-26`.\n- `HEAD...origin/main`: `0 0` após o push.\n- Workflow Pages: [32986076413](https://github.com/elzobrito/elzobrito.github.io/actions/runs/32986076413), disparado manualmente uma vez porque o push não criou execução.\n- Conclusão do workflow: `success` em 2026-08-26 12:50:41 -03.\n\n## URLs previstas\n\n- PT: https://elzobrito.github.io/blog/contexto-longo-virou-um-problema-de-arquitetura/\n- EN: https://elzobrito.github.io/en/blog/long-context-became-an-architecture-problem/\n\n## Gate anterior ao envio\n\n- `git fetch origin`: concluído.\n- `git rev-list --left-right --count HEAD...origin/main`: `0 0` imediatamente antes do commit e após o push.\n- O staging foi restrito aos dois posts e aos documentos QA/PUBLISH deste ciclo.\n- Alterações preexistentes em `.roadmap` e `docs/qa/SITE-BLOG-AGENT-ENGINEERING-20260803-PUBLISH-001.md` permanecem fora do commit.\n\n## Incidente externo superado\n\n- O [GitHub Status](https://www.githubstatus.com/) informou `major_outage` para Actions e `degraded_performance` para Pages.\n- A execução permaneceu inicialmente sem runner, mas entrou em processamento às 12:49 -03 e concluiu com sucesso.\n- Nenhum deploy alternativo foi usado.\n\n## Verificação pública\n\nAs duas URLs retornaram HTTP 200 após a conclusão do deploy.\n\n### PT\n\n- Título `Contexto longo virou um problema de arquitetura`: presente.\n- Canonical próprio: presente.\n- `hreflang` EN para a URL inglesa: presente.\n- `hreflang` PT-BR e `x-default`: presentes.\n\n### EN\n\n- Título `Long context became an architecture problem`: presente.\n- Canonical próprio: presente.\n- `hreflang` PT-BR para a URL portuguesa: presente.\n- `hreflang` EN e `x-default`: presentes.\n\n## Próxima etapa autorizada\n\nCom o deploy e as URLs canônicas confirmados, a divulgação idempotente pode prosseguir de forma independente no LinkedIn e no X.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260826-PUBLISH-001.md",
+  "ts": "2026-08-26T15:51:22Z"
+}

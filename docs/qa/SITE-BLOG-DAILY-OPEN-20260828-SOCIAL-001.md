@@ -65,3 +65,11 @@ Texto preparado, não enviado, 258 caracteres:
 | Blog PT/EN | Publicado | URLs canônicas verificadas |
 | LinkedIn | Bloqueado | Nenhuma |
 | X | Bloqueado | Nenhuma |
+
+## Encerramento
+
+- Data: 2026-09-18
+- Decisão do operador: não executar a divulgação em LinkedIn e X.
+- LinkedIn: não enviado; URL pública ausente.
+- X: não enviado; URL pública ausente.
+- Não retomar este SOCIAL salvo nova tarefa ESAA.

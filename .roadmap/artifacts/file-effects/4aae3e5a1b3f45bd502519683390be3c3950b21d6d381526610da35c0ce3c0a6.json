@@ -1,0 +1,13 @@
+{
+  "after_sha256": "9232b6893db3f0838817e63d097d2b9f9c0c95ffef66529059f989359b5ee862",
+  "artifact_id": "ART-9232b6893db3f0838817e63d097d2b9f9c0c95ffef66529059f989359b5ee862",
+  "artifact_sha256": "4aae3e5a1b3f45bd502519683390be3c3950b21d6d381526610da35c0ce3c0a6",
+  "before_sha256": "9232b6893db3f0838817e63d097d2b9f9c0c95ffef66529059f989359b5ee862",
+  "bytes": 1932,
+  "content": "# QA — SITE-BLOG-DAILY-OPEN-20260804\n\nData editorial: 2026-08-04 (America/Sao_Paulo)\n\n## Escopo editorial\n\n- PT: `src/content/posts/pt/voz-local-ganha-novo-modelo-mas-perde-compatibilidade.md`\n- EN: `src/content/posts/en/local-voice-gains-a-new-model-but-loses-compatibility.md`\n- Fonte primária: https://github.com/ggml-org/llama.cpp/pull/26254\n- Fonte de confirmação: https://github.com/ggml-org/llama.cpp/commit/07132750\n- Decisão: a alteração integrada em 2026-08-04 adiciona suporte ao Qwen3-TTS e declara a quebra da interface anterior de `llama-tts`. A pauta foi escolhida por combinar uma capacidade concreta de execução local com uma consequência de integração verificável.\n\n## Revisão factual e editorial\n\n- A pull request oficial confirma o alvo Qwen3-TTS-12Hz-1.7B-Base, os parâmetros de idioma e referência de voz e a alteração incompatível no binário.\n- A explicação técnica se limita ao fluxo descrito pela fonte: codificador de voz de referência, modelo causal principal e preditor de códigos acústicos. Não atribui métricas, qualidade, latência ou disponibilidade não divulgadas.\n- PT e EN são adaptações editoriais equivalentes; `translation` é recíproco e os slugs são únicos.\n- O frontmatter contém os campos exigidos, `published: 2026-08-04` e `featured: false`.\n\n## Validação executada\n\n- `curl -fsSIL https://github.com/ggml-org/llama.cpp/pull/26254` — HTTP 200.\n- `npm test` — aprovado: Astro check sem diagnósticos; build com 143 páginas; auditoria pública de 156 arquivos e auditoria editorial aprovadas. Houve apenas aviso preexistente de ID duplicado no post independente de engenharia de agentes.\n- Varredura focal de termos proibidos nos dois posts — 0 ocorrências.\n- `git diff --check` — aprovado.\n\n## Resultado\n\nConteúdo apto para commit e publicação. A evidência de deploy será registrada no documento PUBLISH após o GitHub Pages concluir.\n",
+  "effect_scope": "workspace",
+  "encoding": "utf-8",
+  "path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-QA-001.md",
+  "source_path": "docs/qa/SITE-BLOG-DAILY-OPEN-20260804-QA-001.md",
+  "ts": "2026-08-04T17:03:43Z"
+}
