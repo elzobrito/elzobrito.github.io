@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 3807,
-      "projection_hash_sha256": "4e0a9cb96504285c7392cd1d9c7efe2d09588f2ebc30a1876ee7438938297fd4",
+      "last_event_seq": 3826,
+      "projection_hash_sha256": "491f7b420af93a3025987873202b4ed9a4a57abf955688d9b610ebc9ff6d0711",
       "verify_status": "ok"
     },
-    "updated_at": "2026-09-19T01:53:38Z"
+    "updated_at": "2026-09-19T02:23:42Z"
   },
   "project": {
     "name": "esaa-core",
@@ -8463,15 +8463,71 @@
         ]
       },
       "completed_at": "2026-09-19T01:53:36Z"
+    },
+    {
+      "task_id": "SITE-SCHOLAR-ARTICLES-20260919-IMPL-001",
+      "task_kind": "impl",
+      "title": "Atualizar /artigos/ com o perfil Google Acadêmico",
+      "description": "Sincronizar /artigos/ e /en/articles/ com https://scholar.google.com/citations?user=hSP8J9EAAAAJ&hl=pt-BR (Elzo Brito dos Santos Filho). Snapshot 2026-09-19 no perfil: 79 citações, índice h 5, i10 1; a UI ainda mostra 68, h 4 e o texto fixo de 29 registros. Carregar o perfil completo (Mostrar mais). Atualizar src/data/scholar-publications.ts (título, URL individual, autores, venue, citações, ano) e indicadores em src/components/ArticlesIndex.astro. Preservar versões distintas do Scholar como cards separados. Não inventar publicações. Aceite: lista = perfil completo; indicadores e N de cards batem com o snapshot; copy deixa de hardcodar 29; npm test passa; PT/EN permanecem bilíngues.",
+      "status": "done",
+      "depends_on": [
+        "SITE-SCHOLAR-ARTICLES-20260716-QA-001"
+      ],
+      "targets": [
+        "src/data/scholar-publications.ts",
+        "src/components/ArticlesIndex.astro"
+      ],
+      "outputs": {
+        "files": [
+          "src/data/scholar-publications.ts",
+          "src/components/ArticlesIndex.astro"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-09-19T02:19:41Z",
+      "verification": {
+        "checks": [
+          "Perfil hSP8J9EAAAAJ: 25 registros unicos; soma de citacoes 79; h-index 5; i10 1.",
+          "npm test aprovado: astro check 0 erros, build 189 paginas, audit:public 203 arquivos, editorial ok."
+        ]
+      },
+      "completed_at": "2026-09-19T02:23:26Z"
+    },
+    {
+      "task_id": "SITE-SCHOLAR-ARTICLES-20260919-QA-001",
+      "task_kind": "qa",
+      "title": "Validar e publicar a atualização de /artigos/",
+      "description": "Conferir sincronização com https://scholar.google.com/citations?user=hSP8J9EAAAAJ&hl=pt-BR, rodar npm test, publicar e verificar HTTP 200 em /artigos/ e /en/articles/ com indicadores e cards alinhados ao perfil. Recibo em docs/qa/SITE-SCHOLAR-ARTICLES-20260919-QA-001.md com snapshot (citações, h, i10, N) e evidência de Pages.",
+      "status": "in_progress",
+      "depends_on": [
+        "SITE-SCHOLAR-ARTICLES-20260919-IMPL-001"
+      ],
+      "targets": [
+        "docs/qa/SITE-SCHOLAR-ARTICLES-20260919-QA-001.md"
+      ],
+      "outputs": {
+        "files": [
+          "docs/qa/SITE-SCHOLAR-ARTICLES-20260919-QA-001.md"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-09-19T02:23:42Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 296
+      "done": 297,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 139,
-      "qa": 150,
+      "impl": 140,
+      "qa": 151,
       "spec": 7
     }
   }

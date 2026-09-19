@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { scholarProfile, scholarPublications } from '../data/scholar-publications';
+import { scholarMetrics, scholarProfile, scholarPublications } from '../data/scholar-publications';
 import type { Locale } from '../i18n';
 
 const { locale } = Astro.props as { locale: Locale };
 const pt = locale === 'pt';
+const publicationCount = scholarPublications.length;
 ---
 <BaseLayout
   title={pt ? 'Artigos e publicações — Elzo Brito' : 'Articles and publications — Elzo Brito'}
@@ -16,13 +17,14 @@ const pt = locale === 'pt';
     <div>
       <p class="eyebrow">{pt ? 'Produção acadêmica' : 'Academic work'}</p>
       <h1>{pt ? 'Pesquisa que conecta educação, IA e engenharia de sistemas.' : 'Research connecting education, AI, and systems engineering.'}</h1>
-      <p>{pt ? 'A lista reúne todos os 29 registros públicos do perfil, incluindo versões distintas indexadas pelo Google Acadêmico.' : 'This list includes all 29 public profile records, including distinct versions indexed by Google Scholar.'}</p>
+      <p>{pt ? `A lista reúne todos os ${publicationCount} registros públicos do perfil, incluindo versões distintas indexadas pelo Google Acadêmico.` : `This list includes all ${publicationCount} public profile records, including distinct versions indexed by Google Scholar.`}</p>
       <a class="button secondary" href={scholarProfile} target="_blank" rel="noreferrer">{pt ? 'Ver perfil no Google Acadêmico' : 'View Google Scholar profile'} ↗</a>
     </div>
     <dl class="scholar-stats" aria-label={pt ? 'Indicadores do Google Acadêmico' : 'Google Scholar metrics'}>
-      <div><dt>{pt ? 'Publicações' : 'Publications'}</dt><dd>{scholarPublications.length}</dd></div>
-      <div><dt>{pt ? 'Citações' : 'Citations'}</dt><dd>68</dd></div>
-      <div><dt>{pt ? 'Índice h' : 'h-index'}</dt><dd>4</dd></div>
+      <div><dt>{pt ? 'Publicações' : 'Publications'}</dt><dd>{publicationCount}</dd></div>
+      <div><dt>{pt ? 'Citações' : 'Citations'}</dt><dd>{scholarMetrics.citations}</dd></div>
+      <div><dt>{pt ? 'Índice h' : 'h-index'}</dt><dd>{scholarMetrics.hIndex}</dd></div>
+      <div><dt>Índice i10</dt><dd>{scholarMetrics.i10Index}</dd></div>
     </dl>
   </section>
 
@@ -57,6 +59,6 @@ const pt = locale === 'pt';
   .publication-card h2 a{text-decoration:none}.publication-card h2 a:hover{text-decoration:underline}
   .publication-card p{margin:.25rem 0;color:var(--muted);max-width:850px}
   .publication-venue{font-style:italic}.publication-link{font-size:1.6rem;text-decoration:none}
-  @media(max-width:800px){.articles-hero{grid-template-columns:1fr;gap:2rem;padding-block:5rem}.scholar-stats{display:grid;grid-template-columns:repeat(3,1fr);border-left:0;border-top:1px solid var(--line)}.scholar-stats div{padding:1rem .5rem}.scholar-stats dd{font-size:2rem}.publication-card{grid-template-columns:32px minmax(0,1fr)}.publication-link{display:none}}
+  @media(max-width:800px){.articles-hero{grid-template-columns:1fr;gap:2rem;padding-block:5rem}.scholar-stats{display:grid;grid-template-columns:repeat(2,1fr);border-left:0;border-top:1px solid var(--line)}.scholar-stats div{padding:1rem .5rem}.scholar-stats dd{font-size:2rem}.publication-card{grid-template-columns:32px minmax(0,1fr)}.publication-link{display:none}}
   @media(max-width:520px){.scholar-stats{grid-template-columns:1fr}.articles-hero h1{font-size:clamp(2.8rem,15vw,4.5rem)}}
 </style>
