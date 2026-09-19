@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 3826,
-      "projection_hash_sha256": "491f7b420af93a3025987873202b4ed9a4a57abf955688d9b610ebc9ff6d0711",
+      "last_event_seq": 3833,
+      "projection_hash_sha256": "38f181cface8e6d78f76cc0725985d396bedf2686144ee8e21e0c0a38e800a25",
       "verify_status": "ok"
     },
-    "updated_at": "2026-09-19T02:23:42Z"
+    "updated_at": "2026-09-19T02:26:09Z"
   },
   "project": {
     "name": "esaa-core",
@@ -8501,7 +8501,7 @@
       "task_kind": "qa",
       "title": "Validar e publicar a atualização de /artigos/",
       "description": "Conferir sincronização com https://scholar.google.com/citations?user=hSP8J9EAAAAJ&hl=pt-BR, rodar npm test, publicar e verificar HTTP 200 em /artigos/ e /en/articles/ com indicadores e cards alinhados ao perfil. Recibo em docs/qa/SITE-SCHOLAR-ARTICLES-20260919-QA-001.md com snapshot (citações, h, i10, N) e evidência de Pages.",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": [
         "SITE-SCHOLAR-ARTICLES-20260919-IMPL-001"
       ],
@@ -8517,13 +8517,19 @@
         "done_is_immutable": true
       },
       "assigned_to": "agent-qa",
-      "started_at": "2026-09-19T02:23:42Z"
+      "started_at": "2026-09-19T02:23:42Z",
+      "verification": {
+        "checks": [
+          "Snapshot Scholar 2026-09-19: 25 registros, 79 citacoes, h 5, i10 1; paridade no codigo e nas paginas publicadas.",
+          "npm test local ok; commit 20ed6da; workflow 35415545634 success; /artigos/ e /en/articles/ HTTP 200."
+        ]
+      },
+      "completed_at": "2026-09-19T02:26:09Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 297,
-      "in_progress": 1
+      "done": 298
     },
     "by_kind": {
       "impl": 140,
