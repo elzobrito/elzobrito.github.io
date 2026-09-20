@@ -1,79 +1,40 @@
 ---
 title: "Uma pasta de Markdown ainda não é um sistema de notas"
-description: "Entre a pasta solta no VS Code e o segundo cérebro com vault, plugins e sync, falta um intervalo: Markdown local com wiki links, backlinks e preview, sem contrato de PKM."
+description: "Uma pasta cheia de .md ainda é só coleção de arquivos: wiki links não resolvem e não há índice reverso; não é sistema de notas até os links existirem no sistema."
 published: 2026-09-20
+updated: 2026-09-20
 locale: pt
 translation: a-markdown-folder-is-still-not-a-note-system
-tags: ["Markdown", "Ferramentas", "Linux", "PKM", "MD Studio"]
+tags: ["Markdown", "PKM", "Linux", "MD Studio", "Ferramentas"]
 featured: false
 ---
 
-Há um intervalo irritante entre dois extremos.
+Eu gosto de Markdown justamente porque ele não tenta resolver o mundo. É texto, está no disco, funciona com Git, produz diffs legíveis, pode ser aberto no VS Code, Vim, terminal ou praticamente qualquer editor e, principalmente, não depende de uma plataforma para continuar existindo. Posso escrever hoje, mover a pasta de máquina daqui a alguns anos e continuar trabalhando sobre os mesmos arquivos. Essa simplicidade é uma das melhores propriedades do formato, mas existe um ponto em que ela começa a cobrar um preço: uma pasta cheia de .md continua sendo apenas uma coleção de arquivos, mesmo quando mentalmente já começamos a tratá-la como um conjunto relacionado de notas.
 
-De um lado, uma pasta de `.md` aberta no VS Code (ou no editor que for). Os arquivos estão no disco, o Git funciona, o diff é legível. Mas `[[alvo]]` é texto morto: não resolve, não cria nota, não mostra quem aponta para cá. Links wiki viram convenção humana, não navegação.
+O exemplo mais óbvio são os wiki links. Escrever [[arquitetura]] em Markdown puro não significa absolutamente nada para o sistema de arquivos. É apenas uma sequência de caracteres que o autor decidiu interpretar como uma ligação entre duas coisas. Se arquitetura.md não existe, nada acontece; se existe, o editor normalmente não sabe disso; se outra nota aponta para ela, também não existe um índice reverso capaz de dizer quem referencia aquele documento. A relação existe na cabeça de quem escreve, mas ainda não existe no sistema. É justamente aí que, para mim, uma pasta deixa de ser suficiente.
 
-Do outro, Obsidian, Notion e afins. Vault, grafo, plugins, sync, superfície grande. Úteis quando o contrato é “segundo cérebro”. Excessivos quando o que se quer é escrever localmente, com links navegáveis e um preview que não minta.
+A solução tradicional para esse problema é adotar alguma ferramenta de PKM. Obsidian é provavelmente o exemplo mais conhecido: resolve wiki links, backlinks, busca, grafo, plugins, sync e uma quantidade enorme de outras necessidades. Não há nada de errado nisso. O problema é que existe uma distância considerável entre “quero que meus arquivos Markdown saibam se relacionar” e “quero adotar um segundo cérebro completo”. Em determinado momento percebi que meu problema estava exatamente nesse intervalo. Eu não precisava substituir o filesystem por uma plataforma de conhecimento; precisava apenas fazer uma pasta Markdown deixar de ser burra.
 
-**MD Studio** (v0.1.0) ocupa esse intervalo. Editor Markdown desktop, Linux-first, local-first: workspace no disco, wiki links, backlinks, preview rico e export HTML sanitizado. Sem backend. Sem grafo. Sem sync na nuvem. Licença MIT.
+Foi daí que nasceu o MD Studio.
 
-Não é um lançamento heroico. É o desenho de um nicho que eu mesmo precisava.
+A versão 0.1.0 é um editor Markdown desktop, Linux-first e local-first, construído com Tauri 2, React, TypeScript, Rust e CodeMirror 6. Os pacotes .deb e AppImage estão disponíveis na [release v0.1.0](https://github.com/elzobrito/md-studio/releases/tag/v0.1.0). O projeto não nasceu da ideia de criar mais um editor Markdown, porque editor já existe aos montes. A questão era estabelecer algumas propriedades mínimas que transformassem uma pasta de documentos independentes em algo que pudesse efetivamente funcionar como um sistema de notas, sem obrigá-la a virar um vault, uma plataforma ou um ecossistema.
 
-## O problema não é “falta de editor”
+A primeira dessas propriedades é a resolução dos próprios links. No MD Studio, [[arquitetura]] e [[arquitetura|Arquitetura do sistema]] não são apenas elementos visuais reconhecidos pelo editor. Existe resolução para arquivo, autocomplete, possibilidade de criação da nota quando o alvo ainda não existe e, principalmente, um índice reverso que permite descobrir quais documentos apontam para a nota atualmente aberta. É isso que alimenta o painel de backlinks. E fiz questão de estabelecer uma regra simples: backlink é link resolvido. Se algum documento contém [[alguma-coisa]], mas alguma-coisa não pode ser resolvido dentro do workspace, aquilo não entra artificialmente no índice apenas para parecer que existe uma relação. É um link quebrado, e deve continuar sendo tratado como tal.
 
-Markdown puro já resolve texto. O que falha na pasta solta é a **ligação entre notas** como propriedade do sistema, não como disciplina do autor.
+Esse detalhe parece pequeno, mas toca numa questão que considero importante na construção desse tipo de ferramenta: não basta reconhecer sintaxe, é preciso preservar semântica. Pintar [[nota]] com outra cor é trivial; estabelecer uma relação consistente entre documentos, mantê-la quando o filesystem muda e permitir navegar nos dois sentidos já transforma aquilo em uma propriedade do sistema.
 
-Wiki links (`[[alvo]]`, `[[alvo|rótulo]]`) só valem se resolvem para arquivo, sugerem criação quando faltam e alimentam um índice reverso. Sem isso, a pasta é arquivo; não é rede mínima de notas.
+A segunda decisão importante foi tratar o workspace como uma fronteira real. Quando uma pasta é aberta no MD Studio, é dentro dela que o programa deve operar. A camada Rust trabalha com paths canônicos e aplica um path fence, impedindo que operações de arquivo escapem do espaço autorizado por combinações de paths relativos ou outros caminhos inesperados. Se eu abri /home/elzo/notas, não existe razão para um editor de Markdown resolver explorar /home/elzo, /tmp ou qualquer outro lugar da máquina. Isso poderia ser tratado como detalhe interno de implementação, mas para mim é parte do contrato de um software local-first: o usuário escolheu um espaço de trabalho e essa escolha deve significar alguma coisa.
 
-Ferramentas de PKM resolvem a ligação, mas empurram um pacote: grafo visual, ecossistema de plugins, sync, às vezes conta. Para quem só quer escrever, revisar e exportar, o custo de superfície supera o ganho.
+O mesmo raciocínio aparece no preview. Sempre me incomodou a ideia de um editor apresentar uma interpretação do Markdown durante a escrita e usar outro pipeline quando chega a hora de exportar. O resultado previsível é aquele documento que parecia correto dentro do programa e se comporta de outra maneira quando sai dele. No MD Studio, preview e export HTML passam pelo mesmo pipeline. GFM, matemática, syntax highlighting e Mermaid seguem a mesma interpretação, e o HTML produzido passa por rehype-sanitize. Não existe execução arbitrária de JavaScript vindo das notas e não há backend envolvido nesse processo. O documento está no disco antes de ser aberto, continua no disco enquanto está sendo editado e permanece um arquivo comum depois que o programa fecha. A exportação HTML também utiliza escrita atômica, porque gerar uma saída válida e depois destruí-la parcialmente no meio de uma falha não me parece uma característica aceitável só porque estamos falando de um editor pequeno.
 
-## O que a v0.1 de fato faz
+Outro problema que aparece rapidamente quando se trabalha dessa forma é o conflito entre o buffer do editor e o filesystem. Quem usa Git, terminal, scripts, ferramentas de automação ou simplesmente outro editor pode modificar o mesmo arquivo enquanto ele está aberto. Se o buffer local está limpo, recarregar a versão do disco é relativamente simples. A situação muda quando existem alterações ainda não salvas. Nesse caso, sobrescrever silenciosamente uma das versões seria a solução mais fácil e provavelmente a pior. O watcher de filesystem do MD Studio usa debounce e, quando detecta esse conflito, a decisão volta para o usuário: recarregar o arquivo vindo do disco, manter a versão que está no editor ou salvar o conteúdo atual em outro arquivo. Não considero isso uma grande funcionalidade; considero apenas uma forma de não destruir trabalho.
 
-Stack: Tauri 2, React/TypeScript, Rust. Pacotes Linux: `.deb` e AppImage ([release v0.1.0](https://github.com/elzobrito/md-studio/releases/tag/v0.1.0)).
+É também por isso que tentei manter a versão 0.1 bastante explícita sobre aquilo que ela não faz. Não há grafo de notas, sync em nuvem, sistema de plugins JavaScript ou backend. Abrir diretamente um .md pelo associador de arquivos do sistema operacional ainda é um follow-up relacionado ao [PR #2](https://github.com/elzobrito/md-studio/pull/2). A exportação atual é HTML; não PDF. Se o README diz HTML, então a funcionalidade publicada é HTML. Parece uma observação banal, mas existe uma tendência curiosa em projetos de software de apresentar roadmap, intenção e implementação como se fossem a mesma coisa. Prefiro separar as três.
 
-No núcleo:
+Isso também ajuda a explicar por que não vejo o MD Studio como um concorrente direto do Obsidian. Se alguém precisa de grafo, sincronização entre vários dispositivos, plugins, aplicações móveis e um ecossistema grande em torno das notas, existem ferramentas maduras cuja finalidade é exatamente essa. Construir uma versão pequena das mesmas coisas seria apenas produzir um Obsidian pior. O problema que tentei resolver é outro: descobrir qual é a quantidade mínima de infraestrutura necessária para que uma pasta Markdown comece a se comportar como um sistema de notas sem deixar de ser, fundamentalmente, uma pasta Markdown.
 
-- Workspace local (pasta ou arquivo) com **path fence** no Rust: paths canônicos; o processo não vagueia fora do que foi aberto.
-- Editor **CodeMirror 6** e preview com GFM, matemática, highlight de código e Mermaid.
-- Wiki links com resolução, autocomplete e criação de nota.
-- **Backlinks** no painel direito: só links resolvidos. Sem grafo.
-- Watcher de filesystem com debounce; se o arquivo aberto estiver sujo e mudar no disco, diálogo Recarregar / Manter / Salvar como (sem sobrescrita silenciosa).
-- Export **HTML** pelo mesmo pipeline sanitizado do preview (`rehype-sanitize`), com escrita atômica.
+Minha resposta atual é relativamente simples: arquivos locais, links que realmente resolvem, índice reverso, navegação e uma representação consistente do documento. Depois disso acontece uma mudança interessante. Os arquivos continuam independentes e continuam podendo ser abertos com cat, Vim ou VS Code, mas deixam de depender exclusivamente da memória do autor para saber como se relacionam. Se amanhã o MD Studio desaparecer, nada precisa ser migrado para recuperar as notas, porque não existe um formato proprietário escondido por baixo delas. O programa adiciona comportamento à pasta, não substitui a pasta.
 
-Documentos ficam no seu disco. Preview e export usam o mesmo pipeline. Não há servidor remoto nem plugins JS arbitrários.
+Talvez seja isso que eu queira dizer quando chamo o projeto de um PKM mínimo, embora até essa expressão possa carregar mais bagagem do que o necessário. Entre uma coleção de arquivos Markdown e uma plataforma completa de gestão do conhecimento existe uma camada intermediária que raramente recebe muita atenção: resolução, navegação, backlinks, integridade de arquivos e um preview que represente honestamente aquilo que será exportado. Era essa camada que eu queria usar no dia a dia.
 
-## Limites honestos (v0.1)
-
-Vale listar o que **não** está nesta versão, para não vender expectativa:
-
-- Sem grafo de notas.
-- Sem sync em nuvem.
-- Sem plugins JavaScript.
-- Abrir `.md` pelo associador do sistema operacional (argv) ainda é follow-up (PR #2).
-
-O README confirma export HTML sanitizado. Não invento PDF nem recursos de roadmap aqui.
-
-Isso não é humildade de marketing. É o contrato da v0.1: mínimo utilizável para escrita local com wiki e backlinks, não substituto genérico de Obsidian.
-
-## Por que usar (e para quem)
-
-Faz sentido se você é autor técnico, professor ou desenvolvedor em Linux e quer um **PKM mínimo**: wiki + backlinks + preview confiável, arquivos no Git, sem assinar o contrato de segundo cérebro.
-
-Não faz sentido se você precisa de grafo, sync multi-dispositivo, ecossistema de plugins ou um vault que cresce como produto. Nesse caso, as ferramentas maiores continuam melhores, porque esse é o trabalho delas.
-
-A aposta do MD Studio é outra: a pasta de Markdown *pode* virar sistema de notas sem virar plataforma.
-
-## Como começar (curto)
-
-1. Baixe o `.deb` ou o AppImage em [v0.1.0](https://github.com/elzobrito/md-studio/releases/tag/v0.1.0).
-2. Abra uma pasta de notas (ou um arquivo).
-3. Use `[[alvo]]` / `[[alvo|rótulo]]`; deixe o autocomplete e a criação de nota fazerem o trabalho mecânico.
-4. Confira backlinks no painel direito (só resolvidos).
-5. Exporte HTML quando precisar de saída limpa fora do editor.
-
-Código e issues: [github.com/elzobrito/md-studio](https://github.com/elzobrito/md-studio).
-
-## O intervalo que importa
-
-Uma pasta de Markdown ainda não é um sistema de notas. Falta resolução de links, índice reverso e um preview que preserve o mesmo contrato do export.
-
-MD Studio não preenche o mercado inteiro de PKM. Preenche o intervalo em que a pasta solta é pobre demais e o segundo cérebro é pesado demais. Se esse é o seu intervalo, a v0.1 existe para isso, sem prometer o resto.
+Então escrevi.
