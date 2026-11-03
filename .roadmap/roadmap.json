@@ -7,11 +7,11 @@
     "run": {
       "run_id": "RUN-0001",
       "status": "success",
-      "last_event_seq": 3833,
-      "projection_hash_sha256": "38f181cface8e6d78f76cc0725985d396bedf2686144ee8e21e0c0a38e800a25",
+      "last_event_seq": 3871,
+      "projection_hash_sha256": "001330234dbb16901ba7a2643508c1741dc5c31ad0cffc93f6882d78d6c3bc44",
       "verify_status": "ok"
     },
-    "updated_at": "2026-09-19T02:26:09Z"
+    "updated_at": "2026-11-03T13:58:40Z"
   },
   "project": {
     "name": "esaa-core",
@@ -8525,15 +8525,88 @@
         ]
       },
       "completed_at": "2026-09-19T02:26:09Z"
+    },
+    {
+      "task_id": "SITE-POST-GROK-ESAA-20261103",
+      "task_kind": "impl",
+      "title": "Preparar artigo bilingue sobre Grok Bot e ESAA",
+      "description": "Adaptar artigo fornecido pelo autor, preservando seu relato, e validar os arquivos do blog.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": [
+          "src/content/posts/pt/o-grok-bot-nao-precisa-fazer-tudo.md",
+          "src/content/posts/en/grok-bot-does-not-need-to-do-everything.md",
+          "public/images/grok-bot-esaa-fluxo.svg"
+        ]
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "boundary_grant": [
+        "public/images/grok-bot-esaa-fluxo.svg"
+      ],
+      "assigned_to": "agent-impl",
+      "started_at": "2026-11-03T13:54:25Z",
+      "verification": {
+        "checks": [
+          "Revisão ajustou a separação de parágrafos do texto original para Markdown."
+        ]
+      },
+      "completed_at": "2026-11-03T13:57:06Z"
+    },
+    {
+      "task_id": "SITE-POST-GROK-ESAA-QA-20261103",
+      "task_kind": "qa",
+      "title": "Validar artigo Grok Bot e ESAA",
+      "description": "Validar build, integridade editorial, fluxo visual e traduções do artigo.",
+      "status": "done",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-qa",
+      "started_at": "2026-11-03T13:55:33Z",
+      "verification": {
+        "checks": [
+          "npm test: astro check, build (215 páginas) e audit:public passaram; audit:editorial falhou em 20 travessões de dois posts preexistentes no HEAD.",
+          "Páginas geradas: parágrafos, diagrama SVG, canonical e hreflang recíproco verificados; novos arquivos sem a infração editorial.",
+          "git diff --check passou; XML SVG válido."
+        ]
+      },
+      "completed_at": "2026-11-03T13:57:15Z"
+    },
+    {
+      "task_id": "SITE-POST-GROK-ESAA-PUBLISH-20261103",
+      "task_kind": "impl",
+      "title": "Publicar artigo sobre Grok Bot e ESAA",
+      "description": "Operação autorizada pelo autor: verificar remoto, criar commit restrito, enviar e verificar GitHub Pages.",
+      "status": "in_progress",
+      "depends_on": [],
+      "targets": [],
+      "outputs": {
+        "files": []
+      },
+      "immutability": {
+        "done_is_immutable": true
+      },
+      "assigned_to": "agent-impl",
+      "started_at": "2026-11-03T13:58:40Z"
     }
   ],
   "indexes": {
     "by_status": {
-      "done": 298
+      "done": 300,
+      "in_progress": 1
     },
     "by_kind": {
-      "impl": 140,
-      "qa": 151,
+      "impl": 142,
+      "qa": 152,
       "spec": 7
     }
   }
