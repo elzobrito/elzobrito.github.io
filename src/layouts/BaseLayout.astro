@@ -59,6 +59,13 @@ const jsonLdBlocks = jsonLd
       <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
     )}
     <link rel="canonical" href={canonical} />
+    <link
+      rel="describedby"
+      href={Astro.url.pathname.startsWith('/en/blog/') ? '/en/blog/llms.txt' : Astro.url.pathname.startsWith('/blog/') ? '/blog/llms.txt' : '/llms.txt'}
+    />
+    {ogType === 'article' && (
+      <link rel="alternate" type="text/markdown" href={`${Astro.url.pathname}index.md`} />
+    )}
     <link rel="alternate" hreflang={locale === 'pt' ? 'en' : 'pt-BR'} href={alternateUrl} />
     <link rel="alternate" hreflang={locale === 'pt' ? 'pt-BR' : 'en'} href={canonical} />
     <link rel="alternate" hreflang="x-default" href={locale === 'pt' ? canonical : alternateUrl} />

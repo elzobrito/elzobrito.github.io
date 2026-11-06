@@ -17,6 +17,9 @@ const required = [
   'sitemap-index.xml',
   'social-card.png',
   'llms.txt',
+  'llms-full.txt',
+  'blog/llms.txt',
+  'en/blog/llms.txt',
 ];
 const files = [];
 async function walk(dir) {
@@ -30,7 +33,7 @@ const names = new Set(files.map((f) => relative(root, f)));
 const missing = required.filter((f) => !names.has(f));
 if (missing.length) throw new Error(`Missing public artifacts: ${missing.join(', ')}`);
 
-for (const file of files.filter((f) => /\.(html|js|css|xml|txt|svg)$/.test(f))) {
+for (const file of files.filter((f) => /\.(html|js|css|xml|txt|md|svg)$/.test(f))) {
   const content = await readFile(file, 'utf8');
   for (const pattern of forbidden) {
     if (pattern.test(content)) {
