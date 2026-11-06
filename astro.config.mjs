@@ -26,8 +26,8 @@ function collectPostLastmods(root = 'src/content/posts') {
       const slug = name.replace(/\.mdx?$/, '');
       const path =
         localePrefix === 'en'
-          ? `https://elzobrito.github.io/en/blog/${slug}/`
-          : `https://elzobrito.github.io/blog/${slug}/`;
+          ? `https://elzobrito.com/en/blog/${slug}/`
+          : `https://elzobrito.com/blog/${slug}/`;
       map.set(path, new Date(`${dateStr}T00:00:00.000Z`));
     }
   };
@@ -43,7 +43,7 @@ function collectPostLastmods(root = 'src/content/posts') {
 const postLastmods = collectPostLastmods();
 
 export default defineConfig({
-  site: 'https://elzobrito.github.io',
+  site: 'https://elzobrito.com',
   output: 'static',
   integrations: [
     mdx(),

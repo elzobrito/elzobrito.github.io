@@ -4,6 +4,7 @@ import { join, relative } from 'node:path';
 const root = new URL('../dist/', import.meta.url).pathname;
 const forbidden = [/\.roadmap/i, /activity\.jsonl/i, /\.conversation-esaa/i, /\/home\/box\//i, /BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY/i];
 const required = [
+  'CNAME',
   'index.html',
   'en/index.html',
   'consultoria/index.html',

@@ -8,7 +8,7 @@
 import { readdir, readFile, mkdir, writeFile } from 'node:fs/promises';
 import { basename, dirname, join, resolve } from 'node:path';
 
-const BASE = 'https://elzobrito.github.io';
+const BASE = 'https://elzobrito.com';
 const sourceDir = resolve(process.argv[2] ?? 'src/content/posts');
 const outputDir = resolve(process.argv[3] ?? 'dist');
 

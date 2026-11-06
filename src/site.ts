@@ -1,5 +1,5 @@
 /** Site-wide SEO identity (no analytics, static only). */
-export const SITE_URL = 'https://elzobrito.github.io';
+export const SITE_URL = 'https://elzobrito.com';
 export const SITE_NAME = 'Elzo Brito';
 export const DEFAULT_OG_IMAGE = '/social-card.png';
 export const DEFAULT_OG_IMAGE_SVG = '/social-card.svg';
